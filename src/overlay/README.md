@@ -31,18 +31,18 @@ The class cannot be instantiated
 
   - Parameters
     - `{Layer} layer`
-  - Returns `this`
+  - returns `this`
 
 - **_remove()_**
 
-  - Returns `this`
+  - returns `this`
 
 - **_setLabel(text, textStyle)_**
 
   - Parameters
     - `{String} text`
     - `{String} textStyle` [DC.Label](#dc-label)
-  - Returns `this`
+  - returns `this`
 
 - **_on(type, callback, context)_**
 
@@ -52,7 +52,7 @@ The class cannot be instantiated
     - `{Object} type`
     - `{Function} callback`
     - `{Object} context`
-  - Returns `this`
+  - returns `this`
 
 - **_off(type, callback, context)_**
 
@@ -62,14 +62,14 @@ The class cannot be instantiated
     - `{Object} type`
     - `{Function} callback`
     - `{Object} context`
-  - Returns `this`
+  - returns `this`
 
 - **_fire(type,params)_**
 
   - Parameters
     - `{Object} type`
     - `{Object} params`
-  - Returns `this`
+  - returns `this`
 
 ### static methods
 
@@ -82,7 +82,7 @@ The class cannot be instantiated
 
   - Parameters
     - `{String} type`
-  - Returns `string`
+  - returns `string`
 
 ## DC.Point
 
@@ -104,7 +104,7 @@ point.setStyle({
 
   - Parameters
     - `{Position} position`
-  - Returns `point`
+  - returns `point`
 
 ### properties
 
@@ -118,7 +118,7 @@ point.setStyle({
 
   - Parameters
     - `{Object} style` [PointGraphics](https://cesium.com/docs/cesiumjs-ref-doc/PointGraphics.html)
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -152,7 +152,7 @@ point.setStyle({
 
   - Parameters
     - `{Object} entity`
-  - Returns `point`
+  - returns `point`
 
 ## DC.Polyline
 
@@ -173,7 +173,7 @@ polyline.setStyle({
 
   - Parameters
     - `{String|Array<Position|Number|String>} positions`
-  - Returns `polyline`
+  - returns `polyline`
 
 ### properties
 
@@ -187,7 +187,7 @@ polyline.setStyle({
 
   - Parameters
     - `{Object} style` [PolylineGraphics](https://cesium.com/docs/cesiumjs-ref-doc/PolylineGraphics.html)
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -209,7 +209,7 @@ polyline.setStyle({
 
   - Parameters
     - `{Object} entity`
-  - Returns `polyline`
+  - returns `polyline`
 
 ## DC.Polygon
 
@@ -230,7 +230,7 @@ polygon.setStyle({
 
   - Parameters
     - `{String|Array<Position|Number|String>} positions`
-  - Returns `polygon`
+  - returns `polygon`
 
 ### properties
 
@@ -245,7 +245,7 @@ polygon.setStyle({
 
   - Parameters
     - `{Object} style` [PolygonGraphics](https://cesium.com/docs/cesiumjs-ref-doc/PolygonGraphics.html)
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -275,7 +275,7 @@ polygon.setStyle({
 
   - Parameters
     - `{Object} entity`
-  - Returns `polygon`
+  - returns `polygon`
 
 ## DC.Billboard
 
@@ -296,7 +296,7 @@ billboard.size = [20, 20]
   - Parameters
     - `{Position} position`
     - `{String} icon`
-  - Returns `billboard`
+  - returns `billboard`
 
 ### properties
 
@@ -310,7 +310,7 @@ billboard.size = [20, 20]
 
   - Parameters
     - `{Object} style` [BillboardGraphics](https://cesium.com/docs/cesiumjs-ref-doc/BillboardGraphics.html)
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -343,7 +343,7 @@ billboard.size = [20, 20]
 
   - Parameters
     - `{Object} entity`：
-  - Returns `billboard`
+  - returns `billboard`
 
 ## DC.Label
 
@@ -363,7 +363,7 @@ let Label = new DC.Label(position, 'test')
   - Parameters
     - `{Position} position`
     - `{String} text`
-  - Returns `label`
+  - returns `label`
 
 ### properties
 
@@ -376,7 +376,7 @@ let Label = new DC.Label(position, 'test')
 
   - Parameters
     - `{Object} style` [LabelGraphics](https://cesium.com/docs/cesiumjs-ref-doc/LabelGraphics.html)
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -416,7 +416,7 @@ let Label = new DC.Label(position, 'test')
   - Parameters
     - `{Object} entity`
     - `{String} text`
-  - Returns `label`
+  - returns `label`
 
 ## DC.Circle
 
@@ -436,7 +436,7 @@ let circle = new DC.Circle(position, 200)
   - Parameters
     - `{Position} center`
     - `{String} radius`
-  - Returns `billboard`
+  - returns `billboard`
 
 ### properties
 
@@ -449,7 +449,7 @@ let circle = new DC.Circle(position, 200)
 
   - Parameters
     - `{Object} style` [EllipseGraphics](https://cesium.com/docs/cesiumjs-ref-doc/EllipseGraphics.html)
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -492,7 +492,7 @@ let model = new DC.Model(position, '**/**.glb')
   - Parameters
     - `{Position|String|Array} position`
     - `{String} modelUrl`
-  - Returns `model`
+  - returns `model`
 
 ### properties
 
@@ -505,7 +505,7 @@ let model = new DC.Model(position, '**/**.glb')
 
   - Parameters
     - `{Object} style` [ModelGraphics](https://cesium.com/docs/cesiumjs-ref-doc/ModelGraphics.html)
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -530,7 +530,7 @@ let model = new DC.Model(position, '**/**.glb')
   - Parameters
     - `{Object} entity`
     - `{String} modelUrl`
-  - Returns `model`
+  - returns `model`
 
 ## DC.Tileset
 
@@ -550,7 +550,7 @@ let tileset = new DC.Tileset('**/tileset.json')
   - Parameters
     - `{String} url`
     - `{Object} options` [Tileset](https://cesium.com/docs/cesiumjs-ref-doc/Cesium3DTileset.html)
-  - Returns `tileset`
+  - returns `tileset`
 
 ### properties
 
@@ -562,7 +562,7 @@ let tileset = new DC.Tileset('**/tileset.json')
 
   - Parameters
     - `{Object} style` [TileStyle](https://github.com/CesiumGS/3d-tiles/tree/master/specification/Styling)
-  - Returns `this`
+  - returns `this`
 
   ```js
   let style = new DC.TilesetStyle({
@@ -581,26 +581,26 @@ let tileset = new DC.Tileset('**/tileset.json')
 
   - Parameters
     - `{Position} position`
-  - Returns `this`
+  - returns `this`
 
 - **_setHeight(height,isAbsolute)_**
 
   - Parameters
     - `{Number} height`
     - `{Boolean} isAbsolute`
-  - Returns `this`
+  - returns `this`
 
 - **_setCustomShader(customShader)_**
 
   - Parameters
     - `{String} customShader`
-  - Returns `this`
+  - returns `this`
 
 - **_setProperties(properties)_**
 
   - Parameters
     - `{Array<Object>} properties`
-  - Returns `this`
+  - returns `this`
 
 ```json
 {
@@ -629,7 +629,7 @@ let divIcon = new DC.DivIcon(position, '<div></div>')
   - Parameters
     - `{Position|String|Array} position`
     - `{String|Element} content`
-  - Returns `divIcon`
+  - returns `divIcon`
 
 ### properties
 
@@ -642,7 +642,7 @@ let divIcon = new DC.DivIcon(position, '<div></div>')
 
   - Parameters
     - `{Object} style`
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -666,7 +666,7 @@ let divIcon = new DC.DivIcon(position, '<div></div>')
   - Parameters
     - `{Object} entity`
     - `{String|Element} content`
-  - Returns `divIcon`
+  - returns `divIcon`
 
 ## DC.Box
 
@@ -688,7 +688,7 @@ let box = new DC.Box(position, 20, 30, 40)
     - `{Number} length`
     - `{Number} width`
     - `{Number} height`
-  - Returns `box`
+  - returns `box`
 
 ### properties
 
@@ -703,7 +703,7 @@ let box = new DC.Box(position, 20, 30, 40)
 
   - Parameters
     - `{Object} style` [BoxGraphics](https://cesium.com/docs/cesiumjs-ref-doc/BoxGraphics.html)
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -741,7 +741,7 @@ corridor.setStyle({
 
   - Parameters
     - `{String|Array<Position|Number|String>} positions`
-  - Returns `corridor`
+  - returns `corridor`
 
 ### properties
 
@@ -753,7 +753,7 @@ corridor.setStyle({
 
   - Parameters
     - `{Object} style` [CorridorGraphics](https://cesium.com/docs/cesiumjs-ref-doc/CorridorGraphics.html)
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -781,7 +781,7 @@ corridor.setStyle({
 
   - Parameters
     - `{Object} entity`
-  - Returns `corridor`
+  - returns `corridor`
 
 ## DC.Cylinder
 
@@ -803,7 +803,7 @@ let cylinder = new DC.Cylinder(position, 20, 30, 40)
     - `{Number} length`
     - `{Number} topRadius`
     - `{Number} bottomRadius`
-  - Returns `cylinder`
+  - returns `cylinder`
 
 ### properties
 
@@ -818,7 +818,7 @@ let cylinder = new DC.Cylinder(position, 20, 30, 40)
 
   - Parameters
     - `{Object} style` [CylinderGraphics](https://cesium.com/docs/cesiumjs-ref-doc/CylinderGraphics.html)
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -856,7 +856,7 @@ let ellipse = new DC.Ellipse(position, 20, 30)
     - `{Position} position`
     - `{Number} semiMajorAxis`
     - `{Number} semiMinorAxis`
-  - Returns `ellipse`
+  - returns `ellipse`
 
 ### properties
 
@@ -871,7 +871,7 @@ let ellipse = new DC.Ellipse(position, 20, 30)
 
   - Parameters
     - `{Object} style` [EllipseGraphics](https://cesium.com/docs/cesiumjs-ref-doc/EllipseGraphics.html)
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -914,7 +914,7 @@ let ellipsoid = new DC.Ellipsoid(position, { x: 30, y: 30, z: 30 })
   - Parameters
     - `{Position} position`
     - `{Object} radius`：{x: 30, y: 30, z: 30}
-  - Returns `ellipsoid`
+  - returns `ellipsoid`
 
 ### properties
 
@@ -928,7 +928,7 @@ let ellipsoid = new DC.Ellipsoid(position, { x: 30, y: 30, z: 30 })
 
   - Parameters
     - `{Object} style` [EllipsoidGraphics](https://cesium.com/docs/cesiumjs-ref-doc/EllipsoidGraphics.html)
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -967,7 +967,7 @@ let plane = new DC.Plane(position, 20, 30, { normal: 'x' })
     - `{Number} width`
     - `{Number} height`
     - `{Object} plane`
-  - Returns `plane`
+  - returns `plane`
 
 ```json
 // plane
@@ -990,7 +990,7 @@ let plane = new DC.Plane(position, 20, 30, { normal: 'x' })
 
   - Parameters
     - `{Object} style` [PlaneGraphics](https://cesium.com/docs/cesiumjs-ref-doc/PlaneGraphics.html)
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -1040,7 +1040,7 @@ let polylineVolume = new DC.PolylineVolume(
   - Parameters
     - `{String|Array<Position|Number|String>} positions`
     - `{Array} shape`
-  - Returns `polylineVolume`
+  - returns `polylineVolume`
 
 ### properties
 
@@ -1053,7 +1053,7 @@ let polylineVolume = new DC.PolylineVolume(
 
   - Parameters
     - `{Object} style` [PolylineVolumeGraphics](https://cesium.com/docs/cesiumjs-ref-doc/PolylineVolumeGraphics.html)
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -1076,7 +1076,7 @@ let polylineVolume = new DC.PolylineVolume(
 
   - Parameters
     - `{Object} entity`
-  - Returns `polylineVolume`
+  - returns `polylineVolume`
 
 ## DC.Rectangle
 
@@ -1096,7 +1096,7 @@ let rectangle = new DC.Rectangle('-90.0,32.0;-94.0,36.0;')
 
   - Parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - Returns `rectangle`
+  - returns `rectangle`
 
 ### properties
 
@@ -1110,7 +1110,7 @@ let rectangle = new DC.Rectangle('-90.0,32.0;-94.0,36.0;')
 
   - Parameters
     - `{Object} style`：样式，详情参考：[RectangleGraphics](https://cesium.com/docs/cesiumjs-ref-doc/RectangleGraphics.html)
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -1153,7 +1153,7 @@ let wall = new DC.Wall('-90.0,32.0,1000;-94.0,36.0,1000;')
 
   - Parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - Returns `wall`
+  - returns `wall`
 
 ### properties
 
@@ -1167,7 +1167,7 @@ let wall = new DC.Wall('-90.0,32.0,1000;-94.0,36.0,1000;')
 
   - Parameters
     - `{Object} style`：样式，详情参考：[WallGraphics](https://cesium.com/docs/cesiumjs-ref-doc/WallGraphics.html)
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -1192,7 +1192,7 @@ let wall = new DC.Wall('-90.0,32.0,1000;-94.0,36.0,1000;')
 
   - Parameters
     - `{Object} entity`：Cesium 覆盖物
-  - Returns `wall`
+  - returns `wall`
 
 ## DC.AttackArrow
 
@@ -1212,7 +1212,7 @@ let attackArrow = new DC.AttackArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
 
   - Parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - Returns `attackArrow`
+  - returns `attackArrow`
 
 ### properties
 
@@ -1226,7 +1226,7 @@ let attackArrow = new DC.AttackArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
 
   - Parameters
     - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
-  - Returns `this`
+  - returns `this`
 
 ## DC.DoubleArrow
 
@@ -1246,7 +1246,7 @@ let doubleArrow = new DC.DoubleArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
 
   - Parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - Returns `doubleArrow`
+  - returns `doubleArrow`
 
 ### properties
 
@@ -1260,7 +1260,7 @@ let doubleArrow = new DC.DoubleArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
 
   - Parameters
     - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
-  - Returns `this`
+  - returns `this`
 
 ## DC.FineArrow
 
@@ -1280,7 +1280,7 @@ let fineArrow = new DC.FineArrow('-90.0,32.0;-94.0,36.0')
 
   - Parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - Returns `fineArrow`
+  - returns `fineArrow`
 
 ### properties
 
@@ -1294,7 +1294,7 @@ let fineArrow = new DC.FineArrow('-90.0,32.0;-94.0,36.0')
 
   - Parameters
     - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
-  - Returns `this`
+  - returns `this`
 
 ## DC.GatheringPlace
 
@@ -1314,7 +1314,7 @@ let gatheringPlace = new DC.GatheringPlace('-90.0,32.0;-94.0,36.0')
 
   - Parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - Returns `gatheringPlace`
+  - returns `gatheringPlace`
 
 ### properties
 
@@ -1328,7 +1328,7 @@ let gatheringPlace = new DC.GatheringPlace('-90.0,32.0;-94.0,36.0')
 
   - Parameters
     - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
-  - Returns `this`
+  - returns `this`
 
 ## DC.TailedAttackArrow
 
@@ -1348,7 +1348,7 @@ let tailedAttackArrow = new DC.TailedAttackArrow('-90.0,32.0;-94.0,36.0')
 
   - Parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - Returns `tailedAttackArrow`
+  - returns `tailedAttackArrow`
 
 ### properties
 
@@ -1362,7 +1362,7 @@ let tailedAttackArrow = new DC.TailedAttackArrow('-90.0,32.0;-94.0,36.0')
 
   - Parameters
     - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
-  - Returns `this`
+  - returns `this`
 
 ## DC.ElecEllipsoidPrimitive
 
@@ -1383,7 +1383,7 @@ let elecEllipsoid = new DC.ElecEllipsoidPrimitive('120,20',{x:2000,y:2000:z:2000
   - Parameters
     - `{String|Position|Array} center`：中心点
     - `{Object} radius`:球半径
-  - Returns `elecEllipsoidPrimitive`
+  - returns `elecEllipsoidPrimitive`
 
 ### properties
 
@@ -1398,7 +1398,7 @@ let elecEllipsoid = new DC.ElecEllipsoidPrimitive('120,20',{x:2000,y:2000:z:2000
 
   - Parameters
     - `{Object} style`：样式
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -1426,7 +1426,7 @@ let flowLinePrimitive = new DC.FlowLinePrimitive('120,20;120,30;122,30')
 
   - Parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - Returns `flowLinePrimitive`
+  - returns `flowLinePrimitive`
 
 ### properties
 
@@ -1440,7 +1440,7 @@ let flowLinePrimitive = new DC.FlowLinePrimitive('120,20;120,30;122,30')
 
   - Parameters
     - `{Object} style`：样式
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -1471,7 +1471,7 @@ let scanCirclePrimitive = new DC.ScanCirclePrimitive('120,20', 1000)
   - Parameters
     - `{String|Position|Array} position`：圆心
     - `{Number} radius`：半径
-  - Returns `scanCirclePrimitive`
+  - returns `scanCirclePrimitive`
 
 ### properties
 
@@ -1486,7 +1486,7 @@ let scanCirclePrimitive = new DC.ScanCirclePrimitive('120,20', 1000)
 
   - Parameters
     - `{Object} style`：样式
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -1514,7 +1514,7 @@ let trailLinePrimitive = new DC.TrailLinePrimitive('120,20;120,30;122,30')
 
   - Parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - Returns `trailLinePrimitive`
+  - returns `trailLinePrimitive`
 
 ### properties
 
@@ -1528,7 +1528,7 @@ let trailLinePrimitive = new DC.TrailLinePrimitive('120,20;120,30;122,30')
 
   - Parameters
     - `{Object} style`：样式
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -1565,7 +1565,7 @@ water.setStyle({
   - Parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
     - `{Boolean} asynchronous`:异步创建，默认值：true
-  - Returns `waterPrimitive`
+  - returns `waterPrimitive`
 
 ### properties
 
@@ -1579,7 +1579,7 @@ water.setStyle({
 
   - Parameters
     - `{Object} style`：样式，详情参考：[PolygonGraphics](https://cesium.com/docs/cesiumjs-ref-doc/PolygonGraphics.html)
-  - Returns `this`
+  - returns `this`
 
 ```json
 // style(optional)
@@ -1622,7 +1622,7 @@ let waterPrimitive = new DC.VideoPrimitive('120,20;120,30;122,30', videoEl)
   - Parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
     - `{Element} video`：视频节点
-  - Returns `polygon`
+  - returns `polygon`
 
 ### properties
 

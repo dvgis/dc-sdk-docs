@@ -30,7 +30,7 @@ sidebar: auto
 
   - 参数
     - `{Overlay} overlay`：覆盖物
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_addOverlays(overlays)_**
 
@@ -38,7 +38,7 @@ sidebar: auto
 
   - 参数
     - `{Array<Overlay>} overlays`：覆盖物数组
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_removeOverlay(overlay)_**
 
@@ -46,7 +46,7 @@ sidebar: auto
 
   - 参数
     - `{Overlay} overlay`：覆盖物
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_getOverlay(overlayId)_**
 
@@ -54,7 +54,7 @@ sidebar: auto
 
   - 参数
     - `{String} overlayId`：覆盖物唯一标识(默认产生)
-  - 返回值：`overlay`
+  - 返回值 `overlay`
 
 - **_getOverlayById(Id)_**
 
@@ -62,7 +62,7 @@ sidebar: auto
 
   - 参数
     - `{String} Id`：覆盖物业务唯一标识
-  - 返回值：`overlay`
+  - 返回值 `overlay`
 
 - **_getOverlaysByAttr(attrName, attrVal)_**
 
@@ -71,7 +71,7 @@ sidebar: auto
   - 参数
     - `{String} attrName`：属性名称
     - `{Object} attrVal`：属性值
-  - 返回值：`array`
+  - 返回值 `array`
 
   ```js
   overlay.attr.name = 'test' //设置覆盖物的属性
@@ -82,7 +82,7 @@ sidebar: auto
 
   获取所有覆盖物
 
-  - 返回值：`array`
+  - 返回值 `array`
 
 - **_eachOverlay(method, context)_**
 
@@ -91,7 +91,7 @@ sidebar: auto
   - 参数
     - `{Function} method`：回调函数，参数为每一个覆盖物
     - `{Object} context`：上下文
-  - 返回值：`this`
+  - 返回值 `this`
 
   ```js
   layer.eachOverlay((item) => {})
@@ -101,13 +101,13 @@ sidebar: auto
 
   清空图层
 
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_remove()_**
 
   删除图层
 
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_addTo(viewer)_**
 
@@ -115,7 +115,7 @@ sidebar: auto
 
   - 参数
     - `{Viewer|World} viewer`：场景
-  - 返回值：`this`
+  - 返回值 `this`
 
 ### static methods
 
@@ -130,7 +130,7 @@ sidebar: auto
 
   获取图层类型
 
-  - 返回值：`string`
+  - 返回值 `string`
 
 ## DC.LayerGroup
 
@@ -153,7 +153,7 @@ layerGroup.addLayer(layer)
 
   - 参数
     - `{String} id`：图层组唯一标识
-  - 返回值：`layerGroup`
+  - 返回值 `layerGroup`
 
 ### properties
 
@@ -169,7 +169,7 @@ layerGroup.addLayer(layer)
 
   - 参数
     - `{Layer} layer`：图层
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_removeLayer(layer)_**
 
@@ -177,7 +177,7 @@ layerGroup.addLayer(layer)
 
   - 参数
     - `{Layer} layer`：图层
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_getLayer(id)_**
 
@@ -185,19 +185,19 @@ layerGroup.addLayer(layer)
 
   - 参数
     - `{String} id`：图层 ID
-  - 返回值：`layer`
+  - 返回值 `layer`
 
 - **_getLayers()_**
 
   获取所有图层，不包括地图
 
-  - 返回值：`layer`
+  - 返回值 `layer`
 
 - **_remove()_**
 
   删除图层组
 
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_addTo(viewer)_**
 
@@ -205,7 +205,7 @@ layerGroup.addLayer(layer)
 
   - 参数
     - `{Viewer|World} viewer`：场景
-  - 返回值：`this`
+  - 返回值 `this`
 
 ## DC.VectorLayer
 
@@ -226,7 +226,7 @@ viewer.addLayer(layer)
 
   - 参数
     - `{String} id`：图层唯一标识
-  - 返回值：`vectorLayer`
+  - 返回值 `vectorLayer`
 
 ## DC.PrimitiveLayer
 
@@ -247,7 +247,7 @@ viewer.addLayer(layer)
 
   - 参数
     - `{String} id`：图层唯一标识
-  - 返回值：`primitiveLayer`
+  - 返回值 `primitiveLayer`
 
 ## DC.TilesetLayer
 
@@ -268,7 +268,7 @@ viewer.addLayer(layer)
 
   - 参数
     - `{String} id`：图层唯一标识
-  - 返回值：`tilesetLayer`
+  - 返回值 `tilesetLayer`
 
 ## DC.GeoJsonLayer
 
@@ -307,7 +307,7 @@ layer.eachOverlay((item) => {
     - `{String} id`：图层唯一标识
     - `{String} url`：数据地址
     - `{Object} options`：属性配置，详情参考：[GeoJsonDataSource](https://cesium.com/docs/cesiumjs-ref-doc/GeoJsonDataSource.html)
-  - 返回值：`geoJsonLayer`
+  - 返回值 `geoJsonLayer`
 
 ### methods
 
@@ -315,7 +315,7 @@ layer.eachOverlay((item) => {
 
   转换为矢量图层
 
-  - 返回值：`vectorLayer`
+  - 返回值 `vectorLayer`
 
 - **_toModelLayer(modelUrl)_**
 
@@ -323,7 +323,7 @@ layer.eachOverlay((item) => {
 
   - 参数
     - `{String} modelUrl`：模型地址
-  - 返回值：`vectorLayer`
+  - 返回值 `vectorLayer`
 
 ## DC.TopoJsonLayer
 
@@ -362,7 +362,7 @@ layer.eachOverlay((item) => {
     - `{String} id`：图层唯一标识
     - `{String} url`：数据地址
     - `{Object} options`：属性配置，详情参考：[GeoJsonDataSource](https://cesium.com/docs/cesiumjs-ref-doc/GeoJsonDataSource.html)
-  - 返回值：`topoJsonLayer`
+      - 返回值 `topoJsonLayer`
 
 ### methods
 
@@ -370,7 +370,7 @@ layer.eachOverlay((item) => {
 
   转换为矢量图层
 
-  - 返回值：`vectorLayer`
+  - 返回值 `vectorLayer`
 
 - **_toModelLayer(modelUrl)_**
 
@@ -378,7 +378,7 @@ layer.eachOverlay((item) => {
 
   - 参数
     - `{String} modelUrl`：模型地址
-  - 返回值：`vectorLayer`
+  - 返回值 `vectorLayer`
 
 ## DC.HtmlLayer
 
@@ -399,7 +399,7 @@ viewer.addLayer(layer)
 
   - 参数
     - `{String} id`：图层唯一标识
-  - 返回值：`htmlLayer`
+  - 返回值 `htmlLayer`
 
 ## DC.CzmlLayer
 
@@ -432,7 +432,7 @@ layer.eachOverlay((item) => {
     - `{String} id`：图层唯一标识
     - `{String} url`：数据地址
     - `{Object} options`：属性配置，详情参考：[CzmlDataSource](https://cesium.com/docs/cesiumjs-ref-doc/CzmlDataSource.html)
-  - 返回值：`czmlLayer`
+  - 返回值 `czmlLayer`
 
 ## DC.KmlLayer
 
@@ -465,7 +465,7 @@ layer.eachOverlay((item) => {
     - `{String} id`：图层唯一标识
     - `{String} url`：数据地址
     - `{Object} options`：属性配置，详情参考：[KmlDataSource](https://cesium.com/docs/cesiumjs-ref-doc/KmlDataSource.html)
-  - 返回值：`kmlLayer`
+  - 返回值 `kmlLayer`
 
 ## DC.ClusterLayer
 
@@ -487,7 +487,7 @@ viewer.addLayer(layer)
   - 参数
     - `{String} id`：图层唯一标识
     - `{Object} options`：属性配置
-  - 返回值：`clusterLayer`
+  - 返回值 `clusterLayer`
 
 ```json
 // 属性参数(可选)
@@ -528,7 +528,7 @@ viewer.addLayer(layer)
     - `{String} id`：图层唯一标识
     - `{Array<DC.Position>} bounds`：热区范围，有长度为 2 的数组组成，第一个为西南坐标，第二个为东北坐标
     - `{Object} options`：属性配置
-  - 返回值：`heatLayer`
+  - 返回值 `heatLayer`
 
 ```json
 //属性参数(可选)
@@ -558,13 +558,14 @@ viewer.addLayer(layer)
 
   - 参数
     - `{Array<Object>} positions`：点位信息
-  - 返回值：`heatLayer`
+  - 返回值 `heatLayer`
 
 ```json
 //点位信息参数
 {
   "lng": "", //经度
-  "lat": "" //纬度
+  "lat": "", //纬度
+  "value": 10 //强度
 }
 ```
 
@@ -588,7 +589,7 @@ viewer.addLayer(layer)
   - 参数
     - `{String} id`：图层唯一标识
     - `{Object} options`：属性配置
-  - 返回值：`windLayer`
+  - 返回值 `windLayer`
 
 ```json
 //属性参数(可选)
@@ -614,7 +615,7 @@ viewer.addLayer(layer)
   - 参数
     - `{Object} data`：风向数据
     - `{Object} options`：配置信息，参考构造函数的配置信息
-  - 返回值：`windLayer`
+  - 返回值 `windLayer`
 
 - **_setOptions(options)_**
 
@@ -622,4 +623,4 @@ viewer.addLayer(layer)
 
   - 参数
     - `{Object} options`：配置信息，参考构造函数的配置信息
-  - 返回值：`windLayer`
+  - 返回值 `windLayer`

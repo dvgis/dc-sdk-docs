@@ -33,13 +33,13 @@ sidebar: auto
 
   - 参数
     - `{Layer} layer` ：图层
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_remove()_**
 
   删除
 
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_setLabel(text, textStyle)_**
 
@@ -48,7 +48,7 @@ sidebar: auto
   - 参数
     - `{String} text`：文本
     - `{String} textStyle`：文本样式，详情参考：[DC.Label](#dc-label)
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_on(type, callback, context)_**
 
@@ -58,7 +58,7 @@ sidebar: auto
     - `{Object} type` ：订阅类型
     - `{Function} callback` ：订阅回调
     - `{Object} context` ：上下文
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_off(type, callback, context)_**
 
@@ -68,7 +68,7 @@ sidebar: auto
     - `{Object} type` ：订阅类型
     - `{Function} callback` ：订阅回调
     - `{Object} context` ：上下文
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_fire(type,params)_**
 
@@ -77,7 +77,7 @@ sidebar: auto
   - 参数
     - `{Object} type` ：订阅类型
     - `{Object} params` ：参数
-  - 返回值：`this`
+  - 返回值 `this`
 
 ### static methods
 
@@ -94,7 +94,7 @@ sidebar: auto
 
   - 参数
     - `{String} type`：覆盖物类型
-  - 返回值：`string`
+  - 返回值 `string`
 
 ## DC.Point
 
@@ -118,7 +118,7 @@ point.setStyle({
 
   - 参数
     - [`{Position} position`](#dc-position)：坐标
-  - 返回值：`point`
+  - 返回值 `point`
 
 ### properties
 
@@ -132,7 +132,7 @@ point.setStyle({
 
   - 参数
     - `{Object} style`：样式，详情参考：[PointGraphics](https://cesium.com/docs/cesiumjs-ref-doc/PointGraphics.html)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -168,7 +168,7 @@ point.setStyle({
 
   - 参数
     - `{Object} entity`：Cesium 覆盖物
-  - 返回值：`point`
+  - 返回值 `point`
 
 ## DC.Polyline
 
@@ -191,7 +191,7 @@ polyline.setStyle({
 
   - 参数
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - 返回值：`polyline`
+  - 返回值 `polyline`
 
 ### properties
 
@@ -207,7 +207,7 @@ polyline.setStyle({
 
   - 参数
     - `{Object} style`：样式，详情参考：[PolylineGraphics](https://cesium.com/docs/cesiumjs-ref-doc/PolylineGraphics.html)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -231,7 +231,7 @@ polyline.setStyle({
 
   - 参数
     - `{Object} entity`：Cesium 覆盖物
-  - 返回值：`polyline`
+  - 返回值 `polyline`
 
 ## DC.Polygon
 
@@ -254,7 +254,7 @@ polygon.setStyle({
 
   - 参数
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - 返回值：`polygon`
+  - 返回值 `polygon`
 
 ### properties
 
@@ -271,7 +271,7 @@ polygon.setStyle({
 
   - 参数
     - `{Object} style`：样式，详情参考：[PolygonGraphics](https://cesium.com/docs/cesiumjs-ref-doc/PolygonGraphics.html)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -303,7 +303,7 @@ polygon.setStyle({
 
   - 参数
     - `{Object} entity`：Cesium 覆盖物
-  - 返回值：`polygon`
+  - 返回值 `polygon`
 
 ## DC.Billboard
 
@@ -326,13 +326,13 @@ billboard.size = [20, 20]
   - 参数
     - `{Position} position`：坐标
     - `{String} icon`：图标地址
-  - 返回值：`billboard`
+  - 返回值 `billboard`
 
 ### properties
 
 - `{Position} position`：坐标
 - `{String} icon`：图标地址
-- `{Arrray<Number>} size`：图标大小
+- `{Array<Number>} size`：图标大小
 
 ### methods
 
@@ -342,7 +342,7 @@ billboard.size = [20, 20]
 
   - 参数
     - `{Object} style`：样式，详情参考：[BillboardGraphics](https://cesium.com/docs/cesiumjs-ref-doc/BillboardGraphics.html)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -377,7 +377,7 @@ billboard.size = [20, 20]
 
   - 参数
     - `{Object} entity`：Cesium 覆盖物
-  - 返回值：`billbard`
+  - 返回值 `billbard`
 
 ## DC.Label
 
@@ -399,7 +399,7 @@ let Label = new DC.Label(position, 'test')
   - 参数
     - `{Position} position`：坐标
     - `{String} text`：文本
-  - 返回值：`label`
+  - 返回值 `label`
 
 ### properties
 
@@ -414,7 +414,7 @@ let Label = new DC.Label(position, 'test')
 
   - 参数
     - `{Object} style`：样式，详情参考：[LabelGraphics](https://cesium.com/docs/cesiumjs-ref-doc/LabelGraphics.html)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -456,7 +456,7 @@ let Label = new DC.Label(position, 'test')
   - 参数
     - `{Object} entity`：Cesium 覆盖物
     - `{String} text`：文本
-  - 返回值：`label`
+  - 返回值 `label`
 
 ## DC.Circle
 
@@ -478,7 +478,7 @@ let circle = new DC.Circle(position, 200)
   - 参数
     - `{Position} center`：圆心
     - `{String} radius`：半径
-  - 返回值：`billboard`
+  - 返回值 `billboard`
 
 ### properties
 
@@ -493,7 +493,7 @@ let circle = new DC.Circle(position, 200)
 
   - 参数
     - `{Object} style`：样式，详情参考：[EllipseGraphics](https://cesium.com/docs/cesiumjs-ref-doc/EllipseGraphics.html)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -538,7 +538,7 @@ let model = new DC.Model(position, '**/**.glb')
   - 参数
     - `{Position|String|Array} position`：坐标
     - `{String} modelUrl`：模型地址
-  - 返回值：`model`
+  - 返回值 `model`
 
 ### properties
 
@@ -553,7 +553,7 @@ let model = new DC.Model(position, '**/**.glb')
 
   - 参数
     - `{Object} style`：样式，详情参考：[ModelGraphics](https://cesium.com/docs/cesiumjs-ref-doc/ModelGraphics.html)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -580,7 +580,7 @@ let model = new DC.Model(position, '**/**.glb')
   - 参数
     - `{Object} entity`：Cesium 覆盖物
     - `{String} modelUrl`：模型地址
-  - 返回值：`model`
+  - 返回值 `model`
 
 ## DC.Tileset
 
@@ -602,7 +602,7 @@ let tileset = new DC.Tileset('**/tileset.json')
   - 参数
     - `{String} url`：模型地址
     - `{Object} options`：详情参考：[Tileset](https://cesium.com/docs/cesiumjs-ref-doc/Cesium3DTileset.html)
-  - 返回值：`tileset`
+  - 返回值 `tileset`
 
 ### properties
 
@@ -616,7 +616,7 @@ let tileset = new DC.Tileset('**/tileset.json')
 
   - 参数
     - `{Object} style`：样式，详情参考：[TileStyle](https://github.com/CesiumGS/3d-tiles/tree/master/specification/Styling)
-  - 返回值：`this`
+  - 返回值 `this`
 
   ```js
   let style = new DC.TilesetStyle({
@@ -637,7 +637,7 @@ let tileset = new DC.Tileset('**/tileset.json')
 
   - 参数
     - `{Position} position`：位置
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_setHeight(height,isAbsolute)_**
 
@@ -646,7 +646,7 @@ let tileset = new DC.Tileset('**/tileset.json')
   - 参数
     - `{Number} height`：高度
     - `{Boolean} isAbsolute`：是否为绝对高度，如果为 true，将不根据模型中心高度计算
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_setCustomShader(customShader)_**
 
@@ -654,7 +654,7 @@ let tileset = new DC.Tileset('**/tileset.json')
 
   - 参数
     - `{String} customShader`：片元着色器
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_setProperties(properties)_**
 
@@ -662,7 +662,7 @@ let tileset = new DC.Tileset('**/tileset.json')
 
   - 参数
     - `{Array<Object>} properties`: 属性
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 //属性参数
@@ -694,7 +694,7 @@ let divIcon = new DC.DivIcon(position, '<div></div>')
   - 参数
     - `{Position|String|Array} position`：坐标
     - `{String|Element} content`：内容
-  - 返回值：`divIcon`
+  - 返回值 `divIcon`
 
 ### properties
 
@@ -709,7 +709,7 @@ let divIcon = new DC.DivIcon(position, '<div></div>')
 
   - 参数
     - `{Object} style`：样式，
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -735,7 +735,7 @@ let divIcon = new DC.DivIcon(position, '<div></div>')
   - 参数
     - `{Object} entity`：Cesium 覆盖物
     - `{String|Element} content`：内容
-  - 返回值：`divIcon`
+  - 返回值 `divIcon`
 
 ## DC.Box
 
@@ -759,7 +759,7 @@ let box = new DC.Box(position, 20, 30, 40)
     - `{Number} length`：长度
     - `{Number} width`：宽度
     - `{Number} height`：高度
-  - 返回值：`box`
+  - 返回值 `box`
 
 ### properties
 
@@ -776,7 +776,7 @@ let box = new DC.Box(position, 20, 30, 40)
 
   - 参数
     - `{Object} style`：样式，详情参考：[BoxGraphics](https://cesium.com/docs/cesiumjs-ref-doc/BoxGraphics.html)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -816,7 +816,7 @@ corridor.setStyle({
 
   - 参数
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - 返回值：`corridor`
+  - 返回值 `corridor`
 
 ### properties
 
@@ -830,7 +830,7 @@ corridor.setStyle({
 
   - 参数
     - `{Object} style`：样式，详情参考：[CorridorGraphics](https://cesium.com/docs/cesiumjs-ref-doc/CorridorGraphics.html)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -860,7 +860,7 @@ corridor.setStyle({
 
   - 参数
     - `{Object} entity`：Cesium 覆盖物
-  - 返回值：`corridor`
+  - 返回值 `corridor`
 
 ## DC.Cylinder
 
@@ -884,7 +884,7 @@ let cylinder = new DC.Cylinder(position, 20, 30, 40)
     - `{Number} length`：长度
     - `{Number} topRadius`：上半径
     - `{Number} bottomRadius`：下半径
-  - 返回值：`cylinder`
+  - 返回值 `cylinder`
 
 ### properties
 
@@ -901,7 +901,7 @@ let cylinder = new DC.Cylinder(position, 20, 30, 40)
 
   - 参数
     - `{Object} style`：样式，详情参考：[CylinderGraphics](https://cesium.com/docs/cesiumjs-ref-doc/CylinderGraphics.html)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -941,7 +941,7 @@ let ellipse = new DC.Ellipse(position, 20, 30)
     - [`{Position} position`](../dc-sdk/#dc-position)：坐标
     - `{Number} semiMajorAxis`：长半轴
     - `{Number} semiMinorAxis`：短半轴
-  - 返回值：`ellipse`
+  - 返回值 `ellipse`
 
 ### properties
 
@@ -957,7 +957,7 @@ let ellipse = new DC.Ellipse(position, 20, 30)
 
   - 参数
     - `{Object} style`：样式，详情参考：[EllipseGraphics](https://cesium.com/docs/cesiumjs-ref-doc/EllipseGraphics.html)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -1002,7 +1002,7 @@ let ellipsoid = new DC.Ellipsoid(position, { x: 30, y: 30, z: 30 })
   - 参数
     - [`{Position} position`](../dc-sdk/#dc-position)：坐标
     - `{Object} radius`：半径，格式是：{x: 30, y: 30, z: 30}
-  - 返回值：`ellipsoid`
+  - 返回值 `ellipsoid`
 
 ### properties
 
@@ -1017,7 +1017,7 @@ let ellipsoid = new DC.Ellipsoid(position, { x: 30, y: 30, z: 30 })
 
   - 参数
     - `{Object} style`：样式，详情参考：[EllipsoidGraphics](https://cesium.com/docs/cesiumjs-ref-doc/EllipsoidGraphics.html)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -1058,7 +1058,7 @@ let plane = new DC.Plane(position, 20, 30, { normal: 'x' })
     - `{Number} width`：宽度
     - `{Number} height`：高度
     - `{Object} plane`：面板格式
-  - 返回值：`plane`
+  - 返回值 `plane`
 
 ```json
 // 面板参数(可选)
@@ -1083,7 +1083,7 @@ let plane = new DC.Plane(position, 20, 30, { normal: 'x' })
 
   - 参数
     - `{Object} style`：样式，详情参考：[PlaneGraphics](https://cesium.com/docs/cesiumjs-ref-doc/PlaneGraphics.html)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -1135,7 +1135,7 @@ let polylineVolume = new DC.PolylineVolume(
   - 参数
     - `{String|Array<Position|Number|String>} positions`：坐标串
     - `{Array} shape`：形状
-  - 返回值：`polylineVolume`
+  - 返回值 `polylineVolume`
 
 ### properties
 
@@ -1150,7 +1150,7 @@ let polylineVolume = new DC.PolylineVolume(
 
   - 参数
     - `{Object} style`：样式，详情参考：[PolylineVolumeGraphics](https://cesium.com/docs/cesiumjs-ref-doc/PolylineVolumeGraphics.html)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -1175,7 +1175,7 @@ let polylineVolume = new DC.PolylineVolume(
 
   - 参数
     - `{Object} entity`：Cesium 覆盖物
-  - 返回值：`polylineVolume`
+  - 返回值 `polylineVolume`
 
 ## DC.Rectangle
 
@@ -1195,7 +1195,7 @@ let rectangle = new DC.Rectangle('-90.0,32.0;-94.0,36.0;')
 
   - 参数
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - 返回值：`rectangle`
+  - 返回值 `rectangle`
 
 ### properties
 
@@ -1209,7 +1209,7 @@ let rectangle = new DC.Rectangle('-90.0,32.0;-94.0,36.0;')
 
   - 参数
     - `{Object} style`：样式，详情参考：[RectangleGraphics](https://cesium.com/docs/cesiumjs-ref-doc/RectangleGraphics.html)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -1252,7 +1252,7 @@ let wall = new DC.Wall('-90.0,32.0,1000;-94.0,36.0,1000;')
 
   - 参数
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - 返回值：`wall`
+  - 返回值 `wall`
 
 ### properties
 
@@ -1266,7 +1266,7 @@ let wall = new DC.Wall('-90.0,32.0,1000;-94.0,36.0,1000;')
 
   - 参数
     - `{Object} style`：样式，详情参考：[WallGraphics](https://cesium.com/docs/cesiumjs-ref-doc/WallGraphics.html)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -1291,7 +1291,7 @@ let wall = new DC.Wall('-90.0,32.0,1000;-94.0,36.0,1000;')
 
   - 参数
     - `{Object} entity`：Cesium 覆盖物
-  - 返回值：`wall`
+  - 返回值 `wall`
 
 ## DC.AttackArrow
 
@@ -1311,7 +1311,7 @@ let attackArrow = new DC.AttackArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
 
   - 参数
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - 返回值：`attackArrow`
+  - 返回值 `attackArrow`
 
 ### properties
 
@@ -1325,7 +1325,7 @@ let attackArrow = new DC.AttackArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
 
   - 参数
     - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ## DC.DoubleArrow
 
@@ -1345,7 +1345,7 @@ let doubleArrow = new DC.DoubleArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
 
   - 参数
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - 返回值：`doubleArrow`
+  - 返回值 `doubleArrow`
 
 ### properties
 
@@ -1359,7 +1359,7 @@ let doubleArrow = new DC.DoubleArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
 
   - 参数
     - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ## DC.FineArrow
 
@@ -1379,7 +1379,7 @@ let fineArrow = new DC.FineArrow('-90.0,32.0;-94.0,36.0')
 
   - 参数
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - 返回值：`fineArrow`
+  - 返回值 `fineArrow`
 
 ### properties
 
@@ -1393,7 +1393,7 @@ let fineArrow = new DC.FineArrow('-90.0,32.0;-94.0,36.0')
 
   - 参数
     - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ## DC.GatheringPlace
 
@@ -1413,7 +1413,7 @@ let gatheringPlace = new DC.GatheringPlace('-90.0,32.0;-94.0,36.0')
 
   - 参数
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - 返回值：`gatheringPlace`
+  - 返回值 `gatheringPlace`
 
 ### properties
 
@@ -1427,7 +1427,7 @@ let gatheringPlace = new DC.GatheringPlace('-90.0,32.0;-94.0,36.0')
 
   - 参数
     - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ## DC.TailedAttackArrow
 
@@ -1447,7 +1447,7 @@ let tailedAttackArrow = new DC.TailedAttackArrow('-90.0,32.0;-94.0,36.0')
 
   - 参数
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - 返回值：`tailedAttackArrow`
+  - 返回值 `tailedAttackArrow`
 
 ### properties
 
@@ -1461,7 +1461,7 @@ let tailedAttackArrow = new DC.TailedAttackArrow('-90.0,32.0;-94.0,36.0')
 
   - 参数
     - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ## DC.ElecEllipsoidPrimitive
 
@@ -1482,7 +1482,7 @@ let elecEllipsoid = new DC.ElecEllipsoidPrimitive('120,20',{x:2000,y:2000:z:2000
   - 参数
     - `{String|Position|Array} center`：中心点
     - `{Object} radius`:球半径
-  - 返回值：`elecEllipsoidPrimitive`
+  - 返回值 `elecEllipsoidPrimitive`
 
 ### properties
 
@@ -1497,7 +1497,7 @@ let elecEllipsoid = new DC.ElecEllipsoidPrimitive('120,20',{x:2000,y:2000:z:2000
 
   - 参数
     - `{Object} style`：样式
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -1525,7 +1525,7 @@ let flowLinePrimitive = new DC.FlowLinePrimitive('120,20;120,30;122,30')
 
   - 参数
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - 返回值：`flowLinePrimitive`
+  - 返回值 `flowLinePrimitive`
 
 ### properties
 
@@ -1539,7 +1539,7 @@ let flowLinePrimitive = new DC.FlowLinePrimitive('120,20;120,30;122,30')
 
   - 参数
     - `{Object} style`：样式
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -1570,7 +1570,7 @@ let scanCirclePrimitive = new DC.ScanCirclePrimitive('120,20', 1000)
   - 参数
     - `{String|Position|Array} position`：圆心
     - `{Number} radius`：半径
-  - 返回值：`scanCirclePrimitive`
+  - 返回值 `scanCirclePrimitive`
 
 ### properties
 
@@ -1585,7 +1585,7 @@ let scanCirclePrimitive = new DC.ScanCirclePrimitive('120,20', 1000)
 
   - 参数
     - `{Object} style`：样式
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -1613,7 +1613,7 @@ let trailLinePrimitive = new DC.TrailLinePrimitive('120,20;120,30;122,30')
 
   - 参数
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - 返回值：`trailLinePrimitive`
+  - 返回值 `trailLinePrimitive`
 
 ### properties
 
@@ -1627,7 +1627,7 @@ let trailLinePrimitive = new DC.TrailLinePrimitive('120,20;120,30;122,30')
 
   - 参数
     - `{Object} style`：样式
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -1664,7 +1664,7 @@ water.setStyle({
   - 参数
     - `{String|Array<Position|Number|String>} positions`：坐标串
     - `{Boolean} asynchronous`:异步创建，默认值：true
-  - 返回值：`waterPrimitive`
+  - 返回值 `waterPrimitive`
 
 ### properties
 
@@ -1678,7 +1678,7 @@ water.setStyle({
 
   - 参数
     - `{Object} style`：样式，详情参考：[PolygonGraphics](https://cesium.com/docs/cesiumjs-ref-doc/PolygonGraphics.html)
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)
@@ -1721,7 +1721,7 @@ let waterPrimitive = new DC.VideoPrimitive('120,20;120,30;122,30', videoEl)
   - 参数
     - `{String|Array<Position|Number|String>} positions`：坐标串
     - `{Element} video`：视频节点
-  - 返回值：`polygon`
+  - 返回值 `polygon`
 
 ### properties
 

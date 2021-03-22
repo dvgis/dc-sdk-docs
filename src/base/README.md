@@ -265,10 +265,10 @@ If you are using a MVVM framework like Vue, do not add viewer, layer, or overlay
 
 - **_constructor(id,[options])_**
 
-  - Parameters
+  - parameters
     - `{String} id`：divId
     - `{Object} options`
-  - Returns：`viewer`
+  - returns `viewer`
 
 ```json
 //options（optional）
@@ -315,9 +315,9 @@ If you are using a MVVM framework like Vue, do not add viewer, layer, or overlay
 
 - **_setOptions(options)_**
 
-  - Parameters
+  - parameters
     - `{Object} options`：属性对象
-  - Returns `this`
+  - returns `this`
 
 ```json
 // options(optional)
@@ -363,34 +363,34 @@ If you are using a MVVM framework like Vue, do not add viewer, layer, or overlay
 
 - **_setPitchRange(min,max)_**
 
-  - Parameters
+  - parameters
     - `{Number} min`：min angel
     - `{Number} max`：max angel
-  - Returns：`this`
+  - returns `this`
 
 - **_limitCameraToGround()_**
 
-  - Returns：`this`
+  - returns `this`
 
 - **_changeSceneMode(sceneMode, [duration])_**
 
-  - Parameters
+  - parameters
     - `{Number} sceneMode`: 2：2D，3：3D，2.5：2.5D
     - `{Number} duration`
-  - Returns：`this`
+  - returns `this`
 
 - **_changeMouseMode(mouseMode)_**
 
-  - Parameters
+  - parameters
     - `{Number} mouseMode`, Refer to：`DC.MouseMode`
-  - Returns：`this`
+  - returns `this`
 
 - **_addBaseLayer(baseLayers,[options])_**
 
-  - Parameters
+  - parameters
     - `{baseLayer|Array<baseLayer>} baseLayers`
     - `{Object} options`
-  - Returns：`this`
+  - returns `this`
 
 ```json
 //options
@@ -402,66 +402,66 @@ If you are using a MVVM framework like Vue, do not add viewer, layer, or overlay
 
 - **_changeBaseLayer(index)_**
 
-  - Parameters
+  - parameters
     - `{Number} index`
-  - Returns：`this`
+  - returns `this`
 
 - **_addTerrain(terrain)_**
 
-  - Parameters
+  - parameters
     - `{Terrain} terrain`
-  - Returns：`this`
+  - returns `this`
 
 - **_changeTerrain(index)_**
 
-  - Parameters
+  - parameters
     - `{Number} index`
-  - Returns：`this`
+  - returns `this`
 
 - **_removeTerrain()_**
 
-  - Returns：`this`
+  - returns `this`
 
 - **_addLayerGroup(layerGroup)_**
 
-  - Parameters
+  - parameters
     - `{LayerGroup} layerGroup`
-  - Returns：`this`
+  - returns `this`
 
 - **_removeLayerGroup(layerGroup)_**
 
-  - Parameters
+  - parameters
     - `{LayerGroup} layerGroup`
-  - Returns：`this`
+  - returns `this`
 
 - **_addLayer(layer)_**
 
-  - Parameters
+  - parameters
     - `{Layer} layer`
-  - Returns：`this`
+  - returns `this`
 
 - **_removeLayer(layer)_**
 
-  - Parameters
+  - parameters
     - `{Layer} layer`
-  - Returns：`this`
+  - returns `this`
 
 - **_getLayer(id)_**
 
-  - Parameters
+  - parameters
     - `{String} id`:layer id
-  - Returns：`layer`
+  - returns `layer`
 
 - **_getLayers()_**
 
-  - Returns：`layer`
+  - returns `layer`
 
 - **_eachLayer(callback, context)_**
 
-  - Parameters
+  - parameters
     - `{Function} callback`
     - `{Object} context`
-  - Returns：`this`
+  - returns `this`
 
   ```js
   viewer.eachLayer((layer) => {})
@@ -469,71 +469,71 @@ If you are using a MVVM framework like Vue, do not add viewer, layer, or overlay
 
 - **_flyTo(target,[duration])_**
 
-  - Parameters
+  - parameters
     - `{VectorLayer|Overlay} target`
     - `{Number} duration`
-  - Returns：`this`
+  - returns `this`
 
 - **_zoomTo(target)_**
 
-  - Parameters
+  - parameters
     - `{VectorLayer|Overlay} target`
-  - Returns：`this`
+  - returns `this`
 
 - **_flyToPosition(position, [completeCallback], [duration])_**
 
-  - Parameters
+  - parameters
     - `{Position} position`
     - `{Function} completeCallback`
     - `{Number} duration`
-  - Returns：`this`
+  - returns `this`
 
 - **_zoomToPosition(position, [completeCallback])_**
 
-  - Parameters
+  - parameters
     - `{DC.Position} position`
     - `{Function} completeCallback`
-  - Returns：`this`
+  - returns `this`
 
 - **_on(type, callback, [context])_**
 
-  - Parameters
+  - parameters
     - `{Object} type`
     - `{Function} callback`
     - `{Object} context`
-  - Returns：`this`
+  - returns `this`
 
 - **_once(type, callback, [context])_**
 
-  - Parameters
+  - parameters
     - `{Object} type`
     - `{Function} callback`
     - `{Object} context`
-  - Returns：`this`
+  - returns `this`
 
 - **_off(type, callback, [context])_**
 
-  - Parameters
+  - parameters
     - `{Object} type`
     - `{Function} callback`
     - `{Object} context`
-  - Returns：`this`
+  - returns `this`
 
 - **_destroy()_**
 
-  - Returns：`this`
+  - returns `this`
 
 - **_exportScene([name])_**
 
-  - Parameters
+  - parameters
     - `{String} name`
-  - Returns：`this`
+  - returns `this`
 
 - **_use(plugin)_**
 
-  - Parameters
+  - parameters
     - `{Object} plugin`
-  - Returns：`this`
+  - returns `this`
 
   ```js
   let plugin = {
@@ -567,32 +567,32 @@ popup.setContent('<div></div>')
 
 - **_setPosition(position)_**
 
-  - Parameters
+  - parameters
     - `{Cartesian3} position`: World Coordinates
-  - Returns：`this`
+  - returns `this`
 
 - **_setContent(content)_**
 
-  - Parameters
+  - parameters
     - `{String|Element} content`
-  - Returns：`this`
+  - returns `this`
 
 - **_setWrapper(wrapper)_**
 
-  - Parameters
+  - parameters
     - `{Element} wrapper`**_`(Templates for MVVM frameworks in general)`_**
-  - Returns：`this`
+  - returns `this`
 
 - **_showAt(position, content)_**
 
-  - Parameters
+  - parameters
     - `{Cartesian3} position`
     - `{String|Element} content`
-  - Returns：`this`
+  - returns `this`
 
 - **_hide()_**
 
-  - Returns：`this`
+  - returns `this`
 
 ## ContextMenu
 
@@ -635,10 +635,10 @@ tooltip.showAt({ x: 100, y: 100 }, 'test')
 
 - **_showAt(position,content)_**
 
-  - Parameters
+  - parameters
     - `{Cartesian2} position`: Screen Coordinates
     - `{String|Element} content`
-  - Returns：`this`
+  - returns `this`
 
 ## MapSplit
 
@@ -659,10 +659,10 @@ viewer.mapSplit.addBaseLayer(baseLayer_elc, -1)
 
 - **_addBaseLayer(baseLayer,splitDirection)_**
 
-  - Parameters
+  - parameters
     - `{BaseLayer} baseLayer`
     - `{Number} splitDirection`,-1：left，0：none，1：right
-  - Returns：`this`
+  - returns `this`
 
 ## Compass
 
@@ -750,9 +750,9 @@ scene.skyBox = new DC.SkyBox({
 
 - **_constructor(id)_**
 
-  - Parameters
+  - parameters
     - `{Object} options`
-  - Returns：`skyBox`
+  - returns `skyBox`
 
 ```json
 //options(optional)
@@ -785,14 +785,14 @@ let position2 = DC.Position.fromCoordArray([120, 22, 102])
 
 - **_constructor(lng,lat,[alt],[heading],[pitch],[roll])_**
 
-  - Parameters
+  - parameters
     - `{Number} lng`
     - `{Number} lat`
     - `{Number} alt`
     - `{Number} heading`
     - `{Number} pitch`
     - `{Number} roll`
-  - Returns：`position`
+  - returns `position`
 
 ### properties
 
@@ -807,49 +807,49 @@ let position2 = DC.Position.fromCoordArray([120, 22, 102])
 
 - **_serialize()_**
 
-  - Returns：`string`
+  - returns `string`
 
 - **_copy()_**
 
-  - Returns：`position`
+  - returns `position`
 
 - **_toString()_**
 
-  - Returns：`string`
+  - returns `string`
 
 - **_toArray()_**
 
-  - Returns：`array`
+  - returns `array`
 
 - **_toObject()_**
 
-  - Returns：`Object`
+  - returns `Object`
 
 ### static methods
 
 - **_fromString(str)_**
 
-  - Parameters
+  - parameters
     - `{String} str`
-  - Returns：`position`
+  - returns `position`
 
 - **_fromArray(array)_**
 
-  - Parameters
+  - parameters
     - `{Array} array`
-  - Returns：`position`
+  - returns `position`
 
 - **_fromObject(obj)_**
 
-  - Parameters
+  - parameters
     - `{Object} obj`
-  - Returns：`position`
+  - returns `position`
 
 - **_deserialize(valStr)_**
 
-  - Parameters
+  - parameters
     - `{String} valStr`
-  - Returns：`position`
+  - returns `position`
 
 ## DC.Color
 
@@ -894,13 +894,13 @@ let date = DC.JulianDate.now()
 
 - **_now()_**
 
-  - Returns：`date`
+  - returns `date`
 
 - **_fromDate(date)_**
 
-  - Parameters
+  - parameters
     - `{Date} date`
-  - Returns `date`
+  - returns `date`
 
 [JulianDate](https://cesium.com/docs/cesiumjs-ref-doc/JulianDate.html)
 
@@ -945,33 +945,33 @@ let position = DC.P.parsePosition('123,32,0')
 
 - **_parsePosition(position)_**
 
-  - Parameters
+  - parameters
     - `{String|Array|Position} position`
-  - Returns：`position`
+  - returns `position`
 
 - **_parsePositions(positions)_**
 
-  - Parameters
+  - parameters
     - `{String|Array} positions`
-  - Returns：`array`
+  - returns `array`
 
 - **_parsePointCoordToArray(position)_**
 
-  - Parameters
+  - parameters
     - `{String|Position} position`
-  - Returns：`array`
+  - returns `array`
 
 - **_parsePolylineCoordToArray(positions)_**
 
-  - Parameters
+  - parameters
     - `{String|Array} positions`
-  - Returns：`array`
+  - returns `array`
 
 - **_parsePolygonCoordToArray(positions)_**
 
-  - Parameters
+  - parameters
     - `{String|Array} positions`
-  - Returns：`array`
+  - returns `array`
 
 ## DC.Transform
 
@@ -985,59 +985,59 @@ let cartesian3 = DC.T.transformWGS84ToCartesian(new DC.Position(120, 20))
 
 - **_transformCartesianToWGS84(cartesian)_**
 
-  - Parameters
+  - parameters
     - `{Cartesian3} cartesian`
-  - Returns：`position`
+  - returns `position`
 
 - **_transformWGS84ToCartesian(position)_**
 
-  - Parameters
+  - parameters
     - `{Position} position`
-  - Returns：`cartesian`
+  - returns `cartesian`
 
 - **_transformWGS84ToCartographic(position)_**
 
-  - Parameters
+  - parameters
     - `{Position} position`
-  - Returns：`cartographic`
+  - returns `cartographic`
 
 - **_transformCartesianArrayToWGS84Array(cartesianArr)_**
 
-  - Parameters
+  - parameters
     - `{Array<cartesian3>} cartesianArr`
-  - Returns：`array`
+  - returns `array`
 
 - **_transformWGS84ArrayToCartesianArray(WGS84Arr)_**
 
-  - Parameters
+  - parameters
     - `{Array<cartesian3>} WGS84Arr`
-  - Returns：`array`
+  - returns `array`
 
 - **_transformWGS84ToMercator(position)_**
 
-  - Parameters
+  - parameters
     - `{Position} position`
-  - Returns：`position`
+  - returns `position`
 
 - **_transformMercatorToWGS84(position)_**
 
-  - Parameters
+  - parameters
     - `{Position} position`
-  - Returns：`position`
+  - returns `position`
 
 - **_transformWindowToWGS84(position,viewer)_**
 
-  - Parameters
+  - parameters
     - `{Object} position`,format:`{x:1,y:1}`
     - `{Viewer} viewer`
-  - Returns：`position`
+  - returns `position`
 
 - **_transformWGS84ToWindow(position,viewer)_**
 
-  - Parameters
+  - parameters
     - `{Position} position`
     - `{Viewer} viewer`
-  - Returns：`Object`
+  - returns `Object`
 
 ## DC.CoordTransform
 
@@ -1051,31 +1051,31 @@ let point = DC.CoordTransform.BD09ToGCJ02(120, 20)
 
 - **_BD09ToGCJ02(lng, lat)_**
 
-  - Parameters
+  - parameters
     - `{Number} lng`
     - `{Number} lat`
-  - Returns：`[]`
+  - returns `[]`
 
 - **_GCJ02ToBD09(lng, lat)_**
 
-  - Parameters
+  - parameters
     - `{Number} lng`
     - `{Number} lat`
-  - Returns：`[]`
+  - returns `[]`
 
 - **_WGS84ToGCJ02(lng, lat)_**
 
-  - Parameters
+  - parameters
     - `{Number} lng`
     - `{Number} lat`
-  - Returns：`[]`
+  - returns `[]`
 
 - **_GCJ02ToWGS84(lng, lat)_**
 
-  - Parameters
+  - parameters
     - `{Number} lng`
     - `{Number} lat`
-  - Returns：`[]`
+  - returns `[]`
 
 ## DC.Math
 
@@ -1083,51 +1083,51 @@ let point = DC.CoordTransform.BD09ToGCJ02(120, 20)
 
 - **_area(positions)_**
 
-  - Parameters
+  - parameters
     - `{Array<Position>} positions`
-  - Returns：`number`
+  - returns `number`
 
 - **_bounds(positions , expand)_**
 
-  - Parameters
+  - parameters
     - `{Array<Position>} positions`
     - `{Number}} expand`:0~1
-  - Returns：`object`
+  - returns `object`
 
 - **_mid(startPosition , endPosition)_**
 
-  - Parameters
+  - parameters
     - `{Position} startPosition`
     - `{Position} endPosition`
-  - Returns：`position`
+  - returns `position`
 
 - **_center(positions)_**
 
-  - Parameters
+  - parameters
     - `{Array<Position>} positions`
-  - Returns：`position`
+  - returns `position`
 
 - **_distance(positions)_**
 
-  - Parameters
+  - parameters
     - `{Array<Position>} positions`
-  - Returns：`number`
+  - returns `number`
 
 - **_heading(startPosition, endPosition)_**
 
-  - Parameters
+  - parameters
     - `{Position} startPosition`
     - `{Position} endPosition`
-  - Returns：`number`
+  - returns `number`
 
 - **_parabola(startPosition, endPosition,height,count)_**
 
-  - Parameters
+  - parameters
     - `{Position} startPosition`
     - `{Position} endPosition`
     - `{Number} height`
     - `{Number} count`
-  - Returns：`Array`
+  - returns `Array`
 
 > [more](https://cesium.com/docs/cesiumjs-ref-doc/Math.html)
 
@@ -1137,16 +1137,16 @@ let point = DC.CoordTransform.BD09ToGCJ02(120, 20)
 
 - **_uuid([prefix])_**
 
-  - Parameters
+  - parameters
     - `{String} prefix`
-  - Returns：`string`
+  - returns `string`
 
 - **_merge(dest, ...sources)_**
 
-  - Parameters
+  - parameters
     - `{Object} dest`
     - `{Object|Array} sources`
-  - Returns：`object`
+  - returns `object`
 
 - **_emptyImageUrl()_**
 
@@ -1160,64 +1160,64 @@ let point = DC.CoordTransform.BD09ToGCJ02(120, 20)
 
 - **_get(id)_**
 
-  - Parameters
+  - parameters
     - `{String} id`
-  - Returns：`Element`
+  - returns `Element`
 
 - **_create(tagName, className, [container])_**
 
-  - Parameters
+  - parameters
     - `{String} tagName`
     - `{String} className`
     - `{Element} [container]`
-  - Returns：`Element`
+  - returns `Element`
 
 - **_addClass(el, name)_**
 
-  - Parameters
+  - parameters
     - `{Element} el`
     - `{String} className`
 
 - **_removeClass(el, name)_**
 
-  - Parameters
+  - parameters
     - `{Element} el`
     - `{String} className`
 
 - **_addClass(el, name)_**
 
-  - Parameters
+  - parameters
     - `{Element} el`
     - `{String} className`
 
 - **_createSvg(width, height, path, [container])_**
 
-  - Parameters
+  - parameters
     - `{Number} width`
     - `{Number} height`
     - `{String} path`
     - `{Element} [container]`
-  - Returns：`svg`
+  - returns `svg`
 
 - **_parseDom(domStr, [withWrapper], [className])_**
 
-  - Parameters
+  - parameters
     - `{String} domStr`
     - `{Boolean} withWrapper`
     - `{String} className`
-  - Returns：`Element | Nodes`
+  - returns `Element | Nodes`
 
 - **_enterFullscreen(el)_**
 
-  - Parameters
+  - parameters
     - `{Element} el`
 
 - **_exitFullscreen()_**
 
 - **_createVideo(url, className, [container])_**
 
-  - Parameters
+  - parameters
     - `{String} url`
     - `{String} className`
     - `{Element} [container]`
-  - Returns：`Element | Nodes`
+  - returns `Element | Nodes`

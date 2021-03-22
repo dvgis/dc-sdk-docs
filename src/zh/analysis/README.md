@@ -23,7 +23,7 @@ viewer.addLayer(layer)
 
   - 参数
     - `{String} id`：图层唯一标识
-  - 返回值：`videoLayer`
+  - 返回值 `videoLayer`
 
 ## DC.CameraVideo
 
@@ -48,7 +48,7 @@ layer.addOverlay(cameraVideo)
     - `{Position} position`：坐标
     - `{Element} video`：视频节点
     - `{String} [maskUrl]`: 羽化图片地址
-  - 返回值：`cameraVideo`
+  - 返回值 `cameraVideo`
 
 ### properties
 
@@ -64,7 +64,7 @@ layer.addOverlay(cameraVideo)
 
   - 参数
     - `{Boolean} show`：样式
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_setStyle(style)_**
 
@@ -72,7 +72,7 @@ layer.addOverlay(cameraVideo)
 
   - 参数
     - `{Object} style`：样式
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 // 样式参数(可选)

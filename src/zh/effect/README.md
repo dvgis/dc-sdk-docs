@@ -23,7 +23,7 @@ viewer.use(weather)
 
   DC.Weather 构造函数
 
-  - 返回值：`weather`
+  - 返回值 `weather`
 
 ### properties
 
@@ -114,7 +114,7 @@ viewer.use(effect)
 
   DC.Effect 效果函数
 
-  - 返回值：`effect`
+  - 返回值 `effect`
 
 ### properties
 
@@ -263,13 +263,13 @@ viewer.effect.silhouette.enable = true
 
   开始动画
 
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_stop()_**
 
   停止动画
 
-  - 返回值：`this`
+  - 返回值 `this`
 
 ## DC.AroundPoint
 
@@ -284,18 +284,18 @@ aroundPoint.start()
 
 ### creation
 
-- **_constructor(viewer,position,options)_**
+- **_constructor(viewer,position,[options])_**
 
   DC.AroundPoint 构造函数
 
   - 参数
     - `{Viewer} viewer`：3D 场景
     - `{Position|String|Array} position`：点位
-    - `{Object} options`：配置参数
-  - 返回值：`aroundPoint`
+    - `{Object} options`：options
+  - 返回值 `aroundPoint`
 
 ```json
-//配置参数（可选）
+//options（optional）
 {
   "heading": 0, //偏移角度
   "pitch": 0, //翻转角度
@@ -319,17 +319,17 @@ aroundView.start()
 
 ### creation
 
-- **_constructor(viewer,options)_**
+- **_constructor(viewer,[options])_**
 
   DC.AroundView 构造函数
 
   - 参数
     - `{Viewer} viewer`：3D 场景
-    - `{Object} options`：配置参数
-  - 返回值：`aroundView`
+    - `{Object} options`：options
+  - 返回值 `aroundView`
 
 ```json
-//配置参数（可选）
+//options（optional）
 {
   "heading": 0, //偏移角度
   "duration": 0, //间隔，单位：秒，当此值大于0时，callback才会生效
@@ -360,10 +360,10 @@ circleScan.start()
     - `{DC.Position} position`：位置
     - `{Number} radius`：半径
     - `{Object} options`：属性
-  - 返回值：`circleScan`
+  - 返回值 `circleScan`
 
 ```json
-// 属性参数（可选）
+// 属性参数（optional）
 {
   "color": DC.Color.BLUE, // 颜色
   "speed": 5 // 速度
@@ -384,17 +384,17 @@ circleScan.start()
 
 ### creation
 
-- **_constructor(viewer,options)_**
+- **_constructor(viewer,[options])_**
 
   DC.Flying 构造函数
 
   - 参数
     - `{Viewer} viewer`：场景
-    - `{Object} options`：配置参数
-  - 返回值：`flying`
+    - `{Object} options`：options
+  - 返回值 `flying`
 
 ```json
-// 属性参数（可选）
+// 属性参数（optional）
 {
   "loop": false, //是否循环,
   "dwellTime": 3, //驻留时间
@@ -413,19 +413,19 @@ circleScan.start()
 
   开始动画
 
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_pause()_**
 
   暂停
 
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_restore()_**
 
   继续
 
-  - 返回值：`this`
+  - 返回值 `this`
 
 ## DC.GlobeRotate
 
@@ -450,11 +450,11 @@ globeRotate.start()
 
   - 参数
     - `{DC.Viewer} viewer`：3D 场景
-    - `{Object} options`：配置参数
-  - 返回值：`globeRotate`
+    - `{Object} options`：options
+  - 返回值 `globeRotate`
 
 ```json
-//配置参数（可选）
+//options（optional）
 {
   "speed": 12 * 1000, //速度
   "duration": 0, //持续时间,当此值大于0时，callback才会生效
@@ -485,10 +485,10 @@ radarScan.start()
     - `{DC.Position} position`：位置
     - `{Number} radius`：半径
     - `{Object} options`：属性
-  - 返回值：`radarScan`
+  - 返回值 `radarScan`
 
 ```json
-// 属性参数（可选）
+// 属性参数（optional）
 {
   "color": DC.Color.BLUE, // 颜色
   "speed": 5 // 速度
@@ -513,7 +513,7 @@ let rc = new DC.RoamingController(viewer)
 
   - 参数
     - `{Viewer} viewer`：3D 场景
-  - 返回值：`roamingController`
+  - 返回值 `roamingController`
 
 ### properties
 
@@ -528,25 +528,25 @@ let rc = new DC.RoamingController(viewer)
 
   - 参数
     - `{Date} startTime`：开始时间
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_play()_**
 
   播放所有路径
 
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_pause()_**
 
   暂停所有路径
 
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_restore()_**
 
   继续播放所有路径
 
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_changeSpeed(speed)_**
 
@@ -554,7 +554,7 @@ let rc = new DC.RoamingController(viewer)
 
   - 参数
     - `{Number} speed`：速度
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_addPath(path)_**
 
@@ -562,7 +562,7 @@ let rc = new DC.RoamingController(viewer)
 
   - 参数
     - `{DC.RoamingPath} path`：路径
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_getPath(id)_**
 
@@ -570,7 +570,7 @@ let rc = new DC.RoamingController(viewer)
 
   - 参数
     - `{String} id`：唯一标识
-  - 返回值：`path`
+  - 返回值 `path`
 
 - **_removePath(path)_**
 
@@ -578,13 +578,13 @@ let rc = new DC.RoamingController(viewer)
 
   - 参数
     - `{RoamingPath} path`：路径
-  - 返回值：`path`
+  - 返回值 `path`
 
 - **_clearPath()_**
 
   移除所有路径
 
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_trackedPath(path, viewMode, viewOption)_**
 
@@ -594,10 +594,10 @@ let rc = new DC.RoamingController(viewer)
     - `{RoamingPath} path`：路径
     - `{String} viewMode`：相机模式：FP:第一视角，TP：第三视角，TRACKED：跟踪视角，FREE：自由视角
     - `{String} viewOption`：配置信息
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
-// 属性参数（可选）
+// 属性参数（optional）
 {
   "alt": 0, // 高度
   "pitch": 0, // 俯仰角，第一视角有效
@@ -611,13 +611,13 @@ let rc = new DC.RoamingController(viewer)
 
   - 参数
     - `{RoamingPath} path`：路径
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_releaseCamera()_**
 
   释放相机
 
-  - 返回值：`this`
+  - 返回值 `this`
 
 ## DC.RoamingPath
 
@@ -633,7 +633,7 @@ let path = new DC.RoamingPath('path1', 20， (position,isLast) => {}, {
 
 ### creation
 
-- **_constructor(id, duration, callback, options)_**
+- **_constructor(id, duration, [callback], [options])_**
 
   DC.RoamingPath 构造函数
 
@@ -641,11 +641,11 @@ let path = new DC.RoamingPath('path1', 20， (position,isLast) => {}, {
     - `{String} id`：唯一标识
     - `{Number} duration`：间隔时间，单位：秒
     - `{Function} callback`：每一个点位到达回调函数，参数有：position(位置信息),isLast(是否为最后的点位)
-    - `{Object} options`：配置参数
-  - 返回值：`roamingPath`
+    - `{Object} options`：options
+  - 返回值 `roamingPath`
 
 ```json
-//配置参数（可选）
+//options（optional）
 {
   "showPath": false, //显示路径
   "pathWidth": 1, //路径宽度
@@ -669,7 +669,7 @@ let path = new DC.RoamingPath('path1', 20， (position,isLast) => {}, {
 
   - 参数
     - `{String} mode`：模式，speed:匀速，distance:根据距离设置时间
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_setModel(modelUrl,style)_**
 
@@ -678,7 +678,7 @@ let path = new DC.RoamingPath('path1', 20， (position,isLast) => {}, {
   - 参数
     - `{String} modelPath`：模型路径
     - `{Object} style`：样式，详情参考：[DC.Model](../dc-sdk/#dc-model)
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_setBillboard(icon,style)_**
 
@@ -687,7 +687,7 @@ let path = new DC.RoamingPath('path1', 20， (position,isLast) => {}, {
   - 参数
     - `{String} icon`：图标路径
     - `{Object} style`：样式，参考：[DC.Billboard](../dc-sdk/#dc-billboard)
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_setLabel(text,style)_**
 
@@ -696,7 +696,7 @@ let path = new DC.RoamingPath('path1', 20， (position,isLast) => {}, {
   - 参数
     - `{String} text`：文本
     - `{Object} style`：样式，参考：[DC.label](../dc-sdk/#dc-label)
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_setPositions(positions)_** `deprecated`
 
@@ -704,4 +704,4 @@ let path = new DC.RoamingPath('path1', 20， (position,isLast) => {}, {
 
   - 参数
     - `{String|Array<Position|Number|String>} positions`：坐标串
-  - 返回值：`this`
+  - 返回值 `this`

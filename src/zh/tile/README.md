@@ -30,7 +30,7 @@ viewer.addBaseLayer(baseLayer, {
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`baseLayer`
+  - 返回值 `baseLayer`
 
 - **_createBaiduImageryLayer(options)_**
 
@@ -38,7 +38,7 @@ viewer.addBaseLayer(baseLayer, {
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`baseLayer`
+  - 返回值 `baseLayer`
 
 - **_createGoogleImageryLayer(options)_**
 
@@ -46,7 +46,7 @@ viewer.addBaseLayer(baseLayer, {
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`baseLayer`
+  - 返回值 `baseLayer`
 
 - **_createTdtImageryLayer(options)_**
 
@@ -54,7 +54,7 @@ viewer.addBaseLayer(baseLayer, {
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`baseLayer`
+  - 返回值 `baseLayer`
 
 - **_createTencentImageryLayer(options)_**
 
@@ -62,7 +62,7 @@ viewer.addBaseLayer(baseLayer, {
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`baseLayer`
+  - 返回值 `baseLayer`
 
 - **_createArcGisImageryLayer(options)_**
 
@@ -70,7 +70,7 @@ viewer.addBaseLayer(baseLayer, {
 
   - 参数
     - `{Object} options`：属性，详情参考 [ArcGis](https://cesium.com/docs/cesiumjs-ref-doc/ArcGisMapServerImageryProvider.html#.ConstructorOptions)
-  - 返回值：`baseLayer`
+  - 返回值 `baseLayer`
 
 - **_createSingleTileImageryLayer(options)_**
 
@@ -78,7 +78,7 @@ viewer.addBaseLayer(baseLayer, {
 
   - 参数
     - `{Object} options`：属性，详情参考 [Single](https://cesium.com/docs/cesiumjs-ref-doc/SingleTileImageryProvider.html#.ConstructorOptions)
-  - 返回值：`baseLayer`
+  - 返回值 `baseLayer`
 
 - **_createWMSImageryLayer(options)_**
 
@@ -86,7 +86,7 @@ viewer.addBaseLayer(baseLayer, {
 
   - 参数
     - `{Object} options`：属性，详情参考 [WMS](https://cesium.com/docs/cesiumjs-ref-doc/WebMapServiceImageryProvider.html#.ConstructorOptions)
-  - 返回值：`baseLayer`
+  - 返回值 `baseLayer`
 
 - **_createWMTSImageryLayer(options)_**
 
@@ -94,7 +94,7 @@ viewer.addBaseLayer(baseLayer, {
 
   - 参数
     - `{Object} options`：属性，详情参考 [WMTS](https://cesium.com/docs/cesiumjs-ref-doc/WebMapTileServiceImageryProvider.html#.ConstructorOptions)
-  - 返回值：`baseLayer`
+  - 返回值 `baseLayer`
 
 - **_createXYZImageryLayer(options)_**
 
@@ -102,7 +102,7 @@ viewer.addBaseLayer(baseLayer, {
 
   - 参数
     - `{Object} options`：属性，详情参考 [X/Y/Z](https://cesium.com/docs/cesiumjs-ref-doc/UrlTemplateImageryProvider.html#.ConstructorOptions)
-  - 返回值：`baseLayer`
+  - 返回值 `baseLayer`
 
 - **_createCoordImageryLayer(options)_**
 
@@ -110,7 +110,7 @@ viewer.addBaseLayer(baseLayer, {
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`baseLayer`
+  - 返回值 `baseLayer`
 
 - **_createImageryLayer(type, options)_**
 
@@ -119,7 +119,7 @@ viewer.addBaseLayer(baseLayer, {
   - 参数
     - `{String} type`：类型，参考：DC.ImageryType
     - `{Object} options`：属性
-  - 返回值：`baseLayer`
+  - 返回值 `baseLayer`
 
 ```json
 //属性参数(可选)
@@ -157,7 +157,7 @@ viewer.addTerrain(terrain)
 
   创建默认地形
 
-  - 返回值：`terrain`
+  returns `terrain`
 
 - **_createUrlTerrain(options)_**
 
@@ -165,7 +165,7 @@ viewer.addTerrain(terrain)
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`terrain`
+  - 返回值 `terrain`
 
 - **_createGoogleTerrain(options)_**
 
@@ -173,7 +173,7 @@ viewer.addTerrain(terrain)
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`terrain`
+  - 返回值 `terrain`
 
 - **_createArcgisTerrain(options)_**
 
@@ -181,7 +181,7 @@ viewer.addTerrain(terrain)
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`terrain`
+  - 返回值 `terrain`
 
 - **_createVRTerrain(options)_**
 
@@ -189,7 +189,7 @@ viewer.addTerrain(terrain)
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`terrain`
+  - 返回值 `terrain`
 
 - **_createTerrain(type，options)_**
 
@@ -198,7 +198,7 @@ viewer.addTerrain(terrain)
   - 参数
     - `{String} type`：类型，参考：DC.TerrainType
     - `{Object} options`：属性
-  - 返回值：`terrain`
+  - 返回值 `terrain`
 
 ```json
 //属性参数（可选）

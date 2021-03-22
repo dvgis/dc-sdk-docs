@@ -263,14 +263,14 @@ global.viewer = viewer // 添加到全局变量
 
 ### creation
 
-- **_constructor(id,options)_**
+- **_constructor(id,[options])_**
 
   DC.Viewer 构造函数
 
   - 参数
     - `{String} id`：容器 ID
     - `{Object} options`：属性
-  - 返回值：`viewer`
+  - 返回值 `viewer`
 
 ```json
 //属性参数（可选）
@@ -321,7 +321,7 @@ global.viewer = viewer // 添加到全局变量
 
   - 参数
     - `{Object} options`：属性对象
-  - 返回值：`this`
+      - 返回值 `this`
 
 ```json
 // 属性参数(可选)
@@ -374,13 +374,13 @@ global.viewer = viewer // 添加到全局变量
   - 参数
     - `{Number} min`：最小角度
     - `{Number} max`：最大角度
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_limitCameraToGround()_**
 
   设置限制相机到地下
 
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_changeSceneMode(sceneMode, duration)_**
 
@@ -389,7 +389,7 @@ global.viewer = viewer // 添加到全局变量
   - 参数
     - `{Number} sceneMode`：场景模式 ，2：2D，3：3D，2.5：2.5D
     - `{Number} duration`：间隔时间
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_changeMouseMode(mouseMode)_**
 
@@ -397,7 +397,7 @@ global.viewer = viewer // 添加到全局变量
 
   - 参数
     - `{Number} mouseMode`：鼠标模式，详情参考：`DC.MouseMode`
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_addBaseLayer(baseLayers,options)_**
 
@@ -406,7 +406,7 @@ global.viewer = viewer // 添加到全局变量
   - 参数
     - `{baseLayer|Array<baseLayer>} baseLayers`：地图
     - `{Object} options`：属性
-  - 返回值：`this`
+  - 返回值 `this`
 
 ```json
 //属性参数
@@ -422,7 +422,7 @@ global.viewer = viewer // 添加到全局变量
 
   - 参数
     - `{Number} index`：地图索引
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_addTerrain(terrain)_**
 
@@ -430,7 +430,7 @@ global.viewer = viewer // 添加到全局变量
 
   - 参数
     - `{Terrain} terrain`：地形
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_changeTerrain(index)_**
 
@@ -438,13 +438,13 @@ global.viewer = viewer // 添加到全局变量
 
   - 参数
     - `{Number} index`：地形索引
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_removeTerrain()_**
 
   移除地形
 
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_addLayerGroup(layerGroup)_**
 
@@ -452,7 +452,7 @@ global.viewer = viewer // 添加到全局变量
 
   - 参数
     - `{LayerGroup} layerGroup`：图层组
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_removeLayerGroup(layerGroup)_**
 
@@ -460,7 +460,7 @@ global.viewer = viewer // 添加到全局变量
 
   - 参数
     - `{LayerGroup} layerGroup`：图层组
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_addLayer(layer)_**
 
@@ -468,7 +468,7 @@ global.viewer = viewer // 添加到全局变量
 
   - 参数
     - `{Layer} layer`：图层
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_removeLayer(layer)_**
 
@@ -476,7 +476,7 @@ global.viewer = viewer // 添加到全局变量
 
   - 参数
     - `{Layer} layer`：图层
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_getLayer(id)_**
 
@@ -484,13 +484,13 @@ global.viewer = viewer // 添加到全局变量
 
   - 参数
     - `{String} id`：图层 ID
-  - 返回值：`layer`
+  - 返回值 `layer`
 
 - **_getLayers()_**
 
   获取所有图层，不包括地图
 
-  - 返回值：`layer`
+  - 返回值 `layer`
 
 - **_eachLayer(method, context)_**
 
@@ -499,7 +499,7 @@ global.viewer = viewer // 添加到全局变量
   - 参数
     - `{Function} method`：回调函数
     - `{Object} context`：上下文，默认为 this
-  - 返回值：`this`
+  - 返回值 `this`
 
   ```js
   viewer.eachLayer((layer) => {})
@@ -512,7 +512,7 @@ global.viewer = viewer // 添加到全局变量
   - 参数
     - `{VectorLayer|Overlay} target` ：目标
     - `{Number} duration`：飞到位置时间，单位：秒
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_zoomTo(target)_**
 
@@ -520,7 +520,7 @@ global.viewer = viewer // 添加到全局变量
 
   - 参数
     - `{VectorLayer|Overlay} target` ：目标
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_flyToPosition(position, completeCallback, duration)_**
 
@@ -530,7 +530,7 @@ global.viewer = viewer // 添加到全局变量
     - `{Position} position`：位置
     - `{Function} completeCallback`：飞完之后触发的回调
     - `{Number} duration`：飞到位置时间，单位：秒
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_zoomToPosition(position, completeCallback)_**
 
@@ -539,7 +539,7 @@ global.viewer = viewer // 添加到全局变量
   - 参数
     - `{DC.Position} position`：位置
     - `{Function} completeCallback`：缩放完成后触发的回调
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_on(type, callback, context)_**
 
@@ -549,7 +549,7 @@ global.viewer = viewer // 添加到全局变量
     - `{Object} type` ：订阅类型
     - `{Function} callback` ：订阅回调
     - `{Object} context` ：上下文
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_once(type, callback, context)_**
 
@@ -559,7 +559,7 @@ global.viewer = viewer // 添加到全局变量
     - `{Object} type` ：订阅类型
     - `{Function} callback` ：订阅回调
     - `{Object} context` ：上下文
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_off(type, callback, context)_**
 
@@ -569,13 +569,13 @@ global.viewer = viewer // 添加到全局变量
     - `{Object} type` ：订阅类型
     - `{Function} callback` ：订阅回调
     - `{Object} context` ：上下文
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_destroy()_**
 
   销毁三维场景
 
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_exportScene(name)_**
 
@@ -583,7 +583,7 @@ global.viewer = viewer // 添加到全局变量
 
   - 参数
     - `{String} name` ：名称，默认为 scene
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_use(plugin)_**
 
@@ -591,7 +591,7 @@ global.viewer = viewer // 添加到全局变量
 
   - 参数
     - `{Object} plugin` ：插件
-  - 返回值：`this`
+  - 返回值 `this`
 
   ```js
   let plugin = {
@@ -617,7 +617,7 @@ popup.setContent('<div></div>')
 - `{Object} config`：配置 **_`writeOnly`_**
 
 ```json
-// 配置参数（可选）
+// 配置（可选）
 // 配置后会影响全局的popup的显示样式，请慎重。
 {
   "position": "center", // popup的位于鼠标的点击位置的方向,有：center，left ，right
@@ -633,7 +633,7 @@ popup.setContent('<div></div>')
 
   - 参数
     - `{Cartesian3} position`：世界坐标
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_setContent(content)_**
 
@@ -641,7 +641,7 @@ popup.setContent('<div></div>')
 
   - 参数
     - `{String|Element} content`：内容
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_setWrapper(wrapper)_**
 
@@ -649,7 +649,7 @@ popup.setContent('<div></div>')
 
   - 参数
     - `{Element} wrapper`：容器 **_`(一般用于 MVVM 框架的模板)`_**
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_showAt(position, content)_**
 
@@ -658,13 +658,13 @@ popup.setContent('<div></div>')
   - 参数
     - `{Cartesian3} position`：世界坐标
     - `{String|Element} content`：内容
-  - 返回值：`this`
+  - 返回值 `this`
 
 - **_hide()_**
 
   隐藏气泡窗口
 
-  - 返回值：`this`
+  - 返回值 `this`
 
 ## ContextMenu
 
@@ -716,7 +716,7 @@ tooltip.showAt({ x: 100, y: 100 }, '测试')
   - 参数
     - `{Cartesian2} position`：屏幕坐标
     - `{String|Element} content`：内容
-  - 返回值：`this`
+  - 返回值 `this`
 
 ## MapSplit
 
@@ -737,14 +737,14 @@ viewer.mapSplit.addBaseLayer(baseLayer_elc, -1)
 
 ### methods
 
-- **_addBaseLayer(baseLayer,splitDirection)_**
+- **_addBaseLayer(baseLayer,[splitDirection])_**
 
   添加地图
 
   - 参数
     - `{BaseLayer} baseLayer`：地图
     - `{Number} splitDirection`：分割方向，-1：左，0：无，1：右
-  - 返回值：`this`
+  - 返回值 `this`
 
 ## Compass
 
@@ -848,10 +848,10 @@ scene.skyBox = new DC.SkyBox({
 
   - 参数
     - `{Object} options`：配置
-  - 返回值：`skyBox`
+  - 返回值 `skyBox`
 
 ```json
-//配置参数(可选)
+//options(可选)
 {
   "sources": {}, // 六个面的贴图
   "show": true, //显示
@@ -892,7 +892,7 @@ let position2 = DC.Position.fromCoordArray([120, 22, 102])
     - `{Number} heading`：偏航角度，可能其他框架作 yaw，表示绕 Z 轴旋转。默认：0
     - `{Number} pitch`：俯仰角度，表示绕 Y 轴旋转。默认：0
     - `{Number} roll`：翻转角度，表示绕 X 轴旋转。默认：0
-  - 返回值：`position`
+  - 返回值 `position`
 
 ### properties
 
@@ -909,31 +909,31 @@ let position2 = DC.Position.fromCoordArray([120, 22, 102])
 
   序列化
 
-  - 返回值：`string`
+  - 返回值 `string`
 
 - **_copy()_**
 
   复制一个新的位置
 
-  - 返回值：`position`
+  - 返回值 `position`
 
 - **_toString()_**
 
   将坐标字符化
 
-  - 返回值：`string`
+  - 返回值 `string`
 
 - **_toArray()_**
 
   将坐标数组化
 
-  - 返回值：`array`
+  - 返回值 `array`
 
 - **_toObject()_**
 
   将坐标对象化
 
-  - 返回值：`Object`
+  - 返回值 `Object`
 
 ### static methods
 
@@ -943,7 +943,7 @@ let position2 = DC.Position.fromCoordArray([120, 22, 102])
 
   - 参数
     - `{String} str`：字符化坐标
-  - 返回值：`position`
+  - 返回值 `position`
 
 - **_fromArray(array)_**
 
@@ -951,7 +951,7 @@ let position2 = DC.Position.fromCoordArray([120, 22, 102])
 
   - 参数
     - `{Array} array`：数组化坐标
-  - 返回值：`position`
+  - 返回值 `position`
 
 - **_fromObject(obj)_**
 
@@ -959,7 +959,7 @@ let position2 = DC.Position.fromCoordArray([120, 22, 102])
 
   - 参数
     - `{Object} obj`：Json 对象坐标
-  - 返回值：`position`
+  - 返回值 `position`
 
 - **_fromCoordString(str)_** `deprecated`
 
@@ -967,7 +967,7 @@ let position2 = DC.Position.fromCoordArray([120, 22, 102])
 
   - 参数
     - `{String} str`：字符坐标串
-  - 返回值：`position`
+  - 返回值 `position`
 
 - **_fromCoordArray(array)_** `deprecated`
 
@@ -975,7 +975,7 @@ let position2 = DC.Position.fromCoordArray([120, 22, 102])
 
   - 参数
     - `{Array<String|Number>} array`：坐标数组
-  - 返回值：`position`
+  - 返回值 `position`
 
 - **_deserialize(valStr)_**
 
@@ -983,7 +983,7 @@ let position2 = DC.Position.fromCoordArray([120, 22, 102])
 
   - 参数
     - `{String} valStr`：序列化的对象
-  - 返回值：`position`
+  - 返回值 `position`
 
 ## DC.Color
 
@@ -1002,7 +1002,7 @@ let red = DC.Color.RED
 - `{Color} WHITE`：白色
 - `{Color} GREEN`：绿色
 
-  [其他颜色](https://cesium.com/docs/cesiumjs-ref-doc/Color.html)
+[其他颜色](https://cesium.com/docs/cesiumjs-ref-doc/Color.html)
 
 ## DC.TilesetStyle
 
@@ -1036,7 +1036,7 @@ let date = DC.JulianDate.now()
 
   当前朱莉安时间
 
-  - 返回值：`date`
+  - 返回值 `date`
 
 - **_fromDate(date)_**
 
@@ -1095,7 +1095,7 @@ let position = DC.P.parsePosition('123,32,0')
 
   - 参数
     - `{String|Array|Position} position`：坐标
-  - 返回值：`position`
+  - 返回值 `position`
 
 - **_parsePositions(positions)_**
 
@@ -1103,7 +1103,7 @@ let position = DC.P.parsePosition('123,32,0')
 
   - 参数
     - `{String|Array} positions`： 坐标
-  - 返回值：`array`
+  - 返回值 `array`
 
 - **_parsePointCoordToArray(position)_**
 
@@ -1111,7 +1111,7 @@ let position = DC.P.parsePosition('123,32,0')
 
   - 参数
     - `{String|Position} position`：点位坐标
-  - 返回值：`array`
+  - 返回值 `array`
 
 - **_parsePolylineCoordToArray(positions)_**
 
@@ -1119,7 +1119,7 @@ let position = DC.P.parsePosition('123,32,0')
 
   - 参数
     - `{String|Array} positions`：线坐标
-  - 返回值：`array`
+  - 返回值 `array`
 
 - **_parsePolygonCoordToArray(positions)_**
 
@@ -1127,7 +1127,7 @@ let position = DC.P.parsePosition('123,32,0')
 
   - 参数
     - `{String|Array} positions`：面坐标
-  - 返回值：`array`
+  - 返回值 `array`
 
 ## DC.Transform
 
@@ -1145,7 +1145,7 @@ let cartesian3 = DC.T.transformWGS84ToCartesian(new DC.Position(120, 20))
 
   - 参数
     - `{Cartesian3} cartesian`：世界坐标
-  - 返回值：`position`
+  - 返回值 `position`
 
 - **_transformWGS84ToCartesian(position)_**
 
@@ -1153,7 +1153,7 @@ let cartesian3 = DC.T.transformWGS84ToCartesian(new DC.Position(120, 20))
 
   - 参数
     - `{Position} position`：84 坐标
-  - 返回值：`cartesian`
+  - 返回值 `cartesian`
 
 - **_transformWGS84ToCartographic(position)_**
 
@@ -1161,7 +1161,7 @@ let cartesian3 = DC.T.transformWGS84ToCartesian(new DC.Position(120, 20))
 
   - 参数
     - `{Position} position`：84 坐标
-  - 返回值：`cartographic`
+  - 返回值 `cartographic`
 
 - **_transformCartesianArrayToWGS84Array(cartesianArr)_**
 
@@ -1169,7 +1169,7 @@ let cartesian3 = DC.T.transformWGS84ToCartesian(new DC.Position(120, 20))
 
   - 参数
     - `{Array<cartesian3>} cartesianArr`：世界坐标数组
-  - 返回值：`array`
+  - 返回值 `array`
 
 - **_transformWGS84ArrayToCartesianArray(WGS84Arr)_**
 
@@ -1177,7 +1177,7 @@ let cartesian3 = DC.T.transformWGS84ToCartesian(new DC.Position(120, 20))
 
   - 参数
     - `{Array<cartesian3>} WGS84Arr`：84 坐标数组
-  - 返回值：`array`
+  - 返回值 `array`
 
 - **_transformWGS84ToMercator(position)_**
 
@@ -1185,7 +1185,7 @@ let cartesian3 = DC.T.transformWGS84ToCartesian(new DC.Position(120, 20))
 
   - 参数
     - `{Position} position`：84 坐标
-  - 返回值：`position`
+  - 返回值 `position`
 
 - **_transformMercatorToWGS84(position)_**
 
@@ -1193,7 +1193,7 @@ let cartesian3 = DC.T.transformWGS84ToCartesian(new DC.Position(120, 20))
 
   - 参数
     - `{Position} position`：Mercator 坐标
-  - 返回值：`position`
+  - 返回值 `position`
 
 - **_transformWindowToWGS84(position,viewer)_**
 
@@ -1202,7 +1202,7 @@ let cartesian3 = DC.T.transformWGS84ToCartesian(new DC.Position(120, 20))
   - 参数
     - `{Object} position`： 屏幕坐标，格式`{x:1,y:1}`
     - `{Viewer} viewer`：3D 场景
-  - 返回值：`position`
+  - 返回值 `position`
 
 - **_transformWGS84ToWindow(position,viewer)_**
 
@@ -1211,7 +1211,7 @@ let cartesian3 = DC.T.transformWGS84ToCartesian(new DC.Position(120, 20))
   - 参数
     - `{Position} position`： 84 坐标
     - `{Viewer} viewer`：3D 场景
-  - 返回值：`Object`
+  - 返回值 `Object`
 
 ## DC.CoordTransform
 
@@ -1230,7 +1230,7 @@ let point = DC.CoordTransform.BD09ToGCJ02(120, 20)
   - 参数
     - `{Number} lng`：经度
     - `{Number} lat`：纬度
-  - 返回值：`[]`
+  - 返回值 `[]`
 
 - **_GCJ02ToBD09(lng, lat)_**
 
@@ -1239,7 +1239,7 @@ let point = DC.CoordTransform.BD09ToGCJ02(120, 20)
   - 参数
     - `{Number} lng`：经度
     - `{Number} lat`：纬度
-  - 返回值：`[]`
+  - 返回值 `[]`
 
 - **_WGS84ToGCJ02(lng, lat)_**
 
@@ -1248,7 +1248,7 @@ let point = DC.CoordTransform.BD09ToGCJ02(120, 20)
   - 参数
     - `{Number} lng`：经度
     - `{Number} lat`：纬度
-  - 返回值：`[]`
+  - 返回值 `[]`
 
 - **_GCJ02ToWGS84(lng, lat)_**
 
@@ -1257,7 +1257,7 @@ let point = DC.CoordTransform.BD09ToGCJ02(120, 20)
   - 参数
     - `{Number} lng`：经度
     - `{Number} lat`：纬度
-  - 返回值：`[]`
+  - 返回值 `[]`
 
 ## DC.Math
 
@@ -1271,7 +1271,7 @@ let point = DC.CoordTransform.BD09ToGCJ02(120, 20)
 
   - 参数
     - `{Array<Position>} positions`： 点位数据
-  - 返回值：`number`
+  - 返回值 `number`
 
 - **_bounds(positions , expand)_**
 
@@ -1280,16 +1280,16 @@ let point = DC.CoordTransform.BD09ToGCJ02(120, 20)
   - 参数
     - `{Array<Position>} positions`： 点位数据
     - `{Number}} expand`： 扩展比例：0~1
-  - 返回值：`object`
+  - 返回值 `object`
 
-- **_mid(startPosition , endPosition)_**
+- **_mid(start , end)_**
 
   两点之间的中心点
 
   - 参数
-    - `{Position} startPosition`： 开始位置
-    - `{Position} endPosition`： 结束位置
-  - 返回值：`position`
+    - `start`： 开始位置
+    - `end`： 结束位置
+  - 返回值 `position`
 
 - **_center(positions)_**
 
@@ -1297,7 +1297,7 @@ let point = DC.CoordTransform.BD09ToGCJ02(120, 20)
 
   - 参数
     - `{Array<Position>} positions`： 点位数据
-  - 返回值：`position`
+  - 返回值 `position`
 
 - **_distance(positions)_**
 
@@ -1305,27 +1305,27 @@ let point = DC.CoordTransform.BD09ToGCJ02(120, 20)
 
   - 参数
     - `{Array<Position>} positions`： 点位数据
-  - 返回值：`number`
+  - 返回值 `number`
 
-- **_heading(startPosition, endPosition)_**
+- **_heading(start,end)_**
 
   偏转角度,单位：度
 
   - 参数
-    - `{Position} startPosition`： 开始位置
-    - `{Position} endPosition`： 结束位置
-  - 返回值：`number`
+    - `start`： 开始位置
+    - `end`： 结束位置
+  - 返回值 `number`
 
-- **_parabola(startPosition, endPosition,height,count)_**
+- **_parabola(start, end,height,count)_**
 
   抛物线
 
   - 参数
-    - `{Position} startPosition`： 开始位置
-    - `{Position} endPosition`： 结束位置
+    - `start`： 开始位置
+    - `end`： 结束位置
     - `{Number} height`： 最高点高度
     - `{Number} count`： 点位数量
-  - 返回值：`Array`
+  - 返回值 `Array`
 
 > [more](https://cesium.com/docs/cesiumjs-ref-doc/Math.html)
 
@@ -1341,7 +1341,7 @@ let point = DC.CoordTransform.BD09ToGCJ02(120, 20)
 
   - 参数
     - `{String} prefix`：前缀，默认为 D
-  - 返回值：`string`
+  - 返回值 `string`
 
 - **_merge(dest, ...sources)_**
 
@@ -1350,7 +1350,7 @@ let point = DC.CoordTransform.BD09ToGCJ02(120, 20)
   - 参数
     - `{Object} dest`：目标对象
     - `{Object|Array} sources`：需要合并的属性
-  - 返回值：`object`
+  - 返回值 `object`
 
 - **_emptyImageUrl()_**
 
@@ -1376,7 +1376,7 @@ let point = DC.CoordTransform.BD09ToGCJ02(120, 20)
 
   - 参数
     - `{String} id`： 要素 ID
-  - 返回值：`Element`
+  - 返回值 `Element`
 
 - **_create(tagName, className, [container])_**
 
@@ -1386,7 +1386,7 @@ let point = DC.CoordTransform.BD09ToGCJ02(120, 20)
     - `{String} tagName`： 标签名
     - `{String} className`： 样式名，多个用空格隔开
     - `{Element} [container]`： 父容器
-  - 返回值：`Element`
+  - 返回值 `Element`
 
 - **_addClass(el, name)_**
 
@@ -1421,9 +1421,9 @@ let point = DC.CoordTransform.BD09ToGCJ02(120, 20)
     - `{Number} height`： 高度
     - `{String} path`： 路径
     - `{Element} [container]`： 父容器
-  - 返回值：`svg`
+  - 返回值 `svg`
 
-- **_parseDom(domStr, withWrapper, className)_**
+- **_parseDom(domStr, [withWrapper], [className])_**
 
   字符串转 Dom
 
@@ -1431,7 +1431,7 @@ let point = DC.CoordTransform.BD09ToGCJ02(120, 20)
     - `{String} domStr`： dom 字符串
     - `{Boolean} withWrapper`：返回是否含有父容器
     - `{String} className`： 类样式名称
-  - 返回值：`Element | Nodes`
+  - 返回值 `Element | Nodes`
 
 - **_enterFullscreen(el)_**
 
@@ -1452,4 +1452,4 @@ let point = DC.CoordTransform.BD09ToGCJ02(120, 20)
     - `{String} url`： 视频地址
     - `{String} className`： 样式名，多个用空格隔开
     - `{Element} [container]`： 父容器
-  - 返回值：`Element | Nodes`
+  - 返回值 `Element | Nodes`

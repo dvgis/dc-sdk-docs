@@ -55,18 +55,67 @@ KML/CZML is a JSON format data describing time-dynamic graphic scenes, which des
 
 ## Preparation
 
+`Running Env`
+
+DC-SDK is a development platform that relies on [`WebGL`](#webgl), which requires a `discrete graphics card` and a browser that supports `WebGL` on the development or running terminal. Recommended to use **_Chrome_**、**_Firefox_**
+
+`Static File Server`
+
+Static file servers are mainly used to publish map tiles, terrain, model data and other data services, such as: **_Apache Http Sever_**、**_Tomcat_** 、**_Nginx_**. Recommended to use **_Nginx_**
+
 ## Installation
+
+`NPM / YARN` **_`(Recommend)`_**
+
+Installing with NPM or YARN is recommended and it works seamlessly with webpack.
+
+```node
+   yarn add @dvgis/dc-sdk
+   -------------------------
+   npm install @dvgis/dc-sdk
+```
+
+```js
+import DC from '@dvgis/dc-sdk/dist/dc.base.min'
+import DcCore from '@dvgis/dc-sdk/dist/dc.core.min'
+import DcChart from '@dvgis/dc-sdk/dist/dc.chart.min'
+import DcMapv from '@dvgis/dc-sdk/dist/dc.mapv.min'
+import '@dvgis/dc-sdk/dist/dc.core.min.css'
+```
+
+`NPM / YARN` **_`(On-demand)`_**
+
+```node
+   yarn add @dvgis/dc-base
+   yarn add @dvgis/dc-core
+   yarn add @dvgis/dc-chart
+   yarn add @dvgis/dc-mapv
+   -------------------------
+   npm install @dvgis/dc-base
+   npm install @dvgis/dc-core
+   npm install @dvgis/dc-chart
+   npm install @dvgis/dc-mapv
+```
+
+```js
+import DC from '@dvgis/dc-base'
+import DcCore from '@dvgis/dc-core'
+import DcChart from '@dvgis/dc-chart'
+import DcMapv from '@dvgis/dc-mapv'
+import '@dvgis/dc-core/dist/dc.core.min.css'
+```
 
 `CDN`
 
-[Resources Link](https://github.com/dvgis/dc-sdk/tree/v1.x/dist)
+[Resources 下载链接](https://github.com/dvgis/dc-sdk/tree/master/dist)
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@babel/polyfill@7.12.1/lib/index.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@dvgis/dc-sdk@1.16.0/dist/dc.base.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@dvgis/dc-sdk@1.16.0/dist/dc.core.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@dvgis/dc-sdk/dist/dc.base.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@dvgis/dc-sdk/dist/dc.core.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@dvgis/dc-sdk/dist/dc.chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@dvgis/dc-sdk/dist/dc.mapv.min.js"></script>
 <link
-  href="https://cdn.jsdelivr.net/npm/@dvgis/dc-sdk@1.16.0dist/dc.core.min.css"
+  href="https://cdn.jsdelivr.net/npm/@dvgis/dc-sdk/dist/dc.core.min.css"
   rel="stylesheet"
   type="text/css"
 />
@@ -76,22 +125,11 @@ KML/CZML is a JSON format data describing time-dynamic graphic scenes, which des
 Please put the resources in the project root directory libs/dc-sdk, if you put it in other directory, the framework will not run properly.
 :::
 
-`NPM / YARN` **_`(Recommend)`_**
-
-```node
-   yarn add @dvgis/dc-sdk
-   npm install @dvgis/dc-sdk
-```
-
-```js
-import DC from '@dvgis/dc-sdk/dist/dc.base.min'
-import DcCore from '@dvgis/dc-sdk/dist/dc.core.min'
-import '@dvgis/dc-sdk/dist/dc.core.min.css'
-```
-
 ## Configuration
 
 > The configuration is mainly used in the `NPM / YARN` way
+
+Since the DC framework sets `CESIUM_BASE_URL` to `JSON.stringify('. /libs/dc-sdk/resources/')`, you need to copy `Cesium` static resource files: `Assets`, `Workers`, `ThirdParty` to the `libs/dc-sdk/resources` directory of the project to ensure that the 3D scene can be rendered properly.
 
 `Webpack`
 
@@ -104,11 +142,6 @@ const CopywebpackPlugin = require('copy-webpack-plugin')
 const dvgisDist = './node_modules/@dvgis'
 
 module.exports = {
-  resolve: {
-    alias: {
-      dvgis: path.resolve(__dirname, dvgisDist),
-    },
-  },
   plugins: [
     new CopyWebpackPlugin([
       {
@@ -131,7 +164,6 @@ const CopywebpackPlugin = require('copy-webpack-plugin')
 const dvgisDist = './node_modules/@dvgis'
 module.exports = {
   chainWebpack: (config) => {
-    config.resolve.alias.set('dvgis', path.resolve(__dirname, dvgisDist))
     config.plugin('copy').use(CopywebpackPlugin, [
       [
         {
@@ -155,7 +187,6 @@ const CopywebpackPlugin = require('copy-webpack-plugin')
 const dvgisDist = './node_modules/@dvgis'
 module.exports = {
   chainWebpack: (config) => {
-    config.resolve.alias.set('dvgis', path.resolve(__dirname, dvgisDist))
     config.plugin('copy').use(CopywebpackPlugin, [
       {
         patterns: [

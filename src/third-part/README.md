@@ -2,13 +2,13 @@
 sidebar: auto
 ---
 
-# 第三方集成 🌎
+# Third Part 🌎
 
-在三维场景中添加第三方的地图库
+Adding a third-party map library to a 3D scene
 
 ## DC.ChartLayer
 
-> 图表图层，继承于[Layer](../layer/#layer)
+> Inherited from [Layer](../layer/#layer)
 
 ### example
 
@@ -21,21 +21,19 @@ viewer.addLayer(chartLayer)
 
 - **_constructor([id],[option])_**
 
-  DC.Chart 构造函数
-
-  - 参数
-    - `{String} id`：唯一标识
-    - `{Object} option`：echarts 配置，详情参考：[echarts](https://www.echartsjs.com/zh/option.html#title)
-  - 返回值 `chartLayer`
+  - parameters
+    - `{String} id`
+    - `{Object} option` [echarts](https://www.echartsjs.com/zh/option.html#title)
+  - returns `chartLayer`
 
 ```json
-// options，其他的参数参考 echarts
+// options
 {
-  "animation": false, // 必须要加
-  "GLMap": {}, //地图
+  "animation": false, //required
+  "GLMap": {},
   "series": [
     {
-      "coordinateSystem": "GLMap" // 坐标系统
+      "coordinateSystem": "GLMap"
     }
   ]
 }
@@ -45,11 +43,9 @@ viewer.addLayer(chartLayer)
 
 - **_setOption(option)_**
 
-  设置点位
-
-  - 参数
-    - `{Object} option`：echarts 配置，详情参考：[echarts](https://www.echartsjs.com/zh/option.html#title)
-  - 返回值 `this`
+  - parameters
+    - `{Object} option` [echarts](https://www.echartsjs.com/zh/option.html#title)
+  - returns `this`
 
 ## DC.MapvDataSet
 
@@ -85,27 +81,24 @@ let dataset = new DC.MapvDataSet(data)
 
 - **_constructor(data)_**
 
-  DC.MapvDataSet 构造函数
-
-  - 参数
-    - `{Array<Object>} data`：数据数组，详情参考：[DataSet](https://github.com/huiyan-fe/mapv/blob/master/src/data/DataSet.md)
-  - 返回值 `dataset`
+  - parameters
+    - `{Array<Object>} data` [DataSet](https://github.com/huiyan-fe/mapv/blob/master/src/data/DataSet.md)
+  - returns `dataset`
 
 ```json
-// 数据说明
 {
   "geometry": {
-    "type": "Point", // 类别，有：Point、Polygon、LineString
-    "coordinates": [123, 23] // 坐标，线和面是二位数组
+    "type": "Point",
+    "coordinates": [123, 23]
   },
-  "count": 30, // 用于阈值计算
-  "time": 100 * Math.random() // 步长 用于动画
+  "count": 30,
+  "time": 100 * Math.random()
 }
 ```
 
 ## DC.MapvLayer
 
-> 数据可视化图层，继承于[Layer](../layer/#layer)
+> Inherited from [Layer](../layer/#layer)
 
 ### example
 
@@ -143,28 +136,26 @@ viewer.addLayer(layer)
 
 ### creation
 
-- **_constructor(id,options)_**
+- **_constructor(id,[options])_**
 
-  DC.MapvLayer 构造函数
-
-  - 参数
-    - `{String} id`：图层唯一标识
-    - `{Object} options`：属性
-  - 返回值 `mapvLayer`
+  - parameters
+    - `{String} id`
+    - `{Object} options`
+  - returns `mapvLayer`
 
 ```json
-// 属性参数（可选）
+// options(optional)
 {
-  "fillStyle": "rgba(55, 50, 250, 0.8)", //颜色
-  "shadowColor": "rgba(255, 250, 50, 1)", // 阴影颜色
-  "shadowBlur": 20, // 阴影扩散
-  "size": 40, // 点大小
-  "globalAlpha": 0.5, //
+  "fillStyle": "rgba(55, 50, 250, 0.8)",
+  "shadowColor": "rgba(255, 250, 50, 1)",
+  "shadowBlur": 20,
+  "size": 40,
+  "globalAlpha": 0.5,
   "globalCompositeOperation": "lighter",
   "label": {
     "show": true,
     "fillStyle": "white"
-  }, // 文字
+  },
   "animation": {
     "type": "time",
     "stepsRange": {
@@ -173,16 +164,16 @@ viewer.addLayer(layer)
     },
     "trails": 10,
     "duration": 4
-  }, //动画
-  "lineWidth": 0.7, // 线宽
-  "lineDash": [15], // 虚线
+  },
+  "lineWidth": 0.7,
+  "lineDash": [15],
   "gradient": {
     0.25: "rgb(0,0,255)",
     0.55: "rgb(0,255,0)",
     0.85: "yellow",
     1.0: "rgb(255,0,0)"
-  }, //渐变
-  "draw": "grid" //展现方式 有：simple：简单、intensity：强度、honeycomb：蜂巢、grid：格子等
+  },
+  "draw": "grid"
 }
 ```
 
@@ -190,8 +181,6 @@ viewer.addLayer(layer)
 
 - **_setDataSet(dataset)_**
 
-  设置点位
-
-  - 参数
-    - `{MapvDataSet} dataset`： 数据配置
-  - 返回值 `this`
+  - parameters
+    - `{MapvDataSet} dataset`
+  - returns `this`

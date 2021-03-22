@@ -26,76 +26,76 @@ viewer.addBaseLayer(baseLayer, {
 
 - **_createAmapImageryLayer(options)_**
 
-  - Parameters
+  - parameters
     - `{Object} options`
-  - Returns `baseLayer`
+  - returns `baseLayer`
 
 - **_createBaiduImageryLayer(options)_**
 
-  - Parameters
+  - parameters
     - `{Object} options`
-  - Returns `baseLayer`
+  - returns `baseLayer`
 
 - **_createGoogleImageryLayer(options)_**
 
-  - Parameters
+  - parameters
     - `{Object} options`
-  - Returns `baseLayer`
+  - returns `baseLayer`
 
 - **_createTdtImageryLayer(options)_**
 
-  - Parameters
+  - parameters
     - `{Object} options`
-  - Returns `baseLayer`
+  - returns `baseLayer`
 
 - **_createTencentImageryLayer(options)_**
 
-  - Parameters
+  - parameters
     - `{Object} options`
-  - Returns `baseLayer`
+  - returns `baseLayer`
 
 - **_createArcGisImageryLayer(options)_**
 
-  - Parameters
+  - parameters
     - `{Object} options` [ArcGis](https://cesium.com/docs/cesiumjs-ref-doc/ArcGisMapServerImageryProvider.html#.ConstructorOptions)
-  - Returns `baseLayer`
+  - returns `baseLayer`
 
 - **_createSingleTileImageryLayer(options)_**
 
-  - Parameters
+  - parameters
     - `{Object} options` [Single](https://cesium.com/docs/cesiumjs-ref-doc/SingleTileImageryProvider.html#.ConstructorOptions)
-  - Returns `baseLayer`
+  - returns `baseLayer`
 
 - **_createWMSImageryLayer(options)_**
 
-  - Parameters
+  - parameters
     - `{Object} options` [WMS](https://cesium.com/docs/cesiumjs-ref-doc/WebMapServiceImageryProvider.html#.ConstructorOptions)
-  - Returns `baseLayer`
+  - returns `baseLayer`
 
 - **_createWMTSImageryLayer(options)_**
 
-  - Parameters
+  - parameters
     - `{Object} options` [WMTS](https://cesium.com/docs/cesiumjs-ref-doc/WebMapTileServiceImageryProvider.html#.ConstructorOptions)
-  - Returns `baseLayer`
+  - returns `baseLayer`
 
 - **_createXYZImageryLayer(options)_**
 
-  - Parameters
+  - parameters
     - `{Object} options` [X/Y/Z](https://cesium.com/docs/cesiumjs-ref-doc/UrlTemplateImageryProvider.html#.ConstructorOptions)
-  - Returns `baseLayer`
+  - returns `baseLayer`
 
 - **_createCoordImageryLayer(options)_**
 
-  - Parameters
+  - parameters
     - `{Object} options`
-  - Returns `baseLayer`
+  - returns `baseLayer`
 
 - **_createImageryLayer(type, options)_**
 
-  - Parameters
+  - parameters
     - `{String} type`，DC.ImageryType
     - `{Object} options`
-  - Returns `baseLayer`
+  - returns `baseLayer`
 
 ```json
 //options(optional)
@@ -131,38 +131,38 @@ viewer.addTerrain(terrain)
 
 - **_createEllipsoidTerrain()_**
 
-  - Returns `terrain`
+  - returns `terrain`
 
 - **_createUrlTerrain(options)_**
 
-  - Parameters
+  - parameters
     - `{Object} options`
-  - Returns `terrain`
+  - returns `terrain`
 
 - **_createGoogleTerrain(options)_**
 
-  - Parameters
+  - parameters
     - `{Object} options`
-  - Returns `terrain`
+  - returns `terrain`
 
 - **_createArcgisTerrain(options)_**
 
-  - Parameters
+  - parameters
     - `{Object} options`
-  - Returns `terrain`
+  - returns `terrain`
 
 - **_createVRTerrain(options)_**
 
-  - Parameters
+  - parameters
     - `{Object} options`
-  - Returns `terrain`
+  - returns `terrain`
 
 - **_createTerrain(type，options)_**
 
-  - Parameters
+  - parameters
     - `{String} type`: DC.TerrainType
     - `{Object} options`
-  - Returns `terrain`
+  - returns `terrain`
 
 ```json
 //options（optional）

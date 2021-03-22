@@ -19,14 +19,14 @@ plot.draw(DC.OverlayType.POINT, (overlay) => {}, {})
 
 ### creation
 
-- **_constructor(viewer,options)_**
+- **_constructor(viewer,[options])_**
 
   DC.Plot 构造函数
 
   - 参数
     - `{Viewer} viewer`：场景
     - `{Object} options`：属性
-  - 返回值：`plot`
+  - 返回值 `plot`
 
 ```json
 //属性参数(可选)
@@ -48,7 +48,7 @@ plot.draw(DC.OverlayType.POINT, (overlay) => {}, {})
   - `{String} type`：覆盖物类型，参照 [OverlayType](../base/#overlaytype)
   - `{Function} callback`：标绘完成的回调函数，参数为覆盖物
   - `{Object} style`：标绘的覆盖物样式设置
-- 返回值：`this`
+- 返回值 `this`
 
 - **_edit(overlay,callback)_**
 
@@ -57,4 +57,4 @@ plot.draw(DC.OverlayType.POINT, (overlay) => {}, {})
 - 参数
   - `{Overlay} overlay`：覆盖物
   - `{Function} callback`：编辑完成的回调函数，参数为覆盖物
-- 返回值：`this`
+- 返回值 `this`

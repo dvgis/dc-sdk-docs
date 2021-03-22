@@ -26,40 +26,40 @@ This basic class cannot be instantiated
 
 - **_addOverlay(overlay)_**
 
-  - Parameters
+  - parameters
     - `{Overlay} overlay`
-  - Returns `this`
+  - returns `this`
 
 - **_addOverlays(overlays)_**
 
-  - Parameters
+  - parameters
     - `{Array<Overlay>} overlays`
-  - Returns `this`
+  - returns `this`
 
 - **_removeOverlay(overlay)_**
 
-  - Parameters
+  - parameters
     - `{Overlay} overlay`
-  - Returns `this`
+  - returns `this`
 
 - **_getOverlay(overlayId)_**
 
-  - Parameters
+  - parameters
     - `{String} overlayId`
-  - Returns `overlay`
+  - returns `overlay`
 
 - **_getOverlayById(Id)_**
 
-  - Parameters
+  - parameters
     - `{String} Id`
-  - Returns `overlay`
+  - returns `overlay`
 
 - **_getOverlaysByAttr(attrName, attrVal)_**
 
-  - Parameters
+  - parameters
     - `{String} attrName`
     - `{Object} attrVal`
-  - Returns `array`
+  - returns `array`
 
   ```js
   overlay.attr.name = 'test'
@@ -68,14 +68,14 @@ This basic class cannot be instantiated
 
 - **_getOverlays()_**
 
-  - Returns `array`
+  - returns `array`
 
 - **_eachOverlay(method, context)_**
 
-  - Parameters
+  - parameters
     - `{Function} method`：Callback function with parameters for overlay
     - `{Object} context`
-  - Returns `this`
+  - returns `this`
 
   ```js
   layer.eachOverlay((item) => {})
@@ -83,28 +83,28 @@ This basic class cannot be instantiated
 
 - **_clear()_**
 
-  - Returns `this`
+  - returns `this`
 
 - **_remove()_**
 
-  - Returns `this`
+  - returns `this`
 
 - **_addTo(viewer)_**
 
-  - Parameters
+  - parameters
     - `{Viewer|World} viewer`：场景
-  - Returns `this`
+  - returns `this`
 
 ### static methods
 
 - **_registerType(type)_**
 
-  - Parameters
+  - parameters
     - `{String} type`
 
 - **_getLayerType()_**
 
-  - Returns `string`
+  - returns `string`
 
 ## DC.LayerGroup
 
@@ -123,9 +123,9 @@ layerGroup.addLayer(layer)
 
 - **_constructor(id)_**
 
-  - Parameters
+  - parameters
     - `{String} id`
-  - Returns `layerGroup`
+  - returns `layerGroup`
 
 ### properties
 
@@ -137,35 +137,35 @@ layerGroup.addLayer(layer)
 
 - **_addLayer(layer)_**
 
-  - Parameters
+  - parameters
     - `{Layer} layer`
-  - Returns `this`
+  - returns `this`
 
 - **_removeLayer(layer)_**
 
-  - Parameters
+  - parameters
     - `{Layer} layer`
-  - Returns `this`
+  - returns `this`
 
 - **_getLayer(id)_**
 
-  - Parameters
+  - parameters
     - `{String} id`
-  - Returns `layer`
+  - returns `layer`
 
 - **_getLayers()_**
 
-  - Returns `layer`
+  - returns `layer`
 
 - **_remove()_**
 
-  - Returns `this`
+  - returns `this`
 
 - **_addTo(viewer)_**
 
-  - Parameters
+  - parameters
     - `{Viewer|World} viewer`：场景
-  - Returns `this`
+  - returns `this`
 
 ## DC.VectorLayer
 
@@ -182,9 +182,9 @@ viewer.addLayer(layer)
 
 - **_constructor(id)_**
 
-  - Parameters
+  - parameters
     - `{String} id`
-  - Returns `vectorLayer`
+  - returns `vectorLayer`
 
 ## DC.PrimitiveLayer
 
@@ -201,9 +201,9 @@ viewer.addLayer(layer)
 
 - **_constructor(id)_**
 
-  - Parameters
+  - parameters
     - `{String} id`
-  - Returns `primitiveLayer`
+  - returns `primitiveLayer`
 
 ## DC.TilesetLayer
 
@@ -220,9 +220,9 @@ viewer.addLayer(layer)
 
 - **_constructor(id)_**
 
-  - Parameters
+  - parameters
     - `{String} id`
-  - Returns `tilesetLayer`
+  - returns `tilesetLayer`
 
 ## DC.GeoJsonLayer
 
@@ -255,23 +255,23 @@ layer.eachOverlay((item) => {
 
 - **_constructor(id,url,[options])_**
 
-  - Parameters
+  - parameters
     - `{String} id`
     - `{String} url`
     - `{Object} options` [GeoJsonDataSource](https://cesium.com/docs/cesiumjs-ref-doc/GeoJsonDataSource.html)
-  - Returns `geoJsonLayer`
+  - returns `geoJsonLayer`
 
 ### methods
 
 - **_toVectorLayer()_**
 
-  - Returns `vectorLayer`
+  - returns `vectorLayer`
 
 - **_toModelLayer(modelUrl)_**
 
-  - Parameters
+  - parameters
     - `{String} modelUrl`
-  - Returns `vectorLayer`
+  - returns `vectorLayer`
 
 ## DC.TopoJsonLayer
 
@@ -304,23 +304,23 @@ layer.eachOverlay((item) => {
 
 - **_constructor(id,url,[options])_**
 
-  - Parameters
+  - parameters
     - `{String} id`
     - `{String} url`
     - `{Object} options` [GeoJsonDataSource](https://cesium.com/docs/cesiumjs-ref-doc/GeoJsonDataSource.html)
-  - Returns `topoJsonLayer`
+  - returns `topoJsonLayer`
 
 ### methods
 
 - **_toVectorLayer()_**
 
-  - Returns `vectorLayer`
+  - returns `vectorLayer`
 
 - **_toModelLayer(modelUrl)_**
 
-  - Parameters
+  - parameters
     - `{String} modelUrl`
-  - Returns `vectorLayer`
+  - returns `vectorLayer`
 
 ## DC.HtmlLayer
 
@@ -339,9 +339,9 @@ viewer.addLayer(layer)
 
   DC.HtmlLayer 构造函数
 
-  - Parameters
+  - parameters
     - `{String} id`：图层唯一标识
-  - Returns `htmlLayer`
+  - returns `htmlLayer`
 
 ## DC.CzmlLayer
 
@@ -368,11 +368,11 @@ layer.eachOverlay((item) => {
 
 - **_constructor(id,url,[options])_**
 
-  - Parameters
+  - parameters
     - `{String} id`
     - `{String} url`
     - `{Object} options` [CzmlDataSource](https://cesium.com/docs/cesiumjs-ref-doc/CzmlDataSource.html)
-  - Returns `czmlLayer`
+  - returns `czmlLayer`
 
 ## DC.KmlLayer
 
@@ -399,11 +399,11 @@ layer.eachOverlay((item) => {
 
 - **_constructor(id,url,[options])_**
 
-  - Parameters
+  - parameters
     - `{String} id`
     - `{String} url`
     - `{Object} options` [KmlDataSource](https://cesium.com/docs/cesiumjs-ref-doc/KmlDataSource.html)
-  - Returns `kmlLayer`
+  - returns `kmlLayer`
 
 ## DC.ClusterLayer
 
@@ -420,10 +420,10 @@ viewer.addLayer(layer)
 
 - **_constructor(id,[options])_**
 
-  - Parameters
+  - parameters
     - `{String} id`
     - `{Object} options`
-  - Returns `clusterLayer`
+  - returns `clusterLayer`
 
 ```json
 {
@@ -457,11 +457,11 @@ viewer.addLayer(layer)
 
 - **_constructor(id,bounds,[options])_**
 
-  - Parameters
+  - parameters
     - `{String} id`
     - `{Array<DC.Position>} bounds`：There are arrays of length 2, the first with southwest coordinates and the second with northeast coordinates
     - `{Object} options`
-  - Returns `heatLayer`
+  - returns `heatLayer`
 
 ```json
 //options(optional)
@@ -487,9 +487,9 @@ viewer.addLayer(layer)
 
 - **_setPositions(positions)_**
 
-  - Parameters
+  - parameters
     - `{Array<Object>} positions`
-  - Returns `heatLayer`
+  - returns `heatLayer`
 
 ```json
 {
@@ -514,10 +514,10 @@ viewer.addLayer(layer)
 
 - **_constructor(id,[options])_**
 
-  - Parameters
+  - parameters
     - `{String} id`
     - `{Object} options`
-  - Returns `windLayer`
+  - returns `windLayer`
 
 ```json
 //options(optional)
@@ -538,13 +538,13 @@ viewer.addLayer(layer)
 
 - **_setData(data,[options])_**
 
-  - Parameters
+  - parameters
     - `{Object} data`
     - `{Object} options`
-  - Returns `windLayer`
+  - returns `windLayer`
 
 - **_setOptions(options)_**
 
-  - Parameters
+  - parameters
     - `{Object} options`
-  - Returns `windLayer`
+  - returns `windLayer`

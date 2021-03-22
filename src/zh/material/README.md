@@ -24,7 +24,7 @@ let material = new DC.ColorMaterialProperty(DC.Color.RED)
 
   - 参数
     - `{DC.Color} color`：颜色
-  - 返回值：`material`
+  - 返回值 `material`
 
 ## DC.ImageMaterialProperty
 
@@ -41,13 +41,13 @@ let material = new DC.ImageMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.ImageMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`material`
+  - 返回值 `material`
 
 ```json
 // 属性参数（可选）
@@ -80,13 +80,13 @@ let material = new DC.CircleBlurMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.CircleBlurMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`materialProperty`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -115,13 +115,13 @@ let material = new DC.CircleDiffuseMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.CircleDiffuseMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`materialProperty`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -150,13 +150,13 @@ let material = new DC.CircleFadeMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.CircleFadeMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`materialProperty`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -185,13 +185,13 @@ let material = new DC.CirclePulseMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.CirclePulseMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`materialProperty`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -220,13 +220,13 @@ let material = new DC.CircleScanMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.CircleScanMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`material`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -255,13 +255,13 @@ let material = new DC.CircleSpiralMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.CircleSpiralMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`materialProperty`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -290,13 +290,13 @@ let material = new DC.CircleVaryMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.CircleVaryMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`material`
+      - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -325,13 +325,13 @@ let material = new DC.CircleWaveMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`material`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -364,13 +364,13 @@ let material = new DC.EllipsoidElectricMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.EllipsoidElectricMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`materialProperty`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -399,13 +399,13 @@ let material = new DC.EllipsoidTrailMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.EllipsoidTrailMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`materialProperty`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -434,13 +434,13 @@ let material = new DC.PolylineDashMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.PolylineDashMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`materialProperty`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -475,7 +475,7 @@ let material = new DC.PolylineArrowMaterialProperty(DC.Color.WHITE)
 
   - 参数
     - `{DC.Color} color`：箭头颜色
-  - 返回值：`materialProperty`
+  - 返回值 `materialProperty`
 
 ### properties
 
@@ -496,13 +496,13 @@ let material = new DC.PolylineOutlineMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.PolylineOutlineMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`materialProperty`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -534,13 +534,13 @@ let material = new DC.PolylineGlowMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.PolylineGlowMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`materialProperty`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -571,13 +571,13 @@ let material = new DC.PolylineFlickerMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.PolylineFlickerMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`materialProperty`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -606,13 +606,13 @@ let material = new DC.PolylineFlowMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.PolylineFlowMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`materialProperty`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -647,13 +647,13 @@ let material = new DC.PolylineImageTrailMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.PolylineImageTrailMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`materialProperty`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -686,13 +686,13 @@ let material = new DC.PolylineLightingMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.PolylineLightingMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`materialProperty`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -719,13 +719,13 @@ let material = new DC.PolylineLightingTrailMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.PolylineLightingTrailMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`materialProperty`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -754,13 +754,13 @@ let material = new DC.PolylineTrailMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.PolylineTrailMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`materialProperty`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -789,13 +789,13 @@ let material = new DC.RadarLineMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.RadarLineMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`materialProperty`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -824,13 +824,13 @@ let material = new DC.RadarWaveMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.RadarWaveMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`materialProperty`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -861,13 +861,13 @@ let material = new DC.WallImageTrailMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.WallImageTrailMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`materialProperty`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -900,13 +900,13 @@ let material = new DC.WallTrailMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`material`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）
@@ -936,13 +936,13 @@ let material = new DC.WaterMaterialProperty({
 
 ### creation
 
-- **_constructor(options)_**
+- **_constructor([options])_**
 
   DC.WaterMaterialProperty 构造函数
 
   - 参数
     - `{Object} options`：属性
-  - 返回值：`material`
+  - 返回值 `materialProperty`
 
 ```json
 // 属性参数（可选）

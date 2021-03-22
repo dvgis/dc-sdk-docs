@@ -56,22 +56,74 @@ KML/CZML 是一个 JSON 格式的数据,描述 time-dynamic（时间、动态）
 此图转自于[西部世界](http://www.cesiumlab.com)
 :::
 
+## 准备工作
+
+`运行环境`
+
+DC-SDK 是依赖于[`WebGL`](#webgl)运行的一套开发平台，需要开发或运行终端配置 `独立显卡` 和安装支持 `WebGL` 的浏览器，推荐使用 **_Chrome(谷歌)_**、**_Firefox(火狐)_**
+
+`静态服务器`
+
+静态服务器主要用于发布地图瓦片、地形、模型数据等数据服务，如：**_Apache Http Sever_**、**_Tomcat_** 、**_Nginx_**，推荐使用 **_Nginx_**
+
 ## 安装
+
+`NPM / YARN` **_`(推荐使用)`_**
+
+NPM / YARN 的方式安装，它能更好地和 `webpack` 打包工具配合使用。
+
+```node
+   yarn add @dvgis/dc-sdk
+   -------------------------
+   npm install @dvgis/dc-sdk
+```
+
+```js
+import DC from '@dvgis/dc-sdk/dist/dc.base.min' //基础包
+import DcCore from '@dvgis/dc-sdk/dist/dc.core.min' //核心包
+import DcChart from '@dvgis/dc-sdk/dist/dc.chart.min' //chart包
+import DcMapv from '@dvgis/dc-sdk/dist/dc.mapv.min' //mapv包
+import '@dvgis/dc-sdk/dist/dc.core.min.css' // 主要样式
+```
+
+`NPM / YARN` **_`(按需安装)`_**
+
+```node
+   yarn add @dvgis/dc-base
+   yarn add @dvgis/dc-core
+   yarn add @dvgis/dc-chart
+   yarn add @dvgis/dc-mapv
+   -------------------------
+   npm install @dvgis/dc-base
+   npm install @dvgis/dc-core
+   npm install @dvgis/dc-chart
+   npm install @dvgis/dc-mapv
+```
+
+```js
+import DC from '@dvgis/dc-base' //基础包
+import DcCore from '@dvgis/dc-core' //核心包
+import DcChart from '@dvgis/dc-chart' //chart包
+import DcMapv from '@dvgis/dc-mapv' //mapv包
+import '@dvgis/dc-core/dist/dc.core.min.css' // 主要样式
+```
 
 `CDN`
 
 [Resources 下载链接](https://github.com/dvgis/dc-sdk/tree/master/dist)
 
 ```html
-<!--@babel/polyfill 用于解决 IE 或者 Chrome低版本无法是使用Promise问题-->
-<script src="https://cdn.jsdelivr.net/npm/@babel/polyfill@7.12.1/lib/index.min.js"></script>
 <!--基础包-->
-<script src="https://cdn.jsdelivr.net/npm/@dvgis/dc-sdk@1.16.0/dist/dc.base.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@dvgis/dc-sdk/dist/dc.base.min.js"></script>
 <!--核心包-->
-<script src="https://cdn.jsdelivr.net/npm/@dvgis/dc-sdk@1.16.0/dist/dc.core.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@dvgis/dc-sdk/dist/dc.core.min.js"></script>
+<!--chart包-->
+<script src="https://cdn.jsdelivr.net/npm/@dvgis/dc-sdk/dist/dc.chart.min.js"></script>
+<!--mapv包-->
+<script src="https://cdn.jsdelivr.net/npm/@dvgis/dc-sdk/dist/dc.mapv.min.js"></script>
 <!--主要样式-->
 <link
-  href="https://cdn.jsdelivr.net/npm/@dvgis/dc-sdk@1.16.0dist/dc.core.min.css"
+  href="https://cdn.jsdelivr.net/npm/@dvgis/dc-sdk/dist/dc.core.min.css"
   rel="stylesheet"
   type="text/css"
 />
@@ -81,22 +133,11 @@ KML/CZML 是一个 JSON 格式的数据,描述 time-dynamic（时间、动态）
 请将 resources 放置工程根目录 libs/dc-sdk 下，如果放置到其他目录下，框架将无法正常运行
 :::
 
-`NPM / YARN` **_`(推荐使用)`_**
-
-```node
-   yarn add @dvgis/dc-sdk
-   npm install @dvgis/dc-sdk
-```
-
-```js
-import DC from 'dvgis/dc-sdk/dist/dc.base.min' //基础包
-import DcCore from 'dvgis/dc-sdk/dist/dc.core.min' //核心包
-import 'dvgis/dc-sdk/dist/dc.core.min.css' // 主要样式
-```
-
 ## 配置
 
 > 配置主要用于 `NPM / YARN` 的方式
+
+由于 DC 框架中将 `CESIUM_BASE_URL` 设置为 `JSON.stringify('./libs/dc-sdk/resources/')`，这样需将 `Cesium` 相关的静态资源文件: `Assets`、`Workers` 、`ThirdParty` 复制到工程的 `libs/dc-sdk/resources` 目录下以保证三维场景能够正常呈现
 
 `Webpack`
 
@@ -110,12 +151,6 @@ const CopywebpackPlugin = require('copy-webpack-plugin')
 const dvgisDist = './node_modules/@dvgis'
 
 module.exports = {
-  // 其他配置
-  resolve: {
-    alias: {
-      dvgis: path.resolve(__dirname, dvgisDist),
-    },
-  },
   plugins: [
     new CopyWebpackPlugin([
       {
@@ -141,7 +176,6 @@ const dvgisDist = './node_modules/@dvgis'
 module.exports = {
   // 其他配置
   chainWebpack: (config) => {
-    config.resolve.alias.set('dvgis', path.resolve(__dirname, dvgisDist))
     config.plugin('copy').use(CopywebpackPlugin, [
       [
         {
@@ -168,7 +202,6 @@ const dvgisDist = './node_modules/@dvgis'
 module.exports = {
   // 其他配置
   chainWebpack: (config) => {
-    config.resolve.alias.set('dvgis', path.resolve(__dirname, dvgisDist))
     config.plugin('copy').use(CopywebpackPlugin, [
       {
         patterns: [
