@@ -24,6 +24,14 @@ Try not to use DC as variable names or namespaces when developing to avoid the f
 
 ## Global
 
+### accessToken
+
+> Used to load advanced features such as: location editor, analysis module
+
+```js
+DC.accessToken = '<your access token>'
+```
+
 ### use
 
 > Using third-party modules or frameworks in DC frameworks
@@ -146,13 +154,13 @@ Please use the default constants for development
 
 **_`DC.TerrainType.NONE`_**
 
-**_`DC.ImageryType.XYZ`_**
+**_`DC.TerrainType.XYZ`_**
 
 **_`DC.TerrainType.GOOGLE`_**
 
-**_`DC.ImageryType.ARCGIS`_**
+**_`DC.TerrainType.ARCGIS`_**
 
-**_`DC.ImageryType.VR`_**
+**_`DC.TerrainType.VR`_**
 
 ### LayerType
 

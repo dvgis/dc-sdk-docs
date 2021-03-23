@@ -24,6 +24,14 @@ DC 为框架默认命名空间
 
 ## 全局函数
 
+### accessToken
+
+> 用于加载高级功能，如：位置编辑器、分析模块
+
+```js
+DC.accessToken = '<your access token>'
+```
+
 ### use
 
 > 在 DC 框架中使用第三方模块或框架
@@ -146,13 +154,13 @@ DC.ready(() => {
 
 **_`DC.TerrainType.NONE`_**: 无地形
 
-**_`DC.ImageryType.XYZ`_**: xyz 格式地形
+**_`DC.TerrainType.XYZ`_**: xyz 格式地形
 
 **_`DC.TerrainType.GOOGLE`_**: 谷歌地形
 
-**_`DC.ImageryType.ARCGIS`_**: arcgis 地形
+**_`DC.TerrainType.ARCGIS`_**: arcgis 地形
 
-**_`DC.ImageryType.VR`_**: VR 地形
+**_`DC.TerrainType.VR`_**: VR 地形
 
 ### LayerType
 
