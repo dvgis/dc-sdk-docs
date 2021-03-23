@@ -474,6 +474,122 @@ let circle = new DC.Circle(position, 200)
 }
 ```
 
+## DC.Rectangle
+
+> 矩形要素，继承于[Overlay](#overlay)
+
+### example
+
+```js
+let rectangle = new DC.Rectangle('-90.0,32.0;-94.0,36.0;')
+```
+
+### creation
+
+- **_constructor(positions)_**
+
+  构造函数
+
+  - Parameters
+    - `{String|Array<Position|Number|String>} positions`：坐标串
+  - returns `rectangle`
+
+### properties
+
+- `{String|Array<Position|Number|String>} positions`：坐标串
+
+### methods
+
+- **_setStyle(style)_**
+
+  设置样式
+
+  - Parameters
+    - `{Object} style`：样式，详情参考：[RectangleGraphics](https://cesium.com/docs/cesiumjs-ref-doc/RectangleGraphics.html)
+  - returns `this`
+
+```json
+// style(optional)
+{
+  "height": 1, //高度
+  "heightReference": 0, //高度参照，0：位置无参照，位置是绝对的，1：位置固定在地形上 2：位置高度是指地形上方的高度。
+  "extrudedHeight": 0, //拉升高度
+  "rotation": 0, //顺时针旋转角度
+  "stRotation": 0, //逆时针旋转角度
+  "fill": true, //是否用提供的材料填充多边形。
+  "material": DC.Color.WHITE, //材质
+  "outline": false, //是否显示边框
+  "outlineColor": DC.Color.BLACK, //边框颜色
+  "outlineWidth": 0, //边框宽度
+  "shadows": 0, //阴影类型，0：禁用、1：启用 、2：投射、3：接受
+  "distanceDisplayCondition": {
+    "near": 0, //最近距离
+    "far": Number.MAX_VALUE //最远距离
+  }, //根据距离设置可见
+  "classificationType": 2, //分类 是否影响地形，3D切片或同时影响这两者。0:地形、1:3D切片、2：两者
+  "zIndex": 0 //层级
+}
+```
+
+## DC.Wall
+
+> 墙体要素，继承于[Overlay](#overlay)
+
+### example
+
+```js
+let wall = new DC.Wall('-90.0,32.0,1000;-94.0,36.0,1000;')
+```
+
+### creation
+
+- **_constructor(positions)_**
+
+  构造函数
+
+  - Parameters
+    - `{String|Array<Position|Number|String>} positions`：坐标串
+  - returns `wall`
+
+### properties
+
+- `{String|Array<Position|Number|String>} positions`：坐标串
+
+### methods
+
+- **_setStyle(style)_**
+
+  设置样式
+
+  - Parameters
+    - `{Object} style`：样式，详情参考：[WallGraphics](https://cesium.com/docs/cesiumjs-ref-doc/WallGraphics.html)
+  - returns `this`
+
+```json
+// style(optional)
+{
+  "fill": true, //是否用提供的材料填充多边形。
+  "material": DC.Color.WHITE, //材质
+  "outline": false, //是否显示边框
+  "outlineColor": DC.Color.BLACK, //边框颜色
+  "outlineWidth": 0, //边框宽度
+  "shadows": 0, //阴影类型，0：禁用、1：启用 、2：投射、3：接受
+  "distanceDisplayCondition": {
+    "near": 0, //最近距离
+    "far": Number.MAX_VALUE //最远距离
+  }, //根据距离设置可见
+  "classificationType": 2 //分类 是否影响地形，3D切片或同时影响这两者。0:地形、1:3D切片、2：两者
+}
+```
+
+- **_fromEntity(entity)_**
+
+  Entity 转换为 Overlay
+
+  - Parameters
+    - `{Object} entity`：Cesium 覆盖物
+  - returns `wall`
+
 ## DC.Model
 
 > Inherited from [Overlay](#overlay)
@@ -1077,122 +1193,6 @@ let polylineVolume = new DC.PolylineVolume(
   - Parameters
     - `{Object} entity`
   - returns `polylineVolume`
-
-## DC.Rectangle
-
-> 矩形要素，继承于[Overlay](#overlay)
-
-### example
-
-```js
-let rectangle = new DC.Rectangle('-90.0,32.0;-94.0,36.0;')
-```
-
-### creation
-
-- **_constructor(positions)_**
-
-  构造函数
-
-  - Parameters
-    - `{String|Array<Position|Number|String>} positions`：坐标串
-  - returns `rectangle`
-
-### properties
-
-- `{String|Array<Position|Number|String>} positions`：坐标串
-
-### methods
-
-- **_setStyle(style)_**
-
-  设置样式
-
-  - Parameters
-    - `{Object} style`：样式，详情参考：[RectangleGraphics](https://cesium.com/docs/cesiumjs-ref-doc/RectangleGraphics.html)
-  - returns `this`
-
-```json
-// style(optional)
-{
-  "height": 1, //高度
-  "heightReference": 0, //高度参照，0：位置无参照，位置是绝对的，1：位置固定在地形上 2：位置高度是指地形上方的高度。
-  "extrudedHeight": 0, //拉升高度
-  "rotation": 0, //顺时针旋转角度
-  "stRotation": 0, //逆时针旋转角度
-  "fill": true, //是否用提供的材料填充多边形。
-  "material": DC.Color.WHITE, //材质
-  "outline": false, //是否显示边框
-  "outlineColor": DC.Color.BLACK, //边框颜色
-  "outlineWidth": 0, //边框宽度
-  "shadows": 0, //阴影类型，0：禁用、1：启用 、2：投射、3：接受
-  "distanceDisplayCondition": {
-    "near": 0, //最近距离
-    "far": Number.MAX_VALUE //最远距离
-  }, //根据距离设置可见
-  "classificationType": 2, //分类 是否影响地形，3D切片或同时影响这两者。0:地形、1:3D切片、2：两者
-  "zIndex": 0 //层级
-}
-```
-
-## DC.Wall
-
-> 墙体要素，继承于[Overlay](#overlay)
-
-### example
-
-```js
-let wall = new DC.Wall('-90.0,32.0,1000;-94.0,36.0,1000;')
-```
-
-### creation
-
-- **_constructor(positions)_**
-
-  构造函数
-
-  - Parameters
-    - `{String|Array<Position|Number|String>} positions`：坐标串
-  - returns `wall`
-
-### properties
-
-- `{String|Array<Position|Number|String>} positions`：坐标串
-
-### methods
-
-- **_setStyle(style)_**
-
-  设置样式
-
-  - Parameters
-    - `{Object} style`：样式，详情参考：[WallGraphics](https://cesium.com/docs/cesiumjs-ref-doc/WallGraphics.html)
-  - returns `this`
-
-```json
-// style(optional)
-{
-  "fill": true, //是否用提供的材料填充多边形。
-  "material": DC.Color.WHITE, //材质
-  "outline": false, //是否显示边框
-  "outlineColor": DC.Color.BLACK, //边框颜色
-  "outlineWidth": 0, //边框宽度
-  "shadows": 0, //阴影类型，0：禁用、1：启用 、2：投射、3：接受
-  "distanceDisplayCondition": {
-    "near": 0, //最近距离
-    "far": Number.MAX_VALUE //最远距离
-  }, //根据距离设置可见
-  "classificationType": 2 //分类 是否影响地形，3D切片或同时影响这两者。0:地形、1:3D切片、2：两者
-}
-```
-
-- **_fromEntity(entity)_**
-
-  Entity 转换为 Overlay
-
-  - Parameters
-    - `{Object} entity`：Cesium 覆盖物
-  - returns `wall`
 
 ## DC.AttackArrow
 

@@ -69,10 +69,10 @@ Static file servers are mainly used to publish map tiles, terrain, model data an
 
 Installing with NPM or YARN is recommended and it works seamlessly with webpack.
 
-```node
-   yarn add @dvgis/dc-sdk
-   -------------------------
-   npm install @dvgis/dc-sdk
+```shell
+yarn add @dvgis/dc-sdk
+-------------------------
+npm install @dvgis/dc-sdk
 ```
 
 ```js
@@ -85,16 +85,16 @@ import '@dvgis/dc-sdk/dist/dc.core.min.css'
 
 `NPM / YARN` **_`(On-demand)`_**
 
-```node
-   yarn add @dvgis/dc-base
-   yarn add @dvgis/dc-core
-   yarn add @dvgis/dc-chart
-   yarn add @dvgis/dc-mapv
-   -------------------------
-   npm install @dvgis/dc-base
-   npm install @dvgis/dc-core
-   npm install @dvgis/dc-chart
-   npm install @dvgis/dc-mapv
+```shell
+yarn add @dvgis/dc-base
+yarn add @dvgis/dc-core
+yarn add @dvgis/dc-chart
+yarn add @dvgis/dc-mapv
+-------------------------
+npm install @dvgis/dc-base
+npm install @dvgis/dc-core
+npm install @dvgis/dc-chart
+npm install @dvgis/dc-mapv
 ```
 
 ```js
@@ -107,7 +107,7 @@ import '@dvgis/dc-core/dist/dc.core.min.css'
 
 `CDN`
 
-[Resources 下载链接](https://github.com/dvgis/dc-sdk/tree/master/dist)
+[Resources](https://github.com/dvgis/dc-sdk/releases)
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@dvgis/dc-sdk/dist/dc.base.min.js"></script>
@@ -205,12 +205,15 @@ module.exports = {
 
 > DC structure, it is recommended to be familiar with the overall structure diagram before use so that you can use it quickly.
 
-<img src="http://dc.dvgis.cn/examples/images/base/SDK.png" style="width:100%;height:800px">
+<img src="http://dc.dvgis.cn/examples/images/base/dc2.x.png" style="width:100%;height:800px">
 
 ## Support
 
 > If dc-sdk can bring you benefits, please support it!
 
-<p>
+<p style="display:flex">
+<a href="https://www.paypal.com/paypalme/cavencj" target="_blank">
+<img src="https://www.paypalobjects.com/images/shared/paypal-logo-129x32.svg" style="margin-top:10px;margin-right:20px" />
+</a>
 <img src="http://dc.dvgis.cn/examples/images/base/sponsor.jpg?v=2" title="数字视觉"/>
 </p>

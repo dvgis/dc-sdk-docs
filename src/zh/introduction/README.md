@@ -72,10 +72,10 @@ DC-SDK 是依赖于[`WebGL`](#webgl)运行的一套开发平台，需要开发�
 
 NPM / YARN 的方式安装，它能更好地和 `webpack` 打包工具配合使用。
 
-```node
-   yarn add @dvgis/dc-sdk
-   -------------------------
-   npm install @dvgis/dc-sdk
+```shell
+yarn add @dvgis/dc-sdk
+-------------------------
+npm install @dvgis/dc-sdk
 ```
 
 ```js
@@ -88,16 +88,16 @@ import '@dvgis/dc-sdk/dist/dc.core.min.css' // 主要样式
 
 `NPM / YARN` **_`(按需安装)`_**
 
-```node
-   yarn add @dvgis/dc-base
-   yarn add @dvgis/dc-core
-   yarn add @dvgis/dc-chart
-   yarn add @dvgis/dc-mapv
-   -------------------------
-   npm install @dvgis/dc-base
-   npm install @dvgis/dc-core
-   npm install @dvgis/dc-chart
-   npm install @dvgis/dc-mapv
+```shell
+yarn add @dvgis/dc-base
+yarn add @dvgis/dc-core
+yarn add @dvgis/dc-chart
+yarn add @dvgis/dc-mapv
+-------------------------
+npm install @dvgis/dc-base
+npm install @dvgis/dc-core
+npm install @dvgis/dc-chart
+npm install @dvgis/dc-mapv
 ```
 
 ```js
@@ -110,7 +110,7 @@ import '@dvgis/dc-core/dist/dc.core.min.css' // 主要样式
 
 `CDN`
 
-[Resources 下载链接](https://github.com/dvgis/dc-sdk/tree/master/dist)
+[Resources 下载链接](https://github.com/dvgis/dc-sdk/releases)
 
 ```html
 <!--基础包-->
@@ -220,7 +220,7 @@ module.exports = {
 
 > DC 结构图，建议使用前先熟悉整体结构图，以便能够快速使用。
 
-<img src="http://dc.dvgis.cn/examples/images/base/SDK.png" style="width:100%;height:800px">
+<img src="http://dc.dvgis.cn/examples/images/base/dc2.x.png" style="width:100%;height:800px">
 
 ## 群聊
 
@@ -233,6 +233,9 @@ module.exports = {
 
 > 如果 dc-sdk 能够给您带来效益，请支持一下呗~
 
-<p>
+<p style="display:flex">
+<a href="https://www.paypal.com/paypalme/cavencj" target="_blank">
+<img src="https://www.paypalobjects.com/images/shared/paypal-logo-129x32.svg" style="margin-top:10px;margin-right:20px" />
+</a>
 <img src="http://dc.dvgis.cn/examples/images/base/sponsor.jpg?v=2" title="数字视觉"/>
 </p>
