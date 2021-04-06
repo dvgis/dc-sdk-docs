@@ -8,7 +8,7 @@ sidebar: auto
 
 **`DC`**
 
-DC is the default namespace for the framework
+DC is the default namespace for the framework.When developing with this framework, you need to start with `DC.`
 
 :::danger
 Try not to use DC as variable names or namespaces when developing to avoid the framework not working properly.
@@ -20,7 +20,11 @@ Try not to use DC as variable names or namespaces when developing to avoid the f
 
 **`mapv`**
 
-[Mapv](https://mapv.baidu.com/) is a geographic information visualization open source library , can be used to display a large amount of geographic information data , point , line , surface data , each data also has different types of display , such as direct hit points , heat map , grid , aggregation and other ways to display data . If you need Mapv's internal interface during development, you can get Cesium through **`const { mapv } = DC.Namespace`**.
+[Mapv](https://mapv.baidu.com/) is a geographic information visualization open source library , can be used to display a large amount of geographic information data , point , line , surface data , each data also has different types of display , such as direct hit points , heat map , grid , aggregation and other ways to display data . If you need Mapv's internal interface during development, you can get Mapv through **`const { mapv } = DC.Namespace`**.
+
+**`turf`**
+
+[Turf](https://mapv.baidu.com/) is a JavaScript library for spatial analysis. It includes traditional spatial operations, helper functions for creating GeoJSON data, and data classification and statistics tools. Turf can be added to your website as a client-side plugin, or you can run Turf server-side with Node.js . If you need Turf's internal interface during development, you can get Turf through **`const { turf } = DC.Namespace`**.
 
 ## Global
 

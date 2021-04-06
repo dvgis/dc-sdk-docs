@@ -8,7 +8,7 @@ sidebar: auto
 
 **`DC`**
 
-DC 为框架默认命名空间
+DC 为框架默认命名空间，使用该框架开发时都需要统以 `DC.` 开始
 
 :::danger
 开发时尽量不要使用 DC 为变量名或者命名空间，避免框架无法正常使用。
@@ -21,6 +21,10 @@ DC 为框架默认命名空间
 **`mapv`**
 
 [Mapv](https://mapv.baidu.com/) 是一款地理信息可视化开源库，可以用来展示大量地理信息数据，点、线、面的数据，每种数据也有不同的展示类型，如直接打点、热力图、网格、聚合等方式展示数据。开发时如果需要 Mapv 的内部接口可以通过 **`const { mapv } = DC.Namespace`** 获取 mapv
+
+**`turf`**
+
+[Turf](https://mapv.baidu.com/) 是一个用于空间分析的 JavaScript 库，它包括传统的空间操作、创建 GeoJSON 数据的相关函数，以及数据分类和统计工具。Turf 可以作为客户端插件添加到你的网站上，也可以使用 Node.js 在服务器端运行 Turf。开发时如果需要 Turf 的内部接口可以通过 **`const { turf } = DC.Namespace`** 获取 turf
 
 ## 全局函数
 

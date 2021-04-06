@@ -86,3 +86,71 @@ layer.addOverlay(cameraVideo)
   "disViewColor": DC.Color.WHITE //设置视频不可见颜色
 }
 ```
+
+## DC.GeoTools
+
+> 要素工具
+
+### example
+
+```js
+let coords = DC.GeoTools.pointBuffer(
+  '120.71259021075333,31.22148081085083',
+  100
+)
+
+let coords1 = DC.GeoTools.polygonBuffer(
+  '120.71259021075333,31.22148081085083;120.71611354431036,31.221447256684566;120.7140691869497,31.21875584696343',
+  150
+)
+```
+
+### static methods
+
+- **_pointBuffer(position, radius, steps)_**
+
+  点缓冲
+
+  - 参数
+    - `{Array|String|Position} position`：坐标
+    - `{Number} radius`：半径
+    - `{Number} steps`：步数，默认：8
+  - 返回值 `array`
+
+- **_polylineBuffer(positions, radius, steps)_**
+
+  线缓冲
+
+  - 参数
+    - `{Array|String|Array<Position>} positions`：坐标串
+    - `{Number} radius`：半径
+    - `{Number} steps`：步数，默认：8
+  - 返回值 `array`
+
+- **_polygonBuffer(positions, radius, steps)_**
+
+  面缓冲
+
+  - 参数
+    - `{Array|String|Array<Position>} positions`：坐标串
+    - `{Number} radius`：半径
+    - `{Number} steps`：步数，默认：8
+  - 返回值 `array`
+
+- **_transformPolylineScale(positions, factor)_**
+
+  线比例
+
+  - 参数
+    - `{Array|String|Array<Position>} positions`：坐标串
+    - `{Number} factor`：比例
+  - 返回值 `array`
+
+- **_transformPolygonScale(positions, factor)_**
+
+  面比例
+
+  - 参数
+    - `{Array|String|Array<Position>} positions`：坐标串
+    - `{Number} factor`：比例
+  - 返回值 `array`

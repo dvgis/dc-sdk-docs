@@ -78,3 +78,61 @@ layer.addOverlay(cameraVideo)
   "disViewColor": DC.Color.WHITE
 }
 ```
+
+## DC.GeoTools
+
+> Geometry Tool
+
+### example
+
+```js
+let coords = DC.GeoTools.pointBuffer(
+  '120.71259021075333,31.22148081085083',
+  100
+)
+
+let coords1 = DC.GeoTools.polygonBuffer(
+  '120.71259021075333,31.22148081085083;120.71611354431036,31.221447256684566;120.7140691869497,31.21875584696343',
+  150
+)
+```
+
+### static methods
+
+- **_pointBuffer(position, radius, steps)_**
+
+  - parameters
+    - `{Array|String|Position} position`
+    - `{Number} radius`
+    - `{Number} steps` default:8
+  - returns `array`
+
+- **_polylineBuffer(positions, radius, steps)_**
+
+  - parameters
+    - `{Array|String|Array<Position>} positions`
+    - `{Number} radius`
+    - `{Number} steps` default:8
+  - returns `array`
+
+- **_polygonBuffer(positions, radius, steps)_**
+
+  - parameters
+    - `{Array|String|Array<Position>} positions`
+    - `{Number} radius`
+    - `{Number} steps` default:8
+  - returns `array`
+
+- **_transformPolylineScale(positions, factor)_**
+
+  - parameters
+    - `{Array|String|Array<Position>} positions`
+    - `{Number} factor`
+  - returns `array`
+
+- **_transformPolygonScale(positions, factor)_**
+
+  - parameters
+    - `{Array|String|Array<Position>} positions`
+    - `{Number} factor`
+  - returns `array`
