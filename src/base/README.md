@@ -322,6 +322,8 @@ If you are using a MVVM framework like Vue, do not add viewer, layer, or overlay
 - [`{DistanceLegend} distanceLegend`](#distancelegend)**_`readonly`_**
 - [`{LoadingMask} loadingMask`](#loadingmask)**_`readonly`_**
 - `{Position} cameraPosition`**_`readonly`_**
+- `{Number} resolution`**_`readonly`_**
+- `{Object} viewBounds`**_`readonly`_**
 
 ### methods
 
@@ -979,10 +981,11 @@ let position = DC.P.parsePosition('123,32,0')
     - `{String|Array} positions`
   - returns `array`
 
-- **_parsePolygonCoordToArray(positions)_**
+- **_parsePolygonCoordToArray(positions，loop)_**
 
   - parameters
     - `{String|Array} positions`
+    - `{Boolean} loop`
   - returns `array`
 
 ## DC.Transform

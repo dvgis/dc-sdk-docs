@@ -209,7 +209,7 @@ DC.ready(() => {
 
 `Result` [more](http://dc.dvgis.cn/#/examples)
 
-<iframe src="http://dc.dvgis.cn/#/editor?type=info&example=start" frameborder="0" height="500px" width="100%" >
+<iframe src="https://dc.dvgis.cn/#/editor?type=info&example=start" frameborder="0" height="500px" width="100%" >
 </iframe>
 
 ## Structure
@@ -246,6 +246,10 @@ GeoJSON objects can represent geometry, features or feature collections.GeoJSON 
 **`kml/czml`**
 
 KML/CZML is a JSON format data describing time-dynamic graphic scenes, which describes lines, points, billboards (markers), models, and other graphic primitives, and specifies how they change over time.
+
+:::tip
+Data conversion can be done with the help of [CesiumLab](http://www.cesiumlab.com) or some other conversion tools.[view image](http://dc.dvgis.cn/examples/images/base/data_transform.png)
+:::
 
 <img src="http://dc.dvgis.cn/examples/images/base/data_transform.png" style="width:100%;height:500px">
 

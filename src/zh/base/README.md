@@ -261,11 +261,11 @@ DC.ready(() => {
 ### example
 
 ```html
-<div id="map-container"></div>
+<div id="viewer-container"></div>
 ```
 
 ```js
-let viewer = DC.Viewer('map-container')
+let viewer = DC.Viewer('viewer-container')
 global.viewer = viewer // 添加到全局变量
 ```
 
@@ -324,6 +324,8 @@ global.viewer = viewer // 添加到全局变量
 - [`{DistanceLegend} distanceLegend`](#distancelegend)：比例尺 **_`readonly`_**
 - [`{LoadingMask} loadingMask`](#loadingmask)：加载蒙层 **_`readonly`_**
 - `{Position} cameraPosition`：相机位置 **_`readonly`_**
+- `{Number} resolution`：分辨率 **_`readonly`_**
+- `{Object} viewBounds`：视野范围 **_`readonly`_**
 
 ### methods
 
@@ -1133,12 +1135,13 @@ let position = DC.P.parsePosition('123,32,0')
     - `{String|Array} positions`：线坐标
   - 返回值 `array`
 
-- **_parsePolygonCoordToArray(positions)_**
+- **_parsePolygonCoordToArray(positions,loop)_**
 
   解析面坐标为三维数组
 
   - 参数
     - `{String|Array} positions`：面坐标
+    - `{Boolean} loop`：闭合
   - 返回值 `array`
 
 ## DC.Transform
@@ -1218,7 +1221,7 @@ let cartesian3 = DC.T.transformWGS84ToCartesian(new DC.Position(120, 20))
 
 - **_transformWGS84ToWindow(position,viewer)_**
 
-  屏幕坐标转 84
+  84 转屏幕坐标
 
   - 参数
     - `{Position} position`： 84 坐标
