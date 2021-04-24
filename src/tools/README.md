@@ -8,7 +8,7 @@ Auxiliary tools in 3D scenes to facilitate various measurements and markings in 
 
 ## DC.Plot
 
-> 标绘类
+> PLot Tool
 
 ### example
 
@@ -27,7 +27,7 @@ plot.draw(DC.OverlayType.POINT, (overlay) => {}, {})
   - returns `plot`
 
 ```json
-//options(optional)
+// options(optional)
 {
   "icon_center": "**.png",
   "icon_anchor": "**.png",
@@ -51,4 +51,50 @@ plot.draw(DC.OverlayType.POINT, (overlay) => {}, {})
   - parameters
     - `{Overlay} overlay`
     - `{Function} callback`
-      returns `this`
+  - returns `this`
+
+## DC.PositionEditor
+
+> 位置编辑工具
+
+### example
+
+```js
+let positionEditor = new DC.PositionEditor(viewer)
+```
+
+### creation
+
+- **_constructor(viewer,[options])_**
+
+  - parameters
+    - `{Viewer} viewer`
+    - `{Object} options`
+  - returns `positionEditor`
+
+```json
+// options(optional)
+{
+  "arrow": true, // whether the auxiliary axis is an arrow
+  "width": 8, // auxiliary axis width
+  "depthFail": true, // whether the auxiliary axis supports depth test
+  "axisLineScale": 1 // auxiliary axis scale
+}
+```
+
+### properties
+
+- `{Overlay} overlay` **_`readonly`_**
+
+### methods
+
+- **_activate(type, callback)_**
+
+  - parameters
+    - `{String} type`
+    - `{Function} callback` parameter ：position
+  - returns `this`
+
+- **_deactivate()_**
+
+  - returns `this`

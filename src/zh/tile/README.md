@@ -69,7 +69,7 @@ viewer.addBaseLayer(baseLayer, {
   创建 Arcgis 地图
 
   - 参数
-    - `{Object} options`：属性，详情参考 [ArcGis](https://cesium.com/docs/cesiumjs-ref-doc/ArcGisMapServerImageryProvider.html#.ConstructorOptions)
+    - `{Object} options`：属性，详情参考 [ArcGis](http://resource.dvgis.cn/cesium-docs/ArcGisMapServerImageryProvider.html#.ConstructorOptions)
   - 返回值 `baseLayer`
 
 - **_createSingleTileImageryLayer(options)_**
@@ -77,7 +77,7 @@ viewer.addBaseLayer(baseLayer, {
   创建单图片地图
 
   - 参数
-    - `{Object} options`：属性，详情参考 [Single](https://cesium.com/docs/cesiumjs-ref-doc/SingleTileImageryProvider.html#.ConstructorOptions)
+    - `{Object} options`：属性，详情参考 [Single](http://resource.dvgis.cn/cesium-docs/SingleTileImageryProvider.html#.ConstructorOptions)
   - 返回值 `baseLayer`
 
 - **_createWMSImageryLayer(options)_**
@@ -85,7 +85,7 @@ viewer.addBaseLayer(baseLayer, {
   创建 WMS 地图
 
   - 参数
-    - `{Object} options`：属性，详情参考 [WMS](https://cesium.com/docs/cesiumjs-ref-doc/WebMapServiceImageryProvider.html#.ConstructorOptions)
+    - `{Object} options`：属性，详情参考 [WMS](http://resource.dvgis.cn/cesium-docs/WebMapServiceImageryProvider.html#.ConstructorOptions)
   - 返回值 `baseLayer`
 
 - **_createWMTSImageryLayer(options)_**
@@ -93,7 +93,7 @@ viewer.addBaseLayer(baseLayer, {
   创建 WMTS 地图
 
   - 参数
-    - `{Object} options`：属性，详情参考 [WMTS](https://cesium.com/docs/cesiumjs-ref-doc/WebMapTileServiceImageryProvider.html#.ConstructorOptions)
+    - `{Object} options`：属性，详情参考 [WMTS](http://resource.dvgis.cn/cesium-docs/WebMapTileServiceImageryProvider.html#.ConstructorOptions)
   - 返回值 `baseLayer`
 
 - **_createXYZImageryLayer(options)_**
@@ -101,7 +101,7 @@ viewer.addBaseLayer(baseLayer, {
   创建 X/Y/Z 地图
 
   - 参数
-    - `{Object} options`：属性，详情参考 [X/Y/Z](https://cesium.com/docs/cesiumjs-ref-doc/UrlTemplateImageryProvider.html#.ConstructorOptions)
+    - `{Object} options`：属性，详情参考 [X/Y/Z](http://resource.dvgis.cn/cesium-docs/UrlTemplateImageryProvider.html#.ConstructorOptions)
   - 返回值 `baseLayer`
 
 - **_createCoordImageryLayer(options)_**
@@ -110,6 +110,38 @@ viewer.addBaseLayer(baseLayer, {
 
   - 参数
     - `{Object} options`：属性
+  - 返回值 `baseLayer`
+
+- **_createGridImageryLayer(options)_**
+
+  创建网格地图
+
+  - 参数
+    - `{Object} options`：属性，详情参考 [Grid](http://resource.dvgis.cn/cesium-docs/GridImageryProvider.html#.ConstructorOptions)
+  - 返回值 `baseLayer`
+
+- **_createMapboxImageryLayer(options)_**
+
+  创建 Mapbox 地图
+
+  - 参数
+    - `{Object} options`：属性，详情参考 [Mapbox](http://resource.dvgis.cn/cesium-docs/MapboxImageryProvider.html#.ConstructorOptions)
+  - 返回值 `baseLayer`
+
+- **_createMapboxStyleImageryLayer(options)_**
+
+  创建 Mapbox 样式地图
+
+  - 参数
+    - `{Object} options`：属性，详情参考 [Mapbox Style](http://resource.dvgis.cn/cesium-docs/MapboxStyleImageryProvider.html#.ConstructorOptions)
+  - 返回值 `baseLayer`
+
+- **_createTMSImageryLayer(options)_**
+
+  创建 TMS 地图
+
+  - 参数
+    - `{Object} options`：属性，详情参考 [TMS](http://resource.dvgis.cn/cesium-docs/TileMapServiceImageryProvider.html#.ConstructorOptions)
   - 返回值 `baseLayer`
 
 - **_createImageryLayer(type, options)_**
@@ -128,7 +160,8 @@ viewer.addBaseLayer(baseLayer, {
   "style": "img", //样式：img、elec、ter。百度：normal、middlenight、dark，腾讯：img,1、4
   "key": "", //认证，仅天地图有效
   "subdomains": [],
-  "crs":"WGS84",// 坐标系: WGS84 、BD09 、GCJ02，仅百度高德
+  "crs":"WGS84",// 坐标系: WGS84 、BD09 、GCJ02，仅百度、高德有效
+  "tilingScheme":null, // 瓦片切片模式：GeographicTilingScheme , WebMercatorTilingScheme
   "rectangle": {
     "west": 0,
     "south": 0,

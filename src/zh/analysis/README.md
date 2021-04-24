@@ -154,3 +154,78 @@ let coords1 = DC.GeoTools.polygonBuffer(
     - `{Array|String|Array<Position>} positions`：坐标串
     - `{Number} factor`：比例
   - 返回值 `array`
+
+## DC.GlobClipping
+
+> 地球裁剪
+
+### example
+
+```js
+let globClipping = new DC.GlobClipping(viewer)
+```
+
+### creation
+
+- **_constructor(viewer,[options])_**
+
+  构造函数
+
+  - 参数
+    - `{Viewer} viewer`：场景
+    - `{Object} options`：属性
+  - 返回值 `globClipping`
+
+```json
+// 属性参数(可选)
+{
+  "edgeWidth": 0, // 边缘宽度
+  "edgeColor": DC.Color.WHITE // 边缘颜色
+}
+```
+
+### properties
+
+- `{Array<Position>} positions`：坐标串
+- `{Number} distance`: 距离
+- `{Boolean} enable`: 是否启用
+- `{String} state`: 状态 **_`readonly`_**
+
+## DC.TerrainClipping
+
+> 地形裁剪
+
+### example
+
+```js
+let terrainClipping = new DC.TerrainClipping(viewer)
+```
+
+### creation
+
+- **_constructor(viewer,[options])_**
+
+  构造函数
+
+  - 参数
+    - `{Viewer} viewer`：场景
+    - `{Object} options`：属性
+  - 返回值 `terrainClipping`
+
+```json
+// 属性参数(可选)
+{
+  "edgeWidth": 0, // 边缘宽度
+  "edgeColor": DC.Color.WHITE, // 边缘颜色
+  "lerpInterval": 50, // 插值数量
+  "bottomImage": "", // 底部图片
+  "sideImage": "" // 侧边图片
+}
+```
+
+### properties
+
+- `{Array<Position>} positions`：坐标串
+- `{Number} height`: 高度
+- `{Boolean} enable`: 是否启用
+- `{String} state`: 状态 **_`readonly`_**

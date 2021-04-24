@@ -136,3 +136,74 @@ let coords1 = DC.GeoTools.polygonBuffer(
     - `{Array|String|Array<Position>} positions`
     - `{Number} factor`
   - returns `array`
+
+## DC.GlobClipping
+
+> Glob Clipping
+
+### example
+
+```js
+let globClipping = new DC.GlobClipping(viewer)
+```
+
+### creation
+
+- **_constructor(viewer,[options])_**
+
+  - parameters
+    - `{Viewer} viewer`
+    - `{Object} options`
+  - returns `globClipping`
+
+```json
+// options(optional)
+{
+  "edgeWidth": 0,
+  "edgeColor": DC.Color.WHITE
+}
+```
+
+### properties
+
+- `{Array<Position>} positions`
+- `{Number} distance`
+- `{Boolean} enable`
+- `{String} state` **_`readonly`_**
+
+## DC.TerrainClipping
+
+> Terrain Clipping
+
+### example
+
+```js
+let terrainClipping = new DC.TerrainClipping(viewer)
+```
+
+### creation
+
+- **_constructor(viewer,[options])_**
+
+  - parameters
+    - `{Viewer} viewer`
+    - `{Object} options`
+  - returns `terrainClipping`
+
+```json
+// options(optional)
+{
+  "edgeWidth": 0,
+  "edgeColor": DC.Color.WHITE,
+  "lerpInterval": 50,
+  "bottomImage": "",
+  "sideImage": ""
+}
+```
+
+### properties
+
+- `{Array<Position>} positions`
+- `{Number} height`
+- `{Boolean} enable`
+- `{String} state` **_`readonly`_**

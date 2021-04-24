@@ -144,6 +144,14 @@ Please use the default constants for development
 
 **_`DC.ImageryType.COORD`_**
 
+**_`DC.ImageryType.GRID`_**
+
+**_`DC.ImageryType.MAPBOX`_**
+
+**_`DC.ImageryType.MAPBOX_STYLE`_**
+
+**_`DC.ImageryType.TMS`_**
+
 **_`DC.ImageryType.AMAP`_**
 
 **_`DC.ImageryType.BAIDU`_**
@@ -175,6 +183,8 @@ Please use the default constants for development
 **_`DC.LayerType.TILESET`_**
 
 **_`DC.LayerType.HTML`_**
+
+**_`DC.LayerType.FEATURE_GRID`_**
 
 **_`DC.LayerType.GEOJSON`_**
 
@@ -305,13 +315,13 @@ If you are using a MVVM framework like Vue, do not add viewer, layer, or overlay
 ### properties
 
 - `{Element} dcContainer`：custom container **_`readonly`_**
-- `{Object} scene` **_`readonly`_**[Scene](https://cesium.com/docs/cesiumjs-ref-doc/Scene.html)
-- `{Object} camera`**_`readonly`_**[Camera](https://cesium.com/docs/cesiumjs-ref-doc/Scene.html)
+- `{Object} scene` **_`readonly`_**[Scene](http://resource.dvgis.cn/cesium-docs/Scene.html)
+- `{Object} camera`**_`readonly`_**[Camera](http://resource.dvgis.cn/cesium-docs/Scene.html)
 - `{Element} canvas`**_`readonly`_**
-- `{Object} clock`[Clock](https://cesium.com/docs/cesiumjs-ref-doc/Clock.html)
-- `{Object} dataSources`[DataSourceCollection](https://cesium.com/docs/cesiumjs-ref-doc/DataSourceCollection.html)
-- `{Object} imageryLayers`[ImageryLayerCollection](https://cesium.com/docs/cesiumjs-ref-doc/ImageryLayerCollection.html)
-- `{Object} entities`[EntityCollection](https://cesium.com/docs/cesiumjs-ref-doc/EntityCollection.html)
+- `{Object} clock`[Clock](http://resource.dvgis.cn/cesium-docs/Clock.html)
+- `{Object} dataSources`[DataSourceCollection](http://resource.dvgis.cn/cesium-docs/DataSourceCollection.html)
+- `{Object} imageryLayers`[ImageryLayerCollection](http://resource.dvgis.cn/cesium-docs/ImageryLayerCollection.html)
+- `{Object} entities`[EntityCollection](http://resource.dvgis.cn/cesium-docs/EntityCollection.html)
 - [`{Popup} popup`](#popup)**_`readonly`_**
 - [`{ContextMenu} contextMenu`](#contextmenu)**_`readonly`_**
 - [`{Tooltip} tooltip`](#tooltip)**_`readonly`_**
@@ -323,7 +333,7 @@ If you are using a MVVM framework like Vue, do not add viewer, layer, or overlay
 - [`{LoadingMask} loadingMask`](#loadingmask)**_`readonly`_**
 - `{Position} cameraPosition`**_`readonly`_**
 - `{Number} resolution`**_`readonly`_**
-- `{Object} viewBounds`**_`readonly`_**
+- `{Rect} viewBounds`**_`readonly`_**
 
 ### methods
 
@@ -772,6 +782,44 @@ scene.skyBox = new DC.SkyBox({
 //options(optional)
 {
   "sources": {},
+  "show": true
+}
+```
+
+### properties
+
+- `{Object} sources`
+- `{Boolean} show`
+
+## DC.GroundSkyBox
+
+### example
+
+```js
+scene.skyBox = new DC.GroundSkyBox({
+  sources: {
+    positiveX: 'skybox_px.png',
+    negativeX: 'skybox_nx.png',
+    positiveY: 'skybox_py.png',
+    negativeY: 'skybox_ny.png',
+    positiveZ: 'skybox_pz.png',
+    negativeZ: 'skybox_nz.png',
+  },
+})
+```
+
+### creation
+
+- **_constructor(id)_**
+
+  - parameters
+    - `{Object} options`
+  - returns `groundSkyBox`
+
+```json
+//options(optional)
+{
+  "sources": {},
   "show": true,
   "offsetAngle": 0
 }
@@ -880,7 +928,7 @@ let red = DC.Color.RED
 - `{Color} WHITE`
 - `{Color} GREEN`
 
-  [others](https://cesium.com/docs/cesiumjs-ref-doc/Color.html)
+  [others](http://resource.dvgis.cn/cesium-docs/Color.html)
 
 ## DC.TilesetStyle
 
@@ -896,7 +944,7 @@ style.color = {
 }
 ```
 
-[Cesium3DTileStyle](https://cesium.com/docs/cesiumjs-ref-doc/Cesium3DTileStyle.html)
+[Cesium3DTileStyle](http://resource.dvgis.cn/cesium-docs/Cesium3DTileStyle.html)
 
 ## DC.JulianDate
 
@@ -916,7 +964,7 @@ let date = DC.JulianDate.now()
     - `{Date} date`
   - returns `date`
 
-[JulianDate](https://cesium.com/docs/cesiumjs-ref-doc/JulianDate.html)
+[JulianDate](http://resource.dvgis.cn/cesium-docs/JulianDate.html)
 
 ## DC.Rect
 
@@ -926,7 +974,7 @@ let date = DC.JulianDate.now()
 let r = DC.Rect.fromDegrees(10, 20, 12, 31)
 ```
 
-[Rectangle](https://cesium.com/docs/cesiumjs-ref-doc/Rectangle.html)
+[Rectangle](http://resource.dvgis.cn/cesium-docs/Rectangle.html)
 
 ## DC.CallbackProperty
 
@@ -945,7 +993,7 @@ point.setStyle({
 })
 ```
 
-[CallbackProperty](https://cesium.com/docs/cesiumjs-ref-doc/CallbackProperty.html)
+[CallbackProperty](http://resource.dvgis.cn/cesium-docs/CallbackProperty.html)
 
 ## DC.Parse
 
@@ -1144,7 +1192,7 @@ let point = DC.CoordTransform.BD09ToGCJ02(120, 20)
     - `{Number} count`
   - returns `Array`
 
-> [more](https://cesium.com/docs/cesiumjs-ref-doc/Math.html)
+> [more](http://resource.dvgis.cn/cesium-docs/Math.html)
 
 ## DC.Util
 

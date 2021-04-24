@@ -90,6 +90,30 @@ viewer.addBaseLayer(baseLayer, {
     - `{Object} options`
   - returns `baseLayer`
 
+- **_createGridImageryLayer(options)_**
+
+  - parameters
+    - `{Object} options` [Grid](http://resource.dvgis.cn/cesium-docs/GridImageryProvider.html#.ConstructorOptions)
+  - returns `baseLayer`
+
+- **_createMapboxImageryLayer(options)_**
+
+  - parameters
+    - `{Object} options` [Mapbox](http://resource.dvgis.cn/cesium-docs/MapboxImageryProvider.html#.ConstructorOptions)
+  - returns `baseLayer`
+
+- **_createMapboxStyleImageryLayer(options)_**
+
+  - parameters
+    - `{Object} options` [Mapbox Style](http://resource.dvgis.cn/cesium-docs/MapboxStyleImageryProvider.html#.ConstructorOptions)
+  - returns `baseLayer`
+
+- **_createTMSImageryLayer(options)_**
+
+  - parameters
+    - `{Object} options` [TMS](http://resource.dvgis.cn/cesium-docs/TileMapServiceImageryProvider.html#.ConstructorOptions)
+  - returns `baseLayer`
+
 - **_createImageryLayer(type, options)_**
 
   - parameters
@@ -105,6 +129,7 @@ viewer.addBaseLayer(baseLayer, {
   "key": "", //Valid only for TDT
   "subdomains": [],
   "crs":"WGS84",// WGS84 、BD09 、GCJ02
+  "tilingScheme":null, // GeographicTilingScheme , WebMercatorTilingScheme
   "rectangle": {
     "west": 0,
     "south": 0,

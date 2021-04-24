@@ -30,7 +30,7 @@ DC 为框架默认命名空间，使用该框架开发时都需要统以 `DC.` �
 
 ### accessToken
 
-> 用于加载高级功能，如：位置编辑器、分析模块
+> 用于去除 logo 和控制端的输出信息
 
 ```js
 DC.accessToken = '<your access token>'
@@ -254,6 +254,26 @@ DC.ready(() => {
 
 **_`DC.RoamingViewMode.TRACKED`_**: 跟随视角
 
+### PositionEditorType
+
+**_`DC.PositionEditorType.TRANSLATION`_**: 偏移
+
+**_`DC.PositionEditorType.ROTATION`_**: 旋转
+
+### ClippingDirection
+
+**_`DC.ClippingDirection.UP`_**: 向上
+
+**_`DC.ClippingDirection.DOWN`_**: 向下
+
+**_`DC.ClippingDirection.LEFT`_**: 向左
+
+**_`DC.ClippingDirection.RIGHT`_**: 向右
+
+**_`DC.ClippingDirection.FRONT`_**: 向前
+
+**_`DC.ClippingDirection.BACK`_**: 向后
+
 ## DC.Viewer
 
 > 3D 场景主要接口，在给定的 DivId 中构建三维场景，也可用 DC.World.
@@ -307,13 +327,13 @@ global.viewer = viewer // 添加到全局变量
 ### properties
 
 - `{Element} dcContainer`：框架自定义容器 **_`readonly`_**
-- `{Object} scene`：场景 **_`readonly`_**，详情参考：[Scene](https://cesium.com/docs/cesiumjs-ref-doc/Scene.html)
-- `{Object} camera`：相机 **_`readonly`_**，详情参考：[Camera](https://cesium.com/docs/cesiumjs-ref-doc/Scene.html)
+- `{Object} scene`：场景 **_`readonly`_**，详情参考：[Scene](http://resource.dvgis.cn/cesium-docs/Scene.html)
+- `{Object} camera`：相机 **_`readonly`_**，详情参考：[Camera](http://resource.dvgis.cn/cesium-docs/Scene.html)
 - `{Element} canvas`：canvas 节点 **_`readonly`_**
-- `{Object} clock`：时钟，详情参考：[Clock](https://cesium.com/docs/cesiumjs-ref-doc/Clock.html)
-- `{Object} dataSources`：数据资源集合，详情参考：[DataSourceCollection](https://cesium.com/docs/cesiumjs-ref-doc/DataSourceCollection.html)
-- `{Object} imageryLayers`：瓦片集合，详情参考：[ImageryLayerCollection](https://cesium.com/docs/cesiumjs-ref-doc/ImageryLayerCollection.html)
-- `{Object} entities`：实体集合，详情参考：[EntityCollection](https://cesium.com/docs/cesiumjs-ref-doc/EntityCollection.html)
+- `{Object} clock`：时钟，详情参考：[Clock](http://resource.dvgis.cn/cesium-docs/Clock.html)
+- `{Object} dataSources`：数据资源集合，详情参考：[DataSourceCollection](http://resource.dvgis.cn/cesium-docs/DataSourceCollection.html)
+- `{Object} imageryLayers`：瓦片集合，详情参考：[ImageryLayerCollection](http://resource.dvgis.cn/cesium-docs/ImageryLayerCollection.html)
+- `{Object} entities`：实体集合，详情参考：[EntityCollection](http://resource.dvgis.cn/cesium-docs/EntityCollection.html)
 - [`{Popup} popup`](#popup)：气泡窗口 **_`readonly`_**
 - [`{ContextMenu} contextMenu`](#contextmenu)：右击弹框 **_`readonly`_**
 - [`{Tooltip} tooltip`](#tooltip)：提示框 **_`readonly`_**
@@ -325,7 +345,7 @@ global.viewer = viewer // 添加到全局变量
 - [`{LoadingMask} loadingMask`](#loadingmask)：加载蒙层 **_`readonly`_**
 - `{Position} cameraPosition`：相机位置 **_`readonly`_**
 - `{Number} resolution`：分辨率 **_`readonly`_**
-- `{Object} viewBounds`：视野范围 **_`readonly`_**
+- `{Rect} viewBounds`：视野范围 **_`readonly`_**
 
 ### methods
 
@@ -837,12 +857,54 @@ viewer.loadingMask.enable = true
 
 ## DC.SkyBox
 
-> 天空盒
+> 天空盒，[详情参考](http://resource.dvgis.cn/cesium-docs/SkyBox.html)
 
 ### example
 
 ```js
 scene.skyBox = new DC.SkyBox({
+  sources: {
+    positiveX: 'skybox_px.png',
+    negativeX: 'skybox_nx.png',
+    positiveY: 'skybox_py.png',
+    negativeY: 'skybox_ny.png',
+    positiveZ: 'skybox_pz.png',
+    negativeZ: 'skybox_nz.png',
+  },
+})
+```
+
+### creation
+
+- **_constructor(id)_**
+
+  DC.SkyBox 构造函数
+
+  - 参数
+    - `{Object} options`：配置
+  - 返回值 `skyBox`
+
+```json
+//options(可选)
+{
+  "sources": {}, // 六个面的贴图
+  "show": true //显示
+}
+```
+
+### properties
+
+- `{Object} sources`：六个面的贴图
+- `{Boolean} show`：显示
+
+## DC.GroundSkyBox
+
+> 近地天空盒，[详情参考](http://resource.dvgis.cn/cesium-docs/SkyBox.html)
+
+### example
+
+```js
+scene.skyBox = new DC.GroundSkyBox({
   sources: {
     positiveX: 'skybox_px.png',
     negativeX: 'skybox_nx.png',
@@ -1016,7 +1078,7 @@ let red = DC.Color.RED
 - `{Color} WHITE`：白色
 - `{Color} GREEN`：绿色
 
-[其他颜色](https://cesium.com/docs/cesiumjs-ref-doc/Color.html)
+[其他颜色](http://resource.dvgis.cn/cesium-docs/Color.html)
 
 ## DC.TilesetStyle
 
@@ -1034,7 +1096,7 @@ style.color = {
 }
 ```
 
-[详情参考](https://cesium.com/docs/cesiumjs-ref-doc/Cesium3DTileStyle.html)
+[详情参考](http://resource.dvgis.cn/cesium-docs/Cesium3DTileStyle.html)
 
 ## DC.JulianDate
 
@@ -1060,7 +1122,7 @@ let date = DC.JulianDate.now()
     - `{Date} date`：Js 时间
   - 返回值 `date`
 
-[JulianDate](https://cesium.com/docs/cesiumjs-ref-doc/JulianDate.html)
+[JulianDate](http://resource.dvgis.cn/cesium-docs/JulianDate.html)
 
 ## DC.Rect
 
@@ -1072,7 +1134,7 @@ let date = DC.JulianDate.now()
 let r = DC.Rect.fromDegrees(10, 20, 12, 31)
 ```
 
-[详情参考](https://cesium.com/docs/cesiumjs-ref-doc/Rectangle.html)
+[详情参考](http://resource.dvgis.cn/cesium-docs/Rectangle.html)
 
 ## DC.CallbackProperty
 
@@ -1342,7 +1404,7 @@ let point = DC.CoordTransform.BD09ToGCJ02(120, 20)
     - `{Number} count`： 点位数量
   - 返回值 `Array`
 
-> [more](https://cesium.com/docs/cesiumjs-ref-doc/Math.html)
+> [more](http://resource.dvgis.cn/cesium-docs/Math.html)
 
 ## DC.Util
 
