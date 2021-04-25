@@ -37,7 +37,7 @@ DC.accessToken = '<your access token>'
 ```
 
 :::tip
-Token apply [url](https://dvgis.cn/#/price)
+Token apply [url](http://dvgis.cn/#/price)
 :::
 
 ### use

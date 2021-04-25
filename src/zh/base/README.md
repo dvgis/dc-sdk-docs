@@ -37,7 +37,7 @@ DC.accessToken = '<your access token>'
 ```
 
 :::tip
-Token 申请可通过 [https://dvgis.cn/#/price](https://dvgis.cn/#/price) 进行申请
+Token 申请可通过 [http://dvgis.cn/#/price](http://dvgis.cn/#/price) 进行申请
 :::
 
 ### use
