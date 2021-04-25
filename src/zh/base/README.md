@@ -30,11 +30,15 @@ DC 为框架默认命名空间，使用该框架开发时都需要统以 `DC.` �
 
 ### accessToken
 
-> 用于去除 logo 和控制端的输出信息
+> 用于去除 logo 和控制端的输出信息。`不影响框架的使用`
 
 ```js
 DC.accessToken = '<your access token>'
 ```
+
+:::tip
+Token 申请可通过 [https://dvgis.cn/#/price](https://dvgis.cn/#/price) 进行申请
+:::
 
 ### use
 

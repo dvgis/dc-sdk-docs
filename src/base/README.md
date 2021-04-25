@@ -30,11 +30,15 @@ Try not to use DC as variable names or namespaces when developing to avoid the f
 
 ### accessToken
 
-> Used to load advanced features such as: location editor, analysis module
+> For removing logo and console output information
 
 ```js
 DC.accessToken = '<your access token>'
 ```
+
+:::tip
+Token apply [url](https://dvgis.cn/#/price)
+:::
 
 ### use
 
