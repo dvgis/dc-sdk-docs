@@ -117,7 +117,7 @@ point.setStyle({
   设置样式
 
   - Parameters
-    - `{Object} style` [PointGraphics](https://cesium.com/docs/cesiumjs-ref-doc/PointGraphics.html)
+    - `{Object} style` [PointGraphics](http://resource.dvgis.cn/cesium-docs/PointGraphics.html)
   - returns `this`
 
 ```json
@@ -186,7 +186,7 @@ polyline.setStyle({
 - **_setStyle(style)_**
 
   - Parameters
-    - `{Object} style` [PolylineGraphics](https://cesium.com/docs/cesiumjs-ref-doc/PolylineGraphics.html)
+    - `{Object} style` [PolylineGraphics](http://resource.dvgis.cn/cesium-docs/PolylineGraphics.html)
   - returns `this`
 
 ```json
@@ -244,7 +244,7 @@ polygon.setStyle({
 - **_setStyle(style)_**
 
   - Parameters
-    - `{Object} style` [PolygonGraphics](https://cesium.com/docs/cesiumjs-ref-doc/PolygonGraphics.html)
+    - `{Object} style` [PolygonGraphics](http://resource.dvgis.cn/cesium-docs/PolygonGraphics.html)
   - returns `this`
 
 ```json
@@ -309,7 +309,7 @@ billboard.size = [20, 20]
 - **_setStyle(style)_**
 
   - Parameters
-    - `{Object} style` [BillboardGraphics](https://cesium.com/docs/cesiumjs-ref-doc/BillboardGraphics.html)
+    - `{Object} style` [BillboardGraphics](http://resource.dvgis.cn/cesium-docs/BillboardGraphics.html)
   - returns `this`
 
 ```json
@@ -375,7 +375,7 @@ let Label = new DC.Label(position, 'test')
 - **_setStyle(style)_**
 
   - Parameters
-    - `{Object} style` [LabelGraphics](https://cesium.com/docs/cesiumjs-ref-doc/LabelGraphics.html)
+    - `{Object} style` [LabelGraphics](http://resource.dvgis.cn/cesium-docs/LabelGraphics.html)
   - returns `this`
 
 ```json
@@ -448,7 +448,7 @@ let circle = new DC.Circle(position, 200)
 - **_setStyle(style)_**
 
   - Parameters
-    - `{Object} style` [EllipseGraphics](https://cesium.com/docs/cesiumjs-ref-doc/EllipseGraphics.html)
+    - `{Object} style` [EllipseGraphics](http://resource.dvgis.cn/cesium-docs/EllipseGraphics.html)
   - returns `this`
 
 ```json
@@ -505,7 +505,7 @@ let rectangle = new DC.Rectangle('-90.0,32.0;-94.0,36.0;')
   设置样式
 
   - Parameters
-    - `{Object} style`：样式，详情参考：[RectangleGraphics](https://cesium.com/docs/cesiumjs-ref-doc/RectangleGraphics.html)
+    - `{Object} style`：样式，详情参考：[RectangleGraphics](http://resource.dvgis.cn/cesium-docs/RectangleGraphics.html)
   - returns `this`
 
 ```json
@@ -562,7 +562,7 @@ let wall = new DC.Wall('-90.0,32.0,1000;-94.0,36.0,1000;')
   设置样式
 
   - Parameters
-    - `{Object} style`：样式，详情参考：[WallGraphics](https://cesium.com/docs/cesiumjs-ref-doc/WallGraphics.html)
+    - `{Object} style`：样式，详情参考：[WallGraphics](http://resource.dvgis.cn/cesium-docs/WallGraphics.html)
   - returns `this`
 
 ```json
@@ -620,7 +620,7 @@ let model = new DC.Model(position, '**/**.glb')
 - **_setStyle(style)_**
 
   - Parameters
-    - `{Object} style` [ModelGraphics](https://cesium.com/docs/cesiumjs-ref-doc/ModelGraphics.html)
+    - `{Object} style` [ModelGraphics](http://resource.dvgis.cn/cesium-docs/ModelGraphics.html)
   - returns `this`
 
 ```json
@@ -657,6 +657,7 @@ let model = new DC.Model(position, '**/**.glb')
 ```js
 let position = new DC.Position(120, 20)
 let tileset = new DC.Tileset('**/tileset.json')
+tileset.setPosition(position)
 ```
 
 ### creation
@@ -665,7 +666,7 @@ let tileset = new DC.Tileset('**/tileset.json')
 
   - Parameters
     - `{String} url`
-    - `{Object} options` [Tileset](https://cesium.com/docs/cesiumjs-ref-doc/Cesium3DTileset.html)
+    - `{Object} options` [Tileset](http://resource.dvgis.cn/cesium-docs/Cesium3DTileset.html)
   - returns `tileset`
 
 ### properties
@@ -696,7 +697,7 @@ let tileset = new DC.Tileset('**/tileset.json')
 - **_setPosition(position)_**
 
   - Parameters
-    - `{Position} position`
+    - `{Position|Array|String} position`
   - returns `this`
 
 - **_setHeight(height,isAbsolute)_**
@@ -818,7 +819,7 @@ let box = new DC.Box(position, 20, 30, 40)
 - **_setStyle(style)_**
 
   - Parameters
-    - `{Object} style` [BoxGraphics](https://cesium.com/docs/cesiumjs-ref-doc/BoxGraphics.html)
+    - `{Object} style` [BoxGraphics](http://resource.dvgis.cn/cesium-docs/BoxGraphics.html)
   - returns `this`
 
 ```json
@@ -868,7 +869,7 @@ corridor.setStyle({
 - **_setStyle(style)_**
 
   - Parameters
-    - `{Object} style` [CorridorGraphics](https://cesium.com/docs/cesiumjs-ref-doc/CorridorGraphics.html)
+    - `{Object} style` [CorridorGraphics](http://resource.dvgis.cn/cesium-docs/CorridorGraphics.html)
   - returns `this`
 
 ```json
@@ -933,7 +934,7 @@ let cylinder = new DC.Cylinder(position, 20, 30, 40)
 - **_setStyle(style)_**
 
   - Parameters
-    - `{Object} style` [CylinderGraphics](https://cesium.com/docs/cesiumjs-ref-doc/CylinderGraphics.html)
+    - `{Object} style` [CylinderGraphics](http://resource.dvgis.cn/cesium-docs/CylinderGraphics.html)
   - returns `this`
 
 ```json
@@ -986,7 +987,7 @@ let ellipse = new DC.Ellipse(position, 20, 30)
 - **_setStyle(style)_**
 
   - Parameters
-    - `{Object} style` [EllipseGraphics](https://cesium.com/docs/cesiumjs-ref-doc/EllipseGraphics.html)
+    - `{Object} style` [EllipseGraphics](http://resource.dvgis.cn/cesium-docs/EllipseGraphics.html)
   - returns `this`
 
 ```json
@@ -1043,7 +1044,7 @@ let ellipsoid = new DC.Ellipsoid(position, { x: 30, y: 30, z: 30 })
 - **_setStyle(style)_**
 
   - Parameters
-    - `{Object} style` [EllipsoidGraphics](https://cesium.com/docs/cesiumjs-ref-doc/EllipsoidGraphics.html)
+    - `{Object} style` [EllipsoidGraphics](http://resource.dvgis.cn/cesium-docs/EllipsoidGraphics.html)
   - returns `this`
 
 ```json
@@ -1105,7 +1106,7 @@ let plane = new DC.Plane(position, 20, 30, { normal: 'x' })
 - **_setStyle(style)_**
 
   - Parameters
-    - `{Object} style` [PlaneGraphics](https://cesium.com/docs/cesiumjs-ref-doc/PlaneGraphics.html)
+    - `{Object} style` [PlaneGraphics](http://resource.dvgis.cn/cesium-docs/PlaneGraphics.html)
   - returns `this`
 
 ```json
@@ -1168,7 +1169,7 @@ let polylineVolume = new DC.PolylineVolume(
 - **_setStyle(style)_**
 
   - Parameters
-    - `{Object} style` [PolylineVolumeGraphics](https://cesium.com/docs/cesiumjs-ref-doc/PolylineVolumeGraphics.html)
+    - `{Object} style` [PolylineVolumeGraphics](http://resource.dvgis.cn/cesium-docs/PolylineVolumeGraphics.html)
   - returns `this`
 
 ```json
@@ -1578,7 +1579,7 @@ water.setStyle({
   设置样式
 
   - Parameters
-    - `{Object} style`：样式，详情参考：[PolygonGraphics](https://cesium.com/docs/cesiumjs-ref-doc/PolygonGraphics.html)
+    - `{Object} style`：样式，详情参考：[PolygonGraphics](http://resource.dvgis.cn/cesium-docs/PolygonGraphics.html)
   - returns `this`
 
 ```json

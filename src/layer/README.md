@@ -258,7 +258,7 @@ layer.eachOverlay((item) => {
   - parameters
     - `{String} id`
     - `{String} url`
-    - `{Object} options` [GeoJsonDataSource](https://cesium.com/docs/cesiumjs-ref-doc/GeoJsonDataSource.html)
+    - `{Object} options` [GeoJsonDataSource](http://resource.dvgis.cn/cesium-docs/GeoJsonDataSource.html)
   - returns `geoJsonLayer`
 
 ### methods
@@ -307,7 +307,7 @@ layer.eachOverlay((item) => {
   - parameters
     - `{String} id`
     - `{String} url`
-    - `{Object} options` [GeoJsonDataSource](https://cesium.com/docs/cesiumjs-ref-doc/GeoJsonDataSource.html)
+    - `{Object} options` [GeoJsonDataSource](http://resource.dvgis.cn/cesium-docs/GeoJsonDataSource.html)
   - returns `topoJsonLayer`
 
 ### methods
@@ -371,7 +371,7 @@ layer.eachOverlay((item) => {
   - parameters
     - `{String} id`
     - `{String} url`
-    - `{Object} options` [CzmlDataSource](https://cesium.com/docs/cesiumjs-ref-doc/CzmlDataSource.html)
+    - `{Object} options` [CzmlDataSource](http://resource.dvgis.cn/cesium-docs/CzmlDataSource.html)
   - returns `czmlLayer`
 
 ## DC.KmlLayer
@@ -402,7 +402,7 @@ layer.eachOverlay((item) => {
   - parameters
     - `{String} id`
     - `{String} url`
-    - `{Object} options` [KmlDataSource](https://cesium.com/docs/cesiumjs-ref-doc/KmlDataSource.html)
+    - `{Object} options` [KmlDataSource](http://resource.dvgis.cn/cesium-docs/KmlDataSource.html)
   - returns `kmlLayer`
 
 ## DC.ClusterLayer

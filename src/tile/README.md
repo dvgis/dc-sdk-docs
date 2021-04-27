@@ -57,31 +57,31 @@ viewer.addBaseLayer(baseLayer, {
 - **_createArcGisImageryLayer(options)_**
 
   - parameters
-    - `{Object} options` [ArcGis](https://cesium.com/docs/cesiumjs-ref-doc/ArcGisMapServerImageryProvider.html#.ConstructorOptions)
+    - `{Object} options` [ArcGis](http://resource.dvgis.cn/cesium-docs/ArcGisMapServerImageryProvider.html#.ConstructorOptions)
   - returns `baseLayer`
 
 - **_createSingleTileImageryLayer(options)_**
 
   - parameters
-    - `{Object} options` [Single](https://cesium.com/docs/cesiumjs-ref-doc/SingleTileImageryProvider.html#.ConstructorOptions)
+    - `{Object} options` [Single](http://resource.dvgis.cn/cesium-docs/SingleTileImageryProvider.html#.ConstructorOptions)
   - returns `baseLayer`
 
 - **_createWMSImageryLayer(options)_**
 
   - parameters
-    - `{Object} options` [WMS](https://cesium.com/docs/cesiumjs-ref-doc/WebMapServiceImageryProvider.html#.ConstructorOptions)
+    - `{Object} options` [WMS](http://resource.dvgis.cn/cesium-docs/WebMapServiceImageryProvider.html#.ConstructorOptions)
   - returns `baseLayer`
 
 - **_createWMTSImageryLayer(options)_**
 
   - parameters
-    - `{Object} options` [WMTS](https://cesium.com/docs/cesiumjs-ref-doc/WebMapTileServiceImageryProvider.html#.ConstructorOptions)
+    - `{Object} options` [WMTS](http://resource.dvgis.cn/cesium-docs/WebMapTileServiceImageryProvider.html#.ConstructorOptions)
   - returns `baseLayer`
 
 - **_createXYZImageryLayer(options)_**
 
   - parameters
-    - `{Object} options` [X/Y/Z](https://cesium.com/docs/cesiumjs-ref-doc/UrlTemplateImageryProvider.html#.ConstructorOptions)
+    - `{Object} options` [X/Y/Z](http://resource.dvgis.cn/cesium-docs/UrlTemplateImageryProvider.html#.ConstructorOptions)
   - returns `baseLayer`
 
 - **_createCoordImageryLayer(options)_**

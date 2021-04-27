@@ -306,7 +306,7 @@ layer.eachOverlay((item) => {
   - 参数
     - `{String} id`：图层唯一标识
     - `{String} url`：数据地址
-    - `{Object} options`：属性配置，详情参考：[GeoJsonDataSource](https://cesium.com/docs/cesiumjs-ref-doc/GeoJsonDataSource.html)
+    - `{Object} options`：属性配置，详情参考：[GeoJsonDataSource](http://resource.dvgis.cn/cesium-docs/GeoJsonDataSource.html)
   - 返回值 `geoJsonLayer`
 
 ### methods
@@ -361,7 +361,7 @@ layer.eachOverlay((item) => {
   - 参数
     - `{String} id`：图层唯一标识
     - `{String} url`：数据地址
-    - `{Object} options`：属性配置，详情参考：[GeoJsonDataSource](https://cesium.com/docs/cesiumjs-ref-doc/GeoJsonDataSource.html)
+    - `{Object} options`：属性配置，详情参考：[GeoJsonDataSource](http://resource.dvgis.cn/cesium-docs/GeoJsonDataSource.html)
       - 返回值 `topoJsonLayer`
 
 ### methods
@@ -431,7 +431,7 @@ layer.eachOverlay((item) => {
   - 参数
     - `{String} id`：图层唯一标识
     - `{String} url`：数据地址
-    - `{Object} options`：属性配置，详情参考：[CzmlDataSource](https://cesium.com/docs/cesiumjs-ref-doc/CzmlDataSource.html)
+    - `{Object} options`：属性配置，详情参考：[CzmlDataSource](http://resource.dvgis.cn/cesium-docs/CzmlDataSource.html)
   - 返回值 `czmlLayer`
 
 ## DC.KmlLayer
@@ -464,7 +464,7 @@ layer.eachOverlay((item) => {
   - 参数
     - `{String} id`：图层唯一标识
     - `{String} url`：数据地址
-    - `{Object} options`：属性配置，详情参考：[KmlDataSource](https://cesium.com/docs/cesiumjs-ref-doc/KmlDataSource.html)
+    - `{Object} options`：属性配置，详情参考：[KmlDataSource](http://resource.dvgis.cn/cesium-docs/KmlDataSource.html)
   - 返回值 `kmlLayer`
 
 ## DC.ClusterLayer
