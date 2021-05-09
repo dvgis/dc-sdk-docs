@@ -228,6 +228,27 @@ viewer.addLayer(layer)
     - `{String} id`：图层唯一标识
   - 返回值 `vectorLayer`
 
+## DC.DynamicLayer
+
+> 动态图层，用于添加各类动态矢量数据（图标、模型等），将矢量数据按一定的逻辑分组，方便统一管理，继承于[Layer](#layer)
+
+### example
+
+```js
+let layer = new DC.DynamicLayer('id')
+viewer.addLayer(layer)
+```
+
+### creation
+
+- **_constructor(id)_**
+
+  DC.DynamicLayer 构造函数
+
+  - 参数
+    - `{String} id`：图层唯一标识
+  - 返回值 `dynamicLayer`
+
 ## DC.PrimitiveLayer
 
 > 图元图层，用于添加各类图元数据，将图元数据按一定的逻辑分组，方便统一管理，继承于[Layer](#layer)
@@ -513,8 +534,7 @@ viewer.addLayer(layer)
 ### example
 
 ```js
-let bounds = [new DC.Position(100, 20), new DC.Position(150, 26)]
-let layer = new DC.HeatLayer('id', bound)
+let layer = new DC.HeatLayer('id')
 viewer.addLayer(layer)
 ```
 
@@ -526,16 +546,12 @@ viewer.addLayer(layer)
 
   - 参数
     - `{String} id`：图层唯一标识
-    - `{Array<DC.Position>} bounds`：热区范围，有长度为 2 的数组组成，第一个为西南坐标，第二个为东北坐标
     - `{Object} options`：属性配置
   - 返回值 `heatLayer`
 
 ```json
 //属性参数(可选)
 {
-  "maxOpacity": 0.8, // 最大透明度
-  "minOpacity": 0.1, // 最小透明度
-  "blur": 0.85, // 模糊度
   "gradient": {
     "0.5": "blue",
     "0.8": "red",
@@ -543,10 +559,8 @@ viewer.addLayer(layer)
     "0.6": "yellow",
     "0.5": "green"
   }, //颜色设置
-  "distanceDisplayCondition": {
-    "near": 0, //最近距离
-    "far": Number.MAX_VALUE //最远距离
-  } //根据距离设置可见
+  "height": 0, // 高度
+  "radius": 30 // 半径
 }
 ```
 
@@ -558,6 +572,23 @@ viewer.addLayer(layer)
 
   - 参数
     - `{Array<Object>} positions`：点位信息
+  - 返回值 `heatLayer`
+
+```json
+//点位信息参数
+{
+  "lng": "", //经度
+  "lat": "", //纬度
+  "value": 10 //强度
+}
+```
+
+- **_addPosition(position)_**
+
+  添加点位
+
+  - 参数
+    - `{Object} position`：点位信息
   - 返回值 `heatLayer`
 
 ```json

@@ -169,12 +169,31 @@ layerGroup.addLayer(layer)
 
 ## DC.VectorLayer
 
-> Vector layers, used to add all kinds of vector data (points, lines, surfaces, etc.), grouping vector data according to a certain logic to facilitate unified management, inherited from [Layer](#layer)
+> Vector layer, used to add all kinds of vector data (points, lines, surfaces, etc.), grouping vector data according to a certain logic to facilitate unified management, inherited from [Layer](#layer)
 
 ### example
 
 ```js
 let layer = new DC.VectorLayer('id')
+viewer.addLayer(layer)
+```
+
+### creation
+
+- **_constructor(id)_**
+
+  - parameters
+    - `{String} id`
+  - returns `vectorLayer`
+
+## DC.DynamicLayer
+
+> Dynamic layer, used to add all kinds of dynamic data (billboard、model etc.), grouping vector data according to a certain logic to facilitate unified management, inherited from [Layer](#layer)
+
+### example
+
+```js
+let layer = new DC.DynamicLayer('id')
 viewer.addLayer(layer)
 ```
 
@@ -448,27 +467,22 @@ viewer.addLayer(layer)
 ### example
 
 ```js
-let bounds = [new DC.Position(100, 20), new DC.Position(150, 26)]
-let layer = new DC.HeatLayer('id', bound)
+let layer = new DC.HeatLayer('id')
 viewer.addLayer(layer)
 ```
 
 ### creation
 
-- **_constructor(id,bounds,[options])_**
+- **_constructor(id,[options])_**
 
   - parameters
     - `{String} id`
-    - `{Array<DC.Position>} bounds`：There are arrays of length 2, the first with southwest coordinates and the second with northeast coordinates
     - `{Object} options`
   - returns `heatLayer`
 
 ```json
 //options(optional)
 {
-  "maxOpacity": 0.8,
-  "minOpacity": 0.1,
-  "blur": 0.85,
   "gradient": {
     "0.5": "blue",
     "0.8": "red",
@@ -476,10 +490,8 @@ viewer.addLayer(layer)
     "0.6": "yellow",
     "0.5": "green"
   },
-  "distanceDisplayCondition": {
-    "near": 0,
-    "far": Number.MAX_VALUE
-  }
+  "height": 0,
+  "radius": 30
 }
 ```
 
@@ -489,6 +501,20 @@ viewer.addLayer(layer)
 
   - parameters
     - `{Array<Object>} positions`
+  - returns `heatLayer`
+
+```json
+{
+  "lng": "",
+  "lat": "",
+  "value": 1
+}
+```
+
+- **_addPosition(position)_**
+
+  - parameters
+    - `{Object} position`
   - returns `heatLayer`
 
 ```json

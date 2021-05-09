@@ -29,7 +29,7 @@ The class cannot be instantiated
 
 - **_addTo(layer)_**
 
-  - Parameters
+  - parameters
     - `{Layer} layer`
   - returns `this`
 
@@ -39,7 +39,7 @@ The class cannot be instantiated
 
 - **_setLabel(text, textStyle)_**
 
-  - Parameters
+  - parameters
     - `{String} text`
     - `{String} textStyle` [DC.Label](#dc-label)
   - returns `this`
@@ -48,7 +48,7 @@ The class cannot be instantiated
 
   Event Subscription
 
-  - Parameters
+  - parameters
     - `{Object} type`
     - `{Function} callback`
     - `{Object} context`
@@ -58,7 +58,7 @@ The class cannot be instantiated
 
   Event Unsubscribe
 
-  - Parameters
+  - parameters
     - `{Object} type`
     - `{Function} callback`
     - `{Object} context`
@@ -66,7 +66,7 @@ The class cannot be instantiated
 
 - **_fire(type,params)_**
 
-  - Parameters
+  - parameters
     - `{Object} type`
     - `{Object} params`
   - returns `this`
@@ -75,12 +75,12 @@ The class cannot be instantiated
 
 - **_registerType(type)_**
 
-  - Parameters
+  - parameters
     - `{String} type`
 
 - **_getOverlayType(type)_**
 
-  - Parameters
+  - parameters
     - `{String} type`
   - returns `string`
 
@@ -102,7 +102,7 @@ point.setStyle({
 
 - **_constructor(position)_**
 
-  - Parameters
+  - parameters
     - `{Position} position`
   - returns `point`
 
@@ -116,7 +116,7 @@ point.setStyle({
 
   设置样式
 
-  - Parameters
+  - parameters
     - `{Object} style` [PointGraphics](http://resource.dvgis.cn/cesium-docs/PointGraphics.html)
   - returns `this`
 
@@ -150,7 +150,7 @@ point.setStyle({
 
 - **_fromEntity(entity)_**
 
-  - Parameters
+  - parameters
     - `{Object} entity`
   - returns `point`
 
@@ -171,7 +171,7 @@ polyline.setStyle({
 
 - **_constructor(positions)_**
 
-  - Parameters
+  - parameters
     - `{String|Array<Position|Number|String>} positions`
   - returns `polyline`
 
@@ -185,7 +185,7 @@ polyline.setStyle({
 
 - **_setStyle(style)_**
 
-  - Parameters
+  - parameters
     - `{Object} style` [PolylineGraphics](http://resource.dvgis.cn/cesium-docs/PolylineGraphics.html)
   - returns `this`
 
@@ -207,7 +207,7 @@ polyline.setStyle({
 
 - **_fromEntity(entity)_**
 
-  - Parameters
+  - parameters
     - `{Object} entity`
   - returns `polyline`
 
@@ -228,7 +228,7 @@ polygon.setStyle({
 
 - **_constructor(positions)_**
 
-  - Parameters
+  - parameters
     - `{String|Array<Position|Number|String>} positions`
   - returns `polygon`
 
@@ -243,7 +243,7 @@ polygon.setStyle({
 
 - **_setStyle(style)_**
 
-  - Parameters
+  - parameters
     - `{Object} style` [PolygonGraphics](http://resource.dvgis.cn/cesium-docs/PolygonGraphics.html)
   - returns `this`
 
@@ -273,7 +273,7 @@ polygon.setStyle({
 
 - **_fromEntity(entity)_**
 
-  - Parameters
+  - parameters
     - `{Object} entity`
   - returns `polygon`
 
@@ -293,7 +293,7 @@ billboard.size = [20, 20]
 
 - **_constructor(position,icon)_**
 
-  - Parameters
+  - parameters
     - `{Position} position`
     - `{String} icon`
   - returns `billboard`
@@ -308,7 +308,7 @@ billboard.size = [20, 20]
 
 - **_setStyle(style)_**
 
-  - Parameters
+  - parameters
     - `{Object} style` [BillboardGraphics](http://resource.dvgis.cn/cesium-docs/BillboardGraphics.html)
   - returns `this`
 
@@ -341,7 +341,7 @@ billboard.size = [20, 20]
 
 - **_fromEntity(entity)_**
 
-  - Parameters
+  - parameters
     - `{Object} entity`：
   - returns `billboard`
 
@@ -360,7 +360,7 @@ let Label = new DC.Label(position, 'test')
 
 - **_constructor(position,text)_**
 
-  - Parameters
+  - parameters
     - `{Position} position`
     - `{String} text`
   - returns `label`
@@ -374,7 +374,7 @@ let Label = new DC.Label(position, 'test')
 
 - **_setStyle(style)_**
 
-  - Parameters
+  - parameters
     - `{Object} style` [LabelGraphics](http://resource.dvgis.cn/cesium-docs/LabelGraphics.html)
   - returns `this`
 
@@ -413,7 +413,7 @@ let Label = new DC.Label(position, 'test')
 
 - **_fromEntity(entity,text)_**
 
-  - Parameters
+  - parameters
     - `{Object} entity`
     - `{String} text`
   - returns `label`
@@ -433,7 +433,7 @@ let circle = new DC.Circle(position, 200)
 
 - **_constructor(center, radius)_**
 
-  - Parameters
+  - parameters
     - `{Position} center`
     - `{String} radius`
   - returns `billboard`
@@ -447,7 +447,7 @@ let circle = new DC.Circle(position, 200)
 
 - **_setStyle(style)_**
 
-  - Parameters
+  - parameters
     - `{Object} style` [EllipseGraphics](http://resource.dvgis.cn/cesium-docs/EllipseGraphics.html)
   - returns `this`
 
@@ -490,7 +490,7 @@ let rectangle = new DC.Rectangle('-90.0,32.0;-94.0,36.0;')
 
   构造函数
 
-  - Parameters
+  - parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
   - returns `rectangle`
 
@@ -504,7 +504,7 @@ let rectangle = new DC.Rectangle('-90.0,32.0;-94.0,36.0;')
 
   设置样式
 
-  - Parameters
+  - parameters
     - `{Object} style`：样式，详情参考：[RectangleGraphics](http://resource.dvgis.cn/cesium-docs/RectangleGraphics.html)
   - returns `this`
 
@@ -547,7 +547,7 @@ let wall = new DC.Wall('-90.0,32.0,1000;-94.0,36.0,1000;')
 
   构造函数
 
-  - Parameters
+  - parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
   - returns `wall`
 
@@ -561,7 +561,7 @@ let wall = new DC.Wall('-90.0,32.0,1000;-94.0,36.0,1000;')
 
   设置样式
 
-  - Parameters
+  - parameters
     - `{Object} style`：样式，详情参考：[WallGraphics](http://resource.dvgis.cn/cesium-docs/WallGraphics.html)
   - returns `this`
 
@@ -586,7 +586,7 @@ let wall = new DC.Wall('-90.0,32.0,1000;-94.0,36.0,1000;')
 
   Entity 转换为 Overlay
 
-  - Parameters
+  - parameters
     - `{Object} entity`：Cesium 覆盖物
   - returns `wall`
 
@@ -605,7 +605,7 @@ let model = new DC.Model(position, '**/**.glb')
 
 - **_constructor(position, modelUrl)_**
 
-  - Parameters
+  - parameters
     - `{Position|String|Array} position`
     - `{String} modelUrl`
   - returns `model`
@@ -619,7 +619,7 @@ let model = new DC.Model(position, '**/**.glb')
 
 - **_setStyle(style)_**
 
-  - Parameters
+  - parameters
     - `{Object} style` [ModelGraphics](http://resource.dvgis.cn/cesium-docs/ModelGraphics.html)
   - returns `this`
 
@@ -643,7 +643,7 @@ let model = new DC.Model(position, '**/**.glb')
 
 - **_fromEntity(entity,modelUrl)_**
 
-  - Parameters
+  - parameters
     - `{Object} entity`
     - `{String} modelUrl`
   - returns `model`
@@ -664,7 +664,7 @@ tileset.setPosition(position)
 
 - **_constructor(url,[options])_**
 
-  - Parameters
+  - parameters
     - `{String} url`
     - `{Object} options` [Tileset](http://resource.dvgis.cn/cesium-docs/Cesium3DTileset.html)
   - returns `tileset`
@@ -677,7 +677,7 @@ tileset.setPosition(position)
 
 - **_setStyle(style)_**
 
-  - Parameters
+  - parameters
     - `{Object} style` [TileStyle](https://github.com/CesiumGS/3d-tiles/tree/master/specification/Styling)
   - returns `this`
 
@@ -696,26 +696,26 @@ tileset.setPosition(position)
 
 - **_setPosition(position)_**
 
-  - Parameters
+  - parameters
     - `{Position|Array|String} position`
   - returns `this`
 
 - **_setHeight(height,isAbsolute)_**
 
-  - Parameters
+  - parameters
     - `{Number} height`
     - `{Boolean} isAbsolute`
   - returns `this`
 
 - **_setCustomShader(customShader)_**
 
-  - Parameters
+  - parameters
     - `{String} customShader`
   - returns `this`
 
 - **_setProperties(properties)_**
 
-  - Parameters
+  - parameters
     - `{Array<Object>} properties`
   - returns `this`
 
@@ -743,7 +743,7 @@ let divIcon = new DC.DivIcon(position, '<div></div>')
 
 - **_constructor(position, content)_**
 
-  - Parameters
+  - parameters
     - `{Position|String|Array} position`
     - `{String|Element} content`
   - returns `divIcon`
@@ -757,7 +757,7 @@ let divIcon = new DC.DivIcon(position, '<div></div>')
 
 - **_setStyle(style)_**
 
-  - Parameters
+  - parameters
     - `{Object} style`
   - returns `this`
 
@@ -780,7 +780,7 @@ let divIcon = new DC.DivIcon(position, '<div></div>')
 
 - **_fromEntity(entity,content)_**
 
-  - Parameters
+  - parameters
     - `{Object} entity`
     - `{String|Element} content`
   - returns `divIcon`
@@ -800,7 +800,7 @@ let box = new DC.Box(position, 20, 30, 40)
 
 - **_constructor(position, length, width, height)_**
 
-  - Parameters
+  - parameters
     - `{Position} position`
     - `{Number} length`
     - `{Number} width`
@@ -818,7 +818,7 @@ let box = new DC.Box(position, 20, 30, 40)
 
 - **_setStyle(style)_**
 
-  - Parameters
+  - parameters
     - `{Object} style` [BoxGraphics](http://resource.dvgis.cn/cesium-docs/BoxGraphics.html)
   - returns `this`
 
@@ -856,7 +856,7 @@ corridor.setStyle({
 
 - **_constructor(positions)_**
 
-  - Parameters
+  - parameters
     - `{String|Array<Position|Number|String>} positions`
   - returns `corridor`
 
@@ -868,7 +868,7 @@ corridor.setStyle({
 
 - **_setStyle(style)_**
 
-  - Parameters
+  - parameters
     - `{Object} style` [CorridorGraphics](http://resource.dvgis.cn/cesium-docs/CorridorGraphics.html)
   - returns `this`
 
@@ -896,7 +896,7 @@ corridor.setStyle({
 
 - **_fromEntity(entity)_**
 
-  - Parameters
+  - parameters
     - `{Object} entity`
   - returns `corridor`
 
@@ -915,7 +915,7 @@ let cylinder = new DC.Cylinder(position, 20, 30, 40)
 
 - **_constructor(position, length, topRadius, bottomRadius)_**
 
-  - Parameters
+  - parameters
     - `{Position} position`
     - `{Number} length`
     - `{Number} topRadius`
@@ -933,7 +933,7 @@ let cylinder = new DC.Cylinder(position, 20, 30, 40)
 
 - **_setStyle(style)_**
 
-  - Parameters
+  - parameters
     - `{Object} style` [CylinderGraphics](http://resource.dvgis.cn/cesium-docs/CylinderGraphics.html)
   - returns `this`
 
@@ -969,7 +969,7 @@ let ellipse = new DC.Ellipse(position, 20, 30)
 
 - **_constructor(position, semiMajorAxis, semiMinorAxis)_**
 
-  - Parameters
+  - parameters
     - `{Position} position`
     - `{Number} semiMajorAxis`
     - `{Number} semiMinorAxis`
@@ -986,7 +986,7 @@ let ellipse = new DC.Ellipse(position, 20, 30)
 
 - **_setStyle(style)_**
 
-  - Parameters
+  - parameters
     - `{Object} style` [EllipseGraphics](http://resource.dvgis.cn/cesium-docs/EllipseGraphics.html)
   - returns `this`
 
@@ -1028,7 +1028,7 @@ let ellipsoid = new DC.Ellipsoid(position, { x: 30, y: 30, z: 30 })
 
 - **_constructor(position, radius)_**
 
-  - Parameters
+  - parameters
     - `{Position} position`
     - `{Object} radius`：{x: 30, y: 30, z: 30}
   - returns `ellipsoid`
@@ -1043,7 +1043,7 @@ let ellipsoid = new DC.Ellipsoid(position, { x: 30, y: 30, z: 30 })
 
 - **_setStyle(style)_**
 
-  - Parameters
+  - parameters
     - `{Object} style` [EllipsoidGraphics](http://resource.dvgis.cn/cesium-docs/EllipsoidGraphics.html)
   - returns `this`
 
@@ -1079,7 +1079,7 @@ let plane = new DC.Plane(position, 20, 30, { normal: 'x' })
 
 - **_constructor(position, width, height, direction)_**
 
-  - Parameters
+  - parameters
     - `{Position} position`
     - `{Number} width`
     - `{Number} height`
@@ -1105,7 +1105,7 @@ let plane = new DC.Plane(position, 20, 30, { normal: 'x' })
 
 - **_setStyle(style)_**
 
-  - Parameters
+  - parameters
     - `{Object} style` [PlaneGraphics](http://resource.dvgis.cn/cesium-docs/PlaneGraphics.html)
   - returns `this`
 
@@ -1154,7 +1154,7 @@ let polylineVolume = new DC.PolylineVolume(
 
 - **_constructor(positions, shape)_**
 
-  - Parameters
+  - parameters
     - `{String|Array<Position|Number|String>} positions`
     - `{Array} shape`
   - returns `polylineVolume`
@@ -1168,7 +1168,7 @@ let polylineVolume = new DC.PolylineVolume(
 
 - **_setStyle(style)_**
 
-  - Parameters
+  - parameters
     - `{Object} style` [PolylineVolumeGraphics](http://resource.dvgis.cn/cesium-docs/PolylineVolumeGraphics.html)
   - returns `this`
 
@@ -1191,9 +1191,286 @@ let polylineVolume = new DC.PolylineVolume(
 
 - **_fromEntity(entity)_**
 
-  - Parameters
+  - parameters
     - `{Object} entity`
   - returns `polylineVolume`
+
+## DC.DynamicBillboard
+
+> Inherited from [Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let billboard = new DC.DynamicBillboard(position, '***/**.png')
+billboard.size = [20, 20]
+```
+
+### creation
+
+- **_constructor(position,icon)_**
+
+  - parameters
+    - `{Position} position`
+    - `{String} icon`
+  - returns `billboard`
+
+### properties
+
+- `{Position} position` **_`readonly`_**
+- `{String} icon`
+- `{Array<Number>} size`
+
+### methods
+
+- **_addPosition(position,interval)_**
+
+  - parameters
+    - `{Position|Array|String|Object} position`
+    - `{Number} interval`
+  - return's `this`
+
+- **_setStyle(style)_**
+
+  - parameters
+    - `{Object} style` [BillboardGraphics](http://resource.dvgis.cn/cesium-docs/BillboardGraphics.html)
+  - returns `this`
+
+```json
+// style(optional)
+{
+  "heightReference": 0,
+  "scale": 1,
+  "pixelOffset": { "x": 0, "y": 0 },
+  "rotation": 0,
+  "translucencyByDistance": {
+    "near": 0,
+    "nearValue": 0,
+    "far": 1,
+    "farValue": 0
+  },
+  "scaleByDistance": {
+    "near": 0,
+    "nearValue": 0,
+    "far": 1,
+    "farValue": 0
+  },
+  "distanceDisplayCondition": {
+    "near": 0,
+    "far": Number.MAX_VALUE
+  },
+  "disableDepthTestDistance": 0
+}
+```
+
+## DC.DynamicModel
+
+> Inherited from [Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let model = new DC.DynamicModel(position, '**/**.glb')
+```
+
+### creation
+
+- **_constructor(position, modelUrl)_**
+
+  - parameters
+    - `{Position|String|Array|Object} position`
+    - `{String} modelUrl`
+  - returns `model`
+
+### properties
+
+- `{Position} position` **_`readonly`_**
+- `{String} modelUrl`
+
+### methods
+
+- **_addPosition(position,interval)_**
+
+  - parameters
+    - `{Position|Array|String|Object} position`
+    - `{Number} interval`
+  - returns `this`
+
+- **_setStyle(style)_**
+
+  - parameters
+    - `{Object} style` [ModelGraphics](http://resource.dvgis.cn/cesium-docs/ModelGraphics.html)
+  - returns `this`
+
+```json
+// style(optional)
+{
+  "scale": 1,
+  "minimumPixelSize": 0,
+  "maximumScale": 0,
+  "heightReference": 0,
+  "shadows": 0,
+  "silhouetteColor": DC.Color.RED,
+  "silhouetteSize": 0,
+  "lightColor": DC.Color.RED,
+  "distanceDisplayCondition": {
+    "near": 0,
+    "far": Number.MAX_VALUE
+  }
+}
+```
+
+## DC.CustomBillboard
+
+> Inherited from [Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let billboard = new DC.CustomBillboard(position, '***/**.png')
+billboard.size = [20, 20]
+```
+
+### creation
+
+- **_constructor(position,icon)_**
+
+  - parameters
+    - `{Position} position`
+    - `{String} icon`
+  - returns `billboard`
+
+### properties
+
+- `{Position} position`
+- `{String} icon`
+- `{Array<Number>} size`
+
+### methods
+
+- **_setVLine(style)_**
+
+  - parameters
+    - `{Object} style` [PolylineGraphics](http://resource.dvgis.cn/cesium-docs/PolylineGraphics.html)
+  - returns `this`
+
+- **_setBottomCircle(radius,style,rotateAmount)_**
+
+  - parameters
+    - `{Number} radius`
+    - `{Object} style` [EllipseGraphics](http://resource.dvgis.cn/cesium-docs/EllipseGraphics.html)
+    - `{Number} rotateAmount`
+  - returns `this`
+
+- **_setStyle(style)_**
+
+  - parameters
+    - `{Object} style` [BillboardGraphics](http://resource.dvgis.cn/cesium-docs/BillboardGraphics.html)
+  - returns `this`
+
+```json
+// style(optional)
+{
+  "heightReference": 0,
+  "scale": 1,
+  "pixelOffset": { "x": 0, "y": 0 },
+  "rotation": 0,
+  "translucencyByDistance": {
+    "near": 0,
+    "nearValue": 0,
+    "far": 1,
+    "farValue": 0
+  },
+  "scaleByDistance": {
+    "near": 0,
+    "nearValue": 0,
+    "far": 1,
+    "farValue": 0
+  },
+  "distanceDisplayCondition": {
+    "near": 0,
+    "far": Number.MAX_VALUE
+  },
+  "disableDepthTestDistance": 0
+}
+```
+
+## DC.CustomLabel
+
+> Inherited from [Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let label = new DC.CustomLabel(position, 'test')
+```
+
+### creation
+
+- **_constructor(position,text)_**
+
+  - parameters
+    - `{Position} position`
+    - `{String} text`
+  - returns `label`
+
+### properties
+
+- `{Position} position`
+- `{String} text`
+
+### methods
+
+- **_setVLine(style)_**
+
+  - parameters
+    - `{Object} style` [PolylineGraphics](http://resource.dvgis.cn/cesium-docs/PolylineGraphics.html)
+  - returns `this`
+
+- **_setBottomCircle(radius,style,rotateAmount)_**
+
+  - parameters
+    - `{Number} radius`
+    - `{Object} style` [EllipseGraphics](http://resource.dvgis.cn/cesium-docs/EllipseGraphics.html)
+    - `{Number} rotateAmount`
+  - returns `this`
+
+- **_setStyle(style)_**
+
+  - parameters
+    - `{Object} style` [LabelGraphics](http://resource.dvgis.cn/cesium-docs/LabelGraphics.html)
+  - returns `this`
+
+```json
+// style(optional)
+{
+  "heightReference": 0,
+  "scale": 1,
+  "pixelOffset": { "x": 0, "y": 0 },
+  "rotation": 0,
+  "translucencyByDistance": {
+    "near": 0,
+    "nearValue": 0,
+    "far": 1,
+    "farValue": 0
+  },
+  "scaleByDistance": {
+    "near": 0,
+    "nearValue": 0,
+    "far": 1,
+    "farValue": 0
+  },
+  "distanceDisplayCondition": {
+    "near": 0,
+    "far": Number.MAX_VALUE
+  },
+  "disableDepthTestDistance": 0
+}
+```
 
 ## DC.AttackArrow
 
@@ -1211,7 +1488,7 @@ let attackArrow = new DC.AttackArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
 
   构造函数
 
-  - Parameters
+  - parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
   - returns `attackArrow`
 
@@ -1225,7 +1502,7 @@ let attackArrow = new DC.AttackArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
 
   设置样式
 
-  - Parameters
+  - parameters
     - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
   - returns `this`
 
@@ -1245,7 +1522,7 @@ let doubleArrow = new DC.DoubleArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
 
   构造函数
 
-  - Parameters
+  - parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
   - returns `doubleArrow`
 
@@ -1259,7 +1536,7 @@ let doubleArrow = new DC.DoubleArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
 
   设置样式
 
-  - Parameters
+  - parameters
     - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
   - returns `this`
 
@@ -1279,7 +1556,7 @@ let fineArrow = new DC.FineArrow('-90.0,32.0;-94.0,36.0')
 
   构造函数
 
-  - Parameters
+  - parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
   - returns `fineArrow`
 
@@ -1293,7 +1570,7 @@ let fineArrow = new DC.FineArrow('-90.0,32.0;-94.0,36.0')
 
   设置样式
 
-  - Parameters
+  - parameters
     - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
   - returns `this`
 
@@ -1313,7 +1590,7 @@ let gatheringPlace = new DC.GatheringPlace('-90.0,32.0;-94.0,36.0')
 
   构造函数
 
-  - Parameters
+  - parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
   - returns `gatheringPlace`
 
@@ -1327,7 +1604,7 @@ let gatheringPlace = new DC.GatheringPlace('-90.0,32.0;-94.0,36.0')
 
   设置样式
 
-  - Parameters
+  - parameters
     - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
   - returns `this`
 
@@ -1347,7 +1624,7 @@ let tailedAttackArrow = new DC.TailedAttackArrow('-90.0,32.0;-94.0,36.0')
 
   构造函数
 
-  - Parameters
+  - parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
   - returns `tailedAttackArrow`
 
@@ -1361,7 +1638,7 @@ let tailedAttackArrow = new DC.TailedAttackArrow('-90.0,32.0;-94.0,36.0')
 
   设置样式
 
-  - Parameters
+  - parameters
     - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
   - returns `this`
 
@@ -1381,7 +1658,7 @@ let elecEllipsoid = new DC.ElecEllipsoidPrimitive('120,20',{x:2000,y:2000:z:2000
 
   DC.WaterPrimitive 构造函数
 
-  - Parameters
+  - parameters
     - `{String|Position|Array} center`：中心点
     - `{Object} radius`:球半径
   - returns `elecEllipsoidPrimitive`
@@ -1397,7 +1674,7 @@ let elecEllipsoid = new DC.ElecEllipsoidPrimitive('120,20',{x:2000,y:2000:z:2000
 
   设置样式
 
-  - Parameters
+  - parameters
     - `{Object} style`：样式
   - returns `this`
 
@@ -1425,7 +1702,7 @@ let flowLinePrimitive = new DC.FlowLinePrimitive('120,20;120,30;122,30')
 
   DC.FlowLinePrimitive 构造函数
 
-  - Parameters
+  - parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
   - returns `flowLinePrimitive`
 
@@ -1439,7 +1716,7 @@ let flowLinePrimitive = new DC.FlowLinePrimitive('120,20;120,30;122,30')
 
   设置样式
 
-  - Parameters
+  - parameters
     - `{Object} style`：样式
   - returns `this`
 
@@ -1469,7 +1746,7 @@ let scanCirclePrimitive = new DC.ScanCirclePrimitive('120,20', 1000)
 
   DC.ScanCirclePrimitive 构造函数
 
-  - Parameters
+  - parameters
     - `{String|Position|Array} position`：圆心
     - `{Number} radius`：半径
   - returns `scanCirclePrimitive`
@@ -1485,7 +1762,7 @@ let scanCirclePrimitive = new DC.ScanCirclePrimitive('120,20', 1000)
 
   设置样式
 
-  - Parameters
+  - parameters
     - `{Object} style`：样式
   - returns `this`
 
@@ -1513,7 +1790,7 @@ let trailLinePrimitive = new DC.TrailLinePrimitive('120,20;120,30;122,30')
 
   DC.TrailLinePrimitive 构造函数
 
-  - Parameters
+  - parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
   - returns `trailLinePrimitive`
 
@@ -1527,7 +1804,7 @@ let trailLinePrimitive = new DC.TrailLinePrimitive('120,20;120,30;122,30')
 
   设置样式
 
-  - Parameters
+  - parameters
     - `{Object} style`：样式
   - returns `this`
 
@@ -1563,7 +1840,7 @@ water.setStyle({
 
   DC.WaterPrimitive 构造函数
 
-  - Parameters
+  - parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
     - `{Boolean} asynchronous`:异步创建，默认值：true
   - returns `waterPrimitive`
@@ -1578,7 +1855,7 @@ water.setStyle({
 
   设置样式
 
-  - Parameters
+  - parameters
     - `{Object} style`：样式，详情参考：[PolygonGraphics](http://resource.dvgis.cn/cesium-docs/PolygonGraphics.html)
   - returns `this`
 
@@ -1620,7 +1897,7 @@ let waterPrimitive = new DC.VideoPrimitive('120,20;120,30;122,30', videoEl)
 
   DC.WaterPrimitive 构造函数
 
-  - Parameters
+  - parameters
     - `{String|Array<Position|Number|String>} positions`：坐标串
     - `{Element} video`：视频节点
   - returns `polygon`

@@ -4,6 +4,55 @@ sidebar: auto
 
 # Analysis 🌎
 
+## DC.Analysis
+
+> Viewer analysis
+
+### example
+
+```js
+viewer.use(new DC.Analysis())
+```
+
+### creation
+
+- **_constructor()_**
+
+  - returns `analysis`
+
+### methods
+
+- **_shadows(startTime, multiplier)_**
+
+  Daylight Analysis
+
+  - parameters
+    - `{Date} startTime`
+    - `{Number} multiplier`
+  - returns `this`
+
+- **_sightLine(startPosition, endPosition, excludes,lerpNum)_**
+
+  Through-view analysis (line)
+
+  - parameters
+    - `{Position|Array|String|Object} startPosition`
+    - `{Position|Array|String|Object} endPosition`
+    - `{Array<Overlay>} excludes`
+    - `{Number} lerpNum`: Number of Interpolation, default: 10, the larger the number the more accurate, and at the same time the amount of calculation will increase
+  - returns `this`
+
+- **_sightCircle(center, radius, excludes,lerpNum)_**
+
+  Through-view analysis (circle)
+
+  - parameters
+    - `{Position|Array|String|Object} center`
+    - `{Number} radius`
+    - `{Array<Overlay>} excludes`
+    - `{Number} lerpNum`: Number of Interpolation, default: 10, the larger the number the more accurate, and at the same time the amount of calculation will increase
+  - returns `this`
+
 ## DC.VideoLayer
 
 > Inherited from [Layer](../layer/#layer)

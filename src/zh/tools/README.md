@@ -110,3 +110,71 @@ let coords = new DC.PositionEditor(viewer)
   失效
 
   - 返回值 `this`
+
+## DC.ModelManager
+
+> 模型管理工具
+
+### example
+
+```js
+let manager = new DC.ModelManager(viewer, layer.getOverlays())
+```
+
+### creation
+
+- **_constructor(viewer,models,[options])_**
+
+  构造函数
+
+  - 参数
+    - `{Viewer} viewer`：场景
+    - `{Array} models`：覆盖物
+    - `{Object} options`：属性
+  - 返回值 `manager`
+
+```json
+//属性参数(可选)
+{
+  "disappearHeight": 1000, // 消失高度
+  "disappearSeconds": 0.5, // 消失时间
+  "appearSeconds": 0.5 // 出现时间
+}
+```
+
+### properties
+
+- `{Array} models`：覆盖物
+
+### methods
+
+- **_spread(height, seconds)_**
+
+  展开
+
+  - 参数
+    - `{Number} height`：高度
+    - `{Number} seconds`：时间
+  - 返回值 `this`
+
+- **_combine(seconds)_**
+
+  合并
+
+  - 参数
+    - `{Number} seconds`：时间
+  - 返回值 `this`
+
+- **_showModel(modelIndex)_**
+
+  展示模型
+
+  - 参数
+    - `{Number} modelIndex`：模型索引，和数组索引一致
+  - 返回值 `this`
+
+- **_restore()_**
+
+  还原
+
+  - 返回值 `this`

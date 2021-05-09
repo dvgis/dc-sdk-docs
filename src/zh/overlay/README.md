@@ -1294,6 +1294,311 @@ let polylineVolume = new DC.PolylineVolume(
     - `{Object} entity`：Cesium 覆盖物
   - 返回值 `polylineVolume`
 
+## DC.DynamicBillboard
+
+> 动态图标，继承于[Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let billboard = new DC.DynamicBillboard(position, '***/**.png')
+billboard.size = [20, 20]
+```
+
+### creation
+
+- **_constructor(position,icon)_**
+
+  DC.DynamicBillboard 构造函数
+
+  - 参数
+    - `{Position} position`：坐标
+    - `{String} icon`：图标地址
+  - 返回值 `billboard`
+
+### properties
+
+- `{Position} position`：坐标 **_`readonly`_**
+- `{String} icon`：图标地址
+- `{Array<Number>} size`：图标大小
+
+### methods
+
+- **_addPosition(position,interval)_**
+
+  添加点位
+
+  - 参数
+    - `{Position|Array|String|Object} position`：点位
+    - `{Number} interval`：间隔，单位：秒
+  - 返回值 `this`
+
+- **_setStyle(style)_**
+
+  设置样式
+
+  - 参数
+    - `{Object} style`：样式，详情参考：[BillboardGraphics](http://resource.dvgis.cn/cesium-docs/BillboardGraphics.html)
+  - 返回值 `this`
+
+```json
+// 样式参数(可选)
+{
+  "heightReference": 0, //高度参照，0：位置无参照，位置是绝对的，1：位置固定在地形上 2：位置高度是指地形上方的高度。
+  "scale": 1, //比例
+  "pixelOffset": { "x": 0, "y": 0 }, //偏移像素
+  "rotation": 0, //旋转角度
+  "translucencyByDistance": {
+    "near": 0, //最近距离
+    "nearValue": 0, //最近距离值
+    "far": 1, //最远距离值
+    "farValue": 0 //最远距离值
+  }, //根据距离设置透明度
+  "scaleByDistance": {
+    "near": 0, //最近距离
+    "nearValue": 0, //最近距离值
+    "far": 1, //最远距离值
+    "farValue": 0 //最远距离值
+  }, //根据距离设置比例
+  "distanceDisplayCondition": {
+    "near": 0, //最近距离
+    "far": Number.MAX_VALUE //最远距离
+  }, //根据距离设置可见
+  "disableDepthTestDistance": 0 // 深度检测距离，用于防止剪切地形，设置为零时，将始终应用深度测试。设置为Number.POSITIVE_INFINITY时，永远不会应用深度测试。
+}
+```
+
+## DC.DynamicModel
+
+> 动态模型要素，继承于[Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let model = new DC.DynamicModel(position, '**/**.glb')
+```
+
+### creation
+
+- **_constructor(position, modelUrl)_**
+
+  DC.DynamicModel 构造函数
+
+  - 参数
+    - `{Position|String|Array|Object} position`：坐标
+    - `{String} modelUrl`：模型地址
+  - 返回值 `model`
+
+### properties
+
+- `{Position} position`：坐标 **_`readonly`_**
+- `{String} modelUrl`：模型地址
+
+### methods
+
+- **_addPosition(position,interval)_**
+
+  添加点位
+
+  - 参数
+    - `{Position|Array|String|Object} position`：点位
+    - `{Number} interval`：间隔，单位：秒
+  - 返回值 `this`
+
+- **_setStyle(style)_**
+
+  设置样式
+
+  - 参数
+    - `{Object} style`：样式，详情参考：[ModelGraphics](http://resource.dvgis.cn/cesium-docs/ModelGraphics.html)
+  - 返回值 `this`
+
+```json
+// 样式参数(可选)
+{
+  "scale": 1, //比例
+  "minimumPixelSize": 0, //指定模型的最小像素大小，而不考虑缩放
+  "maximumScale": 0, //指定模型的最大比例
+  "heightReference": 0, //高度参照，0：位置无参照，位置是绝对的，1：位置固定在地形上 2：位置高度是指地形上方的高度。
+  "shadows": 0, //阴影类型，0：禁用、1：启用 、2：投射、3：接受
+  "silhouetteColor": DC.Color.RED, //轮廓颜色
+  "silhouetteSize": 0, //轮廓宽度
+  "lightColor": DC.Color.RED, //模型着色时指定灯光颜色
+  "distanceDisplayCondition": {
+    "near": 0, //最近距离
+    "far": Number.MAX_VALUE //最远距离
+  } //根据距离设置可见
+}
+```
+
+## DC.CustomBillboard
+
+> 自定义图标，继承于[Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let billboard = new DC.CustomBillboard(position, '***/**.png')
+billboard.size = [20, 20]
+```
+
+### creation
+
+- **_constructor(position,icon)_**
+
+  DC.CustomBillboard 构造函数
+
+  - 参数
+    - `{Position} position`：坐标
+    - `{String} icon`：图标地址
+  - 返回值 `billboard`
+
+### properties
+
+- `{Position} position`：坐标
+- `{String} icon`：图标地址
+- `{Array<Number>} size`：图标大小
+
+### methods
+
+- **_setVLine(style)_**
+
+  设置垂直线
+
+  - 参数
+    - `{Object} style`：样式，详情参考：[PolylineGraphics](http://resource.dvgis.cn/cesium-docs/PolylineGraphics.html)
+  - 返回值 `this`
+
+- **_setBottomCircle(radius,style,rotateAmount)_**
+
+  设置底圆
+
+  - 参数
+    - `{Number} radius`：半径
+    - `{Object} style`：样式，详情参考：[EllipseGraphics](http://resource.dvgis.cn/cesium-docs/EllipseGraphics.html)
+    - `{Number} rotateAmount`：旋转量
+  - 返回值 `this`
+
+- **_setStyle(style)_**
+
+  设置样式
+
+  - 参数
+    - `{Object} style`：样式，详情参考：[BillboardGraphics](http://resource.dvgis.cn/cesium-docs/BillboardGraphics.html)
+  - 返回值 `this`
+
+```json
+// 样式参数(可选)
+{
+  "heightReference": 0, //高度参照，0：位置无参照，位置是绝对的，1：位置固定在地形上 2：位置高度是指地形上方的高度。
+  "scale": 1, //比例
+  "pixelOffset": { "x": 0, "y": 0 }, //偏移像素
+  "rotation": 0, //旋转角度
+  "translucencyByDistance": {
+    "near": 0, //最近距离
+    "nearValue": 0, //最近距离值
+    "far": 1, //最远距离值
+    "farValue": 0 //最远距离值
+  }, //根据距离设置透明度
+  "scaleByDistance": {
+    "near": 0, //最近距离
+    "nearValue": 0, //最近距离值
+    "far": 1, //最远距离值
+    "farValue": 0 //最远距离值
+  }, //根据距离设置比例
+  "distanceDisplayCondition": {
+    "near": 0, //最近距离
+    "far": Number.MAX_VALUE //最远距离
+  }, //根据距离设置可见
+  "disableDepthTestDistance": 0 // 深度检测距离，用于防止剪切地形，设置为零时，将始终应用深度测试。设置为Number.POSITIVE_INFINITY时，永远不会应用深度测试。
+}
+```
+
+## DC.CustomLabel
+
+> 自定义文本，继承于[Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let label = new DC.CustomLabel(position, 'test')
+```
+
+### creation
+
+- **_constructor(position,text)_**
+
+  DC.CustomLabel 构造函数
+
+  - 参数
+    - `{Position} position`：坐标
+    - `{String} text`：文本
+  - 返回值 `label`
+
+### properties
+
+- `{Position} position`：坐标
+- `{String} text`：文本
+
+### methods
+
+- **_setVLine(style)_**
+
+  设置垂直线
+
+  - 参数
+    - `{Object} style`：样式，详情参考：[PolylineGraphics](http://resource.dvgis.cn/cesium-docs/PolylineGraphics.html)
+  - 返回值 `this`
+
+- **_setBottomCircle(radius,style,rotateAmount)_**
+
+  设置底圆
+
+  - 参数
+    - `{Number} radius`：半径
+    - `{Object} style`：样式，详情参考：[EllipseGraphics](http://resource.dvgis.cn/cesium-docs/EllipseGraphics.html)
+    - `{Number} rotateAmount`：旋转量
+  - 返回值 `this`
+
+- **_setStyle(style)_**
+
+  设置样式
+
+  - 参数
+    - `{Object} style`：样式，详情参考：[LabelGraphics](http://resource.dvgis.cn/cesium-docs/LabelGraphics.html)
+  - 返回值 `this`
+
+```json
+// 样式参数(可选)
+{
+  "heightReference": 0, //高度参照，0：位置无参照，位置是绝对的，1：位置固定在地形上 2：位置高度是指地形上方的高度。
+  "scale": 1, //比例
+  "pixelOffset": { "x": 0, "y": 0 }, //偏移像素
+  "rotation": 0, //旋转角度
+  "translucencyByDistance": {
+    "near": 0, //最近距离
+    "nearValue": 0, //最近距离值
+    "far": 1, //最远距离值
+    "farValue": 0 //最远距离值
+  }, //根据距离设置透明度
+  "scaleByDistance": {
+    "near": 0, //最近距离
+    "nearValue": 0, //最近距离值
+    "far": 1, //最远距离值
+    "farValue": 0 //最远距离值
+  }, //根据距离设置比例
+  "distanceDisplayCondition": {
+    "near": 0, //最近距离
+    "far": Number.MAX_VALUE //最远距离
+  }, //根据距离设置可见
+  "disableDepthTestDistance": 0 // 深度检测距离，用于防止剪切地形，设置为零时，将始终应用深度测试。设置为Number.POSITIVE_INFINITY时，永远不会应用深度测试。
+}
+```
+
 ## DC.AttackArrow
 
 > 攻击箭头要素，继承于[Overlay](#overlay)

@@ -55,7 +55,7 @@ plot.draw(DC.OverlayType.POINT, (overlay) => {}, {})
 
 ## DC.PositionEditor
 
-> 位置编辑工具
+> Position Editor Tool
 
 ### example
 
@@ -96,5 +96,63 @@ let positionEditor = new DC.PositionEditor(viewer)
   - returns `this`
 
 - **_deactivate()_**
+
+  - returns `this`
+
+## DC.ModelManager
+
+> Model Manager Tool
+
+### example
+
+```js
+let manager = new DC.ModelManager(viewer, layer.getOverlays())
+```
+
+### creation
+
+- **_constructor(viewer,models,[options])_**
+
+  - parameters
+    - `{Viewer} viewer`
+    - `{Array} models`
+    - `{Object} options`
+  - returns `manager`
+
+```json
+// options(optional)
+{
+  "disappearHeight": 1000,
+  "disappearSeconds": 0.5,
+  "appearSeconds": 0.5
+}
+```
+
+### properties
+
+- `{Array} models`
+
+### methods
+
+- **_spread(height, seconds)_**
+
+  - parameters
+    - `{Number} height`
+    - `{Number} seconds`
+  - returns `this`
+
+- **_combine(seconds)_**
+
+  - parameters
+    - `{Number} seconds`
+  - returns `this`
+
+- **_showModel(modelIndex)_**
+
+  - parameters
+    - `{Number} modelIndex`
+  - returns `this`
+
+- **_restore()_**
 
   - returns `this`
