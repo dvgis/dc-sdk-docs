@@ -2033,3 +2033,58 @@ let waterPrimitive = new DC.VideoPrimitive('120,20;120,30;122,30', videoEl)
 
 - `{String|Array<Position|Number|String>} positions`：坐标串
 - `{Element} video`：视频节点
+
+## DC.ModelPrimitive
+
+> 模型图元，继承于[Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let model = new DC.ModelPrimitive(position, '**/**.glb')
+```
+
+### creation
+
+- **_constructor(position, modelUrl)_**
+
+  构造函数
+
+  - 参数
+    - `{Position|String|Array} position`：坐标
+    - `{String} modelUrl`：模型地址
+  - 返回值 `model`
+
+### properties
+
+- `{Position} position`：坐标
+- `{String} modelUrl`：模型地址
+
+### methods
+
+- **_setStyle(style)_**
+
+  设置样式
+
+  - 参数
+    - `{Object} style`：样式，详情参考：[Model](http://resource.dvgis.cn/cesium-docs/Model.html)
+  - 返回值 `this`
+
+```json
+// 样式参数(可选)
+{
+  "scale": 1, //比例
+  "minimumPixelSize": 0, //指定模型的最小像素大小，而不考虑缩放
+  "maximumScale": 0, //指定模型的最大比例
+  "heightReference": 0, //高度参照，0：位置无参照，位置是绝对的，1：位置固定在地形上 2：位置高度是指地形上方的高度。
+  "shadows": 0, //阴影类型，0：禁用、1：启用 、2：投射、3：接受
+  "silhouetteColor": DC.Color.RED, //轮廓颜色
+  "silhouetteSize": 0, //轮廓宽度
+  "lightColor": DC.Color.RED, //模型着色时指定灯光颜色
+  "distanceDisplayCondition": {
+    "near": 0, //最近距离
+    "far": Number.MAX_VALUE //最远距离
+  } //根据距离设置可见
+}
+```

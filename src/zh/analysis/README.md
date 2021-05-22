@@ -55,14 +55,14 @@ viewer.use(new DC.Analysis())
     - `{Number} lerpNum`：插值数量，默认：10，数量越大越准确，同时计算量也会增加
   - 返回值 `this`
 
-## DC.VideoLayer
+## DC.CameraVideoLayer
 
 > 视频图层，继承于[Layer](../layer/#layer)
 
 ### example
 
 ```js
-let layer = new DC.VideoLayer('id')
+let layer = new DC.CameraVideoLayer('id')
 viewer.addLayer(layer)
 ```
 
@@ -75,6 +75,18 @@ viewer.addLayer(layer)
   - 参数
     - `{String} id`：图层唯一标识
   - 返回值 `videoLayer`
+
+### methods
+
+- **_showHelp(show, videoOverlay, color)_**
+
+  是否显示辅助视锥
+
+  - 参数
+    - `{Boolean} show`：是否显示
+    - `{Overlay} videoOverlay`：视频覆盖物
+    - `{Color} color`：边线颜色
+  - 返回值 `this`
 
 ## DC.CameraVideo
 
@@ -109,14 +121,6 @@ layer.addOverlay(cameraVideo)
 
 ### methods
 
-- **_showHelp(show)_**
-
-  是否显示视锥
-
-  - 参数
-    - `{Boolean} show`：样式
-  - 返回值 `this`
-
 - **_setStyle(style)_**
 
   设置样式
@@ -135,6 +139,88 @@ layer.addOverlay(cameraVideo)
   "alpha": 1, //透明度
   "clearBlack": true, //清除空白
   "disViewColor": DC.Color.WHITE //设置视频不可见颜色
+}
+```
+
+## DC.PlaneVideoLayer
+
+> 平面视频图层，继承于[Layer](../layer/#layer)
+
+### example
+
+```js
+let layer = new DC.PlaneVideoLayer('id')
+viewer.addLayer(layer)
+```
+
+### creation
+
+- **_constructor(id)_**
+
+  构造函数
+
+  - 参数
+    - `{String} id`：图层唯一标识
+  - 返回值 `videoLayer`
+
+### methods
+
+- **_showHelp(show, videoOverlay, color)_**
+
+  是否显示辅助视锥
+
+  - 参数
+    - `{Boolean} show`：是否显示
+    - `{Overlay} videoOverlay`：视频覆盖物
+    - `{Color} color`：边线颜色
+  - 返回值 `this`
+
+## DC.PlaneVideo
+
+> 平面视频要素，继承于[Overlay](../overlay/#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20, 200, -20, 19)
+let videoEl = new document.getElementById('video')
+let cameraVideo = new DC.PlaneVideo(position, videoEl)
+layer.addOverlay(cameraVideo)
+```
+
+### creation
+
+- **_constructor(position, video)_**
+
+  构造函数
+
+  - 参数
+    - `{Position} position`：坐标
+    - `{Element} video`：视频节点
+  - 返回值 `cameraVideo`
+
+### properties
+
+- `{Position} position`：坐标
+- `{Element} video`：视频节点
+
+### methods
+
+- **_setStyle(style)_**
+
+  设置样式
+
+  - 参数
+    - `{Object} style`：样式
+  - 返回值 `this`
+
+```json
+// 样式参数(可选)
+{
+  "fov": 60, //视场角
+  "near": 1, //近平面的距离
+  "far": 5000, //远平面的距离
+  "aspectRatio": 1 //视锥的宽度与高度的纵横比
 }
 ```
 

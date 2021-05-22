@@ -53,14 +53,14 @@ viewer.use(new DC.Analysis())
     - `{Number} lerpNum`: Number of Interpolation, default: 10, the larger the number the more accurate, and at the same time the amount of calculation will increase
   - returns `this`
 
-## DC.VideoLayer
+## DC.CameraVideoLayer
 
 > Inherited from [Layer](../layer/#layer)
 
 ### example
 
 ```js
-let layer = new DC.VideoLayer('id')
+let layer = new DC.CameraVideoLayer('id')
 viewer.addLayer(layer)
 ```
 
@@ -71,6 +71,16 @@ viewer.addLayer(layer)
   - parameters
     - `{String} id`
   - returns `videoLayer`
+
+### methods
+
+- **_showHelp(show, videoOverlay, color)_**
+
+  - parameters
+    - `{Boolean} show`
+    - `{Overlay} videoOverlay`
+    - `{Color} color`
+  - returns `this`
 
 ## DC.CameraVideo
 
@@ -103,12 +113,6 @@ layer.addOverlay(cameraVideo)
 
 ### methods
 
-- **_showHelp(show)_**
-
-  - parameters
-    - `{Boolean} show`
-  - returns `this`
-
 - **_setStyle(style)_**
 
   - parameters
@@ -125,6 +129,80 @@ layer.addOverlay(cameraVideo)
   "alpha": 1,
   "clearBlack": true,
   "disViewColor": DC.Color.WHITE
+}
+```
+
+## DC.PlaneVideoLayer
+
+> Inherited from [Layer](../layer/#layer)
+
+### example
+
+```js
+let layer = new DC.PlaneVideoLayer('id')
+viewer.addLayer(layer)
+```
+
+### creation
+
+- **_constructor(id)_**
+
+  - parameters
+    - `{String} id`
+  - returns `videoLayer`
+
+### methods
+
+- **_showHelp(show, videoOverlay, color)_**
+
+  - parameters
+    - `{Boolean} show`
+    - `{Overlay} videoOverlay`
+    - `{Color} color`
+  - returns `this`
+
+## DC.PlaneVideo
+
+> Inherited from [Overlay](../overlay/#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20, 200, -20, 19)
+let videoEl = new document.getElementById('video')
+let cameraVideo = new DC.PlaneVideo(position, videoEl)
+layer.addOverlay(cameraVideo)
+```
+
+### creation
+
+- **_constructor(position, video)_**
+
+  - parameters
+    - `{Position} position`
+    - `{Element} video`
+  - returns `cameraVideo`
+
+### properties
+
+- `{Position} position`
+- `{Element} video`
+
+### methods
+
+- **_setStyle(style)_**
+
+  - parameters
+    - `{Object} style`
+  - returns `this`
+
+```json
+// style(optional)
+{
+  "fov": 60,
+  "near": 1,
+  "far": 5000,
+  "aspectRatio": 1
 }
 ```
 

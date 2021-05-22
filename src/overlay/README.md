@@ -1474,7 +1474,7 @@ let label = new DC.CustomLabel(position, 'test')
 
 ## DC.AttackArrow
 
-> 攻击箭头要素，继承于[Overlay](#overlay)
+> Inherited from [Overlay](#overlay)
 
 ### example
 
@@ -1486,29 +1486,25 @@ let attackArrow = new DC.AttackArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
 
 - **_constructor(positions)_**
 
-  构造函数
-
   - parameters
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String>} positions`
   - returns `attackArrow`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{String|Array<Position|Number|String>} positions`
 
 ### methods
 
 - **_setStyle(style)_**
 
-  设置样式
-
   - parameters
-    - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
+    - `{Object} style` [Polygon](../dc-sdk/#dc-polygon)
   - returns `this`
 
 ## DC.DoubleArrow
 
-> 双箭头要素，继承于[Overlay](#overlay)
+> Inherited from [Overlay](#overlay)
 
 ### example
 
@@ -1520,29 +1516,25 @@ let doubleArrow = new DC.DoubleArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
 
 - **_constructor(positions)_**
 
-  构造函数
-
   - parameters
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String>} positions`
   - returns `doubleArrow`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{String|Array<Position|Number|String>} positions`
 
 ### methods
 
 - **_setStyle(style)_**
 
-  设置样式
-
   - parameters
-    - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
+    - `{Object} style` [Polygon](../dc-sdk/#dc-polygon)
   - returns `this`
 
 ## DC.FineArrow
 
-> 直箭头要素，继承于[Overlay](#overlay)
+> Inherited from [Overlay](#overlay)
 
 ### example
 
@@ -1554,29 +1546,25 @@ let fineArrow = new DC.FineArrow('-90.0,32.0;-94.0,36.0')
 
 - **_constructor(positions)_**
 
-  构造函数
-
   - parameters
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String>} positions`
   - returns `fineArrow`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{String|Array<Position|Number|String>} positions`
 
 ### methods
 
 - **_setStyle(style)_**
 
-  设置样式
-
   - parameters
-    - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
+    - `{Object} style` [Polygon](../dc-sdk/#dc-polygon)
   - returns `this`
 
 ## DC.GatheringPlace
 
-> 聚集地要素，继承于[Overlay](#overlay)
+> Inherited from [Overlay](#overlay)
 
 ### example
 
@@ -1588,29 +1576,25 @@ let gatheringPlace = new DC.GatheringPlace('-90.0,32.0;-94.0,36.0')
 
 - **_constructor(positions)_**
 
-  构造函数
-
   - parameters
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String>} positions`
   - returns `gatheringPlace`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{String|Array<Position|Number|String>} positions`
 
 ### methods
 
 - **_setStyle(style)_**
 
-  设置样式
-
   - parameters
-    - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
+    - `{Object} style` [Polygon](../dc-sdk/#dc-polygon)
   - returns `this`
 
 ## DC.TailedAttackArrow
 
-> 聚集地要素，继承于[Overlay](#overlay)
+> Inherited from [Overlay](#overlay)
 
 ### example
 
@@ -1622,29 +1606,25 @@ let tailedAttackArrow = new DC.TailedAttackArrow('-90.0,32.0;-94.0,36.0')
 
 - **_constructor(positions)_**
 
-  构造函数
-
   - parameters
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String>} positions`
   - returns `tailedAttackArrow`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{String|Array<Position|Number|String>} positions`
 
 ### methods
 
 - **_setStyle(style)_**
 
-  设置样式
-
   - parameters
-    - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
+    - `{Object} style`：[Polygon](../dc-sdk/#dc-polygon)
   - returns `this`
 
 ## DC.ElecEllipsoidPrimitive
 
-> 电弧球图元，继承于[Overlay](#overlay)
+> Inherited from [Overlay](#overlay)
 
 ### example
 
@@ -1656,39 +1636,35 @@ let elecEllipsoid = new DC.ElecEllipsoidPrimitive('120,20',{x:2000,y:2000:z:2000
 
 - **_constructor(center,radius)_**
 
-  DC.WaterPrimitive 构造函数
-
   - parameters
-    - `{String|Position|Array} center`：中心点
-    - `{Object} radius`:球半径
+    - `{String|Position|Array} center`
+    - `{Object} radius`: {x:100,y:100,z:100}
   - returns `elecEllipsoidPrimitive`
 
 ### properties
 
-- `{String|Position|Array} center`：中心点,
-- `{Object} radius`:球半径
+- `{String|Position|Array} center`
+- `{Object} radius`
 
 ### methods
 
 - **_setStyle(style)_**
 
-  设置样式
-
   - parameters
-    - `{Object} style`：样式
+    - `{Object} style`
   - returns `this`
 
 ```json
 // style(optional)
 {
-  "speed": 5, //速度
-  "color": DC.Color.WHITE //颜色
+  "speed": 5,
+  "color": DC.Color.WHITE
 }
 ```
 
 ## DC.FlowLinePrimitive
 
-> 流动线图元，继承于[Overlay](#overlay)
+> Inherited from [Overlay](#overlay)
 
 ### example
 
@@ -1700,39 +1676,35 @@ let flowLinePrimitive = new DC.FlowLinePrimitive('120,20;120,30;122,30')
 
 - **_constructor(positions,[asynchronous])_**
 
-  DC.FlowLinePrimitive 构造函数
-
   - parameters
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String>} positions`
   - returns `flowLinePrimitive`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{String|Array<Position|Number|String>} positions`
 
 ### methods
 
 - **_setStyle(style)_**
 
-  设置样式
-
   - parameters
-    - `{Object} style`：样式
+    - `{Object} style`
   - returns `this`
 
 ```json
 // style(optional)
 {
-  "speed": 5, //速度
-  "color": DC.Color.WHITE, //颜色
-  "percent": 0.3, // 比例
-  "gradient": 0.1 // 透明程度
+  "speed": 5,
+  "color": DC.Color.WHITE,
+  "percent": 0.3,
+  "gradient": 0.1
 }
 ```
 
 ## DC.ScanCirclePrimitive
 
-> 扫描圆图元，继承于[Overlay](#overlay)
+> Inherited from [Overlay](#overlay)
 
 ### example
 
@@ -1744,39 +1716,35 @@ let scanCirclePrimitive = new DC.ScanCirclePrimitive('120,20', 1000)
 
 - **_constructor(position,radius)_**
 
-  DC.ScanCirclePrimitive 构造函数
-
   - parameters
-    - `{String|Position|Array} position`：圆心
-    - `{Number} radius`：半径
+    - `{String|Position|Array} position`
+    - `{Number} radius`
   - returns `scanCirclePrimitive`
 
 ### properties
 
-- `{String|Position|Array} position`：圆心
-- `{Number} radius`：半径
+- `{String|Position|Array} position`
+- `{Number} radius`
 
 ### methods
 
 - **_setStyle(style)_**
 
-  设置样式
-
   - parameters
-    - `{Object} style`：样式
+    - `{Object} style`
   - returns `this`
 
 ```json
 // style(optional)
 {
-  "speed": 5, //速度
-  "color": DC.Color.WHITE //颜色
+  "speed": 5,
+  "color": DC.Color.WHITE
 }
 ```
 
 ## DC.TrailLinePrimitive
 
-> 轨迹线图元，继承于[Overlay](#overlay)
+> Inherited from [Overlay](#overlay)
 
 ### example
 
@@ -1788,37 +1756,33 @@ let trailLinePrimitive = new DC.TrailLinePrimitive('120,20;120,30;122,30')
 
 - **_constructor(positions,[asynchronous])_**
 
-  DC.TrailLinePrimitive 构造函数
-
   - parameters
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String>} positions`
   - returns `trailLinePrimitive`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{String|Array<Position|Number|String>} positions`
 
 ### methods
 
 - **_setStyle(style)_**
 
-  设置样式
-
   - parameters
-    - `{Object} style`：样式
+    - `{Object} style`
   - returns `this`
 
 ```json
 // style(optional)
 {
-  "speed": 5, //速度
-  "color": DC.Color.WHITE //颜色
+  "speed": 5,
+  "color": DC.Color.WHITE
 }
 ```
 
 ## DC.WaterPrimitive
 
-> 水面图元，继承于[Overlay](#overlay)
+> Inherited from [Overlay](#overlay)
 
 ### example
 
@@ -1838,51 +1802,47 @@ water.setStyle({
 
 - **_constructor(positions,[asynchronous])_**
 
-  DC.WaterPrimitive 构造函数
-
   - parameters
-    - `{String|Array<Position|Number|String>} positions`：坐标串
-    - `{Boolean} asynchronous`:异步创建，默认值：true
+    - `{String|Array<Position|Number|String>} positions`
+    - `{Boolean} asynchronous`
   - returns `waterPrimitive`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{String|Array<Position|Number|String>} positions`
 
 ### methods
 
 - **_setStyle(style)_**
 
-  设置样式
-
   - parameters
-    - `{Object} style`：样式，详情参考：[PolygonGraphics](http://resource.dvgis.cn/cesium-docs/PolygonGraphics.html)
+    - `{Object} style`
   - returns `this`
 
 ```json
 // style(optional)
 {
-  "height": 1, //高度
-  "extrudedHeight": 0, //拉升高度
-  "stRotation": 0, //旋转角度
-  "outline": false, //是否显示边框
-  "closeTop": true, //顶面是否闭合
-  "closeBottom": true, //底面是否闭合
-  "classificationType": 2, //分类 是否影响地形，3D切片或同时影响这两者。0:地形、1:3D切片、2：两者
-  "baseWaterColor": DC.Color.WHITE, // 水体颜色
-  "blendColor": DC.Color.WHITE, // 混合颜色
-  "specularMap": "", // 镜面图
-  "normalMap": "", // 法线图
-  "frequency": 1000, //波纹数量
-  "animationSpeed": 0.03, // 动画速度
-  "amplitude": 10, //水波振幅
-  "specularIntensity": 10 //镜面反射强度
+  "height": 1,
+  "extrudedHeight": 0,
+  "stRotation": 0,
+  "outline": false,
+  "closeTop": true,
+  "closeBottom": true,
+  "classificationType": 2,
+  "baseWaterColor": DC.Color.WHITE,
+  "blendColor": DC.Color.WHITE,
+  "specularMap": "",
+  "normalMap": "",
+  "frequency": 1000,
+  "animationSpeed": 0.03,
+  "amplitude": 10,
+  "specularIntensity": 10
 }
 ```
 
 ## DC.VideoPrimitive
 
-> 视频图元，继承于[Overlay](#overlay)
+> Inherited from [Overlay](#overlay)
 
 ### example
 
@@ -1895,14 +1855,63 @@ let waterPrimitive = new DC.VideoPrimitive('120,20;120,30;122,30', videoEl)
 
 - **_constructor(positions,video)_**
 
-  DC.WaterPrimitive 构造函数
-
   - parameters
-    - `{String|Array<Position|Number|String>} positions`：坐标串
-    - `{Element} video`：视频节点
+    - `{String|Array<Position|Number|String>} positions`
+    - `{Element} video`
   - returns `polygon`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
-- `{Element} video`：视频节点
+- `{String|Array<Position|Number|String>} positions`
+- `{Element} video`
+
+## DC.ModelPrimitive
+
+> Inherited from [Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let model = new DC.ModelPrimitive(position, '**/**.glb')
+```
+
+### creation
+
+- **_constructor(position, modelUrl)_**
+
+  - parameters
+    - `{Position|String|Array} position`
+    - `{String} modelUrl`
+  - returns `model`
+
+### properties
+
+- `{Position} position`
+- `{String} modelUrl`
+
+### methods
+
+- **_setStyle(style)_**
+
+  - parameters
+    - `{Object} style` [ModelGraphics](http://resource.dvgis.cn/cesium-docs/ModelGraphics.html)
+  - returns `this`
+
+```json
+// style(optional)
+{
+  "scale": 1,
+  "minimumPixelSize": 0,
+  "maximumScale": 0,
+  "heightReference": 0,
+  "shadows": 0,
+  "silhouetteColor": DC.Color.RED,
+  "silhouetteSize": 0,
+  "lightColor": DC.Color.RED,
+  "distanceDisplayCondition": {
+    "near": 0,
+    "far": Number.MAX_VALUE
+  }
+}
+```
