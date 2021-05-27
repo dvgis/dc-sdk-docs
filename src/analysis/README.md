@@ -31,7 +31,7 @@ viewer.use(new DC.Analysis())
     - `{Number} multiplier`
   - returns `this`
 
-- **_sightLine(startPosition, endPosition, excludes,lerpNum)_**
+- **_sightLine(startPosition, endPosition, excludes, lerpNum)_**
 
   Through-view analysis (line)
 
@@ -42,7 +42,7 @@ viewer.use(new DC.Analysis())
     - `{Number} lerpNum`: Number of Interpolation, default: 10, the larger the number the more accurate, and at the same time the amount of calculation will increase
   - returns `this`
 
-- **_sightCircle(center, radius, excludes,lerpNum)_**
+- **_sightCircle(center, radius, excludes, lerpNum)_**
 
   Through-view analysis (circle)
 

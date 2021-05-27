@@ -17,6 +17,10 @@ let chartLayer = new DC.ChartLayer('layer')
 viewer.addLayer(chartLayer)
 ```
 
+:::warning
+The chart layer depends on the echarts library, please make sure that echarts is available in the global variables before using it.
+:::
+
 ### creation
 
 - **_constructor([id],[option])_**

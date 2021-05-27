@@ -336,3 +336,9 @@ BD09 经纬度投影属于百度坐标系，它是在标准经纬度的基础上
 </a>
 <img src="http://dc.dvgis.cn/examples/images/base/sponsor.jpg?v=2" title="数字视觉"/>
 </p>
+
+## 感谢
+
+> 以下列表为 DC 平台的赞助或打赏人员，排名不分先后，如果有什么隐私问题，请联系我
+
+`donkie` `Wchino` `莫慌` `凌风` `老戴`

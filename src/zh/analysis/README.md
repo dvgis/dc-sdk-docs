@@ -33,24 +33,24 @@ viewer.use(new DC.Analysis())
     - `{Number} multiplier`：倍率
   - 返回值 `this`
 
-- **_sightLine(center, radius, excludes,lerpNum)_**
-
-  通视分析(圆)
-
-  - 参数
-    - `{Position|Array|String|Object} center`：圆心
-    - `{Number} radius`：半径
-    - `{Array<Overlay>} excludes`：非包含覆盖物
-    - `{Number} lerpNum`：插值数量，默认：10，数量越大越准确，同时计算量也会增加
-  - 返回值 `this`
-
-- **_sightCircle(startPosition, endPosition, excludes,lerpNum)_**
+- **_sightLine(startPosition, endPosition, excludes, lerpNum)_**
 
   通视分析(线)
 
   - 参数
     - `{Position|Array|String|Object} startPosition`：起点
     - `{Position|Array|String|Object} endPosition`：终点
+    - `{Array<Overlay>} excludes`：非包含覆盖物
+    - `{Number} lerpNum`：插值数量，默认：10，数量越大越准确，同时计算量也会增加
+  - 返回值 `this`
+
+- **_sightCircle(center, radius, excludes, lerpNum)_**
+
+  通视分析(圆)
+
+  - 参数
+    - `{Position|Array|String|Object} center`：圆心
+    - `{Number} radius`：半径
     - `{Array<Overlay>} excludes`：非包含覆盖物
     - `{Number} lerpNum`：插值数量，默认：10，数量越大越准确，同时计算量也会增加
   - 返回值 `this`

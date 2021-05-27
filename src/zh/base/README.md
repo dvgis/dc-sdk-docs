@@ -617,7 +617,7 @@ global.viewer = viewer // 添加到全局变量
 
 - **_exportScene(name)_**
 
-  取消事件订阅
+  导出场景
 
   - 参数
     - `{String} name` ：名称，默认为 scene

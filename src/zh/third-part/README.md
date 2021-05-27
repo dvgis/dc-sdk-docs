@@ -17,6 +17,10 @@ let chartLayer = new DC.ChartLayer('layer')
 viewer.addLayer(chartLayer)
 ```
 
+:::warning
+图表图层依赖于 echarts 库，使用前请确保全局变量中能够获取到 echarts
+:::
+
 ### creation
 
 - **_constructor([id],[option])_**
