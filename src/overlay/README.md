@@ -700,6 +700,14 @@ tileset.setPosition(position)
     - `{Position|Array|String} position`
   - returns `this`
 
+- **_setHeadingPitchRoll(heading, pitch, roll)_**
+
+  - parameters
+    - `{Number} heading`
+    - `{Number} pitch`
+    - `{Number} roll`
+  - returns `this`
+
 - **_setHeight(height,isAbsolute)_**
 
   - parameters

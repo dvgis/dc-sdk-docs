@@ -24,6 +24,16 @@ viewer.use(new DC.Analysis())
 
 ### methods
 
+- **_contourLine(lineColor, lineWidth, lineSpacing)_**
+
+  等高线
+
+  - 参数
+    - `{Color} lineColor`：颜色
+    - `{Number} lineWidth`：宽度
+    - `{Number} lineSpacing`：间隔
+  - 返回值 `this`
+
 - **_shadows(startTime, multiplier)_**
 
   日照分析
@@ -54,6 +64,29 @@ viewer.use(new DC.Analysis())
     - `{Array<Overlay>} excludes`：非包含覆盖物
     - `{Number} lerpNum`：插值数量，默认：10，数量越大越准确，同时计算量也会增加
   - 返回值 `this`
+
+- **_viewshed(position, radius, fov, aspectRatio, options)_**
+
+  可视域分析
+
+  - 参数
+    - `{Position|Array|String|Object} position`：视点
+    - `{Number} radius`：半径
+    - `{Number} fov`：横向视角
+    - `{Number} aspectRatio`：横纵比例
+    - `{Object} options`：属性设置
+  - 返回值 `this`
+
+```json
+//属性参数
+{
+  "visibleColor"：DC.Color.GREEN,//可见颜色
+  "disVisibleColor"：DC.Color.RED,//不可见颜色
+  "showHelp": false, //显示辅助覆盖物
+  "gridColor": DC.Color.YELLOW, //辅助覆盖物格子颜色
+  "lineColor": DC.Color.YELLOW.withAlpha(0.3) //辅助覆盖物边线颜色
+}
+```
 
 ## DC.CameraVideoLayer
 

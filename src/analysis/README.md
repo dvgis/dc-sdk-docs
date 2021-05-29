@@ -22,6 +22,16 @@ viewer.use(new DC.Analysis())
 
 ### methods
 
+- **_contourLine(lineColor, lineWidth, lineSpacing)_**
+
+  Contour Line Analysis
+
+  - parameters
+    - `{Color} lineColor`
+    - `{Number} lineWidth`
+    - `{Number} lineSpacing`
+  - returns `this`
+
 - **_shadows(startTime, multiplier)_**
 
   Daylight Analysis
@@ -52,6 +62,29 @@ viewer.use(new DC.Analysis())
     - `{Array<Overlay>} excludes`
     - `{Number} lerpNum`: Number of Interpolation, default: 10, the larger the number the more accurate, and at the same time the amount of calculation will increase
   - returns `this`
+
+- **_viewshed(position, radius, fov, aspectRatio, options)_**
+
+  View-Shed Analysis
+
+  - parameters
+    - `{Position|Array|String|Object} position`
+    - `{Number} radius`
+    - `{Number} fov`
+    - `{Number} aspectRatio`
+    - `{Object} options`
+  - returns `this`
+
+```json
+//options(optional)
+{
+  "visibleColor"：DC.Color.GREEN,
+  "disVisibleColor"：DC.Color.RED,
+  "showHelp": false,
+  "gridColor": DC.Color.YELLOW,
+  "lineColor": DC.Color.YELLOW.withAlpha(0.3)
+}
+```
 
 ## DC.CameraVideoLayer
 

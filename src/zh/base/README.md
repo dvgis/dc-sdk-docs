@@ -278,6 +278,18 @@ DC.ready(() => {
 
 **_`DC.ClippingDirection.BACK`_**: 向后
 
+### AnalysisType
+
+**_`DC.AnalysisType.CONTOUR_LINE`_**：等高线
+
+**_`DC.AnalysisType.SHADOWS`_**：阴影
+
+**_`DC.AnalysisType.SIGHT_LINE`_**：通视分析（线）
+
+**_`DC.AnalysisType.SIGHT_CIRCLE`_**：通视分析（圆）
+
+**_`DC.AnalysisType.VIEWSHED`_**：可视域
+
 ## DC.Viewer
 
 > 3D 场景主要接口，在给定的 DivId 中构建三维场景，也可用 DC.World.

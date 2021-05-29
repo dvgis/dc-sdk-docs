@@ -756,6 +756,16 @@ tileset.setPosition(position)
     - `{Position|Array|String} position`：位置
   - 返回值 `this`
 
+- **_setHeadingPitchRoll(heading, pitch, roll)_**
+
+  设置方位角
+
+  - 参数
+    - `{Number} heading`：偏航角度，可能其他框架作 yaw，表示绕 Z 轴旋转。默认：0
+    - `{Number} pitch`：俯仰角度，表示绕 Y 轴旋转。默认：0
+    - `{Number} roll`：翻转角度，表示绕 X 轴旋转。默认：0
+  - 返回值 `this`
+
 - **_setHeight(height,isAbsolute)_**
 
   设置高度

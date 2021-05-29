@@ -128,6 +128,18 @@ Please use the default constants for development
 
 **_`DC.SceneEventType.CLOCK_TICK`_**
 
+### AnalysisType
+
+**_`DC.AnalysisType.CONTOUR_LINE`_**
+
+**_`DC.AnalysisType.SHADOWS`_**
+
+**_`DC.AnalysisType.SIGHT_CIRCLE`_**
+
+**_`DC.AnalysisType.SIGHT_LINE`_**
+
+**_`DC.AnalysisType.VIEWSHED`_**
+
 ### MouseMode
 
 **_`DC.MouseMode.LEFT_MIDDLE`_**
