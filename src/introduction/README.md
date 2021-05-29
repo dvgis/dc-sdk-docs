@@ -38,7 +38,7 @@ Provide automatic roaming and cruising function according to the set route, whic
 
 - `Spatial analysis capability`
 
-Provide various measurement functions such as distance, area, height and related mapping functions.
+Provide various measurement functions such as distance, area and height, as well as 3D scene analysis functions such as view-shed and through-view.
 
 - `Compatible with third-party map tool libraries`
 
@@ -201,7 +201,9 @@ module.exports = {
 
 ```js
 global.DC = DC
-DC.use(DcCore)
+DC.use(DcCore) // install core package
+DC.use(DcChart) // install chart package
+DC.use(DcMapv) // install mapv package
 DC.ready(() => {
   let viewer = new DC.Viewer('viewer-container')
 })

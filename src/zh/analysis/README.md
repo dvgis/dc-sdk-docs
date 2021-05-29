@@ -88,6 +88,14 @@ viewer.use(new DC.Analysis())
 }
 ```
 
+- **_deactivate([type])_**
+
+  释放分析
+
+  - 参数
+    - `{String} type`：分析类型，参考 `DC.AnalysisType`。类型为空时，将清除所有分析
+  - 返回值 `this`
+
 ## DC.CameraVideoLayer
 
 > 视频图层，继承于[Layer](../layer/#layer)

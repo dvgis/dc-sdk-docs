@@ -38,7 +38,7 @@ sidebar: auto
 
 - `空间分析能力`
 
-提供测距、面积、高度等各种量算功能以及相关的标绘功能。
+提供测距、面积、高度等各种量算功能以及可视域、通视等三维场景分析功能。
 
 - `兼容第三方地图工具库`
 
@@ -61,9 +61,9 @@ DC-SDK 是依赖于[`WebGL`](#webgl)运行的一套开发平台，需要开发�
 NPM / YARN 的方式安装，它能更好地和 `webpack` 打包工具配合使用。
 
 ```shell
-yarn add @dvgis/dc-sdk
--------------------------
 npm install @dvgis/dc-sdk
+-------------------------
+yarn add @dvgis/dc-sdk
 ```
 
 ```js
@@ -98,7 +98,7 @@ import '@dvgis/dc-core/dist/dc.core.min.css' // 主要样式
 
 `CDN`
 
-[Resources 下载链接](https://github.com/dvgis/dc-sdk/releases)
+[下载链接](https://github.com/dvgis/dc-sdk/releases)
 
 ```html
 <!--基础包-->
@@ -214,6 +214,8 @@ module.exports = {
 ```js
 global.DC = DC //将DC提升到全局变量，方便在工程中直接使用
 DC.use(DcCore) //安装DC核心库
+DC.use(DcChart) //安装DC图标库，使用前确保echarts为全局函数
+DC.use(DcMapv) //安装Mapv库
 DC.ready(() => {
   let viewer = new DC.Viewer('viewer-container')
 })
@@ -326,6 +328,12 @@ BD09 经纬度投影属于百度坐标系，它是在标准经纬度的基础上
 <img src="http://dc.dvgis.cn/examples/images/base/q2.png?v=6" title="Cesium开心农场"/>
 </p>
 
+## 感谢
+
+> 以下列表为 DC 平台的赞助或打赏人员，排名不分先后，如果有什么隐私问题，请联系我
+
+`donkie` `Wchino` `莫慌` `凌风` `老戴`
+
 ## 支持
 
 > 如果 dc-sdk 能够给您带来效益，请支持一下呗~
@@ -336,9 +344,3 @@ BD09 经纬度投影属于百度坐标系，它是在标准经纬度的基础上
 </a>
 <img src="http://dc.dvgis.cn/examples/images/base/sponsor.jpg?v=2" title="数字视觉"/>
 </p>
-
-## 感谢
-
-> 以下列表为 DC 平台的赞助或打赏人员，排名不分先后，如果有什么隐私问题，请联系我
-
-`donkie` `Wchino` `莫慌` `凌风` `老戴`

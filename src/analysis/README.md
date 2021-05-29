@@ -86,6 +86,12 @@ viewer.use(new DC.Analysis())
 }
 ```
 
+- **_deactivate([type])_**
+
+  - parameters
+    - `{String} type`：Refer to `DC.AnalysisType`. When the type is empty, all analyses will be deactivated
+  - returns `this`
+
 ## DC.CameraVideoLayer
 
 > Inherited from [Layer](../layer/#layer)
