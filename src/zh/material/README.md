@@ -20,7 +20,7 @@ let material = new DC.ColorMaterialProperty(DC.Color.RED)
 
 - **_constructor(color)_**
 
-  DC.ColorMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{DC.Color} color`：颜色
@@ -43,7 +43,7 @@ let material = new DC.ImageMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.ImageMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -82,7 +82,7 @@ let material = new DC.CircleBlurMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.CircleBlurMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -117,7 +117,7 @@ let material = new DC.CircleDiffuseMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.CircleDiffuseMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -152,7 +152,7 @@ let material = new DC.CircleFadeMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.CircleFadeMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -187,7 +187,7 @@ let material = new DC.CirclePulseMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.CirclePulseMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -222,7 +222,7 @@ let material = new DC.CircleScanMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.CircleScanMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -257,7 +257,7 @@ let material = new DC.CircleSpiralMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.CircleSpiralMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -292,7 +292,7 @@ let material = new DC.CircleVaryMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.CircleVaryMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -366,7 +366,7 @@ let material = new DC.EllipsoidElectricMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.EllipsoidElectricMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -401,7 +401,7 @@ let material = new DC.EllipsoidTrailMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.EllipsoidTrailMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -436,7 +436,7 @@ let material = new DC.PolylineDashMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.PolylineDashMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -471,7 +471,7 @@ let material = new DC.PolylineArrowMaterialProperty(DC.Color.WHITE)
 
 - **_constructor(color)_**
 
-  DC.PolylineArrowMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{DC.Color} color`：箭头颜色
@@ -498,7 +498,7 @@ let material = new DC.PolylineOutlineMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.PolylineOutlineMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -536,7 +536,7 @@ let material = new DC.PolylineGlowMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.PolylineGlowMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -573,7 +573,7 @@ let material = new DC.PolylineFlickerMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.PolylineFlickerMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -608,7 +608,7 @@ let material = new DC.PolylineFlowMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.PolylineFlowMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -649,7 +649,7 @@ let material = new DC.PolylineImageTrailMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.PolylineImageTrailMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -688,7 +688,7 @@ let material = new DC.PolylineLightingMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.PolylineLightingMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -721,7 +721,7 @@ let material = new DC.PolylineLightingTrailMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.PolylineLightingTrailMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -756,7 +756,7 @@ let material = new DC.PolylineTrailMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.PolylineTrailMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -791,7 +791,7 @@ let material = new DC.RadarLineMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.RadarLineMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -826,7 +826,7 @@ let material = new DC.RadarWaveMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.RadarWaveMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -863,7 +863,7 @@ let material = new DC.WallImageTrailMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.WallImageTrailMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性
@@ -938,7 +938,7 @@ let material = new DC.WaterMaterialProperty({
 
 - **_constructor([options])_**
 
-  DC.WaterMaterialProperty 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：属性

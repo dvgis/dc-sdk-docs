@@ -21,7 +21,7 @@ viewer.use(weather)
 
 - **_constructor()_**
 
-  DC.Weather 构造函数
+  构造函数
 
   - 返回值 `weather`
 
@@ -112,7 +112,7 @@ viewer.use(effect)
 
 - **_constructor()_**
 
-  DC.Effect 效果函数
+  构造函数
 
   - 返回值 `effect`
 
@@ -286,7 +286,7 @@ aroundPoint.start()
 
 - **_constructor(viewer,position,[options])_**
 
-  DC.AroundPoint 构造函数
+  构造函数
 
   - 参数
     - `{Viewer} viewer`：3D 场景
@@ -321,7 +321,7 @@ aroundView.start()
 
 - **_constructor(viewer,[options])_**
 
-  DC.AroundView 构造函数
+  构造函数
 
   - 参数
     - `{Viewer} viewer`：3D 场景
@@ -353,7 +353,7 @@ circleScan.start()
 
 - **_constructor(viewer,position,radius,options)_**
 
-  DC.CircleScan 构造函数
+  构造函数
 
   - 参数
     - `{Viewer} viewer`：场景
@@ -386,7 +386,7 @@ circleScan.start()
 
 - **_constructor(viewer,[options])_**
 
-  DC.Flying 构造函数
+  构造函数
 
   - 参数
     - `{Viewer} viewer`：场景
@@ -446,7 +446,7 @@ globeRotate.start()
 
 - **_constructor(viewer,[options])_**
 
-  DC.GlobeRotate 构造函数
+  构造函数
 
   - 参数
     - `{DC.Viewer} viewer`：3D 场景
@@ -478,7 +478,7 @@ radarScan.start()
 
 - **_constructor(viewer,position,radius,options)_**
 
-  DC.RadarScan 构造函数
+  构造函数
 
   - 参数
     - `{Viewer} viewer`：场景
@@ -509,7 +509,7 @@ let rc = new DC.RoamingController(viewer)
 
 - **_constructor(viewer)_**
 
-  DC.RoamingController 构造函数
+  构造函数
 
   - 参数
     - `{Viewer} viewer`：3D 场景
@@ -635,7 +635,7 @@ let path = new DC.RoamingPath('path1', 20， (position,isLast) => {}, {
 
 - **_constructor(id, duration, [callback], [options])_**
 
-  DC.RoamingPath 构造函数
+  构造函数
 
   - 参数
     - `{String} id`：唯一标识

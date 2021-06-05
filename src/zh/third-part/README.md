@@ -25,7 +25,7 @@ viewer.addLayer(chartLayer)
 
 - **_constructor([id],[option])_**
 
-  DC.Chart 构造函数
+  构造函数
 
   - 参数
     - `{String} id`：唯一标识
@@ -89,7 +89,7 @@ let dataset = new DC.MapvDataSet(data)
 
 - **_constructor(data)_**
 
-  DC.MapvDataSet 构造函数
+  构造函数
 
   - 参数
     - `{Array<Object>} data`：数据数组，详情参考：[DataSet](https://github.com/huiyan-fe/mapv/blob/master/src/data/DataSet.md)
@@ -149,7 +149,7 @@ viewer.addLayer(layer)
 
 - **_constructor(id,options)_**
 
-  DC.MapvLayer 构造函数
+  构造函数
 
   - 参数
     - `{String} id`：图层唯一标识

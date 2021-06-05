@@ -117,15 +117,11 @@ import '@dvgis/dc-core/dist/dc.core.min.css' // 主要样式
 />
 ```
 
-::: danger
-请将 resources 放置工程根目录 libs/dc-sdk 下，如果放置到其他目录下，框架将无法正常运行
-:::
-
 ### 应用配置
 
 > 配置主要用于 `NPM / YARN` 的方式
 
-由于 DC 框架中将 `CESIUM_BASE_URL` 设置为 `JSON.stringify('./libs/dc-sdk/resources/')`，这样需将 `Cesium` 相关的静态资源文件: `Assets`、`Workers` 、`ThirdParty` 复制到工程的 `libs/dc-sdk/resources` 目录下以保证三维场景能够正常呈现
+由于 DC 框架中将 `CESIUM_BASE_URL` 设置为 `./libs/dc-sdk/resources/`，这样需将 `Cesium` 相关的静态资源文件: `Assets`、`Workers` 、`ThirdParty` 复制到工程的 `libs/dc-sdk/resources` 目录下以保证三维场景能够正常呈现,也可通过 `DC.baseUrl` 进行 `Cesium` 相关的静态资源路基设置
 
 `Webpack` [工程模板](https://github.com/cavencj/dc-vue-app)
 

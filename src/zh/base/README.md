@@ -26,7 +26,11 @@ DC 为框架默认命名空间，使用该框架开发时都需要统以 `DC.` �
 
 [Turf](https://mapv.baidu.com/) 是一个用于空间分析的 JavaScript 库，它包括传统的空间操作、创建 GeoJSON 数据的相关函数，以及数据分类和统计工具。Turf 可以作为客户端插件添加到你的网站上，也可以使用 Node.js 在服务器端运行 Turf。开发时如果需要 Turf 的内部接口可以通过 **`const { turf } = DC.Namespace`** 获取 turf
 
-## 全局函数
+## 全局属性
+
+### version
+
+> 框架版本号
 
 ### accessToken
 
@@ -40,9 +44,28 @@ DC.accessToken = '<your access token>'
 Token 申请可通过 [http://dvgis.cn/#/price](http://dvgis.cn/#/price) 进行申请
 :::
 
+### baseUrl
+
+> 用于设置 `Cesium` 相关的静态资源文件: `Assets`、`Workers` 、`ThirdParty`、`Widgets` 的路径
+
+```js
+DC.baseUrl = './libs/dc-sdk/resources/'
+DC.ready(() => {})
+```
+
+:::warning
+`baseUrl` 的设置需要在 `ready` 函数之前，否则将使用默认的设置 `./libs/dc-sdk/resources/`
+:::
+
+### Namespace
+
+> 第三方库的命名空间集合
+
+## 全局函数
+
 ### use
 
-> 在 DC 框架中使用第三方模块或框架
+> 在 DC 中使用第三方模块或框架
 
 ```js
 let plugin = {
@@ -184,7 +207,9 @@ DC.ready(() => {
 
 **_`DC.LayerType.CLUSTER`_**: 聚合图层
 
-**_`DC.LayerType.VIDEO`_**: 视频图层
+**_`DC.LayerType.CAMERA_VIDEO`_**: 相机视频图层
+
+**_`DC.LayerType.PLANE_VIDEO`_**: 平面视频图层
 
 **_`DC.LayerType.KML`_**: kml 图层
 
@@ -194,7 +219,7 @@ DC.ready(() => {
 
 **_`DC.LayerType.MAPV`_**: Mapv 图层
 
-**_`DC.LayerType.CHART`_**: ecahrts 图层
+**_`DC.LayerType.CHART`_**: echarts 图层
 
 ### OverlayType
 
@@ -214,17 +239,27 @@ DC.ready(() => {
 
 **_`DC.OverlayType.LABEL`_**: 标签
 
-**_`DC.OverlayType.PLANE`_**: 面板
-
 **_`DC.OverlayType.TILESET`_**: 3DTiles
-
-**_`DC.OverlayType.WALL`_**: 墙体
 
 **_`DC.OverlayType.BOX`_**: 盒
 
 **_`DC.OverlayType.CORRIDOR`_**: 走廊
 
 **_`DC.OverlayType.CYLINDER`_**: 圆柱
+
+**_`DC.OverlayType.ELLIPSE`_**: 椭圆
+
+**_`DC.OverlayType.ELLIPSOID`_**: 球体
+
+**_`DC.OverlayType.PLANE`_**: 面板
+
+**_`DC.OverlayType.POLYLINE_VOLUME`_**: 管道
+
+**_`DC.OverlayType.WALL`_**: 墙体
+
+**_`DC.OverlayType.DYNAMIC_BILLBOARD`_**: 动态图标点
+
+**_`DC.OverlayType.DYNAMIC_MODEL`_**: 动态模型点
 
 **_`DC.OverlayType.CUSTOM_BILLBOARD`_**: 自定义图标
 
@@ -239,6 +274,26 @@ DC.ready(() => {
 **_`DC.OverlayType.GATHERING_PLACE`_**: 聚集地 **_`可标绘`_**
 
 **_`DC.OverlayType.TAILED_ATTACK_ARROW`_**: 燕尾攻击箭头 **_`可标绘`_**
+
+**_`DC.OverlayType.BILLBOARD_PRIMITIVE`_**: 图标图元
+
+**_`DC.OverlayType.DIFFUSE_WALL_PRIMITIVE`_**: 扩散墙图元
+
+**_`DC.OverlayType.ELEC_ELLIPSOID_PRIMITIVE`_**: 电弧球图元
+
+**_`DC.OverlayType.FLOW_LINE_PRIMITIVE`_**: 流动线图元
+
+**_`DC.OverlayType.LABEL_PRIMITIVE`_**: 文本图元
+
+**_`DC.OverlayType.MODEL_PRIMITIVE`_**: 模型图元
+
+**_`DC.OverlayType.POINT_PRIMITIVE`_**: 点图元
+
+**_`DC.OverlayType.POLYLINE_PRIMITIVE`_**: 线图元
+
+**_`DC.OverlayType.SCAN_CIRCLE_PRIMITIVE`_**: 扫描圆图元
+
+**_`DC.OverlayType.TRAIL_LINE_PRIMITIVE`_**: 轨迹线图元
 
 **_`DC.OverlayType.WATER_PRIMITIVE`_**: 水面图元
 
@@ -313,7 +368,7 @@ global.viewer = viewer // 添加到全局变量
 
 - **_constructor(id,[options])_**
 
-  DC.Viewer 构造函数
+  构造函数
 
   - 参数
     - `{String} id`：容器 ID
@@ -894,7 +949,7 @@ scene.skyBox = new DC.SkyBox({
 
 - **_constructor(id)_**
 
-  DC.SkyBox 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：配置
@@ -936,7 +991,7 @@ scene.skyBox = new DC.GroundSkyBox({
 
 - **_constructor(id)_**
 
-  DC.SkyBox 构造函数
+  构造函数
 
   - 参数
     - `{Object} options`：配置
@@ -977,7 +1032,7 @@ let position3 = DC.Position.fromObject({ lng: 120, lat: 22, height: 102 })
 
 - **_constructor(lng,lat,alt,heading,pitch,roll)_**
 
-  DC.Position 构造函数
+  构造函数
 
   - 参数
     - `{Number} lng`：经度

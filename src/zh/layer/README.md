@@ -149,7 +149,7 @@ layerGroup.addLayer(layer)
 
 - **_constructor(id)_**
 
-  DC.LayerGroup 构造函数
+  构造函数
 
   - 参数
     - `{String} id`：图层组唯一标识
@@ -222,7 +222,7 @@ viewer.addLayer(layer)
 
 - **_constructor(id)_**
 
-  DC.VectorLayer 构造函数
+  构造函数
 
   - 参数
     - `{String} id`：图层唯一标识
@@ -243,7 +243,7 @@ viewer.addLayer(layer)
 
 - **_constructor(id)_**
 
-  DC.DynamicLayer 构造函数
+  构造函数
 
   - 参数
     - `{String} id`：图层唯一标识
@@ -264,7 +264,7 @@ viewer.addLayer(layer)
 
 - **_constructor(id)_**
 
-  DC.PrimitiveLayer 构造函数
+  构造函数
 
   - 参数
     - `{String} id`：图层唯一标识
@@ -285,7 +285,7 @@ viewer.addLayer(layer)
 
 - **_constructor(id)_**
 
-  DC.TilesetLayer 构造函数
+  构造函数
 
   - 参数
     - `{String} id`：图层唯一标识
@@ -322,7 +322,7 @@ layer.eachOverlay((item) => {
 
 - **_constructor(id,url,[options])_**
 
-  DC.GeoJsonLayer 构造函数
+  构造函数
 
   - 参数
     - `{String} id`：图层唯一标识
@@ -377,13 +377,13 @@ layer.eachOverlay((item) => {
 
 - **_constructor(id,url,[options])_**
 
-  DC.TopoJsonLayer 构造函数
+  构造函数
 
   - 参数
     - `{String} id`：图层唯一标识
     - `{String} url`：数据地址
     - `{Object} options`：属性配置，详情参考：[GeoJsonDataSource](http://resource.dvgis.cn/cesium-docs/GeoJsonDataSource.html)
-      - 返回值 `topoJsonLayer`
+  - 返回值 `topoJsonLayer`
 
 ### methods
 
@@ -416,7 +416,7 @@ viewer.addLayer(layer)
 
 - **_constructor(id)_**
 
-  DC.HtmlLayer 构造函数
+  构造函数
 
   - 参数
     - `{String} id`：图层唯一标识
@@ -447,7 +447,7 @@ layer.eachOverlay((item) => {
 
 - **_constructor(id,url,[options])_**
 
-  DC.CzmlLayer 构造函数
+  构造函数
 
   - 参数
     - `{String} id`：图层唯一标识
@@ -480,7 +480,7 @@ layer.eachOverlay((item) => {
 
 - **_constructor(id,url,[options])_**
 
-  DC.KmlLayer 构造函数
+  构造函数
 
   - 参数
     - `{String} id`：图层唯一标识
@@ -503,7 +503,7 @@ viewer.addLayer(layer)
 
 - **_constructor(id,[options])_**
 
-  DC.ClusterLayer 构造函数
+  构造函数
 
   - 参数
     - `{String} id`：图层唯一标识
@@ -542,7 +542,7 @@ viewer.addLayer(layer)
 
 - **_constructor(id,bounds,[options])_**
 
-  DC.HeatLayer 构造函数
+  构造函数
 
   - 参数
     - `{String} id`：图层唯一标识
@@ -615,7 +615,7 @@ viewer.addLayer(layer)
 
 - **_constructor(id,[options])_**
 
-  DC.WindLayer 构造函数
+  构造函数
 
   - 参数
     - `{String} id`：图层唯一标识

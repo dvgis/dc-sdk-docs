@@ -114,15 +114,15 @@ point.setStyle({
 
 - **_constructor(position)_**
 
-  DC.Point 构造函数
+  构造函数
 
   - 参数
-    - [`{Position} position`](#dc-position)：坐标
+    - `{Position|String|Array|Object} position`：坐标
   - 返回值 `point`
 
 ### properties
 
-- [`{Position} position`](#dc-position)：坐标
+- `{Position|String|Array|Object} position`：坐标
 
 ### methods
 
@@ -187,15 +187,15 @@ polyline.setStyle({
 
 - **_constructor(positions)_**
 
-  DC.Polyline 构造函数
+  构造函数
 
   - 参数
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String|Object>} positions`：坐标串
   - 返回值 `polyline`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{String|Array<Position|Number|String|Object>} positions`：坐标串
 - `{DC.Position} center`：中心点 **_`readonly`_**
 - `{Number} distance`：距离,单位：米 **_`readonly`_**
 
@@ -250,16 +250,16 @@ polygon.setStyle({
 
 - **_constructor(positions)_**
 
-  DC.Polygon 构造函数
+  构造函数
 
   - 参数
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String|Object} positions`：坐标串
   - 返回值 `polygon`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
-- `{String|Array<Position|Number|String>} holes`：洞坐标串
+- `{String|Array<Position|Number|String|Object>} positions`：坐标串
+- `{String|Array<Position|Number|String|Object>} holes`：洞坐标串
 - `{DC.Position} center`：中心点 **_`readonly`_**
 - `{Number} area`：距离，单位：平方米 **_`readonly`_**
 
@@ -321,16 +321,16 @@ billboard.size = [20, 20]
 
 - **_constructor(position,icon)_**
 
-  DC.Billboard 构造函数
+  构造函数
 
   - 参数
-    - `{Position} position`：坐标
+    - `{Position|String|Array|Object} position`：坐标
     - `{String} icon`：图标地址
   - 返回值 `billboard`
 
 ### properties
 
-- `{Position} position`：坐标
+- `{Position|String|Array|Object} position`：坐标
 - `{String} icon`：图标地址
 - `{Array<Number>} size`：图标大小
 
@@ -394,10 +394,10 @@ let Label = new DC.Label(position, 'test')
 
 - **_constructor(position,text)_**
 
-  DC.Label 构造函数
+  构造函数
 
   - 参数
-    - `{Position} position`：坐标
+    - `{Position|String|Array|Object} position`：坐标
     - `{String} text`：文本
   - 返回值 `label`
 
@@ -473,10 +473,10 @@ let circle = new DC.Circle(position, 200)
 
 - **_constructor(center, radius)_**
 
-  DC.Circle 构造函数
+  构造函数
 
   - 参数
-    - `{Position} center`：圆心
+    - `{Position|String|Array|Object} center`：圆心
     - `{String} radius`：半径
   - 返回值 `billboard`
 
@@ -649,10 +649,10 @@ let model = new DC.Model(position, '**/**.glb')
 
 - **_constructor(position, modelUrl)_**
 
-  DC.Model 构造函数
+  构造函数
 
   - 参数
-    - `{Position|String|Array} position`：坐标
+    - ``{Position|String|Array|Object} position`：坐标
     - `{String} modelUrl`：模型地址
   - 返回值 `model`
 
@@ -714,7 +714,7 @@ tileset.setPosition(position)
 
 - **_constructor(url,[options])_**
 
-  DC.Tileset 构造函数
+  构造函数
 
   - 参数
     - `{String} url`：模型地址
@@ -753,7 +753,7 @@ tileset.setPosition(position)
   设置位置
 
   - 参数
-    - `{Position|Array|String} position`：位置
+    - `{Position|String|Array|Object} position`：位置
   - 返回值 `this`
 
 - **_setHeadingPitchRoll(heading, pitch, roll)_**
@@ -773,6 +773,14 @@ tileset.setPosition(position)
   - 参数
     - `{Number} height`：高度
     - `{Boolean} isAbsolute`：是否为绝对高度，如果为 true，将不根据模型中心高度计算
+  - 返回值 `this`
+
+- **_setScale(scale)_**
+
+  设置比例
+
+  - 参数
+    - `{Number} scale`：比例
   - 返回值 `this`
 
 - **_setCustomShader(customShader)_**
@@ -816,10 +824,10 @@ let divIcon = new DC.DivIcon(position, '<div></div>')
 
 - **_constructor(position, content)_**
 
-  DC.DivIcon 构造函数
+  构造函数
 
   - 参数
-    - `{Position|String|Array} position`：坐标
+    - `{Position|String|Array|Object} position`：坐标
     - `{String|Element} content`：内容
   - 返回值 `divIcon`
 
@@ -882,7 +890,7 @@ let box = new DC.Box(position, 20, 30, 40)
   构造函数
 
   - 参数
-    - [`{Position} position`](../dc-sdk/#dc-position)：坐标
+    - `{Position|String|Array|Object} position`：坐标
     - `{Number} length`：长度
     - `{Number} width`：宽度
     - `{Number} height`：高度
@@ -890,7 +898,7 @@ let box = new DC.Box(position, 20, 30, 40)
 
 ### properties
 
-- [`{Position} position`](#../dc-sdk/dc-position)：坐标
+- `{Position} position`：坐标
 - `{Number} length`：长度
 - `{Number} width`：宽度
 - `{Number} height`：高度
@@ -942,12 +950,12 @@ corridor.setStyle({
   构造函数
 
   - 参数
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String|Object>} positions`：坐标串
   - 返回值 `corridor`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{Array<Position>} positions`：坐标串
 
 ### methods
 
@@ -1007,7 +1015,7 @@ let cylinder = new DC.Cylinder(position, 20, 30, 40)
   构造函数
 
   - 参数
-    - [`{Position} position`](../dc-sdk/#dc-position)：坐标
+    - `{Position|Number|String|Object} position`：坐标
     - `{Number} length`：长度
     - `{Number} topRadius`：上半径
     - `{Number} bottomRadius`：下半径
@@ -1015,7 +1023,7 @@ let cylinder = new DC.Cylinder(position, 20, 30, 40)
 
 ### properties
 
-- [`{Position} position`](#../dc-sdk/dc-position)：坐标
+- `{Position} position`：坐标
 - `{Number} length`：长度
 - `{Number} topRadius`：上半径
 - `{Number} bottomRadius`：下半径
@@ -1065,14 +1073,14 @@ let ellipse = new DC.Ellipse(position, 20, 30)
   构造函数
 
   - 参数
-    - [`{Position} position`](../dc-sdk/#dc-position)：坐标
+    - `{Position|Number|String|Object} position`：坐标
     - `{Number} semiMajorAxis`：长半轴
     - `{Number} semiMinorAxis`：短半轴
   - 返回值 `ellipse`
 
 ### properties
 
-- [`{Position} position`](#../dc-sdk/dc-position)：坐标
+- `{Position} position`：坐标
 - `{Number} semiMajorAxis`：长半轴
 - `{Number} semiMinorAxis`：短半轴
 
@@ -1127,13 +1135,13 @@ let ellipsoid = new DC.Ellipsoid(position, { x: 30, y: 30, z: 30 })
   构造函数
 
   - 参数
-    - [`{Position} position`](../dc-sdk/#dc-position)：坐标
+    - `{Position|Number|String|Object} position`：坐标
     - `{Object} radius`：半径，格式是：{x: 30, y: 30, z: 30}
   - 返回值 `ellipsoid`
 
 ### properties
 
-- [`{Position} position`](#../dc-sdk/dc-position)：坐标
+- `{Position} position`：坐标
 - `{Object} radius`：半径，格式是：{x: 30, y: 30, z: 30}
 
 ### methods
@@ -1181,7 +1189,7 @@ let plane = new DC.Plane(position, 20, 30, { normal: 'x' })
   构造函数
 
   - 参数
-    - [`{Position} position`](../dc-sdk/#dc-position)：坐标
+    - `{Position|Number|String|Object} position`：坐标
     - `{Number} width`：宽度
     - `{Number} height`：高度
     - `{Object} plane`：面板格式
@@ -1197,7 +1205,7 @@ let plane = new DC.Plane(position, 20, 30, { normal: 'x' })
 
 ### properties
 
-- [`{Position} position`](#../dc-sdk/dc-position)：坐标
+- `{Position} position`：坐标
 - `{Number} width`：宽度
 - `{Number} height`：高度
 - `{Number} distance`：距离
@@ -1260,13 +1268,13 @@ let polylineVolume = new DC.PolylineVolume(
   构造函数
 
   - 参数
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String|Object>} positions`：坐标串
     - `{Array} shape`：形状
   - 返回值 `polylineVolume`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{Array<Position>} positions`：坐标串
 - `{Array} shape`：形状
 
 ### methods
@@ -1320,10 +1328,10 @@ billboard.size = [20, 20]
 
 - **_constructor(position,icon)_**
 
-  DC.DynamicBillboard 构造函数
+  构造函数
 
   - 参数
-    - `{Position} position`：坐标
+    - `{Position|String|Array|Object} position`：坐标
     - `{String} icon`：图标地址
   - 返回值 `billboard`
 
@@ -1394,7 +1402,7 @@ let model = new DC.DynamicModel(position, '**/**.glb')
 
 - **_constructor(position, modelUrl)_**
 
-  DC.DynamicModel 构造函数
+  构造函数
 
   - 参数
     - `{Position|String|Array|Object} position`：坐标
@@ -1459,10 +1467,10 @@ billboard.size = [20, 20]
 
 - **_constructor(position,icon)_**
 
-  DC.CustomBillboard 构造函数
+  构造函数
 
   - 参数
-    - `{Position} position`：坐标
+    - `{Position|String|Array|Object} position`：坐标
     - `{String} icon`：图标地址
   - 返回值 `billboard`
 
@@ -1542,10 +1550,10 @@ let label = new DC.CustomLabel(position, 'test')
 
 - **_constructor(position,text)_**
 
-  DC.CustomLabel 构造函数
+  构造函数
 
   - 参数
-    - `{Position} position`：坐标
+    - `{Position|String|Array|Object} position`：坐标
     - `{String} text`：文本
   - 返回值 `label`
 
@@ -1626,12 +1634,12 @@ let attackArrow = new DC.AttackArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
   构造函数
 
   - 参数
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String|Object>} positions`：坐标串
   - 返回值 `attackArrow`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{Array<Position>} positions`：坐标串
 
 ### methods
 
@@ -1660,12 +1668,12 @@ let doubleArrow = new DC.DoubleArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
   构造函数
 
   - 参数
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String|Object>} positions`：坐标串
   - 返回值 `doubleArrow`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{Array<Position>} positions`：坐标串
 
 ### methods
 
@@ -1694,12 +1702,12 @@ let fineArrow = new DC.FineArrow('-90.0,32.0;-94.0,36.0')
   构造函数
 
   - 参数
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String|Object>} positions`：坐标串
   - 返回值 `fineArrow`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{Array<Position>} positions`：坐标串
 
 ### methods
 
@@ -1728,12 +1736,12 @@ let gatheringPlace = new DC.GatheringPlace('-90.0,32.0;-94.0,36.0')
   构造函数
 
   - 参数
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String|Object>} positions`：坐标串
   - 返回值 `gatheringPlace`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{Array<Position>} positions`：坐标串
 
 ### methods
 
@@ -1747,7 +1755,7 @@ let gatheringPlace = new DC.GatheringPlace('-90.0,32.0;-94.0,36.0')
 
 ## DC.TailedAttackArrow
 
-> 聚集地要素，继承于[Overlay](#overlay)
+> 聚集地，继承于[Overlay](#overlay)
 
 ### example
 
@@ -1762,12 +1770,12 @@ let tailedAttackArrow = new DC.TailedAttackArrow('-90.0,32.0;-94.0,36.0')
   构造函数
 
   - 参数
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String|Object>} positions`：坐标串
   - 返回值 `tailedAttackArrow`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{Array<Position>} positions`：坐标串
 
 ### methods
 
@@ -1778,6 +1786,124 @@ let tailedAttackArrow = new DC.TailedAttackArrow('-90.0,32.0;-94.0,36.0')
   - 参数
     - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
   - 返回值 `this`
+
+## DC.BillboardPrimitive
+
+> 图标图元，继承于[Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let billboard = new DC.BillboardPrimitive(position, '***/**.png')
+billboard.size = [20, 20]
+```
+
+### creation
+
+- **_constructor(position,icon)_**
+
+  构造函数
+
+  - 参数
+    - `{Position|Number|String|Object} position`：坐标
+    - `{String} icon`：图标地址
+  - 返回值 `billboard`
+
+### properties
+
+- `{Position} position`：坐标
+- `{String} icon`：图标地址
+- `{Array<Number>} size`：图标大小
+
+### methods
+
+- **_setStyle(style)_**
+
+  设置样式
+
+  - 参数
+    - `{Object} style`：样式，详情参考：[Billboard](http://resource.dvgis.cn/cesium-docs/Billboard.html)
+  - 返回值 `this`
+
+```json
+// 样式参数(可选)
+{
+  "heightReference": 0, //高度参照，0：位置无参照，位置是绝对的，1：位置固定在地形上 2：位置高度是指地形上方的高度。
+  "scale": 1, //比例
+  "pixelOffset": { "x": 0, "y": 0 }, //偏移像素
+  "rotation": 0, //旋转角度
+  "translucencyByDistance": {
+    "near": 0, //最近距离
+    "nearValue": 0, //最近距离值
+    "far": 1, //最远距离值
+    "farValue": 0 //最远距离值
+  }, //根据距离设置透明度
+  "scaleByDistance": {
+    "near": 0, //最近距离
+    "nearValue": 0, //最近距离值
+    "far": 1, //最远距离值
+    "farValue": 0 //最远距离值
+  }, //根据距离设置比例
+  "distanceDisplayCondition": {
+    "near": 0, //最近距离
+    "far": Number.MAX_VALUE //最远距离
+  }, //根据距离设置可见
+  "disableDepthTestDistance": 0 // 深度检测距离，用于防止剪切地形，设置为零时，将始终应用深度测试。设置为Number.POSITIVE_INFINITY时，永远不会应用深度测试。
+}
+```
+
+## DC.DiffuseWallPrimitive
+
+> 扩散墙图元，继承于[Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let wall = new DC.DiffuseWallPrimitive(position, 2000, 1000)
+```
+
+### creation
+
+- **_constructor(center, radius, height, [slices], [speed])_**
+
+  构造函数
+
+  - 参数
+    - `{Position|Number|String|Object} center`：圆心
+    - `{Number} radius`：半径
+    - `{Number} height`：高度
+    - `{Number} slices`：边数，默认为 128
+    - `{Number} speed`：速度
+  - 返回值 `wall`
+
+### properties
+
+- `{Position|Number|String|Object} center`：圆心
+- `{Number} radius`：半径
+- `{Number} height`：高度
+- `{Number} slices`：边数，默认为 128
+- `{Number} speed`：速度
+
+### methods
+
+- **_setStyle(style)_**
+
+  设置样式
+
+  - 参数
+    - `{Object} style`：样式
+  - 返回值 `this`
+
+```json
+// 样式参数(可选)
+{
+  "minRadius": 10, // 动画最小半径
+  "minHeight": 30, // 动画最小高度
+  "color": DC.Color.RED // 墙体颜色
+}
+```
 
 ## DC.ElecEllipsoidPrimitive
 
@@ -1793,16 +1919,16 @@ let elecEllipsoid = new DC.ElecEllipsoidPrimitive('120,20',{x:2000,y:2000:z:2000
 
 - **_constructor(center,radius)_**
 
-  DC.WaterPrimitive 构造函数
+  构造函数
 
   - 参数
-    - `{String|Position|Array} center`：中心点
+    - `{Position|Number|String|Object} center`：球心
     - `{Object} radius`:球半径
-  - 返回值 `elecEllipsoidPrimitive`
+  - 返回值 `elecEllipsoid`
 
 ### properties
 
-- `{String|Position|Array} center`：中心点,
+- `{Position|Number|String|Object} center`：球心
 - `{Object} radius`:球半径
 
 ### methods
@@ -1837,15 +1963,15 @@ let flowLinePrimitive = new DC.FlowLinePrimitive('120,20;120,30;122,30')
 
 - **_constructor(positions,[asynchronous])_**
 
-  DC.FlowLinePrimitive 构造函数
+  构造函数
 
   - 参数
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String|Object>} positions`：坐标串
   - 返回值 `flowLinePrimitive`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{String|Array<Position|Number|String|Object>} positions`：坐标串
 
 ### methods
 
@@ -1867,6 +1993,252 @@ let flowLinePrimitive = new DC.FlowLinePrimitive('120,20;120,30;122,30')
 }
 ```
 
+## DC.LabelPrimitive
+
+> 标签图元，继承于[Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let Label = new DC.LabelPrimitive(position, 'test')
+```
+
+### creation
+
+- **_constructor(position,text)_**
+
+  构造函数
+
+  - 参数
+    - `{Position|Number|String|Object} position`：坐标
+    - `{String} text`：文本
+  - 返回值 `label`
+
+### properties
+
+- `{Position|Number|String|Object} position`：坐标
+- `{String} text`：文本
+
+### methods
+
+- **_setStyle(style)_**
+
+  设置样式
+
+  - 参数
+    - `{Object} style`：样式，详情参考：[Label](http://resource.dvgis.cn/cesium-docs/Label.html)
+  - 返回值 `this`
+
+```json
+// 样式参数(可选)
+{
+  "font": "30px sans-serif", // CSS 字体设置
+  "scale": 1, //比例
+  "pixelOffset": { "x": 0, "y": 0 }, //偏移像素
+  "heightReference": 0, //高度参照，0：位置无参照，位置是绝对的，1：位置固定在地形上 2：位置高度是指地形上方的高度。
+  "showBackground": false, //是否显示背景
+  "backgroundColor": DC.Color.BLACK, //背景颜色
+  "backgroundPadding": { "x": 0, "y": 0 }, //背景间隙
+  "fillColor": DC.Color.BLACK, //文字颜色
+  "outlineColor": DC.Color.WHITE, //边框颜色
+  "outlineWidth": 0, //边框大小，
+  "scaleByDistance": {
+    "near": 0, //最近距离
+    "nearValue": 0, //最近距离值
+    "far": 1, //最远距离值
+    "farValue": 0 //最远距离值
+  }, //根据距离设置比例
+  "translucencyByDistance": {
+    "near": 0, //最近距离
+    "nearValue": 0, //最近距离值
+    "far": 1, //最远距离值
+    "farValue": 0 //最远距离值
+  }, //根据距离设置透明度
+  "distanceDisplayCondition": {
+    "near": 0, //最近距离
+    "far": Number.MAX_VALUE //最远距离
+  }, //根据距离设置可见
+  "disableDepthTestDistance": 0 // 深度检测距离，用于防止剪切地形，设置为零时，将始终应用深度测试。设置为Number.POSITIVE_INFINITY时，永远不会应用深度测试。
+}
+```
+
+## DC.ModelPrimitive
+
+> 模型图元，继承于[Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let model = new DC.ModelPrimitive(position, '**/**.glb')
+```
+
+### creation
+
+- **_constructor(position, modelUrl)_**
+
+  构造函数
+
+  - 参数
+    - `{Position|Number|String|Object} position`：坐标
+    - `{String} modelUrl`：模型地址
+  - 返回值 `model`
+
+### properties
+
+- `{Position|Number|String|Object} position`：坐标
+- `{String} modelUrl`：模型地址
+
+### methods
+
+- **_setStyle(style)_**
+
+  设置样式
+
+  - 参数
+    - `{Object} style`：样式，详情参考：[Model](http://resource.dvgis.cn/cesium-docs/Model.html)
+  - 返回值 `this`
+
+```json
+// 样式参数(可选)
+{
+  "scale": 1, //比例
+  "minimumPixelSize": 0, //指定模型的最小像素大小，而不考虑缩放
+  "maximumScale": 0, //指定模型的最大比例
+  "heightReference": 0, //高度参照，0：位置无参照，位置是绝对的，1：位置固定在地形上 2：位置高度是指地形上方的高度。
+  "shadows": 0, //阴影类型，0：禁用、1：启用 、2：投射、3：接受
+  "silhouetteColor": DC.Color.RED, //轮廓颜色
+  "silhouetteSize": 0, //轮廓宽度
+  "lightColor": DC.Color.RED, //模型着色时指定灯光颜色
+  "distanceDisplayCondition": {
+    "near": 0, //最近距离
+    "far": Number.MAX_VALUE //最远距离
+  } //根据距离设置可见
+}
+```
+
+## DC.PointPrimitive
+
+> 点位图元，继承于[Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let point = new DC.PointPrimitive(position)
+point.setStyle({
+  pixelSize: 10,
+})
+```
+
+### creation
+
+- **_constructor(position)_**
+
+  构造函数
+
+  - 参数
+    - `{Position|Number|String|Object} position`：坐标
+  - 返回值 `point`
+
+### properties
+
+- `{Position|Number|String|Object} position`：坐标
+
+### methods
+
+- **_setStyle(style)_**
+
+  设置样式
+
+  - 参数
+    - `{Object} style`：样式，详情参考：[PointGraphics](http://resource.dvgis.cn/cesium-docs/PointGraphics.html)
+  - 返回值 `this`
+
+```json
+// 样式参数(可选)
+{
+  "pixelSize": 1, //像素大小
+  "heightReference": 0, //高度参照，0：位置无参照，位置是绝对的，1：位置固定在地形上 2：位置高度是指地形上方的高度。
+  "color": DC.Color.WHITE, //颜色
+  "outlineColor": DC.Color.WHITE, //边框颜色
+  "outlineWidth": 0, //边框大小，
+  "scaleByDistance": {
+    "near": 0, //最近距离
+    "nearValue": 0, //最近距离值
+    "far": 1, //最远距离值
+    "farValue": 0 //最远距离值
+  }, //根据距离设置比例
+  "translucencyByDistance": {
+    "near": 0, //最近距离
+    "nearValue": 0, //最近距离值
+    "far": 1, //最远距离值
+    "farValue": 0 //最远距离值
+  }, //根据距离设置透明度
+  "distanceDisplayCondition": {
+    "near": 0, //最近距离
+    "far": Number.MAX_VALUE //最远距离
+  }, //根据距离设置可见
+  "disableDepthTestDistance": 0 // 深度检测距离，用于防止剪切地形，设置为零时，将始终应用深度测试。设置为Number.POSITIVE_INFINITY时，永远不会应用深度测试。
+}
+```
+
+## DC.PolylinePrimitive
+
+> 线图元，继承于[Overlay](#overlay)
+
+### example
+
+```js
+let polyline = new DC.PolylinePrimitive('120,20;120,30')
+polyline.setStyle({
+  width: 10,
+})
+```
+
+### creation
+
+- **_constructor(positions)_**
+
+  构造函数
+
+  - 参数
+    - `{String|Array<Position|Number|String|Object>} positions`：坐标串
+  - 返回值 `polyline`
+
+### properties
+
+- `{String|Array<Position|Number|String|Object>} positions`：坐标串
+- `{Position} center`：中心点 **_`readonly`_**
+- `{Number} distance`：距离,单位：米 **_`readonly`_**
+
+### methods
+
+- **_setStyle(style)_**
+
+  设置样式
+
+  - 参数
+    - `{Object} style`：样式，详情参考：[Polyline](http://resource.dvgis.cn/cesium-docs/Polyline.html)
+  - 返回值 `this`
+
+```json
+// 样式参数(可选)
+{
+  "width": 1, //线宽
+  "material": DC.Color.WHITE, //材质
+  "clampToGround": false, //是否贴地
+  "shadows": 0, //阴影类型，0：禁用、1：启用 、2：投射、3：接受
+  "distanceDisplayCondition": {
+    "near": 0, //最近距离
+    "far": Number.MAX_VALUE //最远距离
+  }, //根据距离设置可见
+  "classificationType": 2, //分类 是否影响地形，3D切片或同时影响这两者。0:地形、1:3D切片、2：两者
+  "zIndex": 0 //层级
+}
+```
+
 ## DC.ScanCirclePrimitive
 
 > 扫描圆图元，继承于[Overlay](#overlay)
@@ -1881,16 +2253,16 @@ let scanCirclePrimitive = new DC.ScanCirclePrimitive('120,20', 1000)
 
 - **_constructor(position,radius)_**
 
-  DC.ScanCirclePrimitive 构造函数
+  构造函数
 
   - 参数
-    - `{String|Position|Array} position`：圆心
+    - `{String|Position|Array|Object} position`：圆心
     - `{Number} radius`：半径
   - 返回值 `scanCirclePrimitive`
 
 ### properties
 
-- `{String|Position|Array} position`：圆心
+- `{String|Position|Array|Object} position`：圆心
 - `{Number} radius`：半径
 
 ### methods
@@ -1925,15 +2297,15 @@ let trailLinePrimitive = new DC.TrailLinePrimitive('120,20;120,30;122,30')
 
 - **_constructor(positions,[asynchronous])_**
 
-  DC.TrailLinePrimitive 构造函数
+  构造函数
 
   - 参数
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String|Object>} positions`：坐标串
   - 返回值 `trailLinePrimitive`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{String|Array<Position|Number|String|Object>} positions`：坐标串
 
 ### methods
 
@@ -1975,16 +2347,16 @@ water.setStyle({
 
 - **_constructor(positions,[asynchronous])_**
 
-  DC.WaterPrimitive 构造函数
+  构造函数
 
   - 参数
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String|Object>} positions`：坐标串
     - `{Boolean} asynchronous`:异步创建，默认值：true
   - 返回值 `waterPrimitive`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{String|Array<Position|Number|String|Object>} positions`：坐标串
 
 ### methods
 
@@ -2032,69 +2404,14 @@ let waterPrimitive = new DC.VideoPrimitive('120,20;120,30;122,30', videoEl)
 
 - **_constructor(positions,video)_**
 
-  DC.WaterPrimitive 构造函数
+  构造函数
 
   - 参数
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String|Object>} positions`：坐标串
     - `{Element} video`：视频节点
   - 返回值 `polygon`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{String|Array<Position|Number|String|Object>} positions`：坐标串
 - `{Element} video`：视频节点
-
-## DC.ModelPrimitive
-
-> 模型图元，继承于[Overlay](#overlay)
-
-### example
-
-```js
-let position = new DC.Position(120, 20)
-let model = new DC.ModelPrimitive(position, '**/**.glb')
-```
-
-### creation
-
-- **_constructor(position, modelUrl)_**
-
-  构造函数
-
-  - 参数
-    - `{Position|String|Array} position`：坐标
-    - `{String} modelUrl`：模型地址
-  - 返回值 `model`
-
-### properties
-
-- `{Position} position`：坐标
-- `{String} modelUrl`：模型地址
-
-### methods
-
-- **_setStyle(style)_**
-
-  设置样式
-
-  - 参数
-    - `{Object} style`：样式，详情参考：[Model](http://resource.dvgis.cn/cesium-docs/Model.html)
-  - 返回值 `this`
-
-```json
-// 样式参数(可选)
-{
-  "scale": 1, //比例
-  "minimumPixelSize": 0, //指定模型的最小像素大小，而不考虑缩放
-  "maximumScale": 0, //指定模型的最大比例
-  "heightReference": 0, //高度参照，0：位置无参照，位置是绝对的，1：位置固定在地形上 2：位置高度是指地形上方的高度。
-  "shadows": 0, //阴影类型，0：禁用、1：启用 、2：投射、3：接受
-  "silhouetteColor": DC.Color.RED, //轮廓颜色
-  "silhouetteSize": 0, //轮廓宽度
-  "lightColor": DC.Color.RED, //模型着色时指定灯光颜色
-  "distanceDisplayCondition": {
-    "near": 0, //最近距离
-    "far": Number.MAX_VALUE //最远距离
-  } //根据距离设置可见
-}
-```

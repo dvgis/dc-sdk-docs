@@ -103,18 +103,16 @@ point.setStyle({
 - **_constructor(position)_**
 
   - parameters
-    - `{Position} position`
+    - `{Position|String|Array|Object} position`
   - returns `point`
 
 ### properties
 
-- `{Position} position`
+- `{Position|String|Array|Object} position`
 
 ### methods
 
 - **_setStyle(style)_**
-
-  设置样式
 
   - parameters
     - `{Object} style` [PointGraphics](http://resource.dvgis.cn/cesium-docs/PointGraphics.html)
@@ -172,12 +170,12 @@ polyline.setStyle({
 - **_constructor(positions)_**
 
   - parameters
-    - `{String|Array<Position|Number|String>} positions`
+    - `{String|Array<Position|Number|String|Object>} positions`
   - returns `polyline`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`
+- `{String|Array<Position|Number|String|Object>} positions`
 - `{DC.Position} center` **_`readonly`_**
 - `{Number} distance` **_`readonly`_**
 
@@ -229,13 +227,13 @@ polygon.setStyle({
 - **_constructor(positions)_**
 
   - parameters
-    - `{String|Array<Position|Number|String>} positions`
+    - `{String|Array<Position|Number|String|Object>} positions`
   - returns `polygon`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`
-- `{String|Array<Position|Number|String>} holes`
+- `{String|Array<Position|Number|String|Object>} positions`
+- `{String|Array<Position|Number|String|Object>} holes`
 - `{DC.Position} center` **_`readonly`_**
 - `{Number} area` **_`readonly`_**
 
@@ -294,13 +292,13 @@ billboard.size = [20, 20]
 - **_constructor(position,icon)_**
 
   - parameters
-    - `{Position} position`
+    - `{Position|String|Array|Object} position`
     - `{String} icon`
   - returns `billboard`
 
 ### properties
 
-- `{Position} position`
+- `{Position|String|Array|Object} position`
 - `{String} icon`
 - `{Array<Number>} size`: [width,height]
 
@@ -361,13 +359,13 @@ let Label = new DC.Label(position, 'test')
 - **_constructor(position,text)_**
 
   - parameters
-    - `{Position} position`
+    - `{Position|String|Array|Object} position`
     - `{String} text`
   - returns `label`
 
 ### properties
 
-- `{Position} position`
+- `{Position|String|Array|Object} position`
 - `{String} text`
 
 ### methods
@@ -434,13 +432,13 @@ let circle = new DC.Circle(position, 200)
 - **_constructor(center, radius)_**
 
   - parameters
-    - `{Position} center`
+    - `{Position|String|Array|Object} center`
     - `{String} radius`
   - returns `billboard`
 
 ### properties
 
-- `{Position} center`
+- `{Position|String|Array|Object} center`
 - `{String} radius`
 
 ### methods
@@ -491,12 +489,12 @@ let rectangle = new DC.Rectangle('-90.0,32.0;-94.0,36.0;')
   构造函数
 
   - parameters
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String|Object>} positions`：坐标串
   - returns `rectangle`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{String|Array<Position|Number|String|Object>} positions`：坐标串
 
 ### methods
 
@@ -548,12 +546,12 @@ let wall = new DC.Wall('-90.0,32.0,1000;-94.0,36.0,1000;')
   构造函数
 
   - parameters
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{String|Array<Position|Number|String|Object>} positions`：坐标串
   - returns `wall`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{String|Array<Position|Number|String|Object>} positions`：坐标串
 
 ### methods
 
@@ -606,13 +604,13 @@ let model = new DC.Model(position, '**/**.glb')
 - **_constructor(position, modelUrl)_**
 
   - parameters
-    - `{Position|String|Array} position`
+    - `{Position|String|Array|Object} position`
     - `{String} modelUrl`
   - returns `model`
 
 ### properties
 
-- `{Position} position`
+- `{Position|String|Array|Object} position`
 - `{String} modelUrl`
 
 ### methods
@@ -715,6 +713,12 @@ tileset.setPosition(position)
     - `{Boolean} isAbsolute`
   - returns `this`
 
+- **_setScale(scale)_**
+
+  - parameters
+    - `{Number} scale`
+  - returns `this`
+
 - **_setCustomShader(customShader)_**
 
   - parameters
@@ -752,13 +756,13 @@ let divIcon = new DC.DivIcon(position, '<div></div>')
 - **_constructor(position, content)_**
 
   - parameters
-    - `{Position|String|Array} position`
+    - `{Position|String|Array|Object} position`
     - `{String|Element} content`
   - returns `divIcon`
 
 ### properties
 
-- `{Position|String|Array} position`
+- `{Position|String|Array|Object} position`
 - `{String|Element} content` **_`writeonly`_**
 
 ### methods
@@ -809,7 +813,7 @@ let box = new DC.Box(position, 20, 30, 40)
 - **_constructor(position, length, width, height)_**
 
   - parameters
-    - `{Position} position`
+    - `{Position|String|Array|Object} position`
     - `{Number} length`
     - `{Number} width`
     - `{Number} height`
@@ -817,7 +821,7 @@ let box = new DC.Box(position, 20, 30, 40)
 
 ### properties
 
-- `{Position} position`
+- `{Position|String|Array|Object} position`
 - `{Number} length`
 - `{Number} width`
 - `{Number} height`
@@ -865,12 +869,12 @@ corridor.setStyle({
 - **_constructor(positions)_**
 
   - parameters
-    - `{String|Array<Position|Number|String>} positions`
+    - `{String|Array<Position|Number|String|Object>} positions`
   - returns `corridor`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`
+- `{String|Array<Position|Number|String|Object>} positions`
 
 ### methods
 
@@ -924,7 +928,7 @@ let cylinder = new DC.Cylinder(position, 20, 30, 40)
 - **_constructor(position, length, topRadius, bottomRadius)_**
 
   - parameters
-    - `{Position} position`
+    - `{Position|String|Array|Object} position`
     - `{Number} length`
     - `{Number} topRadius`
     - `{Number} bottomRadius`
@@ -932,7 +936,7 @@ let cylinder = new DC.Cylinder(position, 20, 30, 40)
 
 ### properties
 
-- `{Position} position`
+- `{Position|String|Array|Object} position`
 - `{Number} length`
 - `{Number} topRadius`
 - `{Number} bottomRadius`
@@ -978,15 +982,14 @@ let ellipse = new DC.Ellipse(position, 20, 30)
 - **_constructor(position, semiMajorAxis, semiMinorAxis)_**
 
   - parameters
-    - `{Position} position`
+    - `{Position|String|Array|Object} position`
     - `{Number} semiMajorAxis`
     - `{Number} semiMinorAxis`
   - returns `ellipse`
 
 ### properties
 
--`{Position} position`
-
+- `{Position|String|Array|Object} position`
 - `{Number} semiMajorAxis`
 - `{Number} semiMinorAxis`
 
@@ -1037,14 +1040,13 @@ let ellipsoid = new DC.Ellipsoid(position, { x: 30, y: 30, z: 30 })
 - **_constructor(position, radius)_**
 
   - parameters
-    - `{Position} position`
+    - `{Position|String|Array|Object} position`
     - `{Object} radius`：{x: 30, y: 30, z: 30}
   - returns `ellipsoid`
 
 ### properties
 
--`{Position} position`
-
+- `{Position|String|Array|Object} position`
 - `{Object} radius`：{x: 30, y: 30, z: 30}
 
 ### methods
@@ -1088,7 +1090,7 @@ let plane = new DC.Plane(position, 20, 30, { normal: 'x' })
 - **_constructor(position, width, height, direction)_**
 
   - parameters
-    - `{Position} position`
+    - `{Position|String|Array|Object} position`
     - `{Number} width`
     - `{Number} height`
     - `{Object} plane`
@@ -1104,7 +1106,7 @@ let plane = new DC.Plane(position, 20, 30, { normal: 'x' })
 
 ### properties
 
-- `{Position} position`
+- `{Position|String|Array|Object} position`
 - `{Number} width`
 - `{Number} height`
 - `{Number} distance`
@@ -1163,13 +1165,13 @@ let polylineVolume = new DC.PolylineVolume(
 - **_constructor(positions, shape)_**
 
   - parameters
-    - `{String|Array<Position|Number|String>} positions`
+    - `{String|Array<Position|Number|String|Object>} positions`
     - `{Array} shape`
   - returns `polylineVolume`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`
+- `{String|Array<Position|Number|String|Object>} positions`
 - `{Array} shape`
 
 ### methods
@@ -1220,7 +1222,7 @@ billboard.size = [20, 20]
 - **_constructor(position,icon)_**
 
   - parameters
-    - `{Position} position`
+    - `{Position|String|Array|Object} position`
     - `{String} icon`
   - returns `billboard`
 
@@ -1347,13 +1349,13 @@ billboard.size = [20, 20]
 - **_constructor(position,icon)_**
 
   - parameters
-    - `{Position} position`
+    - `{Position|String|Array|Object} position`
     - `{String} icon`
   - returns `billboard`
 
 ### properties
 
-- `{Position} position`
+- `{Position|String|Array|Object} position`
 - `{String} icon`
 - `{Array<Number>} size`
 
@@ -1422,13 +1424,13 @@ let label = new DC.CustomLabel(position, 'test')
 - **_constructor(position,text)_**
 
   - parameters
-    - `{Position} position`
+    - `{Position|String|Array|Object} position`
     - `{String} text`
   - returns `label`
 
 ### properties
 
-- `{Position} position`
+- `{Position|String|Array|Object} position`
 - `{String} text`
 
 ### methods
@@ -1495,12 +1497,12 @@ let attackArrow = new DC.AttackArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
 - **_constructor(positions)_**
 
   - parameters
-    - `{String|Array<Position|Number|String>} positions`
+    - `{String|Array<Position|Number|String|Object>} positions`
   - returns `attackArrow`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`
+- `{String|Array<Position|Number|String|Object>} positions`
 
 ### methods
 
@@ -1525,12 +1527,12 @@ let doubleArrow = new DC.DoubleArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
 - **_constructor(positions)_**
 
   - parameters
-    - `{String|Array<Position|Number|String>} positions`
+    - `{String|Array<Position|Number|String|Object>} positions`
   - returns `doubleArrow`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`
+- `{String|Array<Position|Number|String|Object>} positions`
 
 ### methods
 
@@ -1555,12 +1557,12 @@ let fineArrow = new DC.FineArrow('-90.0,32.0;-94.0,36.0')
 - **_constructor(positions)_**
 
   - parameters
-    - `{String|Array<Position|Number|String>} positions`
+    - `{String|Array<Position|Number|String|Object>} positions`
   - returns `fineArrow`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`
+- `{String|Array<Position|Number|String|Object>} positions`
 
 ### methods
 
@@ -1585,12 +1587,12 @@ let gatheringPlace = new DC.GatheringPlace('-90.0,32.0;-94.0,36.0')
 - **_constructor(positions)_**
 
   - parameters
-    - `{String|Array<Position|Number|String>} positions`
+    - `{String|Array<Position|Number|String|Object>} positions`
   - returns `gatheringPlace`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`
+- `{String|Array<Position|Number|String|Object>} positions`
 
 ### methods
 
@@ -1615,12 +1617,12 @@ let tailedAttackArrow = new DC.TailedAttackArrow('-90.0,32.0;-94.0,36.0')
 - **_constructor(positions)_**
 
   - parameters
-    - `{String|Array<Position|Number|String>} positions`
+    - `{String|Array<Position|Number|String|Object>} positions`
   - returns `tailedAttackArrow`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`
+- `{String|Array<Position|Number|String|Object>} positions`
 
 ### methods
 
@@ -1629,6 +1631,116 @@ let tailedAttackArrow = new DC.TailedAttackArrow('-90.0,32.0;-94.0,36.0')
   - parameters
     - `{Object} style`：[Polygon](../dc-sdk/#dc-polygon)
   - returns `this`
+
+## DC.BillboardPrimitive
+
+> Inherited from [Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let billboard = new DC.BillboardPrimitive(position, '***/**.png')
+billboard.size = [20, 20]
+```
+
+### creation
+
+- **_constructor(position,icon)_**
+
+  - parameters
+    - `{Position|String|Array|Object} position`
+    - `{String} icon`
+  - returns `billboard`
+
+### properties
+
+- `{Position|String|Array|Object} position`
+- `{String} icon`
+- `{Array<Number>} size`: [width,height]
+
+### methods
+
+- **_setStyle(style)_**
+
+  - parameters
+    - `{Object} style` [Billboard](http://resource.dvgis.cn/cesium-docs/Billboard.html)
+  - returns `this`
+
+```json
+// style(optional)
+{
+  "heightReference": 0,
+  "scale": 1,
+  "pixelOffset": { "x": 0, "y": 0 },
+  "rotation": 0,
+  "translucencyByDistance": {
+    "near": 0,
+    "nearValue": 0,
+    "far": 1,
+    "farValue": 0
+  },
+  "scaleByDistance": {
+    "near": 0,
+    "nearValue": 0,
+    "far": 1,
+    "farValue": 0
+  },
+  "distanceDisplayCondition": {
+    "near": 0,
+    "far": Number.MAX_VALUE
+  },
+  "disableDepthTestDistance": 0
+}
+```
+
+## DC.DiffuseWallPrimitive
+
+> Inherited from [Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let wall = new DC.DiffuseWallPrimitive(position, 2000, 1000)
+```
+
+### creation
+
+- **_constructor(center, radius, height, [slices], [speed])_**
+
+  - parameters
+    - `{Position|Number|String|Object} center`
+    - `{Number} radius`
+    - `{Number} height`
+    - `{Number} slices`: 128
+    - `{Number} speed`
+  - returns `wall`
+
+### properties
+
+- `{Position|Number|String|Object} center`
+- `{Number} radius`
+- `{Number} height`
+- `{Number} slices`
+- `{Number} speed`
+
+### methods
+
+- **_setStyle(style)_**
+
+  - parameters
+    - `{Object} style`
+  - returns `this`
+
+```json
+// style(optional)
+{
+  "minRadius": 10,
+  "minHeight": 30,
+  "color": DC.Color.RED
+}
+```
 
 ## DC.ElecEllipsoidPrimitive
 
@@ -1645,13 +1757,13 @@ let elecEllipsoid = new DC.ElecEllipsoidPrimitive('120,20',{x:2000,y:2000:z:2000
 - **_constructor(center,radius)_**
 
   - parameters
-    - `{String|Position|Array} center`
+    - `{String|Position|Array|Object} center`
     - `{Object} radius`: {x:100,y:100,z:100}
   - returns `elecEllipsoidPrimitive`
 
 ### properties
 
-- `{String|Position|Array} center`
+- `{String|Position|Array|Object} center`
 - `{Object} radius`
 
 ### methods
@@ -1685,12 +1797,12 @@ let flowLinePrimitive = new DC.FlowLinePrimitive('120,20;120,30;122,30')
 - **_constructor(positions,[asynchronous])_**
 
   - parameters
-    - `{String|Array<Position|Number|String>} positions`
+    - `{String|Array<Position|Number|String|Object>} positions`
   - returns `flowLinePrimitive`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`
+- `{String|Array<Position|Number|String|Object>} positions`
 
 ### methods
 
@@ -1710,6 +1822,236 @@ let flowLinePrimitive = new DC.FlowLinePrimitive('120,20;120,30;122,30')
 }
 ```
 
+## DC.LabelPrimitive
+
+> Inherited from [Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let Label = new DC.LabelPrimitive(position, 'test')
+```
+
+### creation
+
+- **_constructor(position,text)_**
+
+  - parameters
+    - `{Position|String|Array|Object} position`
+    - `{String} text`
+  - returns `label`
+
+### properties
+
+- `{Position|String|Array|Object} position`
+- `{String} text`
+
+### methods
+
+- **_setStyle(style)_**
+
+  - parameters
+    - `{Object} style` [Labels](http://resource.dvgis.cn/cesium-docs/Label.html)
+  - returns `this`
+
+```json
+// style(optional)
+{
+  "font": "30px sans-serif",
+  "scale": 1,
+  "pixelOffset": { "x": 0, "y": 0 },
+  "heightReference": 0,
+  "showBackground": false,
+  "backgroundColor": DC.Color.BLACK,
+  "backgroundPadding": { "x": 0, "y": 0 },
+  "fillColor": DC.Color.BLACK,
+  "outlineColor": DC.Color.WHITE,
+  "outlineWidth": 0,
+  "scaleByDistance": {
+    "near": 0,
+    "nearValue": 0,
+    "far": 1,
+    "farValue": 0
+  },
+  "translucencyByDistance": {
+    "near": 0,
+    "nearValue": 0,
+    "far": 1,
+    "farValue": 0
+  },
+  "distanceDisplayCondition": {
+    "near": 0,
+    "far": Number.MAX_VALUE
+  },
+  "disableDepthTestDistance": 0
+}
+```
+
+## DC.ModelPrimitive
+
+> Inherited from [Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let model = new DC.ModelPrimitive(position, '**/**.glb')
+```
+
+### creation
+
+- **_constructor(position, modelUrl)_**
+
+  - parameters
+    - `{Position|Number|String|Object} position`
+    - `{String} modelUrl`
+  - returns `model`
+
+### properties
+
+- `{Position|Number|String|Object} position`
+- `{String} modelUrl`
+
+### methods
+
+- **_setStyle(style)_**
+
+  - parameters
+    - `{Object} style` [Model](http://resource.dvgis.cn/cesium-docs/Model.html)
+  - returns `this`
+
+```json
+// style(optional)
+{
+  "scale": 1,
+  "minimumPixelSize": 0,
+  "maximumScale": 0,
+  "heightReference": 0,
+  "shadows": 0,
+  "silhouetteColor": DC.Color.RED,
+  "silhouetteSize": 0,
+  "lightColor": DC.Color.RED,
+  "distanceDisplayCondition": {
+    "near": 0,
+    "far": Number.MAX_VALUE
+  }
+}
+```
+
+## DC.PointPrimitive
+
+> Inherited from [Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let point = new DC.PointPrimitive(position)
+point.setStyle({
+  pixelSize: 10,
+})
+```
+
+### creation
+
+- **_constructor(position)_**
+
+  - parameters
+    - `{Position|Number|String|Object} position`：坐标
+  - returns `point`
+
+### properties
+
+- `{Position|Number|String|Object} position`：坐标
+
+### methods
+
+- **_setStyle(style)_**
+
+  - parameters
+    - `{Object} style` [Point](http://resource.dvgis.cn/cesium-docs/Point.html)
+  - returns `this`
+
+```json
+// style(optional)
+{
+  "pixelSize": 1,
+  "heightReference": 0,
+  "color": DC.Color.WHITE,
+  "outlineColor": DC.Color.WHITE,
+  "outlineWidth": 0,
+  "scaleByDistance": {
+    "near": 0,
+    "nearValue": 0,
+    "far": 1,
+    "farValue": 0
+  },
+  "translucencyByDistance": {
+    "near": 0,
+    "nearValue": 0,
+    "far": 1,
+    "farValue": 0
+  },
+  "distanceDisplayCondition": {
+    "near": 0,
+    "far": Number.MAX_VALUE
+  },
+  "disableDepthTestDistance": 0
+}
+```
+
+## DC.PolylinePrimitive
+
+> Inherited from [Overlay](#overlay)
+
+### example
+
+```js
+let polyline = new DC.PolylinePrimitive('120,20;120,30')
+polyline.setStyle({
+  width: 10,
+})
+```
+
+### creation
+
+- **_constructor(positions)_**
+
+  - parameters
+    - `{String|Array<Position|Number|String|Object>} positions`
+  - returns `polyline`
+
+### properties
+
+- `{String|Array<Position|Number|String|Object>} positions`
+- `{Position} center` **_`readonly`_**
+- `{Number} distance` **_`readonly`_**
+
+### methods
+
+- **_setStyle(style)_**
+
+  - parameters
+    - `{Object} style` [Polyline](http://resource.dvgis.cn/cesium-docs/Polyline.html)
+  - returns `this`
+
+```json
+// style(optional)
+{
+  "width": 1,
+  "material": DC.Color.WHITE,
+  "clampToGround": false,
+  "shadows": 0,
+  "distanceDisplayCondition": {
+    "near": 0,
+    "far": Number.MAX_VALUE
+  },
+  "classificationType": 2,
+  "zIndex": 0
+}
+```
+
 ## DC.ScanCirclePrimitive
 
 > Inherited from [Overlay](#overlay)
@@ -1725,13 +2067,13 @@ let scanCirclePrimitive = new DC.ScanCirclePrimitive('120,20', 1000)
 - **_constructor(position,radius)_**
 
   - parameters
-    - `{String|Position|Array} position`
+    - `{String|Position|Array|Object} position`
     - `{Number} radius`
   - returns `scanCirclePrimitive`
 
 ### properties
 
-- `{String|Position|Array} position`
+- `{String|Position|Array|Object} position`
 - `{Number} radius`
 
 ### methods
@@ -1765,12 +2107,12 @@ let trailLinePrimitive = new DC.TrailLinePrimitive('120,20;120,30;122,30')
 - **_constructor(positions,[asynchronous])_**
 
   - parameters
-    - `{String|Array<Position|Number|String>} positions`
+    - `{String|Array<Position|Number|String|Object>} positions`
   - returns `trailLinePrimitive`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`
+- `{String|Array<Position|Number|String|Object>} positions`
 
 ### methods
 
@@ -1811,13 +2153,13 @@ water.setStyle({
 - **_constructor(positions,[asynchronous])_**
 
   - parameters
-    - `{String|Array<Position|Number|String>} positions`
+    - `{String|Array<Position|Number|String|Object>} positions`
     - `{Boolean} asynchronous`
   - returns `waterPrimitive`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`
+- `{String|Array<Position|Number|String|Object>} positions`
 
 ### methods
 
@@ -1864,62 +2206,11 @@ let waterPrimitive = new DC.VideoPrimitive('120,20;120,30;122,30', videoEl)
 - **_constructor(positions,video)_**
 
   - parameters
-    - `{String|Array<Position|Number|String>} positions`
+    - `{String|Array<Position|Number|String|Object>} positions`
     - `{Element} video`
   - returns `polygon`
 
 ### properties
 
-- `{String|Array<Position|Number|String>} positions`
+- `{String|Array<Position|Number|String|Object>} positions`
 - `{Element} video`
-
-## DC.ModelPrimitive
-
-> Inherited from [Overlay](#overlay)
-
-### example
-
-```js
-let position = new DC.Position(120, 20)
-let model = new DC.ModelPrimitive(position, '**/**.glb')
-```
-
-### creation
-
-- **_constructor(position, modelUrl)_**
-
-  - parameters
-    - `{Position|String|Array} position`
-    - `{String} modelUrl`
-  - returns `model`
-
-### properties
-
-- `{Position} position`
-- `{String} modelUrl`
-
-### methods
-
-- **_setStyle(style)_**
-
-  - parameters
-    - `{Object} style` [ModelGraphics](http://resource.dvgis.cn/cesium-docs/ModelGraphics.html)
-  - returns `this`
-
-```json
-// style(optional)
-{
-  "scale": 1,
-  "minimumPixelSize": 0,
-  "maximumScale": 0,
-  "heightReference": 0,
-  "shadows": 0,
-  "silhouetteColor": DC.Color.RED,
-  "silhouetteSize": 0,
-  "lightColor": DC.Color.RED,
-  "distanceDisplayCondition": {
-    "near": 0,
-    "far": Number.MAX_VALUE
-  }
-}
-```

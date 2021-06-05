@@ -26,19 +26,42 @@ Try not to use DC as variable names or namespaces when developing to avoid the f
 
 [Turf](https://mapv.baidu.com/) is a JavaScript library for spatial analysis. It includes traditional spatial operations, helper functions for creating GeoJSON data, and data classification and statistics tools. Turf can be added to your website as a client-side plugin, or you can run Turf server-side with Node.js . If you need Turf's internal interface during development, you can get Turf through **`const { turf } = DC.Namespace`**.
 
-## Global
+## Global Properties
+
+### version
+
+> Framework version number
 
 ### accessToken
 
-> For removing logo and console output information
+> Used to remove logo and console output information. `does not affect the use of the framework`
 
 ```js
 DC.accessToken = '<your access token>'
 ```
 
 :::tip
-Token apply [url](http://dvgis.cn/#/price)
+Token requests can be made via [http://dvgis.cn/#/price](http://dvgis.cn/#/price)
 :::
+
+### baseUrl
+
+> Path to set the static resource files associated with `Cesium`: `Assets`, `Workers`, `ThirdParty`, `Widgets`
+
+```js
+DC.baseUrl = '. /libs/dc-sdk/resources/'
+DC.ready(() => {})
+```
+
+:::warning
+The `baseUrl` setting needs to be set before the `ready` function, otherwise the default setting of `. /libs/dc-sdk/resources/`
+:::
+
+### Namespace
+
+> Namespace collection for third-party libraries
+
+## Global Methods
 
 ### use
 
@@ -200,13 +223,13 @@ Please use the default constants for development
 
 **_`DC.LayerType.HTML`_**
 
-**_`DC.LayerType.FEATURE_GRID`_**
-
 **_`DC.LayerType.GEOJSON`_**
 
 **_`DC.LayerType.CLUSTER`_**
 
-**_`DC.LayerType.VIDEO`_**
+**_`DC.LayerType.CAMERA_VIDEO`_**
+
+**_`DC.LayerType.PLANE_VIDEO`_**
 
 **_`DC.LayerType.KML`_**
 
@@ -236,17 +259,27 @@ Please use the default constants for development
 
 **_`DC.OverlayType.LABEL`_**
 
-**_`DC.OverlayType.PLANE`_**
-
 **_`DC.OverlayType.TILESET`_**
-
-**_`DC.OverlayType.WALL`_**
 
 **_`DC.OverlayType.BOX`_**
 
 **_`DC.OverlayType.CORRIDOR`_**
 
 **_`DC.OverlayType.CYLINDER`_**
+
+**_`DC.OverlayType.ELLIPSE`_**
+
+**_`DC.OverlayType.ELLIPSOID`_**
+
+**_`DC.OverlayType.PLANE`_**
+
+**_`DC.OverlayType.POLYLINE_VOLUME`_**
+
+**_`DC.OverlayType.WALL`_**
+
+**_`DC.OverlayType.DYNAMIC_BILLBOARD`_**
+
+**_`DC.OverlayType.DYNAMIC_MODEL`_**
 
 **_`DC.OverlayType.CUSTOM_BILLBOARD`_**
 
@@ -261,6 +294,26 @@ Please use the default constants for development
 **_`DC.OverlayType.GATHERING_PLACE`_**
 
 **_`DC.OverlayType.TAILED_ATTACK_ARROW`_**
+
+**_`DC.OverlayType.BILLBOARD_PRIMITIVE`_**
+
+**_`DC.OverlayType.DIFFUSE_WALL_PRIMITIVE`_**
+
+**_`DC.OverlayType.ELEC_ELLIPSOID_PRIMITIVE`_**
+
+**_`DC.OverlayType.FLOW_LINE_PRIMITIVE`_**
+
+**_`DC.OverlayType.LABEL_PRIMITIVE`_**
+
+**_`DC.OverlayType.MODEL_PRIMITIVE`_**
+
+**_`DC.OverlayType.POINT_PRIMITIVE`_**
+
+**_`DC.OverlayType.POLYLINE_PRIMITIVE`_**
+
+**_`DC.OverlayType.SCAN_CIRCLE_PRIMITIVE`_**
+
+**_`DC.OverlayType.TRAIL_LINE_PRIMITIVE`_**
 
 **_`DC.OverlayType.WATER_PRIMITIVE`_**
 
