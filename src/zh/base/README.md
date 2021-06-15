@@ -303,15 +303,15 @@ DC.ready(() => {
 
 **_`DC.OverlayType.PLAN_VIDEO`_**: 平面视频
 
-### RoamingViewMode
+### TrackViewMode
 
-**_`DC.RoamingViewMode.FREE`_**: 自由视角
+**_`DC.TrackViewMode.FP`_**: 第一人称视角
 
-**_`DC.RoamingViewMode.FP`_**: 第一人称视角
+**_`DC.TrackViewMode.TP`_**: 第三人称视角
 
-**_`DC.RoamingViewMode.TP`_**: 第三人称视角
+**_`DC.TrackViewMode.TRACKED`_**: 跟随视角
 
-**_`DC.RoamingViewMode.TRACKED`_**: 跟随视角
+**_`DC.TrackViewMode.FREE`_**: 自由视角
 
 ### PositionEditorType
 

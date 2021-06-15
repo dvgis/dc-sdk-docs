@@ -323,15 +323,15 @@ Please use the default constants for development
 
 **_`DC.OverlayType.PLAN_VIDEO`_**
 
-### RoamingViewMode
+### TrackViewMode
 
-**_`DC.RoamingViewMode.FREE`_**
+**_`DC.TrackViewMode.FP`_**
 
-**_`DC.RoamingViewMode.FP`_**
+**_`DC.TrackViewMode.TP`_**
 
-**_`DC.RoamingViewMode.TP`_**
+**_`DC.TrackViewMode.TRACKED`_**
 
-**_`DC.RoamingViewMode.TRACKED`_**
+**_`DC.TrackViewMode.FREE`_**
 
 ## DC.Viewer
 

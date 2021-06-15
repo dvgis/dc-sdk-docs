@@ -456,21 +456,158 @@ let rc = new DC.RoamingController(viewer)
 - **_constructor(viewer)_**
 
   - parameters
-    - `{Viewer} viewer`：3D 场景
+    - `{Viewer} viewer`
   - returns `roamingController`
-
-### properties
-
-- `{JulianDate} startTime` **_`readonly`_**
-- `{Object} roamingLayer` **_`readonly`_**
 
 ### methods
 
-- **_setStartTime(startTime)_**
+- **_addPath(path)_**
 
   - parameters
-    - `{Date} startTime`
+    - `{RoamingPath} path`
   - returns `this`
+
+- **_addPaths(paths)_**
+
+  - parameters
+    - `{Array<RoamingPath>} paths`
+  - returns `this`
+
+- **_removePath(path)_**
+
+  - parameters
+    - `{RoamingPath} path`
+  - returns `path`
+
+- **_getPath(id)_**
+
+  - parameters
+    - `{String} id`
+  - returns `path`
+
+- **_getPaths()_**
+
+  - returns `array`
+
+- **_activate(path, viewOption)_**
+
+  - parameters
+    - `{RoamingPath} path`
+    - `{String} viewOption`
+  - returns `this`
+
+```json
+// options (optional)
+{
+  "pitch": 0,
+  "range": 1000
+}
+```
+
+- **_deactivate()_**
+
+  - returns `this`
+
+- **_clear()_**
+
+  - returns `this`
+
+## DC.RoamingPath
+
+### example
+
+```js
+let path = new DC.RoamingPath('120.121,32.1213;121.132,32.1213', 20)
+rc.addPath(path)
+```
+
+### creation
+
+- **_constructor(positions, duration, [pathMode])_**
+
+  - parameters
+    - `{String|Array<Position|Number|String|Object>} positions`
+    - `{Number} duration`
+    - `{String} pathMode` speed / time
+  - returns `roamingPath`
+
+### properties
+
+- `{String} pathId` **_`readonly`_**
+- `{String} id`
+- `{String|Array<Position|Number|String>} positions`
+- `{Number} duration`
+- `{String} pathMode` speed / time
+- `{String} state` **_`readonly`_**
+
+## DC.KeyboardRoaming
+
+### example
+
+```js
+let kr = new DC.KeyboardRoaming(viewer)
+kr.enable = true
+```
+
+### creation
+
+- **_constructor(viewer)_**
+
+  - parameters
+    - `{Viewer} viewer`
+  - returns `keyboardRoaming`
+
+### properties
+
+- `{Boolean} enable`
+- `{Number} moveRate` default: 100
+- `{Number} rotateRate` default: 0.01
+
+## DC.TrackController
+
+### example
+
+```js
+let tc = new DC.TrackController(viewer)
+```
+
+### creation
+
+- **_constructor(viewer)_**
+
+  - parameters
+    - `{Viewer} viewer`
+  - returns `trackController`
+
+### methods
+
+- **_addTrack(track)_**
+
+  - parameters
+    - `{Track} track`
+  - returns `this`
+
+- **_addTracks(tracks)_**
+
+  - parameters
+    - `{Array<Track>} tracks`
+  - returns `this`
+
+- **_removeTrack(track)_**
+
+  - parameters
+    - `{Track} track`
+  - returns `path`
+
+- **_getTrack(id)_**
+
+  - parameters
+    - `{String} id`
+  - returns `track`
+
+- **_getTracks()_**
+
+  - returns `array`
 
 - **_play()_**
 
@@ -487,127 +624,105 @@ let rc = new DC.RoamingController(viewer)
 - **_changeSpeed(speed)_**
 
   - parameters
-    - `{Number} speed`：速度
+    - `{Number} speed`
   - returns `this`
 
-- **_addPath(path)_**
+- **_viewTrack(track, viewOption)_**
 
   - parameters
-    - `{DC.RoamingPath} path`：路径
-  - returns `this`
-
-- **_getPath(id)_**
-
-  - parameters
-    - `{String} id`：唯一标识
-  - returns `path`
-
-- **_removePath(path)_**
-
-  - parameters
-    - `{RoamingPath} path`：路径
-  - returns `path`
-
-- **_clearPath()_**
-
-  - returns `this`
-
-- **_trackedPath(path, viewMode, viewOption)_**
-
-  - parameters
-    - `{RoamingPath} path`
-    - `{String} viewMode`: FP: first view, TP: third view, TRACKED: tracking view, FREE: free view
+    - `{Track} track`
     - `{String} viewOption`
   - returns `this`
 
 ```json
-//options(optional)
+// options (optional)
 {
-  "alt": 0,
+  "mode": null, // DC.TrackViewMode
   "pitch": 0,
   "range": 1000
 }
 ```
 
-- **_releasePath(path)_**
+- **_releaseTrack(track)_**
 
   - parameters
-    - `{RoamingPath} path`
+    - `{Track} track`：路径
   - returns `this`
 
-- **_releaseCamera()_**
+- **_clear()_**
 
   - returns `this`
 
-## DC.RoamingPath
+## DC.Track
 
 ### example
 
 ```js
-let path = new DC.RoamingPath('path1', 20， (position,isLast) => {}, {
-  showPath: true,
-})
+let track = new DC.Track('120.121,32.1213;121.132,32.1213', 20)
+rc.addTrack(track)
 ```
 
 ### creation
 
-- **_constructor(id, duration, callback, [options])_**
+- **_constructor(positions, duration, [callback], [options])_**
 
   - parameters
-    - `{String} id`
+    - `{String|Array<Position|Number|String|Object>} positions`
     - `{Number} duration`
-    - `{Function} callback`
+    - `{Function} callback`：Each point arrival callback function, parameters are: position, isLast
     - `{Object} options`
-  - Returns `roamingPath`
+  - returns `track`
 
 ```json
-//options(optional)
+// options (optional)
 {
-  "showPath": false,
-  "pathWidth": 1,
-  "pathMaterial": DC.Color.ORANGE.withAlpha(0.8),
-  "pathLeadTime": 1
+  "clampToGround": false, // 是否贴地
+  "clampToTileset": false // 是否贴物
 }
 ```
 
 ### properties
 
-- `{String} id` **_`readonly`_**
-- `{String} state` **_`readonly`_**
+- `{String} trackId` **_`readonly`_**
+- `{String} id`
+- `{String|Array<Position|Number|String|Object>} positions`
+- `{Number} duration`
 - `{Date} startTime`
-- `{String|Array<Position|Number|String>} positions`
+- `{String} state` **_`readonly`_**
 
 ### methods
 
-- **_setMode(mode)_**
+- **_addPosition(position,duration)_**
 
   - parameters
-    - `{String} mode`：speed，distance
+    - `{Position|Array|String|Object} position`
+    - `{Number} duration`
   - returns `this`
 
 - **_setModel(modelUrl,style)_**
 
   - parameters
     - `{String} modelPath`
-    - `{Object} style` [DC.Model](../overlay/#dc-model)
+    - `{Object} style` [DC.Model](../dc-sdk/#dc-model)
   - returns `this`
 
 - **_setBillboard(icon,style)_**
 
   - parameters
     - `{String} icon`
-    - `{Object} style` [DC.Billboard](../overlay#dc-billboard)
+    - `{Object} style` [DC.Billboard](../dc-sdk/#dc-billboard)
   - returns `this`
 
 - **_setLabel(text,style)_**
 
   - parameters
     - `{String} text`
-    - `{Object} style` [DC.label](../overlay/#dc-label)
+    - `{Object} style` [DC.Label](../dc-sdk/#dc-label)
   - returns `this`
 
-- **_setPositions(positions)_** `deprecated`
+- **_setPath(visible,style)_**
 
   - parameters
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{Boolean}} visible`
+    - `{Object} style` [DC.Polyline](../dc-sdk/#dc-polyline)
   - returns `this`

@@ -1707,14 +1707,12 @@ let wall = new DC.DiffuseWallPrimitive(position, 2000, 1000)
 
 ### creation
 
-- **_constructor(center, radius, height, [slices], [speed])_**
+- **_constructor(center, radius, height)_**
 
   - parameters
     - `{Position|Number|String|Object} center`
     - `{Number} radius`
     - `{Number} height`
-    - `{Number} slices`: 128
-    - `{Number} speed`
   - returns `wall`
 
 ### properties
@@ -1722,8 +1720,6 @@ let wall = new DC.DiffuseWallPrimitive(position, 2000, 1000)
 - `{Position|Number|String|Object} center`
 - `{Number} radius`
 - `{Number} height`
-- `{Number} slices`
-- `{Number} speed`
 
 ### methods
 
@@ -1738,7 +1734,9 @@ let wall = new DC.DiffuseWallPrimitive(position, 2000, 1000)
 {
   "minRadius": 10,
   "minHeight": 30,
-  "color": DC.Color.RED
+  "color": DC.Color.RED,
+  "slices": 128,
+  "speed": 10
 }
 ```
 

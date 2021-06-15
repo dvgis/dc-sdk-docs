@@ -515,36 +515,209 @@ let rc = new DC.RoamingController(viewer)
     - `{Viewer} viewer`：3D 场景
   - 返回值 `roamingController`
 
+### methods
+
+- **_addPath(path)_**
+
+  添加路径
+
+  - 参数
+    - `{RoamingPath} path`：路径
+  - 返回值 `this`
+
+- **_addPaths(paths)_**
+
+  添加路径数组
+
+  - 参数
+    - `{Array<RoamingPath>} paths`：路径数组
+  - 返回值 `this`
+
+- **_removePath(path)_**
+
+  移除路径
+
+  - 参数
+    - `{RoamingPath} path`：路径
+  - 返回值 `path`
+
+- **_getPath(id)_**
+
+  根据唯一标识获取路径
+
+  - 参数
+    - `{String} id`：唯一标识
+  - 返回值 `path`
+
+- **_getPaths()_**
+
+  获取所有路径
+
+  - 返回值 `array`
+
+- **_activate(path, viewOption)_**
+
+  激活漫游
+
+  - 参数
+    - `{RoamingPath} path`：路径
+    - `{String} viewOption`：漫游参数
+  - 返回值 `this`
+
+```json
+// 漫游参数（可选）
+{
+  "pitch": 0, // 俯仰角
+  "range": 1000 // 距离
+}
+```
+
+- **_deactivate()_**
+
+  结束漫游
+
+  - 返回值 `this`
+
+- **_clear()_**
+
+  移除所有路径
+
+  - 返回值 `this`
+
+## DC.RoamingPath
+
+> 漫游路径
+
+### example
+
+```js
+let path = new DC.RoamingPath('120.121,32.1213;121.132,32.1213', 20)
+rc.addPath(path)
+```
+
+### creation
+
+- **_constructor(positions, duration, [pathMode])_**
+
+  构造函数
+
+  - 参数
+    - `{String|Array<Position|Number|String|Object>} positions`：坐标串
+    - `{Number} duration`：间隔时间，单位：秒
+    - `{String} pathMode`：路径模式：speed(匀速) / time(等时)
+  - 返回值 `roamingPath`
+
 ### properties
 
-- `{JulianDate} startTime`：开始时间 **_`readonly`_**
-- `{Object} roamingLayer`：漫游图层 **_`readonly`_**
+- `{String} pathId`：唯一标识 **_`readonly`_**
+- `{String} id`：业务唯一标识
+- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{Number} duration`：间隔时间，单位：秒
+- `{String} pathMode`：路径模式：speed(匀速) / time(等时)
+- `{String} state`：状态 **_`readonly`_**
+
+## DC.KeyboardRoaming
+
+> 键盘漫游
+
+### example
+
+```js
+let kr = new DC.KeyboardRoaming(viewer)
+kr.enable = true
+```
+
+### creation
+
+- **_constructor(viewer)_**
+
+  构造函数
+
+  - 参数
+    - `{Viewer} viewer`：3D 场景
+  - 返回值 `keyboardRoaming`
+
+### properties
+
+- `{Boolean} enable`：是否启用
+- `{Number} moveRate`：移动变化率：100
+- `{Number} rotateRate`：旋转变化率：0.01
+
+## DC.TrackController
+
+> 历史轨迹控制
+
+### example
+
+```js
+let tc = new DC.TrackController(viewer)
+```
+
+### creation
+
+- **_constructor(viewer)_**
+
+  构造函数
+
+  - 参数
+    - `{Viewer} viewer`：3D 场景
+  - 返回值 `trackController`
 
 ### methods
 
-- **_setStartTime(startTime)_**
+- **_addTrack(track)_**
 
-  设置开始时间
+  添加轨迹
 
   - 参数
-    - `{Date} startTime`：开始时间
+    - `{Track} track`：轨迹
   - 返回值 `this`
+
+- **_addTracks(tracks)_**
+
+  添加轨迹数组
+
+  - 参数
+    - `{Array<Track>} tracks`：轨迹数组
+  - 返回值 `this`
+
+- **_removeTrack(track)_**
+
+  移除轨迹
+
+  - 参数
+    - `{Track} track`：轨迹
+  - 返回值 `path`
+
+- **_getTrack(id)_**
+
+  根据业务唯一标识获取轨迹
+
+  - 参数
+    - `{String} id`：业务唯一标识
+  - 返回值 `track`
+
+- **_getTracks()_**
+
+  获取所有轨迹
+
+  - 返回值 `array`
 
 - **_play()_**
 
-  播放所有路径
+  播放
 
   - 返回值 `this`
 
 - **_pause()_**
 
-  暂停所有路径
+  暂停
 
   - 返回值 `this`
 
 - **_restore()_**
 
-  继续播放所有路径
+  继续播放
 
   - 返回值 `this`
 
@@ -556,119 +729,88 @@ let rc = new DC.RoamingController(viewer)
     - `{Number} speed`：速度
   - 返回值 `this`
 
-- **_addPath(path)_**
-
-  添加路径
-
-  - 参数
-    - `{DC.RoamingPath} path`：路径
-  - 返回值 `this`
-
-- **_getPath(id)_**
-
-  根据唯一标识获取路径
-
-  - 参数
-    - `{String} id`：唯一标识
-  - 返回值 `path`
-
-- **_removePath(path)_**
-
-  移除路径
-
-  - 参数
-    - `{RoamingPath} path`：路径
-  - 返回值 `path`
-
-- **_clearPath()_**
-
-  移除所有路径
-
-  - 返回值 `this`
-
-- **_trackedPath(path, viewMode, viewOption)_**
+- **_viewTrack(track, viewOption)_**
 
   跟踪某一条路径
 
   - 参数
-    - `{RoamingPath} path`：路径
-    - `{String} viewMode`：相机模式：FP:第一视角，TP：第三视角，TRACKED：跟踪视角，FREE：自由视角
+    - `{Track} track`：路径
     - `{String} viewOption`：配置信息
   - 返回值 `this`
 
 ```json
-// 属性参数（optional）
+// 属性参数（可选）
 {
-  "alt": 0, // 高度
+  "mode": null, // 视角模式：DC.TrackViewMode
   "pitch": 0, // 俯仰角，第一视角有效
   "range": 1000 // 距离
 }
 ```
 
-- **_releasePath(path)_**
+- **_releaseTrack(track)_**
 
-  取消跟踪某一条路径
+  取消跟踪某一条轨迹
 
   - 参数
-    - `{RoamingPath} path`：路径
+    - `{Track} track`：路径
   - 返回值 `this`
 
-- **_releaseCamera()_**
+- **_clear()_**
 
-  释放相机
+  移除所有路径
 
   - 返回值 `this`
 
-## DC.RoamingPath
+## DC.Track
 
-> 漫游路径
+> 轨迹
 
 ### example
 
 ```js
-let path = new DC.RoamingPath('path1', 20， (position,isLast) => {}, {
-  showPath: true,
-})
+let track = new DC.Track('120.121,32.1213;121.132,32.1213', 20)
+rc.addTrack(track)
 ```
 
 ### creation
 
-- **_constructor(id, duration, [callback], [options])_**
+- **_constructor(positions, duration, [callback], [options])_**
 
   构造函数
 
   - 参数
-    - `{String} id`：唯一标识
+    - `{String|Array<Position|Number|String|Object>} positions`：坐标串
     - `{Number} duration`：间隔时间，单位：秒
     - `{Function} callback`：每一个点位到达回调函数，参数有：position(位置信息),isLast(是否为最后的点位)
-    - `{Object} options`：options
-  - 返回值 `roamingPath`
+    - `{Object} options`： 配置参数
+  - 返回值 `track`
 
 ```json
-//options（optional）
+//配置参数（可选）
 {
-  "showPath": false, //显示路径
-  "pathWidth": 1, //路径宽度
-  "pathMaterial": DC.Color.ORANGE.withAlpha(0.8), //路径材质
-  "pathLeadTime": 1 // 路径提前时间
+  "clampToGround": false, // 是否贴地
+  "clampToTileset": false // 是否贴物
 }
 ```
 
 ### properties
 
-- `{String} id`：唯一标识 **_`readonly`_**
-- `{String} state`：状态 **_`readonly`_**
+- `{String} trackId`：唯一标识 **_`readonly`_**
+- `{String} id`：业务唯一标识
+- `{String|Array<Position|Number|String|Object>} positions`：坐标串
+- `{Number} duration`：间隔时间，单位：秒
 - `{Date} startTime`：开始时间，设置后会独立于控制器的开始时间
-- `{String|Array<Position|Number|String>} positions`：坐标串
+- `{String} state`：状态 **_`readonly`_**
 
 ### methods
 
-- **_setMode(mode)_**
+- **_addPosition(position,duration)_**
 
-  设置路径模式
+  添加点位
 
   - 参数
-    - `{String} mode`：模式，speed:匀速，distance:根据距离设置时间
+    - `{Position|Array|String|Object} position`：点位
+    - `{Number} duration`：间隔，单位：秒
   - 返回值 `this`
 
 - **_setModel(modelUrl,style)_**
@@ -695,13 +837,14 @@ let path = new DC.RoamingPath('path1', 20， (position,isLast) => {}, {
 
   - 参数
     - `{String} text`：文本
-    - `{Object} style`：样式，参考：[DC.label](../dc-sdk/#dc-label)
+    - `{Object} style`：样式，参考：[DC.Label](../dc-sdk/#dc-label)
   - 返回值 `this`
 
-- **_setPositions(positions)_** `deprecated`
+- **_setPath(visible,style)_**
 
-  设置坐标串
+  设置路径
 
   - 参数
-    - `{String|Array<Position|Number|String>} positions`：坐标串
+    - `{Boolean}} visible`：是否可见
+    - `{Object} style`：样式，参考：[DC.Polyline](../dc-sdk/#dc-polyline)
   - 返回值 `this`

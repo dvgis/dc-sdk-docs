@@ -1866,7 +1866,7 @@ let wall = new DC.DiffuseWallPrimitive(position, 2000, 1000)
 
 ### creation
 
-- **_constructor(center, radius, height, [slices], [speed])_**
+- **_constructor(center, radius, height)_**
 
   构造函数
 
@@ -1874,8 +1874,6 @@ let wall = new DC.DiffuseWallPrimitive(position, 2000, 1000)
     - `{Position|Number|String|Object} center`：圆心
     - `{Number} radius`：半径
     - `{Number} height`：高度
-    - `{Number} slices`：边数，默认为 128
-    - `{Number} speed`：速度
   - 返回值 `wall`
 
 ### properties
@@ -1883,8 +1881,6 @@ let wall = new DC.DiffuseWallPrimitive(position, 2000, 1000)
 - `{Position|Number|String|Object} center`：圆心
 - `{Number} radius`：半径
 - `{Number} height`：高度
-- `{Number} slices`：边数，默认为 128
-- `{Number} speed`：速度
 
 ### methods
 
@@ -1901,7 +1897,9 @@ let wall = new DC.DiffuseWallPrimitive(position, 2000, 1000)
 {
   "minRadius": 10, // 动画最小半径
   "minHeight": 30, // 动画最小高度
-  "color": DC.Color.RED // 墙体颜色
+  "color": DC.Color.RED, // 墙体颜色
+  "slices": 128, //边数
+  "speed": 10 //速度
 }
 ```
 
