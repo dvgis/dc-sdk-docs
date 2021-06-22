@@ -32,7 +32,8 @@ plot.draw(DC.OverlayType.POINT, (overlay) => {}, {})
   "icon_center": "**.png",
   "icon_anchor": "**.png",
   "icon_midAnchor": "**.png",
-  "icon_size": [12, 12]
+  "icon_size": [12, 12],
+  "clampToGround": true
 }
 ```
 

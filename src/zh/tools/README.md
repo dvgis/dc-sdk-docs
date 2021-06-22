@@ -34,7 +34,8 @@ plot.draw(DC.OverlayType.POINT, (overlay) => {}, {})
   "icon_center": "**.png", // 自定义的中心点图标
   "icon_anchor": "**.png", //自定义的锚点图标
   "icon_midAnchor": "**.png", //自定义的中心锚点图标
-  "icon_size": [12, 12] //自定义的中心锚点大小
+  "icon_size": [12, 12], //自定义的中心锚点大小
+  "clampToGround": true // 点位是否获取地表坐标，如果为false，将获取鼠标当前三维坐标
 }
 ```
 
