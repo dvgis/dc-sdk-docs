@@ -54,6 +54,30 @@ DC-SDK is a development platform that relies on [`WebGL`](#webgl), which require
 
 Static file servers are mainly used to publish map tiles, terrain, model data and other data services, such as: **_Apache Http Sever_**、**_Tomcat_** 、**_Nginx_**. Recommended to use **_Nginx_**
 
+`Hardware Configuration`
+
+> Hardware configuration description, the following hardware configuration is recommended for 3D scene viewing and development.
+
+<table style="width:100%">
+ <tr><td colspan=3 style="text-align:center;background:#3eaf7c;">PC Side</td></tr>
+ <tr><td>Project</td><td>Standard</td><td>Recommended</td></tr>
+ <tr><td>CPU</td><td>2.6GHz 64-bit processor</td><td>3.0GHz 64-bit processor</td></tr>
+ <tr><td>RAM</td><td>8GB</td><td>32GB</td></tr>
+ <tr><td>Graphics card model</td><td>NVIDIA GTX 1660 (or equivalent)</td><td>NVIDIA RTX 2080 (or equivalent)</td></tr>
+ <tr><td>Video Memory</td><td>4GB</td><td>16G</td></tr>
+ <tr><td>Optimal Resolution</td><td>FHD - 1920 * 1080</td><td>4K QFHD - 3840 * 2160</td></tr>
+ <tr><td>Operating System</td><td colspan=2>64-bit Windows 8/10/11 or 64-bit Linux desktop distribution, or macOS 10.12.1 or higher</td></tr>
+ <tr><td>Browser</td><td colspan=2>Google Chrome or Firefox latest version</td></tr>
+</table
+
+<table style="width:78.7%">
+ <tr><td colspan=3 style="text-align:center;background:#3eaf7c;">Mobile devices</td></tr>
+ <tr><td width="16%">Platform</td><td>Android</td><td>Apple</td></tr>
+ <tr><td>Devices</td><td>Mobile devices compatible with Android OS, 2019 and up for mid-range and high-end models</td><td>IPhone 11 and above, IPad Pro 2019 and above</td></tr>
+ <tr><td>Operating System</td><td>Android</td><td>IOS or IPadOS</td></tr>
+ <tr><td>Browser</td><td colspan=2>WebGL-enabled browsers</td></tr>
+</table>
+
 ### Installation
 
 `NPM / YARN` **_`(Recommend)`_**
