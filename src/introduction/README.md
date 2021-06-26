@@ -70,11 +70,11 @@ Static file servers are mainly used to publish map tiles, terrain, model data an
  <tr><td>Browser</td><td colspan=2>Google Chrome or Firefox latest version</td></tr>
 </table
 
-<table style="width:78.7%">
+<table style="width:70%">
  <tr><td colspan=3 style="text-align:center;background:#3eaf7c;">Mobile devices</td></tr>
  <tr><td width="16%">Platform</td><td>Android</td><td>Apple</td></tr>
  <tr><td>Devices</td><td>Mobile devices compatible with Android OS, 2019 and up for mid-range and high-end models</td><td>IPhone 11 and above, IPad Pro 2019 and above</td></tr>
- <tr><td>Operating System</td><td>Android</td><td>IOS or IPadOS</td></tr>
+ <tr><td>OS</td><td>Android</td><td>IOS or IPadOS</td></tr>
  <tr><td>Browser</td><td colspan=2>WebGL-enabled browsers</td></tr>
 </table>
 

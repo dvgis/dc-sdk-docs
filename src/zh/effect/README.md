@@ -789,7 +789,9 @@ rc.addTrack(track)
 //配置参数（可选）
 {
   "clampToGround": false, // 是否贴地
-  "clampToTileset": false // 是否贴物
+  "clampToTileset": false, // 是否贴物
+  "interpolationType": "Linear", // 插值类型：Linear、Hermite、Lagrange
+  "interpolationDegree": 2 // 插值度数
 }
 ```
 

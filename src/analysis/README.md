@@ -303,6 +303,20 @@ let coords1 = DC.GeoTools.polygonBuffer(
     - `{Number} factor`
   - returns `array`
 
+- **_transformPolylineRotate(positions, angle)_**
+
+  - parameters
+    - `{Array|String|Array<Position>} positions`
+    - `{Number} angle`
+  - returns `array`
+
+- **_transformPolygonRotate(positions, angle)_**
+
+  - parameters
+    - `{Array|String|Array<Position>} positions`
+    - `{Number} angle`
+  - returns `array`
+
 ## DC.GlobClipping
 
 > Glob Clipping

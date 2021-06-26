@@ -317,7 +317,7 @@ let coords1 = DC.GeoTools.polygonBuffer(
 
 - **_transformPolylineScale(positions, factor)_**
 
-  线比例
+  比例线
 
   - 参数
     - `{Array|String|Array<Position>} positions`：坐标串
@@ -326,11 +326,29 @@ let coords1 = DC.GeoTools.polygonBuffer(
 
 - **_transformPolygonScale(positions, factor)_**
 
-  面比例
+  比例面
 
   - 参数
     - `{Array|String|Array<Position>} positions`：坐标串
     - `{Number} factor`：比例
+  - 返回值 `array`
+
+- **_transformPolylineRotate(positions, angle)_**
+
+  旋转线
+
+  - 参数
+    - `{Array|String|Array<Position>} positions`：坐标串
+    - `{Number} angle`：角度
+  - 返回值 `array`
+
+- **_transformPolygonRotate(positions, angle)_**
+
+  旋转面
+
+  - 参数
+    - `{Array|String|Array<Position>} positions`：坐标串
+    - `{Number} angle`：角度
   - 返回值 `array`
 
 ## DC.GlobClipping

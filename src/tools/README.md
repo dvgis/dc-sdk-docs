@@ -39,19 +39,21 @@ plot.draw(DC.OverlayType.POINT, (overlay) => {}, {})
 
 ### methods
 
-- **_draw(type,callback,style)_**
+- **_draw(type,callback,[style],[clampToGround])_**
 
   - parameters
     - `{String} type` [OverlayType](../base/#overlaytype)
     - `{Function} callback`
     - `{Object} style`
+    - `{Boolean} clampToGround`: Whether the point gets the surface coordinates, if false, it will get the current 3D coordinates of the mouse
   - returns `this`
 
-- **_edit(overlay,callback)_**
+- **_edit(overlay,callback,[clampToGround])_**
 
   - parameters
     - `{Overlay} overlay`
     - `{Function} callback`
+    - `{Boolean} clampToGround`: Whether the point gets the surface coordinates, if false, it will get the current 3D coordinates of the mouse
   - returns `this`
 
 ## DC.PositionEditor

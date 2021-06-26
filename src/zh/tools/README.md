@@ -41,7 +41,7 @@ plot.draw(DC.OverlayType.POINT, (overlay) => {}, {})
 
 ### methods
 
-- **_draw(type,callback,style)_**
+- **_draw(type,callback,[style],[clampToGround])_**
 
 标绘
 
@@ -49,15 +49,17 @@ plot.draw(DC.OverlayType.POINT, (overlay) => {}, {})
   - `{String} type`：覆盖物类型，参照 [OverlayType](../base/#overlaytype)
   - `{Function} callback`：标绘完成的回调函数，参数为覆盖物
   - `{Object} style`：标绘的覆盖物样式设置
+  - `{Boolean} clampToGround`：点位是否获取地表坐标，如果为 false，将获取鼠标当前三维坐标
 - 返回值 `this`
 
-- **_edit(overlay,callback)_**
+- **_edit(overlay,callback,clampToGround)_**
 
 编辑
 
 - 参数
   - `{Overlay} overlay`：覆盖物
   - `{Function} callback`：编辑完成的回调函数，参数为覆盖物
+  - `{Boolean} clampToGround`：点位是否获取地表坐标，如果为 false，将获取鼠标当前三维坐标
 - 返回值 `this`
 
 ## DC.PositionEditor

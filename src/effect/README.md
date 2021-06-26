@@ -676,8 +676,10 @@ rc.addTrack(track)
 ```json
 // options (optional)
 {
-  "clampToGround": false, // 是否贴地
-  "clampToTileset": false // 是否贴物
+  "clampToGround": false,
+  "clampToTileset": false,
+  "interpolationType": "Linear", // Linear、Hermite、Lagrange
+  "interpolationDegree": 2
 }
 ```
 
