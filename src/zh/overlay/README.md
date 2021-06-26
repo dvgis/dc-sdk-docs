@@ -1648,7 +1648,7 @@ let attackArrow = new DC.AttackArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
   设置样式
 
   - 参数
-    - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
+    - `{Object} style`：样式，详情参考：[Polygon](#dc-polygon)
   - 返回值 `this`
 
 ## DC.DoubleArrow
@@ -1682,7 +1682,7 @@ let doubleArrow = new DC.DoubleArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
   设置样式
 
   - 参数
-    - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
+    - `{Object} style`：样式，详情参考：[Polygon](#dc-polygon)
   - 返回值 `this`
 
 ## DC.FineArrow
@@ -1716,7 +1716,7 @@ let fineArrow = new DC.FineArrow('-90.0,32.0;-94.0,36.0')
   设置样式
 
   - 参数
-    - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
+    - `{Object} style`：样式，详情参考：[Polygon](#dc-polygon)
   - 返回值 `this`
 
 ## DC.GatheringPlace
@@ -1750,7 +1750,7 @@ let gatheringPlace = new DC.GatheringPlace('-90.0,32.0;-94.0,36.0')
   设置样式
 
   - 参数
-    - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
+    - `{Object} style`：样式，详情参考：[Polygon](#dc-polygon)
   - 返回值 `this`
 
 ## DC.TailedAttackArrow
@@ -1784,7 +1784,7 @@ let tailedAttackArrow = new DC.TailedAttackArrow('-90.0,32.0;-94.0,36.0')
   设置样式
 
   - 参数
-    - `{Object} style`：样式，详情参考：[Polygon](../dc-sdk/#dc-polygon)
+    - `{Object} style`：样式，详情参考：[Polygon](#dc-polygon)
   - 返回值 `this`
 
 ## DC.BillboardPrimitive
@@ -1965,7 +1965,7 @@ let flowLinePrimitive = new DC.FlowLinePrimitive('120,20;120,30;122,30')
 
   - 参数
     - `{String|Array<Position|Number|String|Object>} positions`：坐标串
-  - 返回值 `flowLinePrimitive`
+  - 返回值 `flowLine`
 
 ### properties
 
@@ -2256,7 +2256,7 @@ let scanCirclePrimitive = new DC.ScanCirclePrimitive('120,20', 1000)
   - 参数
     - `{String|Position|Array|Object} position`：圆心
     - `{Number} radius`：半径
-  - 返回值 `scanCirclePrimitive`
+  - 返回值 `scanCircle`
 
 ### properties
 
@@ -2299,7 +2299,7 @@ let trailLinePrimitive = new DC.TrailLinePrimitive('120,20;120,30;122,30')
 
   - 参数
     - `{String|Array<Position|Number|String|Object>} positions`：坐标串
-  - 返回值 `trailLinePrimitive`
+  - 返回值 `trailLine`
 
 ### properties
 
@@ -2330,7 +2330,7 @@ let trailLinePrimitive = new DC.TrailLinePrimitive('120,20;120,30;122,30')
 ### example
 
 ```js
-let waterPrimitive = new DC.WaterPrimitive('120,20;120,30;122,30')
+let water = new DC.WaterPrimitive('120,20;120,30;122,30')
 water.setStyle({
   baseWaterColor: DC.Color.AQUA.withAlpha(0.3),
   normalMap: 'examples/images/icon/waterNormalsSmall.jpg',
@@ -2350,7 +2350,7 @@ water.setStyle({
   - 参数
     - `{String|Array<Position|Number|String|Object>} positions`：坐标串
     - `{Boolean} asynchronous`:异步创建，默认值：true
-  - 返回值 `waterPrimitive`
+  - 返回值 `water`
 
 ### properties
 
@@ -2395,7 +2395,7 @@ water.setStyle({
 
 ```js
 let videoEl = new document.getElementById('video')
-let waterPrimitive = new DC.VideoPrimitive('120,20;120,30;122,30', videoEl)
+let videoPrimitive = new DC.VideoPrimitive('120,20;120,30;122,30', videoEl)
 ```
 
 ### creation
@@ -2407,7 +2407,7 @@ let waterPrimitive = new DC.VideoPrimitive('120,20;120,30;122,30', videoEl)
   - 参数
     - `{String|Array<Position|Number|String|Object>} positions`：坐标串
     - `{Element} video`：视频节点
-  - 返回值 `polygon`
+  - 返回值 `videoPrimitive`
 
 ### properties
 

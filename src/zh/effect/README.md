@@ -379,7 +379,7 @@ circleScan.start()
 ```js
 let flying = new DC.Flying(viewer)
 flying.positions = ['121.234,21.212,0,-29', '121.435,21.212,0,-29']
-circleScan.start()
+flying.start()
 ```
 
 ### creation
@@ -821,7 +821,7 @@ rc.addTrack(track)
 
   - 参数
     - `{String} modelPath`：模型路径
-    - `{Object} style`：样式，详情参考：[DC.Model](../dc-sdk/#dc-model)
+    - `{Object} style`：样式，详情参考：[DC.Model](../overlay/#dc-model)
   - 返回值 `this`
 
 - **_setBillboard(icon,style)_**
@@ -830,7 +830,7 @@ rc.addTrack(track)
 
   - 参数
     - `{String} icon`：图标路径
-    - `{Object} style`：样式，参考：[DC.Billboard](../dc-sdk/#dc-billboard)
+    - `{Object} style`：样式，参考：[DC.Billboard](../overlay/#dc-billboard)
   - 返回值 `this`
 
 - **_setLabel(text,style)_**
@@ -839,7 +839,7 @@ rc.addTrack(track)
 
   - 参数
     - `{String} text`：文本
-    - `{Object} style`：样式，参考：[DC.Label](../dc-sdk/#dc-label)
+    - `{Object} style`：样式，参考：[DC.Label](../overlay/#dc-label)
   - 返回值 `this`
 
 - **_setPath(visible,style)_**
@@ -848,5 +848,5 @@ rc.addTrack(track)
 
   - 参数
     - `{Boolean}} visible`：是否可见
-    - `{Object} style`：样式，参考：[DC.Polyline](../dc-sdk/#dc-polyline)
+    - `{Object} style`：样式，参考：[DC.Polyline](../overlay/#dc-polyline)
   - 返回值 `this`

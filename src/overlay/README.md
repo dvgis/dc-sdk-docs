@@ -1509,7 +1509,7 @@ let attackArrow = new DC.AttackArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
 - **_setStyle(style)_**
 
   - parameters
-    - `{Object} style` [Polygon](../dc-sdk/#dc-polygon)
+    - `{Object} style` [Polygon](#dc-polygon)
   - returns `this`
 
 ## DC.DoubleArrow
@@ -1539,7 +1539,7 @@ let doubleArrow = new DC.DoubleArrow('-90.0,32.0;-94.0,36.0;-94.0,38.0')
 - **_setStyle(style)_**
 
   - parameters
-    - `{Object} style` [Polygon](../dc-sdk/#dc-polygon)
+    - `{Object} style` [Polygon](#dc-polygon)
   - returns `this`
 
 ## DC.FineArrow
@@ -1569,7 +1569,7 @@ let fineArrow = new DC.FineArrow('-90.0,32.0;-94.0,36.0')
 - **_setStyle(style)_**
 
   - parameters
-    - `{Object} style` [Polygon](../dc-sdk/#dc-polygon)
+    - `{Object} style` [Polygon](#dc-polygon)
   - returns `this`
 
 ## DC.GatheringPlace
@@ -1599,7 +1599,7 @@ let gatheringPlace = new DC.GatheringPlace('-90.0,32.0;-94.0,36.0')
 - **_setStyle(style)_**
 
   - parameters
-    - `{Object} style` [Polygon](../dc-sdk/#dc-polygon)
+    - `{Object} style` [Polygon](#dc-polygon)
   - returns `this`
 
 ## DC.TailedAttackArrow
@@ -1629,7 +1629,7 @@ let tailedAttackArrow = new DC.TailedAttackArrow('-90.0,32.0;-94.0,36.0')
 - **_setStyle(style)_**
 
   - parameters
-    - `{Object} style`：[Polygon](../dc-sdk/#dc-polygon)
+    - `{Object} style`：[Polygon](#dc-polygon)
   - returns `this`
 
 ## DC.BillboardPrimitive
@@ -2135,7 +2135,7 @@ let trailLinePrimitive = new DC.TrailLinePrimitive('120,20;120,30;122,30')
 ### example
 
 ```js
-let waterPrimitive = new DC.WaterPrimitive('120,20;120,30;122,30')
+let water = new DC.WaterPrimitive('120,20;120,30;122,30')
 water.setStyle({
   baseWaterColor: DC.Color.AQUA.withAlpha(0.3),
   normalMap: 'examples/images/icon/waterNormalsSmall.jpg',
@@ -2153,7 +2153,7 @@ water.setStyle({
   - parameters
     - `{String|Array<Position|Number|String|Object>} positions`
     - `{Boolean} asynchronous`
-  - returns `waterPrimitive`
+  - returns `water`
 
 ### properties
 
@@ -2196,7 +2196,7 @@ water.setStyle({
 
 ```js
 let videoEl = new document.getElementById('video')
-let waterPrimitive = new DC.VideoPrimitive('120,20;120,30;122,30', videoEl)
+let videoPrimitive = new DC.VideoPrimitive('120,20;120,30;122,30', videoEl)
 ```
 
 ### creation
@@ -2206,7 +2206,7 @@ let waterPrimitive = new DC.VideoPrimitive('120,20;120,30;122,30', videoEl)
   - parameters
     - `{String|Array<Position|Number|String|Object>} positions`
     - `{Element} video`
-  - returns `polygon`
+  - returns `videoPrimitive`
 
 ### properties
 

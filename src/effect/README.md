@@ -339,7 +339,7 @@ circleScan.start()
 ```js
 let flying = new DC.Flying(viewer)
 flying.positions = ['121.234,21.212,0,-29', '121.435,21.212,0,-29']
-circleScan.start()
+flying.start()
 ```
 
 ### creation
