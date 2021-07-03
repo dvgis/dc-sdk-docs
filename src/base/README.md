@@ -437,6 +437,8 @@ If you are using a MVVM framework like Vue, do not add viewer, layer, or overlay
     "depthTestAgainstTerrain": false,
     "tileCacheSize": 100,
     "preloadSiblings": false,
+    "terrainExaggeration": 1,
+    "terrainExaggerationRelativeHeight": 1,
     "baseColor": new DC.Color(0, 0, 0.5, 1),
     "translucency": {
       "enabled": false,

@@ -454,6 +454,8 @@ global.viewer = viewer // 添加到全局变量
     "depthTestAgainstTerrain": false, //是否开启深度检测
     "tileCacheSize": 100, // 默认瓦片缓存大小
     "preloadSiblings": false, //是否应预加载渲染同级图块
+    "terrainExaggeration": 1, //地形夸张系数
+    "terrainExaggerationRelativeHeight": 1, //地形相对高度夸张系数
     "baseColor": new DC.Color(0, 0, 0.5, 1), //地球默认底色
     "translucency": {
       //地表透明
