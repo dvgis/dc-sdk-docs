@@ -32,8 +32,7 @@ plot.draw(DC.OverlayType.POINT, (overlay) => {}, {})
   "icon_center": "**.png",
   "icon_anchor": "**.png",
   "icon_midAnchor": "**.png",
-  "icon_size": [12, 12],
-  "clampToGround": true
+  "icon_size": [12, 12]
 }
 ```
 
@@ -45,7 +44,7 @@ plot.draw(DC.OverlayType.POINT, (overlay) => {}, {})
     - `{String} type` [OverlayType](../base/#overlaytype)
     - `{Function} callback`
     - `{Object} style`
-    - `{Boolean} clampToGround`: Whether the point gets the surface coordinates, if false, it will get the current 3D coordinates of the mouse
+    - `{Boolean} clampToModel`: Whether the point gets the surface coordinates, if false, it will get the current 3D coordinates of the mouse
   - returns `this`
 
 - **_edit(overlay,callback,[clampToGround])_**
@@ -53,7 +52,7 @@ plot.draw(DC.OverlayType.POINT, (overlay) => {}, {})
   - parameters
     - `{Overlay} overlay`
     - `{Function} callback`
-    - `{Boolean} clampToGround`: Whether the point gets the surface coordinates, if false, it will get the current 3D coordinates of the mouse
+    - `{Boolean} clampToModel`: Whether the point gets the surface coordinates, if false, it will get the current 3D coordinates of the mouse
   - returns `this`
 
 ## DC.PositionEditor

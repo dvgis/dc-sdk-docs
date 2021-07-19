@@ -34,8 +34,7 @@ plot.draw(DC.OverlayType.POINT, (overlay) => {}, {})
   "icon_center": "**.png", // 自定义的中心点图标
   "icon_anchor": "**.png", //自定义的锚点图标
   "icon_midAnchor": "**.png", //自定义的中心锚点图标
-  "icon_size": [12, 12], //自定义的中心锚点大小
-  "clampToGround": true // 点位是否获取地表坐标，如果为false，将获取鼠标当前三维坐标
+  "icon_size": [12, 12] //自定义的中心锚点大小
 }
 ```
 
@@ -49,7 +48,7 @@ plot.draw(DC.OverlayType.POINT, (overlay) => {}, {})
   - `{String} type`：覆盖物类型，参照 [OverlayType](../base/#overlaytype)
   - `{Function} callback`：标绘完成的回调函数，参数为覆盖物
   - `{Object} style`：标绘的覆盖物样式设置
-  - `{Boolean} clampToGround`：点位是否获取地表坐标，如果为 false，将获取鼠标当前三维坐标
+  - `{Boolean} clampToGround`：点位是否获取模型表面坐标
 - 返回值 `this`
 
 - **_edit(overlay,callback,clampToGround)_**
@@ -59,7 +58,7 @@ plot.draw(DC.OverlayType.POINT, (overlay) => {}, {})
 - 参数
   - `{Overlay} overlay`：覆盖物
   - `{Function} callback`：编辑完成的回调函数，参数为覆盖物
-  - `{Boolean} clampToGround`：点位是否获取地表坐标，如果为 false，将获取鼠标当前三维坐标
+  - `{Boolean} clampToGround`：点位是否获取模型表面坐标
 - 返回值 `this`
 
 ## DC.PositionEditor

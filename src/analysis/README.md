@@ -4,6 +4,94 @@ sidebar: auto
 
 # Analysis 🌎
 
+## DC.Measure
+
+> viewer measure
+
+### example
+
+```js
+viewer.use(new DC.Measure())
+```
+
+### creation
+
+- **_constructor()_**
+
+  - returns `measure`
+
+### methods
+
+- **_angle([options])_**
+
+  - parameters
+    - `{Object} options`
+  - returns `this`
+
+- **_area([options])_**
+
+  - parameters
+    - `{Object} options`
+  - returns `this`
+
+- **_areaSurface([options])_**
+
+  - parameters
+    - `{Object} options`
+  - returns `this`
+
+- **_distance([options])_**
+
+  - parameters
+    - `{Object} options`
+  - returns `this`
+
+- **_distanceSurface([options])_**
+
+  - parameters
+    - `{Object} options`
+  - returns `this`
+
+- **_heading([options])_**
+
+  - parameters
+    - `{Object} options`
+  - returns `this`
+
+- **_height([options])_**
+
+  - parameters
+    - `{Object} options`
+  - returns `this`
+
+- **_triangleHeight([options])_**
+
+  - parameters
+    - `{Object} options`
+  - returns `this`
+
+- **_activate(type,[options])_**
+
+  - parameters
+    - `{String} type`
+    - `{Object} options`
+  - returns `this`
+
+```json
+// options(optional)
+{
+  "icon_center": "**.png",
+  "icon_anchor": "**.png",
+  "icon_midAnchor": "**.png",
+  "icon_size": [12, 12],
+  "clampToModel": false
+}
+```
+
+- **_deactivate()_**
+
+  - returns `this`
+
 ## DC.Analysis
 
 > Viewer analysis

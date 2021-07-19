@@ -4,6 +4,116 @@ sidebar: auto
 
 # 场景分析 🌎
 
+## DC.Measure
+
+> 三维空间分析
+
+### example
+
+```js
+viewer.use(new DC.Measure())
+```
+
+### creation
+
+- **_constructor()_**
+
+  构造函数
+
+  - 返回值 `measure`
+
+### methods
+
+- **_angle([options])_**
+
+  角度
+
+  - 参数
+    - `{Object} options`：配置
+  - 返回值 `this`
+
+- **_area([options])_**
+
+  面积
+
+  - 参数
+    - `{Object} options`：配置
+  - 返回值 `this`
+
+- **_areaSurface([options])_**
+
+  表面面积
+
+  - 参数
+    - `{Object} options`：配置
+  - 返回值 `this`
+
+- **_distance([options])_**
+
+  距离
+
+  - 参数
+    - `{Object} options`：配置
+  - 返回值 `this`
+
+- **_distanceSurface([options])_**
+
+  表面距离
+
+  - 参数
+    - `{Object} options`：配置
+  - 返回值 `this`
+
+- **_heading([options])_**
+
+  偏航角
+
+  - 参数
+    - `{Object} options`：配置
+  - 返回值 `this`
+
+- **_height([options])_**
+
+  高度
+
+  - 参数
+    - `{Object} options`：配置
+  - 返回值 `this`
+
+- **_triangleHeight([options])_**
+
+  三角测量
+
+  - 参数
+    - `{Object} options`：配置
+  - 返回值 `this`
+
+- **_activate(type,[options])_**
+
+  根据类型分析
+
+  - 参数
+    - `{String} type`：分析类型，参考 `DC.MeasureType`,
+    - `{Object} options`：配置
+  - 返回值 `this`
+
+```json
+//属性参数(可选)
+{
+  "icon_center": "**.png", // 自定义的中心点图标
+  "icon_anchor": "**.png", //自定义的锚点图标
+  "icon_midAnchor": "**.png", //自定义的中心锚点图标
+  "icon_size": [12, 12], //自定义的中心锚点大小
+  "clampToModel": false //点位是否获取模型表面坐标
+}
+```
+
+- **_deactivate()_**
+
+  释放空间分析
+
+  - 返回值 `this`
+
 ## DC.Analysis
 
 > 三维场景分析
