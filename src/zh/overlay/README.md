@@ -723,7 +723,7 @@ tileset.setPosition(position)
 
 ### properties
 
--`{Promise} readyPromise`：加载完成后的异步函数
+- `{Promise} readyPromise`：加载完成后的异步函数 **_`readonly`_**
 
 ### methods
 
@@ -1853,6 +1853,48 @@ billboard.size = [20, 20]
 }
 ```
 
+## DC.BounceBillboardPrimitive
+
+> 跳动图标图元，继承于[BillboardPrimitive](#dc-billboardprimitive)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let billboard = new DC.BounceBillboardPrimitive(position, '***/**.png')
+billboard.size = [20, 20]
+```
+
+### creation
+
+- **_constructor(position,icon)_**
+
+  构造函数
+
+  - 参数
+    - `{Position|Number|String|Object} position`：坐标
+    - `{String} icon`：图标地址
+  - 返回值 `billboard`
+
+### methods
+
+- **_setStyle(style)_**
+
+  设置样式
+
+  - 参数
+    - `{Object} style`：样式，详情参考：[Billboard](http://resource.dvgis.cn/cesium-docs/Billboard.html)
+  - 返回值 `this`
+
+```json
+// 样式参数(可选)
+{
+  "maxOffsetY": 10, //垂直方向最大平移量
+  "offsetAmount": 0.1 //垂直方向每帧平移量
+  // 其他样式参考 BillboardPrimitive 样式
+}
+```
+
 ## DC.DiffuseWallPrimitive
 
 > 扩散墙图元，继承于[Overlay](#overlay)
@@ -2061,6 +2103,47 @@ let Label = new DC.LabelPrimitive(position, 'test')
 }
 ```
 
+## DC.BounceLabelPrimitive
+
+> 跳动文本图元，继承于[LabelPrimitive](#dc-labelprimitive)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let label = new DC.BounceLabelPrimitive(position, 'test')
+```
+
+### creation
+
+- **_constructor(position,text)_**
+
+  构造函数
+
+  - 参数
+    - `{Position|Number|String|Object} position`：坐标
+    - `{String} text`：文本
+  - 返回值 `label`
+
+### methods
+
+- **_setStyle(style)_**
+
+  设置样式
+
+  - 参数
+    - `{Object} style`：样式，详情参考：[Label](http://resource.dvgis.cn/cesium-docs/Label.html)
+  - 返回值 `this`
+
+```json
+// 样式参数(可选)
+{
+  "maxOffsetY": 10, //垂直方向最大平移量
+  "offsetAmount": 0.1 //垂直方向每帧平移量
+  // 其他样式参考 LabelPrimitive 样式
+}
+```
+
 ## DC.ModelPrimitive
 
 > 模型图元，继承于[Overlay](#overlay)
@@ -2087,8 +2170,112 @@ let model = new DC.ModelPrimitive(position, '**/**.glb')
 
 - `{Position|Number|String|Object} position`：坐标
 - `{String} modelUrl`：模型地址
+- `{Promise} readyPromise`：加载完成后的异步函数 **_`readonly`_**
 
 ### methods
+
+- **_getMaterial(name)_**
+
+  设置材质
+
+  - 参数
+    - `{String} name`：节点名称
+  - 返回值 `modelMaterial`
+
+- **_getMesh(name)_**
+
+  获取三角网
+
+  - 参数
+    - `{String} name`：节点名称
+  - 返回值 `modelMesh`
+
+- **_getNode(name)_**
+
+  获取节点
+
+  - 参数
+    - `{String} name`：节点名称
+  - 返回值 `modelNode`
+
+- **_getNodes()_**
+
+  获取所有节点
+
+  - 返回值 `array<ModelNode>`
+
+- **_setStyle(style)_**
+
+  设置样式
+
+  - 参数
+    - `{Object} style`：样式，详情参考：[Model](http://resource.dvgis.cn/cesium-docs/Model.html)
+  - 返回值 `this`
+
+```json
+// 样式参数(可选)
+{
+  "scale": 1, //比例
+  "minimumPixelSize": 0, //指定模型的最小像素大小，而不考虑缩放
+  "maximumScale": 0, //指定模型的最大比例
+  "heightReference": 0, //高度参照，0：位置无参照，位置是绝对的，1：位置固定在地形上 2：位置高度是指地形上方的高度。
+  "shadows": 0, //阴影类型，0：禁用、1：启用 、2：投射、3：接受
+  "silhouetteColor": DC.Color.RED, //轮廓颜色
+  "silhouetteSize": 0, //轮廓宽度
+  "lightColor": DC.Color.RED, //模型着色时指定灯光颜色
+  "distanceDisplayCondition": {
+    "near": 0, //最近距离
+    "far": Number.MAX_VALUE //最远距离
+  } //根据距离设置可见
+}
+```
+
+## DC.ModelCollectionPrimitive
+
+> 模型结合图元，继承于[Overlay](#overlay)
+
+### example
+
+```js
+let positions = '120,20;120,30;122,30'
+let model = new DC.ModelCollectionPrimitive(positions, '**/**.glb')
+```
+
+### creation
+
+- **_constructor(positions, modelUrl)_**
+
+  构造函数
+
+  - 参数
+    - `{Array<Position|String|Object>} positions`：坐标串
+    - `{String} modelUrl`：模型地址
+  - 返回值 `model`
+
+### properties
+
+- `{Array<Position|String|Object>} positions`：坐标串
+- `{String} modelUrl`：模型地址
+- `{Array<Object>} attrs`：属性集合
+- `{Promise} readyPromise`：加载完成后的异步函数 **_`readonly`_**
+
+### methods
+
+- **_getModelInstance(instanceId)_**
+
+  获取模型实例
+
+  - 参数
+    - `{String} instanceId`：实例 ID，默认为实例的 index，可通过鼠标事件获取
+  - 返回值 `modelInstance`
+
+- **_getAttrByInstanceId(instanceId)_**
+
+  获取属性
+
+  - 参数
+    - `{String} instanceId`：实例 ID，默认为实例的 index，可通过鼠标事件获取
+  - 返回值 `Object`
 
 - **_setStyle(style)_**
 

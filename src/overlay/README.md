@@ -1694,6 +1694,44 @@ billboard.size = [20, 20]
 }
 ```
 
+## DC.BounceBillboardPrimitive
+
+> Inherited from [BillboardPrimitive](#dc-billboardprimitive)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let billboard = new DC.BounceBillboardPrimitive(position, '***/**.png')
+billboard.size = [20, 20]
+```
+
+### creation
+
+- **_constructor(position,icon)_**
+
+  - parameters
+    - `{Position|Number|String|Object} position`
+    - `{String} icon`
+  - returns `billboard`
+
+### methods
+
+- **_setStyle(style)_**
+
+  - parameters
+    - `{Object} style` [Billboard](http://resource.dvgis.cn/cesium-docs/Billboard.html)
+  - returns `this`
+
+```json
+// style(optional)
+{
+  "maxOffsetY": 10, //Maximum translation in vertical direction
+  "offsetAmount": 0.1 //Vertical panning per frame
+  // Other styles refer to BillboardPrimitive style
+}
+```
+
 ## DC.DiffuseWallPrimitive
 
 > Inherited from [Overlay](#overlay)
@@ -1886,6 +1924,43 @@ let Label = new DC.LabelPrimitive(position, 'test')
 }
 ```
 
+## DC.BounceLabelPrimitive
+
+> Inherited from [LabelPrimitive](#dc-labelprimitive)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let label = new DC.BounceLabelPrimitive(position, 'test')
+```
+
+### creation
+
+- **_constructor(position,text)_**
+
+  - parameters
+    - `{Position|Number|String|Object} position`
+    - `{String} text`
+  - returns `label`
+
+### methods
+
+- **_setStyle(style)_**
+
+  - parameters
+    - `{Object} style` [Label](http://resource.dvgis.cn/cesium-docs/Label.html)
+  - returns `this`
+
+```json
+// style(optional)
+{
+  "maxOffsetY": 10, //Maximum translation in vertical direction
+  "offsetAmount": 0.1 //Vertical panning per frame
+  // Other styles refer to LabelPrimitive style
+}
+```
+
 ## DC.ModelPrimitive
 
 > Inherited from [Overlay](#overlay)
@@ -1910,8 +1985,96 @@ let model = new DC.ModelPrimitive(position, '**/**.glb')
 
 - `{Position|Number|String|Object} position`
 - `{String} modelUrl`
+- `{Promise} readyPromise` **_`readonly`_**
 
 ### methods
+
+- **_getMaterial(name)_**
+
+  - parameters
+    - `{String} name`
+  - returns `modelMaterial`
+
+- **_getMesh(name)_**
+
+  - parameters
+    - `{String} name`
+  - returns `modelMesh`
+
+- **_getNode(name)_**
+
+  - parameters
+    - `{String} name`
+  - returns `modelNode`
+
+- **_getNodes()_**
+
+  - returns `array<ModelNode>`
+
+- **_setStyle(style)_**
+
+  - parameters
+    - `{Object} style` [Model](http://resource.dvgis.cn/cesium-docs/Model.html)
+  - returns `this`
+
+```json
+// style(optional)
+{
+  "scale": 1,
+  "minimumPixelSize": 0,
+  "maximumScale": 0,
+  "heightReference": 0,
+  "shadows": 0,
+  "silhouetteColor": DC.Color.RED,
+  "silhouetteSize": 0,
+  "lightColor": DC.Color.RED,
+  "distanceDisplayCondition": {
+    "near": 0,
+    "far": Number.MAX_VALUE
+  }
+}
+```
+
+## DC.ModelCollectionPrimitive
+
+> Inherited from [Overlay](#overlay)
+
+### example
+
+```js
+let positions = '120,20;120,30;122,30'
+let model = new DC.ModelCollectionPrimitive(positions, '**/**.glb')
+```
+
+### creation
+
+- **_constructor(positions, modelUrl)_**
+
+  - parameters
+    - `{Array<Position|String|Object>} positions`
+    - `{String} modelUrl`
+  - returns `model`
+
+### properties
+
+- `{Array<Position|String|Object>} positions`
+- `{String} modelUrl`
+- `{Array<Object>} attrs`
+- `{Promise} readyPromise` **_`readonly`_**
+
+### methods
+
+- **_getModelInstance(instanceId)_**
+
+  - parameters
+    - `{String} instanceId`：Instance ID, the default is the index of the instance, which can be obtained through mouse events
+  - returns `modelInstance`
+
+- **_getAttrByInstanceId(instanceId)_**
+
+  - parameters
+    - `{String} instanceId`：Instance ID, the default is the index of the instance, which can be obtained through mouse events
+  - returns `Object`
 
 - **_setStyle(style)_**
 
