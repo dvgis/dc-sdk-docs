@@ -95,6 +95,33 @@ This basic class cannot be instantiated
     - `{Viewer|World} viewer`：场景
   - returns `this`
 
+- **_on(type, callback, context)_**
+
+  Event Subscription
+
+  - parameters
+    - `{Object} type`
+    - `{Function} callback`
+    - `{Object} context`
+  - returns `this`
+
+- **_off(type, callback, context)_**
+
+  Event Unsubscribe
+
+  - parameters
+    - `{Object} type`
+    - `{Function} callback`
+    - `{Object} context`
+  - returns `this`
+
+- **_fire(type,params)_**
+
+  - parameters
+    - `{Object} type`
+    - `{Object} params`
+  - returns `this`
+
 ### static methods
 
 - **_registerType(type)_**

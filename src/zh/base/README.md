@@ -119,11 +119,19 @@ DC.ready(() => {
 
 ### MouseEventType
 
-**_`DC.MouseEventType.CLICK`_**: (场景、覆盖物)鼠标点击事件
+**_`DC.MouseEventType.LEFT_DOWN`_**: (场景、图层、覆盖物)鼠标左键按下事件
 
-**_`DC.MouseEventType.RIGHT_CLICK`_**: (场景、覆盖物)鼠标右击事件
+**_`DC.MouseEventType.LEFT_UP`_**: (场景、图层、覆盖物)鼠标左键抬升事件
 
-**_`DC.MouseEventType.DB_CLICK`_**: (场景、覆盖物)鼠标双击事件
+**_`DC.MouseEventType.CLICK`_**: (场景、图层、覆盖物)鼠标点击事件
+
+**_`DC.MouseEventType.RIGHT_DOWN`_**: (场景、图层、覆盖物)鼠标右键按下事件
+
+**_`DC.MouseEventType.RIGHT_UP`_**: (场景、图层、覆盖物)鼠标右键按下事件
+
+**_`DC.MouseEventType.RIGHT_CLICK`_**: (场景、图层、覆盖物)鼠标右击事件
+
+**_`DC.MouseEventType.DB_CLICK`_**: (场景、图层、覆盖物)鼠标双击事件
 
 **_`DC.MouseEventType.MOUSE_MOVE`_**: 场景鼠标移动事件
 
@@ -530,6 +538,14 @@ global.viewer = viewer // 添加到全局变量
   - 参数
     - `{Number} index`：地图索引
   - 返回值 `this`
+
+- **_getImageryLayerInfo(windowPosition)_**
+
+  获取瓦片信息
+
+  - 参数
+    - `{Object} windowPosition`：窗口坐标
+  - 返回值 `promise`
 
 - **_addTerrain(terrain)_**
 

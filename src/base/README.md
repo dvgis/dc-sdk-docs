@@ -119,7 +119,15 @@ Please use the default constants for development
 
 ### MouseEventType
 
+**_`DC.MouseEventType.LEFT_DOWN`_**
+
+**_`DC.MouseEventType.LEFT_UP`_**
+
 **_`DC.MouseEventType.CLICK`_**
+
+**_`DC.MouseEventType.RIGHT_DOWN`_**
+
+**_`DC.MouseEventType.RIGHT_UP`_**
 
 **_`DC.MouseEventType.RIGHT_CLICK`_**
 
@@ -500,6 +508,12 @@ If you are using a MVVM framework like Vue, do not add viewer, layer, or overlay
   - parameters
     - `{Number} index`
   - returns `this`
+
+- **_getImageryLayerInfo(windowPosition)_**
+
+  - parameters
+    - `{Object} windowPosition`
+  - returns `promise`
 
 - **_addTerrain(terrain)_**
 

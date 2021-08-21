@@ -117,6 +117,35 @@ sidebar: auto
     - `{Viewer|World} viewer`：场景
   - 返回值 `this`
 
+- **_on(type, callback, context)_**
+
+  事件订阅
+
+  - 参数
+    - `{Object} type` ：订阅类型
+    - `{Function} callback` ：订阅回调
+    - `{Object} context` ：上下文
+  - 返回值 `this`
+
+- **_off(type, callback, context)_**
+
+  取消事件订阅
+
+  - 参数
+    - `{Object} type` ：订阅类型
+    - `{Function} callback` ：订阅回调
+    - `{Object} context` ：上下文
+  - 返回值 `this`
+
+- **_fire(type,params)_**
+
+  触发事件
+
+  - 参数
+    - `{Object} type` ：订阅类型
+    - `{Object} params` ：参数
+  - 返回值 `this`
+
 ### static methods
 
 - **_registerType(type)_**
