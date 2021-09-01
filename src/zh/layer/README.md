@@ -582,11 +582,9 @@ viewer.addLayer(layer)
 //属性参数(可选)
 {
   "gradient": {
-    "0.5": "blue",
-    "0.8": "red",
-    "0.95": "white",
-    "0.6": "yellow",
-    "0.5": "green"
+    "0.5": "green",
+    "0.6": "orange",
+    "0.95": "red"
   }, //颜色设置
   "height": 0, // 高度
   "radius": 30 // 半径

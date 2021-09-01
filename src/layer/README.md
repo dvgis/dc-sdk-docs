@@ -511,11 +511,9 @@ viewer.addLayer(layer)
 //options(optional)
 {
   "gradient": {
-    "0.5": "blue",
-    "0.8": "red",
-    "0.95": "white",
-    "0.6": "yellow",
-    "0.5": "green"
+    "0.5": "green",
+    "0.6": "orange",
+    "0.95": "red"
   },
   "height": 0,
   "radius": 30

@@ -718,7 +718,7 @@ tileset.setPosition(position)
 
   - 参数
     - `{String} url`：模型地址
-    - `{Object} options`：详情参考：[Tileset](http://resource.dvgis.cn/cesium-docs/Cesium3DTileset.html)
+    - `{Object} options`：参数设置，详情参考：[Tileset](http://resource.dvgis.cn/cesium-docs/Cesium3DTileset.html)
   - 返回值 `tileset`
 
 ### properties
