@@ -295,6 +295,8 @@ aroundView.start()
 {
   "heading": 0,
   "duration": 0,
+  "pitch": 0,
+  "roll": 0,
   "callback": null,
   "context": null
 }

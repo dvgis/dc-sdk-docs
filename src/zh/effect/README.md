@@ -332,6 +332,8 @@ aroundView.start()
 //options（optional）
 {
   "heading": 0, //偏移角度
+  "pitch": 0, //俯仰角度
+  "roll": 0, //翻转角度
   "duration": 0, //间隔，单位：秒，当此值大于0时，callback才会生效
   "callback": null, //完成回调函数
   "context": null //回调函数执行上下文
