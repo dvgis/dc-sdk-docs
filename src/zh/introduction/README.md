@@ -143,9 +143,9 @@ import '@dvgis/dc-core/dist/dc.core.min.css' // 主要样式
 
 ### 应用配置
 
-> 配置主要用于 `NPM / YARN` 的方式
-
 由于 DC 框架中将 `CESIUM_BASE_URL` 设置为 `./libs/dc-sdk/resources/`，这样需将 `Cesium` 相关的静态资源文件: `Assets`、`Workers` 、`ThirdParty` 复制到工程的 `libs/dc-sdk/resources` 目录下以保证三维场景能够正常呈现,也可通过 `DC.baseUrl` 进行 `Cesium` 相关的静态资源路基设置
+
+> `NPM / YARN`
 
 `Webpack` [工程模板](https://github.com/cavencj/dc-vue-app)
 
@@ -217,6 +217,10 @@ module.exports = {
   },
 }
 ```
+
+`CDN`
+
+直接通过[网站](https://github.com/dvgis/dc-sdk/releases)下载当前版本的资源文件
 
 ### 快速上手
 

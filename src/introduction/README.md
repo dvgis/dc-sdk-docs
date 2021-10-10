@@ -142,9 +142,9 @@ Please put the resources in the project root directory libs/dc-sdk, if you put i
 
 ### Configuration
 
-> The configuration is mainly used in the `NPM / YARN` way
-
 Since the DC framework sets `CESIUM_BASE_URL` to `. /libs/dc-sdk/resources/`, you need to copy `Cesium` related static resources files: `Assets`, `Workers`, `ThirdParty` to `libs/dc-sdk/resources` directory of the project to ensure that the 3D scene can be rendered properly. You can also use `DC.baseUrl` to set the static resource base related to `Cesium`.
+
+> `NPM / YARN`
 
 `Webpack` [Project Template](https://github.com/cavencj/dc-vue-app)
 
@@ -209,6 +209,10 @@ module.exports = {
   },
 }
 ```
+
+`CDN`
+
+Download the current version of the resource file directly through the [website](https://github.com/dvgis/dc-sdk/releases)
 
 ### Get Started
 
