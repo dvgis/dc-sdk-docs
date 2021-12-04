@@ -251,6 +251,25 @@ viewer.addLayer(layer)
     - `{String} id`
   - returns `primitiveLayer`
 
+## DC.GroundPrimitiveLayer
+
+> The ground primitive layer, which is used to add all kinds of ground primitive data, group the ground primitive data in a certain logic to facilitate unified management, inherited from [Layer](#layer)
+
+### example
+
+```js
+let layer = new DC.GroundPrimitiveLayer('id')
+viewer.addLayer(layer)
+```
+
+### creation
+
+- **_constructor(id)_**
+
+  - parameters
+    - `{String} id`
+  - returns `groundPrimitiveLayer`
+
 ## DC.TilesetLayer
 
 > 3dTiles layer, used to add 3dTiles model data, inherits from[Layer](#layer)
@@ -516,7 +535,9 @@ viewer.addLayer(layer)
     "0.95": "red"
   },
   "height": 0,
-  "radius": 30
+  "radius": 30,
+  "useGround": false,
+  "classificationType": 2 // only use for "useGround" is true
 }
 ```
 

@@ -299,6 +299,27 @@ viewer.addLayer(layer)
     - `{String} id`：图层唯一标识
   - 返回值 `primitiveLayer`
 
+## DC.GroundPrimitiveLayer
+
+> 贴地图元图层，用于添加各类贴地图元数据，将贴地图元数据按一定的逻辑分组，方便统一管理，继承于[Layer](#layer)
+
+### example
+
+```js
+let layer = new DC.GroundPrimitiveLayer('id')
+viewer.addLayer(layer)
+```
+
+### creation
+
+- **_constructor(id)_**
+
+  构造函数
+
+  - 参数
+    - `{String} id`：图层唯一标识
+  - 返回值 `groundPrimitiveLayer`
+
 ## DC.TilesetLayer
 
 > 3dTiles 图层，用于添加 3dTiles 模型数据， 继承于[Layer](#layer)
@@ -587,7 +608,9 @@ viewer.addLayer(layer)
     "0.95": "red"
   }, //颜色设置
   "height": 0, // 高度
-  "radius": 30 // 半径
+  "radius": 30, // 半径
+  "useGround": false, //是否使用贴地模式
+  "classificationType": 2 //分类 是否影响地形，3D切片或同时影响这两者。0:地形、1:3D切片、2：两者。贴地模式下生效
 }
 ```
 

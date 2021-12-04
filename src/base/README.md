@@ -543,6 +543,12 @@ If you are using a MVVM framework like Vue, do not add viewer, layer, or overlay
     - `{LayerGroup} layerGroup`
   - returns `this`
 
+- **_getLayerGroup(id)_**
+
+  - parameters
+    - `{String} id`
+  - returns `layerGroup`
+
 - **_addLayer(layer)_**
 
   - parameters

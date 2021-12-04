@@ -585,6 +585,14 @@ global.viewer = viewer // 添加到全局变量
     - `{LayerGroup} layerGroup`：图层组
   - 返回值 `this`
 
+- **_getLayerGroup(id)_**
+
+  获取图层组
+
+  - 参数
+    - `{String} id`：图层组 ID
+  - 返回值 `layerGroup`
+
 - **_addLayer(layer)_**
 
   添加图层

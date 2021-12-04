@@ -681,7 +681,8 @@ rc.addTrack(track)
   "clampToGround": false,
   "clampToTileset": false,
   "interpolationType": "Linear", // Linear、Hermite、Lagrange
-  "interpolationDegree": 2
+  "interpolationDegree": 2,
+  "endDelayTime": 0.5 // End time extension time, unit:second
 }
 ```
 

@@ -2311,11 +2311,11 @@ water.setStyle({
 
 ### creation
 
-- **_constructor(positions,[asynchronous])_**
+- **_constructor(positions,[holes])_**
 
   - parameters
     - `{String|Array<Position|Number|String|Object>} positions`
-    - `{Boolean} asynchronous`
+    - `{Array<Position|Number|String|Object>} holes`
   - returns `water`
 
 ### properties

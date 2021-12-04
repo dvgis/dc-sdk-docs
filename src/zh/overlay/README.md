@@ -2530,13 +2530,13 @@ water.setStyle({
 
 ### creation
 
-- **_constructor(positions,[asynchronous])_**
+- **_constructor(positions,[holes])_**
 
   构造函数
 
   - 参数
     - `{String|Array<Position|Number|String|Object>} positions`：坐标串
-    - `{Boolean} asynchronous`:异步创建，默认值：true
+    - `{Array<Position|Number|String|Object>} holes`：洞面坐标
   - 返回值 `water`
 
 ### properties
