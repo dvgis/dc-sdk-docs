@@ -161,6 +161,7 @@ viewer.addBaseLayer(baseLayer, {
   "key": "", //认证，仅天地图有效
   "subdomains": [],
   "crs":"WGS84",// 坐标系: WGS84 、BD09 、GCJ02，仅百度、高德有效
+  "protocol":null,// http、https
   "tilingScheme":null, // 瓦片切片模式：GeographicTilingScheme , WebMercatorTilingScheme
   "rectangle": {
     "west": 0,

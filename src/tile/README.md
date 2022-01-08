@@ -128,7 +128,8 @@ viewer.addBaseLayer(baseLayer, {
   "style": "img", //img、elec、ter。baidu：normal、middlenight、dark，tencent：img,1、4
   "key": "", //Valid only for TDT
   "subdomains": [],
-  "crs":"WGS84",// WGS84 、BD09 、GCJ02
+  "crs":"WGS84",// WGS84 、BD09 、GCJ02, Valid only for BAIDU and AMAP
+  "protocol":null,// http、https
   "tilingScheme":null, // GeographicTilingScheme , WebMercatorTilingScheme
   "rectangle": {
     "west": 0,

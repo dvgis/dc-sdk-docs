@@ -44,6 +44,10 @@ The class cannot be instantiated
     - `{String} textStyle` [DC.Label](#dc-label)
   - returns `this`
 
+:::warning
+This function is only valid for the following overlays：Point、Circle、Polygon、Billboard、Ellipse、Rectangle
+:::
+
 - **_on(type, callback, context)_**
 
   Event Subscription

@@ -50,6 +50,10 @@ sidebar: auto
     - `{String} textStyle`：文本样式，详情参考：[DC.Label](#dc-label)
   - 返回值 `this`
 
+:::warning
+该函数仅对下列覆盖物有效：Point、Circle、Polygon、Billboard、Ellipse、Rectangle
+:::
+
 - **_on(type, callback, context)_**
 
   事件订阅
