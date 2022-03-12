@@ -470,6 +470,26 @@ layer.eachOverlay((item) => {
     - `{Object} options` [KmlDataSource](http://resource.dvgis.cn/cesium-docs/KmlDataSource.html)
   - returns `kmlLayer`
 
+## DC.GpxLayer
+
+> Gpx layer for loading gpx data, inherited from [Layer](#layer)
+
+### example
+
+```js
+let layer = new DC.GpxLayer('id', '**/**.gpx')
+```
+
+### creation
+
+- **_constructor(id,url,[options])_**
+
+  - parameters
+    - `{String} id`
+    - `{String} url`
+    - `{Object} options` [GpxDataSource](http://resource.dvgis.cn/cesium-docs/GpxDataSource.html)
+  - returns `gpxLayer`
+
 ## DC.ClusterLayer
 
 > Inherited from [Layer](#layer)
@@ -500,7 +520,7 @@ viewer.addLayer(layer)
     "0.01": DC.Color.ORANGE,
     "0.1": DC.Color.RED
   },
-  "style": "circle", // circle 和 clustering
+  "style": "circle", // circle or clustering
   "fontSize": 12,
   "fontColor": DC.Color.BLACK
 }
@@ -620,3 +640,32 @@ viewer.addLayer(layer)
   - parameters
     - `{Object} options`
   - returns `windLayer`
+
+## DC.S3MLayer
+
+> SInherited from [Layer](#layer)
+
+### example
+
+```js
+let layer = new DC.S3MLayer('id','**.scp')
+viewer.addLayer(layer)
+```
+
+### creation
+
+- **_constructor(id,url,[options])_**
+
+  - parameters
+    - `{String} id`
+    - `{String} url`
+    - `{Object} options`
+  - returns `windLayer`
+
+```json
+//options(optional)
+{
+  "maxVisibleDistance"：Number.MAX_VALUE, 
+  "minVisibleDistance"：0,
+}
+```

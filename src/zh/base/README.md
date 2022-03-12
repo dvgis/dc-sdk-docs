@@ -445,6 +445,7 @@ global.viewer = viewer // 添加到全局变量
   "showSun": true, //是否显示太阳
   "showMoon": true, //是否显示月亮
   "enableFxaa": true, //是否开启抗锯齿
+  "msaaSamples": 1, //msaa抗拒出取样度
   "cameraController": {
     // 相机控制
     "enableRotate": true, // 是否可以旋转
@@ -465,6 +466,7 @@ global.viewer = viewer // 添加到全局变量
     "terrainExaggeration": 1, //地形夸张系数
     "terrainExaggerationRelativeHeight": 1, //地形相对高度夸张系数
     "baseColor": new DC.Color(0, 0, 0.5, 1), //地球默认底色
+    "filterColor": new DC.Color(0, 0, 0, 0), //瓦片过滤色
     "translucency": {
       //地表透明
       "enabled": false, // 是否开启地表透明

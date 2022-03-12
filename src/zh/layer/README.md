@@ -538,6 +538,28 @@ layer.eachOverlay((item) => {
     - `{Object} options`：属性配置，详情参考：[KmlDataSource](http://resource.dvgis.cn/cesium-docs/KmlDataSource.html)
   - 返回值 `kmlLayer`
 
+## DC.GpxLayer
+
+> GPX 图层，用于加载 gpx 数据，继承于[Layer](#layer)
+
+### example
+
+```js
+let layer = new DC.GpxLayer('id', '**/**.gpx')
+```
+
+### creation
+
+- **_constructor(id,url,[options])_**
+
+  构造函数
+
+  - 参数
+    - `{String} id`：图层唯一标识
+    - `{String} url`：数据地址
+    - `{Object} options`：属性配置，详情参考：[GpxDataSource](http://resource.dvgis.cn/cesium-docs/GpxDataSource.html)
+  - 返回值 `gpxLayer`
+
 ## DC.ClusterLayer
 
 > 聚合图层，继承于[Layer](../dc-sdk/#layer)
@@ -705,3 +727,34 @@ viewer.addLayer(layer)
   - 参数
     - `{Object} options`：配置信息，参考构造函数的配置信息
   - 返回值 `windLayer`
+
+## DC.S3MLayer
+
+> S3M图层，继承于[Layer](../dc-sdk/#layer)
+
+### example
+
+```js
+let layer = new DC.S3MLayer('id','**.scp')
+viewer.addLayer(layer)
+```
+
+### creation
+
+- **_constructor(id,url,[options])_**
+
+  构造函数
+
+  - 参数
+    - `{String} id`：图层唯一标识
+    - `{String} url`：数据地址
+    - `{Object} options`：属性配置
+  - 返回值 `windLayer`
+
+```json
+//属性参数(可选)
+{
+  "maxVisibleDistance"：Number.MAX_VALUE, //最大可见距离
+  "minVisibleDistance"：0,//最小可见距离
+}
+```

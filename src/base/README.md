@@ -429,6 +429,7 @@ If you are using a MVVM framework like Vue, do not add viewer, layer, or overlay
   "showSun": true,
   "showMoon": true,
   "enableFxaa": true,
+  "msaaSamples": 1,
   "cameraController": {
     "enableRotate": true,
     "enableTilt": true,
@@ -448,6 +449,7 @@ If you are using a MVVM framework like Vue, do not add viewer, layer, or overlay
     "terrainExaggeration": 1,
     "terrainExaggerationRelativeHeight": 1,
     "baseColor": new DC.Color(0, 0, 0.5, 1),
+    "filterColor": new DC.Color(0, 0, 0, 0),
     "translucency": {
       "enabled": false,
       "backFaceAlpha": 1,
