@@ -424,7 +424,9 @@ global.viewer = viewer // 添加到全局变量
 - [`{LoadingMask} loadingMask`](#loadingmask)：加载蒙层 **_`readonly`_**
 - `{Position} cameraPosition`：相机位置 **_`readonly`_**
 - `{Number} resolution`：分辨率 **_`readonly`_**
+- `{Number} level`: 当前层级 **_`readonly`_**
 - `{Rect} viewBounds`：视野范围 **_`readonly`_**
+
 
 ### methods
 
@@ -459,7 +461,7 @@ global.viewer = viewer // 添加到全局变量
   "globe": {
     "show": true, // 是否显示地球
     "showGroundAtmosphere": true, // 显示地面大气
-    "enableLighting": false, //是否开启灯光，开启后地球会根据当前时间启用灯光
+    "enableLighting": false, //是否开启灯光，开启后地球会根据当前时间启用灯光
     "depthTestAgainstTerrain": false, //是否开启深度检测
     "tileCacheSize": 100, // 默认瓦片缓存大小
     "preloadSiblings": false, //是否应预加载渲染同级图块
@@ -491,12 +493,6 @@ global.viewer = viewer // 添加到全局变量
   - 参数
     - `{Number} min`：最小角度
     - `{Number} max`：最大角度
-  - 返回值 `this`
-
-- **_limitCameraToGround()_**
-
-  设置限制相机到地下
-
   - 返回值 `this`
 
 - **_changeSceneMode(sceneMode, duration)_**

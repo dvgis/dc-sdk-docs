@@ -410,6 +410,7 @@ If you are using a MVVM framework like Vue, do not add viewer, layer, or overlay
 - [`{LoadingMask} loadingMask`](#loadingmask)**_`readonly`_**
 - `{Position} cameraPosition`**_`readonly`_**
 - `{Number} resolution`**_`readonly`_**
+- `{Number} level`**_`readonly`_**
 - `{Rect} viewBounds`**_`readonly`_**
 
 ### methods
@@ -471,10 +472,6 @@ If you are using a MVVM framework like Vue, do not add viewer, layer, or overlay
   - parameters
     - `{Number} min`：min angel
     - `{Number} max`：max angel
-  - returns `this`
-
-- **_limitCameraToGround()_**
-
   - returns `this`
 
 - **_changeSceneMode(sceneMode, [duration])_**
