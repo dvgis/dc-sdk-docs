@@ -95,6 +95,7 @@ import DC from '@dvgis/dc-sdk/dist/dc.base.min' //基础包
 import DcCore from '@dvgis/dc-sdk/dist/dc.core.min' //核心包
 import DcChart from '@dvgis/dc-sdk/dist/dc.chart.min' //chart包
 import DcMapv from '@dvgis/dc-sdk/dist/dc.mapv.min' //mapv包
+import DcS3M from '@dvgis/dc-sdk/dist/dc.s3m.min' //s3m包
 import '@dvgis/dc-sdk/dist/dc.core.min.css' // 主要样式
 ```
 
@@ -105,11 +106,13 @@ yarn add @dvgis/dc-base
 yarn add @dvgis/dc-core
 yarn add @dvgis/dc-chart
 yarn add @dvgis/dc-mapv
+yarn add @dvgis/dc-s3m
 -------------------------
 npm install @dvgis/dc-base
 npm install @dvgis/dc-core
 npm install @dvgis/dc-chart
 npm install @dvgis/dc-mapv
+npm install @dvgis/dc-s3m
 ```
 
 ```js
@@ -117,6 +120,7 @@ import DC from '@dvgis/dc-base' //基础包
 import DcCore from '@dvgis/dc-core' //核心包
 import DcChart from '@dvgis/dc-chart' //chart包
 import DcMapv from '@dvgis/dc-mapv' //mapv包
+import DcS3M from '@dvgis/dc-s3m' //mapv包
 import '@dvgis/dc-core/dist/dc.core.min.css' // 主要样式
 ```
 
@@ -133,6 +137,8 @@ import '@dvgis/dc-core/dist/dc.core.min.css' // 主要样式
 <script src="https://cdn.jsdelivr.net/npm/@dvgis/dc-sdk/dist/dc.chart.min.js"></script>
 <!--mapv包-->
 <script src="https://cdn.jsdelivr.net/npm/@dvgis/dc-sdk/dist/dc.mapv.min.js"></script>
+<!--s3m包-->
+<script src="https://cdn.jsdelivr.net/npm/@dvgis/dc-sdk/dist/dc.s3m.min.js"></script>
 <!--主要样式-->
 <link
   href="https://cdn.jsdelivr.net/npm/@dvgis/dc-sdk/dist/dc.core.min.css"

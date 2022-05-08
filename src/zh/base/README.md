@@ -417,6 +417,8 @@ global.viewer = viewer // 添加到全局变量
 - [`{ContextMenu} contextMenu`](#contextmenu)：右击弹框 **_`readonly`_**
 - [`{Tooltip} tooltip`](#tooltip)：提示框 **_`readonly`_**
 - [`{MapSplit} mapSplit`](#mapsplit)：地图分割 **_`readonly`_**
+- [`{TilesetSplit} tilesetSplit`](#tilesetsplit)：模型分割 **_`readonly`_**
+- [`{SceneSplit} sceneSplit`](#scenesplit)：场景分割 **_`readonly`_**
 - [`{Compass} compass`](#compass)：罗盘 **_`readonly`_**
 - [`{ZoomController} zoomController`](#zoomcontroller)：罗盘 **_`readonly`_**
 - [`{LocationBar} locationBar`](#locationbar)：坐标信息 **_`readonly`_**
@@ -873,6 +875,70 @@ viewer.mapSplit.addBaseLayer(baseLayer_elc, -1)
   - 参数
     - `{BaseLayer} baseLayer`：地图
     - `{Number} splitDirection`：分割方向，-1：左，0：无，1：右
+  - 返回值 `this`
+
+## TilesetSplit
+
+> 模型分割
+
+### examples
+
+```js
+let tileset = new DC.Tileset('**/tileset.json')
+tileset.setSplitDirection(1)
+viewer.tilesetSplit.enable = true
+viewer.tilesetSplit.addTileset(tileset)
+```
+
+### properties
+
+- `{Boolean} enable`：是否启用
+- `{String} state`：状态 **_`readonly`_**
+
+### methods
+
+- **_addTileset(tileset)_**
+
+  添加地图
+
+  - 参数
+    - `{Tileset} tileset`：模型
+  - 返回值 `this`
+
+## SceneSplit
+
+> 场景分割
+
+### examples
+
+```js
+let tileset = new DC.Tileset('**/tileset.json')
+tileset.setSplitDirection(1)
+viewer.sceneSplit.enable = true
+viewer.sceneSplit.addTileset(tileset)
+```
+
+### properties
+
+- `{Boolean} enable`：是否启用
+- `{String} state`：状态 **_`readonly`_**
+
+### methods
+
+- **_addBaseLayer(baseLayer)_**
+
+  添加地图
+
+  - 参数
+    - `{BaseLayer} baseLayer`：地图
+  - 返回值 `this`
+
+- **_addTileset(tileset)_**
+
+  添加地图
+
+  - 参数
+    - `{Tileset} tileset`：模型
   - 返回值 `this`
 
 ## Compass

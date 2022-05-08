@@ -770,8 +770,9 @@ let tc = new DC.TrackController(viewer)
 ### example
 
 ```js
+let tc = new DC.TrackController(viewer)
 let track = new DC.Track('120.121,32.1213;121.132,32.1213', 20)
-rc.addTrack(track)
+tc.addTrack(track)
 ```
 
 ### creation
@@ -794,7 +795,8 @@ rc.addTrack(track)
   "clampToTileset": false, // 是否贴物
   "interpolationType": "Linear", // 插值类型：Linear、Hermite、Lagrange
   "interpolationDegree": 2, // 插值度数
-  "endDelayTime": 0.5 // 结束时间延长时间，单位:秒
+  "endDelayTime": 0.5,// 结束时间延长时间，单位:秒，
+  "headingOffset":0,//旋转偏移
 }
 ```
 

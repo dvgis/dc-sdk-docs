@@ -755,6 +755,7 @@ viewer.addLayer(layer)
 //属性参数(可选)
 {
   "maxVisibleDistance"：Number.MAX_VALUE, //最大可见距离
-  "minVisibleDistance"：0,//最小可见距离
+  "minVisibleDistance"：0,//最小可见距离,
+  "heightOffset":0,//高度偏移
 }
 ```
