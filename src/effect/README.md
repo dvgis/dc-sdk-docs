@@ -623,12 +623,6 @@ let tc = new DC.TrackController(viewer)
 
   - returns `this`
 
-- **_changeSpeed(speed)_**
-
-  - parameters
-    - `{Number} speed`
-  - returns `this`
-
 - **_viewTrack(track, viewOption)_**
 
   - parameters

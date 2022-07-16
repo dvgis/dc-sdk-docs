@@ -429,7 +429,6 @@ global.viewer = viewer // 添加到全局变量
 - `{Number} level`: 当前层级 **_`readonly`_**
 - `{Rect} viewBounds`：视野范围 **_`readonly`_**
 
-
 ### methods
 
 - **_setOptions(options)_**
@@ -670,6 +669,27 @@ global.viewer = viewer // 添加到全局变量
   - 参数
     - `{DC.Position} position`：位置
     - `{Function} completeCallback`：缩放完成后触发的回调
+  - 返回值 `this`
+
+- **_flyToBounds(bounds,{heading,pitch,roll}, completeCallback, duration)_**
+
+  飞到指定的范围
+
+  - 参数
+    - `{String|Array} bounds`：范围，格式:[minX,minY,maxX,maxY]
+    - `{Object} hpr`：方位角
+    - `{Function} completeCallback`：飞完之后触发的回调
+    - `{Number} duration`：飞到位置时间，单位：秒
+  - 返回值 `this`
+
+- **_zoomToBounds(bounds,{heading,pitch,roll}, completeCallback)_**
+
+  缩放到指定的范围
+
+  - 参数
+    - `{String|Array} bounds`：范围，格式:[minX,minY,maxX,maxY]
+    - `{Object} hpr`：方位角
+    - `{Function} completeCallback`：缩放完之后触发的回调
   - 返回值 `this`
 
 - **_on(type, callback, context)_**

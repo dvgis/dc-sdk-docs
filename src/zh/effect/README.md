@@ -723,14 +723,6 @@ let tc = new DC.TrackController(viewer)
 
   - 返回值 `this`
 
-- **_changeSpeed(speed)_**
-
-  改变播放速度
-
-  - 参数
-    - `{Number} speed`：速度
-  - 返回值 `this`
-
 - **_viewTrack(track, viewOption)_**
 
   跟踪某一条路径

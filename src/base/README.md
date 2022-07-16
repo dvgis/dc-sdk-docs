@@ -609,6 +609,23 @@ If you are using a MVVM framework like Vue, do not add viewer, layer, or overlay
     - `{Function} completeCallback`
   - returns `this`
 
+- **_flyToBounds(bounds,{heading,pitch,roll}, completeCallback, duration)_**
+
+  - parameters
+    - `{String|Array} bounds` format:[minX,minY,maxX,maxY]
+    - `{Object} hpr`
+    - `{Function} completeCallback`
+    - `{Number} duration`
+  - returns `this`
+
+- **_zoomToBounds(bounds,{heading,pitch,roll}, completeCallback)_**
+
+  - parameters
+    - `{String|Array} bounds` format:[minX,minY,maxX,maxY]
+    - `{Object} hpr`
+    - `{Function} completeCallback` 
+  - returns `this`
+
 - **_on(type, callback, [context])_**
 
   - parameters
