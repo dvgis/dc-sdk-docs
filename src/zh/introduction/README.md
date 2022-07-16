@@ -228,6 +228,16 @@ module.exports = {
 
 直接通过[网站](https://github.com/dvgis/dc-sdk/releases)下载当前版本的资源文件
 
+### 代码提示
+
+通过安装代码提示工具包，能够在开发过程中提示和自动完成框架内部的接口，更好地提高开发效率
+
+```shell
+npm install @dvgis/types -D
+-------------------------
+yarn add @dvgis/types -D
+```
+
 ### 快速上手
 
 > [框架安装](#框架安装) 和 [配置](#应用配置) 后，就可以开发属于自己的 **_`WebGis`_** 应用了
@@ -246,6 +256,7 @@ global.DC = DC //将DC提升到全局变量，方便在工程中直接使用
 DC.use(DcCore) //安装DC核心库
 DC.use(DcChart) //安装DC图标库，使用前确保echarts为全局函数
 DC.use(DcMapv) //安装Mapv库
+//使用CDN方式时无需以上代码,会自动安装
 DC.ready(() => {
   let viewer = new DC.Viewer('viewer-container')
 })

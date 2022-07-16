@@ -147,7 +147,7 @@ viewer.addBaseLayer(baseLayer, {
 ### example
 
 ```js
-let terrain = DC.ImageryLayerFactory.createUrlTerrain({
+let terrain = DC.TerrainFactory.createUrlTerrain({
   url: '****/***',
 })
 viewer.addTerrain(terrain)

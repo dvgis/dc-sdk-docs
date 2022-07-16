@@ -2107,6 +2107,54 @@ let Label = new DC.LabelPrimitive(position, 'test')
 }
 ```
 
+## DC.LightCylinderPrimitive
+
+> 光柱要素，继承于[Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let cylinder = new DC.LightCylinderPrimitive(position, 1000, 1, 100)
+```
+
+### creation
+
+- **_constructor(position, length, topRadius, bottomRadius)_**
+
+  构造函数
+
+  - 参数
+    - `{Position|Number|String|Object} position`：坐标
+    - `{Number} length`：长度
+    - `{Number} topRadius`：上半径
+    - `{Number} bottomRadius`：下半径
+  - 返回值 `cylinder`
+
+### properties
+
+- `{Position} position`：坐标
+- `{Number} length`：长度
+- `{Number} topRadius`：上半径
+- `{Number} bottomRadius`：下半径
+
+### methods
+
+- **_setStyle(style)_**
+
+  设置样式
+
+  - 参数
+    - `{Object} style`：样式
+  - 返回值 `this`
+
+```json
+// 样式参数(可选)
+{
+  "color": DC.Color.BLACK //颜色
+}
+```
+
 ## DC.BounceLabelPrimitive
 
 > 跳动文本图元，继承于[LabelPrimitive](#dc-labelprimitive)

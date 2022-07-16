@@ -214,6 +214,16 @@ module.exports = {
 
 Download the current version of the resource file directly through the [website](https://github.com/dvgis/dc-sdk/releases)
 
+### Code hinting
+
+By installing the code hinting toolkit, you can prompt and automate the framework's internal interfaces during development to better improve development efficiency
+
+```shell
+npm install @dvgis/types -D
+-------------------------
+yarn add @dvgis/types -D
+```
+
 ### Get Started
 
 > [Installation](#installation) and [Configuration](#configuration), then you can develop your own **_`WebGis`_** application
@@ -232,6 +242,7 @@ global.DC = DC
 DC.use(DcCore) // install core package
 DC.use(DcChart) // install chart package
 DC.use(DcMapv) // install mapv package
+//The above code is not needed when using CDN method, it will be installed automatically.
 DC.ready(() => {
   let viewer = new DC.Viewer('viewer-container')
 })

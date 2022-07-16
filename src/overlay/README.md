@@ -1870,7 +1870,7 @@ let flowLinePrimitive = new DC.FlowLinePrimitive('120,20;120,30;122,30')
 
 ```js
 let position = new DC.Position(120, 20)
-let Label = new DC.LabelPrimitive(position, 'test')
+let label = new DC.LabelPrimitive(position, 'test')
 ```
 
 ### creation
@@ -1925,6 +1925,50 @@ let Label = new DC.LabelPrimitive(position, 'test')
     "far": Number.MAX_VALUE
   },
   "disableDepthTestDistance": 0
+}
+```
+
+## DC.LightCylinderPrimitive
+
+> Inherited from [Overlay](#overlay)
+
+### example
+
+```js
+let position = new DC.Position(120, 20)
+let cylinder = new DC.LightCylinderPrimitive(position, 1000,1,100)
+```
+
+### creation
+
+- **_constructor(center, length, topRadius, bottomRadius)_**
+
+  - parameters
+    - `{Position|String|Array|Object} center`
+    - `{Number} length`
+    - `{Number} topRadius`
+    - `{Number} bottomRadius`
+  - returns `cylinder`
+
+### properties
+
+- `{Position|String|Array|Object} center`
+- `{Number} length`
+- `{Number} topRadius`
+- `{Number} bottomRadius`
+
+### methods
+
+- **_setStyle(style)_**
+
+  - parameters
+    - `{Object} style` 
+  - returns `this`
+
+```json
+// style(optional)
+{
+  "color": DC.Color.BLACK
 }
 ```
 
