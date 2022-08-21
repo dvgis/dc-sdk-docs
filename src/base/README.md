@@ -159,6 +159,8 @@ Please use the default constants for development
 
 **_`DC.SceneEventType.CLOCK_TICK`_**
 
+**_`DC.SceneEventType.RENDER_ERROR`_**
+
 ### AnalysisType
 
 **_`DC.AnalysisType.CONTOUR_LINE`_**

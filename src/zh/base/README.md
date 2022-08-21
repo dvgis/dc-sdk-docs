@@ -159,6 +159,8 @@ DC.ready(() => {
 
 **_`DC.SceneEventType.CLOCK_TICK`_**: 时钟跳动
 
+**_`DC.SceneEventType.RENDER_ERROR`_**: 渲染错误
+
 ### MouseMode
 
 **_`DC.MouseMode.LEFT_MIDDLE`_**: 左键拖动，中键翻转(默认)

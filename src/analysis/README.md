@@ -166,6 +166,7 @@ viewer.use(new DC.Analysis())
 ```json
 //options(optional)
 {
+  "mixNum":1, 
   "visibleColor"：DC.Color.GREEN,
   "disVisibleColor"：DC.Color.RED,
   "showHelp": false,

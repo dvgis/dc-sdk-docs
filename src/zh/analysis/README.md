@@ -190,6 +190,7 @@ viewer.use(new DC.Analysis())
 ```json
 //属性参数
 {
+  "mixNum":1, // 混合度
   "visibleColor"：DC.Color.GREEN,//可见颜色
   "disVisibleColor"：DC.Color.RED,//不可见颜色
   "showHelp": false, //显示辅助覆盖物
